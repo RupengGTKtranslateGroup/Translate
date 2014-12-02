@@ -1,0 +1,1989 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: GtkRecentManager</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="RecentDocuments.html" rel="up" title="Recently Used Documents"></link><link href="RecentDocuments.html" rel="prev" title="Recently Used Documents"></link><link href="GtkRecentChooser.html" rel="next" title="GtkRecentChooser"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkRecentManager.description">Description</a></span><span id="nav_hierarchy">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkRecentManager.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkRecentManager.properties">Properties</a></span><span id="nav_signals">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkRecentManager.signals">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="RecentDocuments.html" tppabs="https://developer.gnome.org/gtk3/stable/RecentDocuments.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="RecentDocuments.html" tppabs="https://developer.gnome.org/gtk3/stable/RecentDocuments.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="GtkRecentChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentChooser.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="GtkRecentManager"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkRecentManager.top_of_page"></a>GtkRecentManager</span></h2>
+<p>GtkRecentManager â€” Managing recently used files</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="GtkRecentManager.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="returnvalue">GtkRecentManager</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-manager-new" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-new" title="gtk_recent_manager_newÂ ()">gtk_recent_manager_new</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="returnvalue">GtkRecentManager</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-manager-get-default" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-get-default" title="gtk_recent_manager_get_defaultÂ ()">gtk_recent_manager_get_default</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-manager-add-item" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-add-item" title="gtk_recent_manager_add_itemÂ ()">gtk_recent_manager_add_item</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-manager-add-full" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-add-full" title="gtk_recent_manager_add_fullÂ ()">gtk_recent_manager_add_full</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-manager-remove-item" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-remove-item" title="gtk_recent_manager_remove_itemÂ ()">gtk_recent_manager_remove_item</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="returnvalue">GtkRecentInfo</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-manager-lookup-item" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-lookup-item" title="gtk_recent_manager_lookup_itemÂ ()">gtk_recent_manager_lookup_item</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-manager-has-item" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-has-item" title="gtk_recent_manager_has_itemÂ ()">gtk_recent_manager_has_item</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-manager-move-item" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-move-item" title="gtk_recent_manager_move_itemÂ ()">gtk_recent_manager_move_item</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-manager-get-items" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-get-items" title="gtk_recent_manager_get_itemsÂ ()">gtk_recent_manager_get_items</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-manager-purge-items" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-purge-items" title="gtk_recent_manager_purge_itemsÂ ()">gtk_recent_manager_purge_items</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="returnvalue">GtkRecentInfo</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-ref" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-ref" title="gtk_recent_info_refÂ ()">gtk_recent_info_ref</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-unref" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-unref" title="gtk_recent_info_unrefÂ ()">gtk_recent_info_unref</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-uri" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-uri" title="gtk_recent_info_get_uriÂ ()">gtk_recent_info_get_uri</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-display-name" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-display-name" title="gtk_recent_info_get_display_nameÂ ()">gtk_recent_info_get_display_name</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-description" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-description" title="gtk_recent_info_get_descriptionÂ ()">gtk_recent_info_get_description</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-mime-type" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-mime-type" title="gtk_recent_info_get_mime_typeÂ ()">gtk_recent_info_get_mime_type</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">time_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-added" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-added" title="gtk_recent_info_get_addedÂ ()">gtk_recent_info_get_added</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">time_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-modified" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-modified" title="gtk_recent_info_get_modifiedÂ ()">gtk_recent_info_get_modified</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">time_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-visited" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-visited" title="gtk_recent_info_get_visitedÂ ()">gtk_recent_info_get_visited</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-private-hint" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-private-hint" title="gtk_recent_info_get_private_hintÂ ()">gtk_recent_info_get_private_hint</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-application-info" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-application-info" title="gtk_recent_info_get_application_infoÂ ()">gtk_recent_info_get_application_info</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â **
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-applications" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-applications" title="gtk_recent_info_get_applicationsÂ ()">gtk_recent_info_get_applications</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-last-application" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-last-application" title="gtk_recent_info_last_applicationÂ ()">gtk_recent_info_last_application</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-has-application" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-has-application" title="gtk_recent_info_has_applicationÂ ()">gtk_recent_info_has_application</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GAppInfo.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GAppInfo.html'" tppabs="https://developer.gnome.org/gio/unstable/GAppInfo.html"><span class="returnvalue">GAppInfo</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-create-app-info" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-create-app-info" title="gtk_recent_info_create_app_infoÂ ()">gtk_recent_info_create_app_info</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â **
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-groups" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-groups" title="gtk_recent_info_get_groupsÂ ()">gtk_recent_info_get_groups</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-has-group" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-has-group" title="gtk_recent_info_has_groupÂ ()">gtk_recent_info_has_group</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf'" tppabs="https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-icon" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-icon" title="gtk_recent_info_get_iconÂ ()">gtk_recent_info_get_icon</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GIcon.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GIcon.html'" tppabs="https://developer.gnome.org/gio/unstable/GIcon.html"><span class="returnvalue">GIcon</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-gicon" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-gicon" title="gtk_recent_info_get_giconÂ ()">gtk_recent_info_get_gicon</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-short-name" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-short-name" title="gtk_recent_info_get_short_nameÂ ()">gtk_recent_info_get_short_name</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-uri-display" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-uri-display" title="gtk_recent_info_get_uri_displayÂ ()">gtk_recent_info_get_uri_display</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-get-age" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-age" title="gtk_recent_info_get_ageÂ ()">gtk_recent_info_get_age</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-is-local" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-is-local" title="gtk_recent_info_is_localÂ ()">gtk_recent_info_is_local</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-exists" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-exists" title="gtk_recent_info_existsÂ ()">gtk_recent_info_exists</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-match" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-match" title="gtk_recent_info_matchÂ ()">gtk_recent_info_match</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkRecentManager.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="properties_type" width="150px"></col>
+<col class="properties_name" width="300px"></col>
+<col class="properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkRecentManager.html#GtkRecentManager--filename" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentManager--filename" title="The â€œfilenameâ€ property">filename</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkRecentManager.html#GtkRecentManager--size" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentManager--size" title="The â€œsizeâ€ property">size</a></td>
+<td class="property_flags">Read</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkRecentManager.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="signals_return" width="150px"></col>
+<col class="signals_name" width="300px"></col>
+<col class="signals_flags" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkRecentManager.html#GtkRecentManager-changed" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentManager-changed" title="The â€œchangedâ€ signal">changed</a></td>
+<td class="signal_flags">Run First</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkRecentManager.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkRecentManager.html#GtkRecentManager-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentManager-struct" title="struct GtkRecentManager">GtkRecentManager</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">Â </td>
+<td class="function_name"><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo">GtkRecentInfo</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkRecentManager.html#GtkRecentData" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentData" title="struct GtkRecentData">GtkRecentData</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="GtkRecentManager.html#GTK-RECENT-MANAGER-ERROR:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GTK-RECENT-MANAGER-ERROR:CAPS" title="GTK_RECENT_MANAGER_ERROR">GTK_RECENT_MANAGER_ERROR</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GtkRecentManager.html#GtkRecentManagerError" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentManagerError" title="enum GtkRecentManagerError">GtkRecentManagerError</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkRecentManager.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">â•°â”€â”€</span> GtkRecentManager
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkRecentManager.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkRecentManager.description"></a><h2>Description</h2>
+<p><a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> provides a facility for adding, removing and
+looking up recently used files. Each recently used file is
+identified by its URI, and has meta-data associated to it, like
+the names and command lines of the applications that have
+registered it, the number of time each application has registered
+the same file, the mime type of the file and whether the file
+should be displayed only by the applications that have
+registered it.</p>
+<p>The recently used files list is per user.</p>
+<p>The <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> acts like a database of all the recently
+used files. You can create new <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> objects, but
+it is more efficient to use the default manager created by GTK+.</p>
+<p>Adding a new recently used file is as simple as:</p>
+<div class="informalexample">
+  <table border="0" cellpadding="0" cellspacing="0" class="listing_frame">
+    <tbody>
+      <tr>
+        <td align="right" class="listing_lines"><pre>1
+2
+3
+4</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="usertype">GtkRecentManager</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">manager</span><span class="symbol">;</span>
+
+<span class="normal">manager </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="GtkRecentManager.html#gtk-recent-manager-get-default" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-get-default">gtk_recent_manager_get_default</a></span><span class="normal"> </span><span class="symbol">();</span>
+<span class="function"><a href="GtkRecentManager.html#gtk-recent-manager-add-item" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-add-item">gtk_recent_manager_add_item</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">manager</span><span class="symbol">,</span><span class="normal"> file_uri</span><span class="symbol">);</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p>The <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> will try to gather all the needed information
+from the file itself through GIO.</p>
+<p>Looking up the meta-data associated with a recently used file
+given its URI requires calling <a class="link" href="GtkRecentManager.html#gtk-recent-manager-lookup-item" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-lookup-item" title="gtk_recent_manager_lookup_itemÂ ()"><code class="function">gtk_recent_manager_lookup_item()</code></a>:</p>
+<div class="informalexample">
+  <table border="0" cellpadding="0" cellspacing="0" class="listing_frame">
+    <tbody>
+      <tr>
+        <td align="right" class="listing_lines"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="usertype">GtkRecentManager</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">manager</span><span class="symbol">;</span>
+<span class="usertype">GtkRecentInfo</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">info</span><span class="symbol">;</span>
+<span class="usertype">GError</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">error </span><span class="symbol">=</span><span class="normal"> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></span><span class="symbol">;</span>
+
+<span class="normal">manager </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="GtkRecentManager.html#gtk-recent-manager-get-default" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-get-default">gtk_recent_manager_get_default</a></span><span class="normal"> </span><span class="symbol">();</span>
+<span class="normal">info </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="GtkRecentManager.html#gtk-recent-manager-lookup-item" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-lookup-item">gtk_recent_manager_lookup_item</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">manager</span><span class="symbol">,</span><span class="normal"> file_uri</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">error</span><span class="symbol">);</span>
+<span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">error</span><span class="symbol">)</span>
+<span class="normal">  </span><span class="cbracket">{</span>
+<span class="normal">    </span><span class="function"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Message-Logging.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Message-Logging.html#g-warning'" tppabs="https://developer.gnome.org/glib/unstable/glib-Message-Logging.html#g-warning">g_warning</a></span><span class="normal"> </span><span class="symbol">(</span><span class="string">"Could not find the file: %s"</span><span class="symbol">,</span><span class="normal"> error</span><span class="symbol">-&gt;</span><span class="normal">message</span><span class="symbol">);</span>
+<span class="normal">    </span><span class="function"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#g-error-free'" tppabs="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#g-error-free">g_error_free</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">error</span><span class="symbol">);</span>
+<span class="normal">  </span><span class="cbracket">}</span>
+<span class="keyword">else</span>
+<span class="normal"> </span><span class="cbracket">{</span>
+<span class="normal">   </span><span class="comment">// Use the info object</span>
+<span class="normal">   </span><span class="function"><a href="GtkRecentManager.html#gtk-recent-info-unref" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-unref">gtk_recent_info_unref</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">info</span><span class="symbol">);</span>
+<span class="normal"> </span><span class="cbracket">}</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p>In order to retrieve the list of recently used files, you can use
+<a class="link" href="GtkRecentManager.html#gtk-recent-manager-get-items" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-get-items" title="gtk_recent_manager_get_itemsÂ ()"><code class="function">gtk_recent_manager_get_items()</code></a>, which returns a list of <span class="type">GtkRecentInfo-structs</span>.</p>
+<p>A <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> is the model used to populate the contents of
+one, or more <a class="link" href="GtkRecentChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentChooser.html" title="GtkRecentChooser"><span class="type">GtkRecentChooser</span></a> implementations.</p>
+<p>Note that the maximum age of the recently used files list is
+controllable through the <a class="link" href="GtkSettings.html#GtkSettings--gtk-recent-files-max-age" tppabs="https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-recent-files-max-age" title="The â€œgtk-recent-files-max-ageâ€ property"><span class="type">â€œgtk-recent-files-max-ageâ€</span></a>
+property.</p>
+<p>Recently used files are supported since GTK+ 2.10.</p>
+</div>
+<div class="refsect1">
+<a name="GtkRecentManager.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-recent-manager-new"></a><h3>gtk_recent_manager_newÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="returnvalue">GtkRecentManager</span></a>Â *
+gtk_recent_manager_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new recent manager object.  Recent manager objects are used to
+handle the list of recently used resources.  A <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> object
+monitors the recently used resources list, and emits the â€œchangedâ€ signal
+each time something inside the list changes.</p>
+<p><a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> objects are expensive: be sure to create them only when
+needed. You should use <a class="link" href="GtkRecentManager.html#gtk-recent-manager-get-default" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-get-default" title="gtk_recent_manager_get_defaultÂ ()"><code class="function">gtk_recent_manager_get_default()</code></a> instead.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.2.6"></a><h4>Returns</h4>
+<p> A newly created <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> object.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-manager-get-default"></a><h3>gtk_recent_manager_get_defaultÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="returnvalue">GtkRecentManager</span></a>Â *
+gtk_recent_manager_get_default (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Gets a unique instance of <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a>, that you can share
+in your application without caring about memory management.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.3.5"></a><h4>Returns</h4>
+<p> A unique <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a>. Do not ref or unref it. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-manager-add-item"></a><h3>gtk_recent_manager_add_itemÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_recent_manager_add_item (<em class="parameter"><code><a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> *manager</code></em>,
+                             <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>);</pre>
+<p>Adds a new resource, pointed by <em class="parameter"><code>uri</code></em>
+, into the recently used
+resources list.</p>
+<p>This function automatically retrieves some of the needed
+metadata and setting other metadata to common default values; it
+then feeds the data to <a class="link" href="GtkRecentManager.html#gtk-recent-manager-add-full" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-add-full" title="gtk_recent_manager_add_fullÂ ()"><code class="function">gtk_recent_manager_add_full()</code></a>.</p>
+<p>See <a class="link" href="GtkRecentManager.html#gtk-recent-manager-add-full" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-add-full" title="gtk_recent_manager_add_fullÂ ()"><code class="function">gtk_recent_manager_add_full()</code></a> if you want to explicitly
+define the metadata for the resource pointed by <em class="parameter"><code>uri</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.4.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>a valid URI</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.4.8"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the new item was successfully added
+to the recently used resources list</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-manager-add-full"></a><h3>gtk_recent_manager_add_fullÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_recent_manager_add_full (<em class="parameter"><code><a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> *manager</code></em>,
+                             <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                             <em class="parameter"><code>const <a class="link" href="GtkRecentManager.html#GtkRecentData" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentData" title="struct GtkRecentData"><span class="type">GtkRecentData</span></a> *recent_data</code></em>);</pre>
+<p>Adds a new resource, pointed by <em class="parameter"><code>uri</code></em>
+, into the recently used
+resources list, using the metadata specified inside the <span class="type">GtkRecentData</span>
+passed in <em class="parameter"><code>recent_data</code></em>
+.</p>
+<p>The passed URI will be used to identify this resource inside the
+list.</p>
+<p>In order to register the new recently used resource, metadata about
+the resource must be passed as well as the URI; the metadata is
+stored in a <span class="type">GtkRecentData</span>, which must contain the MIME
+type of the resource pointed by the URI; the name of the application
+that is registering the item, and a command line to be used when
+launching the item.</p>
+<p>Optionally, a <span class="type">GtkRecentData</span> might contain a UTF-8 string
+to be used when viewing the item instead of the last component of the
+URI; a short description of the item; whether the item should be
+considered private - that is, should be displayed only by the
+applications that have registered it.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.5.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>a valid URI</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>recent_data</p></td>
+<td class="parameter_description"><p>metadata of the resource</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.5.9"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the new item was successfully added to the
+recently used resources list, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-manager-remove-item"></a><h3>gtk_recent_manager_remove_itemÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_recent_manager_remove_item (<em class="parameter"><code><a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> *manager</code></em>,
+                                <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError'" tppabs="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Removes a resource pointed by <em class="parameter"><code>uri</code></em>
+ from the recently used resources
+list handled by a recent manager.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>the URI of the item you wish to remove</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p> return location for a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError'" tppabs="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.6.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the item pointed by <em class="parameter"><code>uri</code></em>
+has been successfully
+removed by the recently used resources list, and <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-manager-lookup-item"></a><h3>gtk_recent_manager_lookup_itemÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="returnvalue">GtkRecentInfo</span></a>Â *
+gtk_recent_manager_lookup_item (<em class="parameter"><code><a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> *manager</code></em>,
+                                <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError'" tppabs="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Searches for a URI inside the recently used resources list, and
+returns a <span class="type">GtkRecentInfo</span> containing informations about the resource
+like its MIME type, or its display name.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>a URI</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p> a return location for a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError'" tppabs="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.7.6"></a><h4>Returns</h4>
+<p> a <span class="type">GtkRecentInfo</span> containing information
+about the resource pointed by <em class="parameter"><code>uri</code></em>
+, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the URI was
+not registered in the recently used resources list.  Free with
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-unref" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-unref" title="gtk_recent_info_unrefÂ ()"><code class="function">gtk_recent_info_unref()</code></a>.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-manager-has-item"></a><h3>gtk_recent_manager_has_itemÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_recent_manager_has_item (<em class="parameter"><code><a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> *manager</code></em>,
+                             <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>);</pre>
+<p>Checks whether there is a recently used resource registered
+with <em class="parameter"><code>uri</code></em>
+ inside the recent manager.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>a URI</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.8.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the resource was found, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-manager-move-item"></a><h3>gtk_recent_manager_move_itemÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_recent_manager_move_item (<em class="parameter"><code><a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> *manager</code></em>,
+                              <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                              <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *new_uri</code></em>,
+                              <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError'" tppabs="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Changes the location of a recently used resource from <em class="parameter"><code>uri</code></em>
+ to <em class="parameter"><code>new_uri</code></em>
+.</p>
+<p>Please note that this function will not affect the resource pointed
+by the URIs, but only the URI used in the recently used resources list.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.9.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uri</p></td>
+<td class="parameter_description"><p>the URI of a recently used resource</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>new_uri</p></td>
+<td class="parameter_description"><p> the new URI of the recently used resource, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to
+remove the item pointed by <em class="parameter"><code>uri</code></em>
+in the list. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p> a return location for a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError'" tppabs="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.9.7"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-manager-get-items"></a><h3>gtk_recent_manager_get_itemsÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a>Â *
+gtk_recent_manager_get_items (<em class="parameter"><code><a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> *manager</code></em>);</pre>
+<p>Gets the list of recently used resources.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.10.6"></a><h4>Returns</h4>
+<p> a list of
+newly allocated <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> objects. Use
+<a class="link" href="GtkRecentManager.html#gtk-recent-info-unref" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-unref" title="gtk_recent_info_unrefÂ ()"><code class="function">gtk_recent_info_unref()</code></a> on each item inside the list, and then
+free the list itself using <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free'" tppabs="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GtkRecentInfo][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-manager-purge-items"></a><h3>gtk_recent_manager_purge_itemsÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_recent_manager_purge_items (<em class="parameter"><code><a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> *manager</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError'" tppabs="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Purges every item from the recently used resources list.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p> a return location for a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError'" tppabs="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.11.6"></a><h4>Returns</h4>
+<p> the number of items that have been removed from the
+recently used resources list.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-ref"></a><h3>gtk_recent_info_refÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="returnvalue">GtkRecentInfo</span></a>Â *
+gtk_recent_info_ref (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Increases the reference count of <em class="parameter"><code>recent_info</code></em>
+ by one.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.12.6"></a><h4>Returns</h4>
+<p> the recent info object with its reference count increased
+by one.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-unref"></a><h3>gtk_recent_info_unrefÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_recent_info_unref (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Decreases the reference count of <em class="parameter"><code>info</code></em>
+ by one.  If the reference
+count reaches zero, <em class="parameter"><code>info</code></em>
+ is deallocated, and the memory freed.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-uri"></a><h3>gtk_recent_info_get_uriÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_recent_info_get_uri (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Gets the URI of the resource.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.14.6"></a><h4>Returns</h4>
+<p> the URI of the resource.  The returned string is
+owned by the recent manager, and should not be freed.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-display-name"></a><h3>gtk_recent_info_get_display_nameÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_recent_info_get_display_name (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Gets the name of the resource.  If none has been defined, the basename
+of the resource is obtained.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.15.6"></a><h4>Returns</h4>
+<p> the display name of the resource.  The returned string
+is owned by the recent manager, and should not be freed.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-description"></a><h3>gtk_recent_info_get_descriptionÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_recent_info_get_description (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Gets the (short) description of the resource.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.16.6"></a><h4>Returns</h4>
+<p> the description of the resource.  The returned string
+is owned by the recent manager, and should not be freed.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-mime-type"></a><h3>gtk_recent_info_get_mime_typeÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_recent_info_get_mime_type (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Gets the MIME type of the resource.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.17.6"></a><h4>Returns</h4>
+<p> the MIME type of the resource.  The returned string
+is owned by the recent manager, and should not be freed.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-added"></a><h3>gtk_recent_info_get_addedÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">time_t</span>
+gtk_recent_info_get_added (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Gets the timestamp (seconds from systemâ€™s Epoch) when the resource
+was added to the recently used resources list.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.18.6"></a><h4>Returns</h4>
+<p> the number of seconds elapsed from systemâ€™s Epoch when
+the resource was added to the list, or -1 on failure.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-modified"></a><h3>gtk_recent_info_get_modifiedÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">time_t</span>
+gtk_recent_info_get_modified (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Gets the timestamp (seconds from systemâ€™s Epoch) when the meta-data
+for the resource was last modified.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.19.6"></a><h4>Returns</h4>
+<p> the number of seconds elapsed from systemâ€™s Epoch when
+the resource was last modified, or -1 on failure.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-visited"></a><h3>gtk_recent_info_get_visitedÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">time_t</span>
+gtk_recent_info_get_visited (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Gets the timestamp (seconds from systemâ€™s Epoch) when the meta-data
+for the resource was last visited.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.20.6"></a><h4>Returns</h4>
+<p> the number of seconds elapsed from systemâ€™s Epoch when
+the resource was last visited, or -1 on failure.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-private-hint"></a><h3>gtk_recent_info_get_private_hintÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_recent_info_get_private_hint (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Gets the value of the â€œprivateâ€ flag.  Resources in the recently used
+list that have this flag set to <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> should only be displayed by the
+applications that have registered them.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.21.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the private flag was found, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-application-info"></a><h3>gtk_recent_info_get_application_infoÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_recent_info_get_application_info (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>,
+                                      <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *app_name</code></em>,
+                                      <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **app_exec</code></em>,
+                                      <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *count</code></em>,
+                                      <em class="parameter"><code><span class="type">time_t</span> *time_</code></em>);</pre>
+<p>Gets the data regarding the application that has registered the resource
+pointed by <em class="parameter"><code>info</code></em>
+.</p>
+<p>If the command line contains any escape characters defined inside the
+storage specification, they will be expanded.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.22.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>app_name</p></td>
+<td class="parameter_description"><p>the name of the application that has registered this item</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>app_exec</p></td>
+<td class="parameter_description"><p> return location for the string containing the command line. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>count</p></td>
+<td class="parameter_description"><p> return location for the number of times this item was registered. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>time_</p></td>
+<td class="parameter_description"><p> return location for the timestamp this item was last registered
+for this application. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.22.7"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if an application with <em class="parameter"><code>app_name</code></em>
+has registered this
+resource inside the recently used list, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise. The
+<em class="parameter"><code>app_exec</code></em>
+string is owned by the <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> and should not be
+modified or freed</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-applications"></a><h3>gtk_recent_info_get_applicationsÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â **
+gtk_recent_info_get_applications (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>,
+                                  <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *length</code></em>);</pre>
+<p>Retrieves the list of applications that have registered this resource.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p> return location for the length of the returned list. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.23.6"></a><h4>Returns</h4>
+<p>    a newly allocated <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of strings.
+Use <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev'" tppabs="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a> to free it. </p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=length zero-terminated=1][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-last-application"></a><h3>gtk_recent_info_last_applicationÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_recent_info_last_application (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Gets the name of the last application that have registered the
+recently used resource represented by <em class="parameter"><code>info</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.24.6"></a><h4>Returns</h4>
+<p> an application name.  Use <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free'" tppabs="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> to free it.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-has-application"></a><h3>gtk_recent_info_has_applicationÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_recent_info_has_application (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>,
+                                 <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *app_name</code></em>);</pre>
+<p>Checks whether an application registered this resource using <em class="parameter"><code>app_name</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>app_name</p></td>
+<td class="parameter_description"><p>a string containing an application name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.25.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if an application with name <em class="parameter"><code>app_name</code></em>
+was found,
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-create-app-info"></a><h3>gtk_recent_info_create_app_infoÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GAppInfo.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GAppInfo.html'" tppabs="https://developer.gnome.org/gio/unstable/GAppInfo.html"><span class="returnvalue">GAppInfo</span></a>Â *
+gtk_recent_info_create_app_info (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>,
+                                 <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *app_name</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError'" tppabs="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Creates a <a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GAppInfo.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GAppInfo.html'" tppabs="https://developer.gnome.org/gio/unstable/GAppInfo.html"><span class="type">GAppInfo</span></a> for the specified <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>app_name</p></td>
+<td class="parameter_description"><p> the name of the application that should
+be mapped to a <a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GAppInfo.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GAppInfo.html'" tppabs="https://developer.gnome.org/gio/unstable/GAppInfo.html"><span class="type">GAppInfo</span></a>; if <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> is used then the default
+application for the MIME type is used. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p> return location for a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError'" tppabs="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.26.6"></a><h4>Returns</h4>
+<p> the newly created <a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GAppInfo.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GAppInfo.html'" tppabs="https://developer.gnome.org/gio/unstable/GAppInfo.html"><span class="type">GAppInfo</span></a>, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+In case of error, <em class="parameter"><code>error</code></em>
+will be set either with a
+<a class="link" href="GtkRecentManager.html#GTK-RECENT-MANAGER-ERROR:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GTK-RECENT-MANAGER-ERROR:CAPS" title="GTK_RECENT_MANAGER_ERROR"><code class="literal">GTK_RECENT_MANAGER_ERROR</code></a> or a <a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/gio-GIOError.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/gio-GIOError.html#G-IO-ERROR:CAPS'" tppabs="https://developer.gnome.org/gio/unstable/gio-GIOError.html#G-IO-ERROR:CAPS"><code class="literal">G_IO_ERROR</code></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-groups"></a><h3>gtk_recent_info_get_groupsÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â **
+gtk_recent_info_get_groups (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>,
+                            <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *length</code></em>);</pre>
+<p>Returns all groups registered for the recently used item <em class="parameter"><code>info</code></em>
+.  The
+array of returned group names will be <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> terminated, so length might
+optionally be <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p> return location for the number of groups returned. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.27.6"></a><h4>Returns</h4>
+<p>    a newly allocated <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> terminated array of strings.
+Use <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev'" tppabs="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a> to free it. </p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=length zero-terminated=1][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-has-group"></a><h3>gtk_recent_info_has_groupÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_recent_info_has_group (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>,
+                           <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *group_name</code></em>);</pre>
+<p>Checks whether <em class="parameter"><code>group_name</code></em>
+ appears inside the groups registered for the
+recently used item <em class="parameter"><code>info</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.28.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>group_name</p></td>
+<td class="parameter_description"><p>name of a group</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.28.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the group was found.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-icon"></a><h3>gtk_recent_info_get_iconÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf'" tppabs="https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="returnvalue">GdkPixbuf</span></a>Â *
+gtk_recent_info_get_icon (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> size</code></em>);</pre>
+<p>Retrieves the icon of size <em class="parameter"><code>size</code></em>
+ associated to the resource MIME type.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.29.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>the size of the icon in pixels</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.29.6"></a><h4>Returns</h4>
+<p> a <a href="javascript:if(confirm('https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf'" tppabs="https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a> containing the icon,
+or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. Use <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> when finished using the icon. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-gicon"></a><h3>gtk_recent_info_get_giconÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GIcon.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GIcon.html'" tppabs="https://developer.gnome.org/gio/unstable/GIcon.html"><span class="returnvalue">GIcon</span></a>Â *
+gtk_recent_info_get_gicon (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Retrieves the icon associated to the resource MIME type.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.30.6"></a><h4>Returns</h4>
+<p> a <a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GIcon.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GIcon.html'" tppabs="https://developer.gnome.org/gio/unstable/GIcon.html"><span class="type">GIcon</span></a> containing the icon, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. Use
+<a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> when finished using the icon. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.22</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-short-name"></a><h3>gtk_recent_info_get_short_nameÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_recent_info_get_short_name (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Computes a valid UTF-8 string that can be used as the name of the item in a
+menu or list.  For example, calling this function on an item that refers to
+â€œfile:///foo/bar.txtâ€ will yield â€œbar.txtâ€.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.31.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>an <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.31.6"></a><h4>Returns</h4>
+<p> A newly-allocated string in UTF-8 encoding; free it with
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free'" tppabs="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-uri-display"></a><h3>gtk_recent_info_get_uri_displayÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_recent_info_get_uri_display (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Gets a displayable version of the resourceâ€™s URI.  If the resource
+is local, it returns a local path; if the resource is not local,
+it returns the UTF-8 encoded content of <a class="link" href="GtkRecentManager.html#gtk-recent-info-get-uri" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-info-get-uri" title="gtk_recent_info_get_uriÂ ()"><code class="function">gtk_recent_info_get_uri()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.32.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.32.6"></a><h4>Returns</h4>
+<p> a newly allocated UTF-8 string containing the
+resourceâ€™s URI or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. Use <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free'" tppabs="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> when done using it.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-get-age"></a><h3>gtk_recent_info_get_ageÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_recent_info_get_age (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Gets the number of days elapsed since the last update of the resource
+pointed by <em class="parameter"><code>info</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.33.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.33.6"></a><h4>Returns</h4>
+<p> a positive integer containing the number of days elapsed
+since the time this resource was last modified.  </p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-is-local"></a><h3>gtk_recent_info_is_localÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_recent_info_is_local (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Checks whether the resource is local or not by looking at the
+scheme of its URI.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.34.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.34.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the resource is local.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-exists"></a><h3>gtk_recent_info_existsÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_recent_info_exists (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info</code></em>);</pre>
+<p>Checks whether the resource pointed by <em class="parameter"><code>info</code></em>
+ still exists.  At
+the moment this check is done only on resources pointing to local files.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.35.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.35.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the resource exists</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-recent-info-match"></a><h3>gtk_recent_info_matchÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_recent_info_match (<em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info_a</code></em>,
+                       <em class="parameter"><code><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> *info_b</code></em>);</pre>
+<p>Checks whether two <span class="type">GtkRecentInfo</span> point to the same
+resource.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.36.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>info_a</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>info_b</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.21.2.10.36.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if both <span class="type">GtkRecentInfo</span> point to se same
+resource, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkRecentManager.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkRecentManager-struct"></a><h3>struct GtkRecentManager</h3>
+<pre class="programlisting">struct GtkRecentManager;</pre>
+<p><a class="link" href="GtkRecentManager.html#GtkRecentManager-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentManager-struct" title="struct GtkRecentManager"><span class="type">GtkRecentManager</span></a> contains only private data
+and should be accessed using the provided API.</p>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkRecentInfo"></a><h3>GtkRecentInfo</h3>
+<pre class="programlisting">typedef struct _GtkRecentInfo GtkRecentInfo;</pre>
+<p><span class="type">GtkRecentInfo</span> contains private data only, and should
+be accessed using the provided API.</p>
+<p><a class="link" href="GtkRecentManager.html#GtkRecentInfo" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#GtkRecentInfo" title="GtkRecentInfo"><span class="type">GtkRecentInfo</span></a> constains all the meta-data
+associated with an entry in the recently used files list.</p>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkRecentData"></a><h3>struct GtkRecentData</h3>
+<pre class="programlisting">struct GtkRecentData {
+  gchar *display_name;
+  gchar *description;
+
+  gchar *mime_type;
+
+  gchar *app_name;
+  gchar *app_exec;
+
+  gchar **groups;
+
+  gboolean is_private;
+};
+</pre>
+<p>Meta-data to be passed to <a class="link" href="GtkRecentManager.html#gtk-recent-manager-add-full" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-add-full" title="gtk_recent_manager_add_fullÂ ()"><code class="function">gtk_recent_manager_add_full()</code></a> when
+registering a recently used resource.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.11.4.5"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="struct_members_name" width="300px"></col>
+<col class="struct_members_description"></col>
+<col class="struct_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *<em class="structfield"><code><a name="GtkRecentData.display-name"></a>display_name</code></em>;</p></td>
+<td class="struct_member_description"><p>a UTF-8 encoded string, containing the name of the recently
+used resource to be displayed, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>;</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *<em class="structfield"><code><a name="GtkRecentData.description"></a>description</code></em>;</p></td>
+<td class="struct_member_description"><p>a UTF-8 encoded string, containing a short description of
+the resource, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>;</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *<em class="structfield"><code><a name="GtkRecentData.mime-type"></a>mime_type</code></em>;</p></td>
+<td class="struct_member_description"><p>the MIME type of the resource;</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *<em class="structfield"><code><a name="GtkRecentData.app-name"></a>app_name</code></em>;</p></td>
+<td class="struct_member_description"><p>the name of the application that is registering this recently
+used resource;</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *<em class="structfield"><code><a name="GtkRecentData.app-exec"></a>app_exec</code></em>;</p></td>
+<td class="struct_member_description"><p>command line used to launch this resource; may contain the
+â€œ%fâ€ and â€œ%uâ€ escape characters which will be expanded
+to the resource file path and URI respectively when the command line
+is retrieved;</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â **<em class="structfield"><code><a name="GtkRecentData.groups"></a>groups</code></em>;</p></td>
+<td class="struct_member_description"><p>a vector of strings containing groups names;</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>Â <em class="structfield"><code><a name="GtkRecentData.is-private"></a>is_private</code></em>;</p></td>
+<td class="struct_member_description"><p>whether this resource should be displayed only by the
+applications that have registered it or not.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GTK-RECENT-MANAGER-ERROR:CAPS"></a><h3>GTK_RECENT_MANAGER_ERROR</h3>
+<pre class="programlisting">#define GTK_RECENT_MANAGER_ERRORÂ (gtk_recent_manager_error_quark ())
+</pre>
+<p>The <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError'" tppabs="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> domain for <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> errors.</p>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkRecentManagerError"></a><h3>enum GtkRecentManagerError</h3>
+<p>Error codes for <a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> operations</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.11.6.4"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="enum_members_name" width="300px"></col>
+<col class="enum_members_description"></col>
+<col class="enum_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-RECENT-MANAGER-ERROR-NOT-FOUND:CAPS"></a>GTK_RECENT_MANAGER_ERROR_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>the URI specified does not exists in
+  the recently used resources list.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-RECENT-MANAGER-ERROR-INVALID-URI:CAPS"></a>GTK_RECENT_MANAGER_ERROR_INVALID_URI</p></td>
+<td class="enum_member_description">
+<p>the URI specified is not valid.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-RECENT-MANAGER-ERROR-INVALID-ENCODING:CAPS"></a>GTK_RECENT_MANAGER_ERROR_INVALID_ENCODING</p></td>
+<td class="enum_member_description">
+<p>the supplied string is not
+  UTF-8 encoded.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-RECENT-MANAGER-ERROR-NOT-REGISTERED:CAPS"></a>GTK_RECENT_MANAGER_ERROR_NOT_REGISTERED</p></td>
+<td class="enum_member_description">
+<p>no application has registered
+  the specified item.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-RECENT-MANAGER-ERROR-READ:CAPS"></a>GTK_RECENT_MANAGER_ERROR_READ</p></td>
+<td class="enum_member_description">
+<p>failure while reading the recently used
+  resources file.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-RECENT-MANAGER-ERROR-WRITE:CAPS"></a>GTK_RECENT_MANAGER_ERROR_WRITE</p></td>
+<td class="enum_member_description">
+<p>failure while writing the recently used
+  resources file.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-RECENT-MANAGER-ERROR-UNKNOWN:CAPS"></a>GTK_RECENT_MANAGER_ERROR_UNKNOWN</p></td>
+<td class="enum_member_description">
+<p>unspecified error.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkRecentManager.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GtkRecentManager--filename"></a><h3>The <code class="literal">â€œfilenameâ€</code> property</h3>
+<pre class="programlisting">  â€œfilenameâ€                 <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</pre>
+<p>The full path to the file to be used to store and read the recently
+used resources list</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: NULL</p>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkRecentManager--size"></a><h3>The <code class="literal">â€œsizeâ€</code> property</h3>
+<pre class="programlisting">  â€œsizeâ€                     <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>The size of the recently used resources list.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: 0</p>
+<p class="since">Since 2.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkRecentManager.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GtkRecentManager-changed"></a><h3>The <code class="literal">â€œchangedâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html" title="GtkRecentManager"><span class="type">GtkRecentManager</span></a> *recent_manager,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          user_data)</pre>
+<p>Emitted when the current recently used resources manager changes its
+contents, either by calling <a class="link" href="GtkRecentManager.html#gtk-recent-manager-add-item" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html#gtk-recent-manager-add-item" title="gtk_recent_manager_add_itemÂ ()"><code class="function">gtk_recent_manager_add_item()</code></a> or by another
+application.</p>
+<div class="refsect3">
+<a name="id-1.3.21.2.13.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>recent_manager</p></td>
+<td class="parameter_description"><p>the recent manager</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+<p class="since">Since 2.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkRecentManager.see-also"></a><h2>See Also</h2>
+<p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Bookmark-file-parser.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Bookmark-file-parser.html#GBookmarkFile'" tppabs="https://developer.gnome.org/glib/unstable/glib-Bookmark-file-parser.html#GBookmarkFile"><span class="type">GBookmarkFile</span></a>, <a class="link" href="GtkSettings.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSettings.html" title="Settings"><span class="type">GtkSettings</span></a>, <a class="link" href="GtkRecentChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentChooser.html" title="GtkRecentChooser"><span class="type">GtkRecentChooser</span></a></p>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

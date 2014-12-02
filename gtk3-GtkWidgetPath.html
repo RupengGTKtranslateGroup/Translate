@@ -1,0 +1,1758 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: GtkWidgetPath</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="theming.html" rel="up" title="PartÂ IV.Â Theming in GTK+"></link><link href="GtkThemingEngine.html" rel="prev" title="GtkThemingEngine"></link><link href="GtkIconTheme.html" rel="next" title="GtkIconTheme"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#gtk3-GtkWidgetPath.description">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="theming.html" tppabs="https://developer.gnome.org/gtk3/stable/theming.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="GtkIconTheme.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkIconTheme.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="gtk3-GtkWidgetPath"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gtk3-GtkWidgetPath.top_of_page"></a>GtkWidgetPath</span></h2>
+<p>GtkWidgetPath â€” Widget path abstraction</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="gtk3-GtkWidgetPath.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-append-type" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-append-type" title="gtk_widget_path_append_typeÂ ()">gtk_widget_path_append_type</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-append-with-siblings" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-append-with-siblings" title="gtk_widget_path_append_with_siblingsÂ ()">gtk_widget_path_append_with_siblings</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-append-for-widget" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-append-for-widget" title="gtk_widget_path_append_for_widgetÂ ()">gtk_widget_path_append_for_widget</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="returnvalue">GtkWidgetPath</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-copy" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-copy" title="gtk_widget_path_copyÂ ()">gtk_widget_path_copy</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="returnvalue">GtkWidgetPath</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-ref" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-ref" title="gtk_widget_path_refÂ ()">gtk_widget_path_ref</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-unref" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-unref" title="gtk_widget_path_unrefÂ ()">gtk_widget_path_unref</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-free" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-free" title="gtk_widget_path_freeÂ ()">gtk_widget_path_free</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-get-object-type" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-get-object-type" title="gtk_widget_path_get_object_typeÂ ()">gtk_widget_path_get_object_type</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-has-parent" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-has-parent" title="gtk_widget_path_has_parentÂ ()">gtk_widget_path_has_parent</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-is-type" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-is-type" title="gtk_widget_path_is_typeÂ ()">gtk_widget_path_is_type</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-add-class" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-add-class" title="gtk_widget_path_iter_add_classÂ ()">gtk_widget_path_iter_add_class</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-add-region" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-add-region" title="gtk_widget_path_iter_add_regionÂ ()">gtk_widget_path_iter_add_region</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-clear-classes" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-clear-classes" title="gtk_widget_path_iter_clear_classesÂ ()">gtk_widget_path_iter_clear_classes</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-clear-regions" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-clear-regions" title="gtk_widget_path_iter_clear_regionsÂ ()">gtk_widget_path_iter_clear_regions</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-get-name" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-get-name" title="gtk_widget_path_iter_get_nameÂ ()">gtk_widget_path_iter_get_name</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-get-object-type" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-get-object-type" title="gtk_widget_path_iter_get_object_typeÂ ()">gtk_widget_path_iter_get_object_type</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="returnvalue">GtkWidgetPath</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-get-siblings" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-get-siblings" title="gtk_widget_path_iter_get_siblingsÂ ()">gtk_widget_path_iter_get_siblings</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-get-sibling-index" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-get-sibling-index" title="gtk_widget_path_iter_get_sibling_indexÂ ()">gtk_widget_path_iter_get_sibling_index</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-class" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-class" title="gtk_widget_path_iter_has_classÂ ()">gtk_widget_path_iter_has_class</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-name" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-name" title="gtk_widget_path_iter_has_nameÂ ()">gtk_widget_path_iter_has_name</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-qclass" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-qclass" title="gtk_widget_path_iter_has_qclassÂ ()">gtk_widget_path_iter_has_qclass</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-qname" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-qname" title="gtk_widget_path_iter_has_qnameÂ ()">gtk_widget_path_iter_has_qname</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-qregion" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-qregion" title="gtk_widget_path_iter_has_qregionÂ ()">gtk_widget_path_iter_has_qregion</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-region" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-region" title="gtk_widget_path_iter_has_regionÂ ()">gtk_widget_path_iter_has_region</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-list-classes" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-list-classes" title="gtk_widget_path_iter_list_classesÂ ()">gtk_widget_path_iter_list_classes</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-list-regions" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-list-regions" title="gtk_widget_path_iter_list_regionsÂ ()">gtk_widget_path_iter_list_regions</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-remove-class" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-remove-class" title="gtk_widget_path_iter_remove_classÂ ()">gtk_widget_path_iter_remove_class</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-remove-region" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-remove-region" title="gtk_widget_path_iter_remove_regionÂ ()">gtk_widget_path_iter_remove_region</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-set-name" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-set-name" title="gtk_widget_path_iter_set_nameÂ ()">gtk_widget_path_iter_set_name</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-set-object-type" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-set-object-type" title="gtk_widget_path_iter_set_object_typeÂ ()">gtk_widget_path_iter_set_object_type</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-length" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-length" title="gtk_widget_path_lengthÂ ()">gtk_widget_path_length</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="returnvalue">GtkWidgetPath</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-new" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-new" title="gtk_widget_path_newÂ ()">gtk_widget_path_new</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-prepend-type" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-prepend-type" title="gtk_widget_path_prepend_typeÂ ()">gtk_widget_path_prepend_type</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">char</span>Â *
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-to-string" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-to-string" title="gtk_widget_path_to_stringÂ ()">gtk_widget_path_to_string</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gtk3-GtkWidgetPath.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">Â </td>
+<td class="function_name"><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath">GtkWidgetPath</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gtk3-GtkWidgetPath.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="gtk3-GtkWidgetPath.description"></a><h2>Description</h2>
+<p>GtkWidgetPath is a boxed type that represents a widget hierarchy from
+the topmost widget, typically a toplevel, to any child. This widget
+path abstraction is used in <a class="link" href="GtkStyleContext.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html" title="GtkStyleContext"><span class="type">GtkStyleContext</span></a> on behalf of the real
+widget in order to query style information.</p>
+<p>If you are using GTK+ widgets, you probably will not need to use
+this API directly, as there is <a class="link" href="GtkWidget.html#gtk-widget-get-path" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#gtk-widget-get-path" title="gtk_widget_get_pathÂ ()"><code class="function">gtk_widget_get_path()</code></a>, and the style
+context returned by <a class="link" href="GtkWidget.html#gtk-widget-get-style-context" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#gtk-widget-get-style-context" title="gtk_widget_get_style_contextÂ ()"><code class="function">gtk_widget_get_style_context()</code></a> will be automatically
+updated on widget hierarchy changes.</p>
+<p>The widget path generation is generally simple:</p>
+<div class="refsect3">
+<a name="id-1.5.7.6.5"></a><h4>Defining a button within a window</h4>
+<div class="informalexample">
+  <table border="0" cellpadding="0" cellspacing="0" class="listing_frame">
+    <tbody>
+      <tr>
+        <td align="right" class="listing_lines"><pre>1
+2
+3
+4
+5
+6
+7</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="cbracket">{</span>
+<span class="normal">  </span><span class="usertype">GtkWidgetPath</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">path</span><span class="symbol">;</span>
+
+<span class="normal">  path </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="gtk3-GtkWidgetPath.html#gtk-widget-path-new" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-new">gtk_widget_path_new</a></span><span class="normal"> </span><span class="symbol">();</span>
+<span class="normal">  </span><span class="function"><a href="gtk3-GtkWidgetPath.html#gtk-widget-path-append-type" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-append-type">gtk_widget_path_append_type</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">path</span><span class="symbol">,</span><span class="normal"> GTK_TYPE_WINDOW</span><span class="symbol">);</span>
+<span class="normal">  </span><span class="function"><a href="gtk3-GtkWidgetPath.html#gtk-widget-path-append-type" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-append-type">gtk_widget_path_append_type</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">path</span><span class="symbol">,</span><span class="normal"> GTK_TYPE_BUTTON</span><span class="symbol">);</span>
+<span class="cbracket">}</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p>Although more complex information, such as widget names, or
+different classes (property that may be used by other widget
+types) and intermediate regions may be included:</p>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.6.6"></a><h4>Defining the first tab widget in a notebook</h4>
+<div class="informalexample">
+  <table border="0" cellpadding="0" cellspacing="0" class="listing_frame">
+    <tbody>
+      <tr>
+        <td align="right" class="listing_lines"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="cbracket">{</span>
+<span class="normal">  </span><span class="usertype">GtkWidgetPath</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">path</span><span class="symbol">;</span>
+<span class="normal">  </span><span class="usertype">guint</span><span class="normal"> pos</span><span class="symbol">;</span>
+
+<span class="normal">  path </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="gtk3-GtkWidgetPath.html#gtk-widget-path-new" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-new">gtk_widget_path_new</a></span><span class="normal"> </span><span class="symbol">();</span>
+
+<span class="normal">  pos </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="gtk3-GtkWidgetPath.html#gtk-widget-path-append-type" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-append-type">gtk_widget_path_append_type</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">path</span><span class="symbol">,</span><span class="normal"> GTK_TYPE_NOTEBOOK</span><span class="symbol">);</span>
+<span class="normal">  </span><span class="function"><a href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-add-region" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-add-region">gtk_widget_path_iter_add_region</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">path</span><span class="symbol">,</span><span class="normal"> pos</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"tab"</span><span class="symbol">,</span><span class="normal"> GTK_REGION_EVEN </span><span class="symbol">|</span><span class="normal"> GTK_REGION_FIRST</span><span class="symbol">);</span>
+
+<span class="normal">  pos </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="gtk3-GtkWidgetPath.html#gtk-widget-path-append-type" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-append-type">gtk_widget_path_append_type</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">path</span><span class="symbol">,</span><span class="normal"> GTK_TYPE_LABEL</span><span class="symbol">);</span>
+<span class="normal">  </span><span class="function"><a href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-set-name" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-set-name">gtk_widget_path_iter_set_name</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">path</span><span class="symbol">,</span><span class="normal"> pos</span><span class="symbol">,</span><span class="normal"> </span><span class="string">"first tab label"</span><span class="symbol">);</span>
+<span class="cbracket">}</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p>All this information will be used to match the style information
+that applies to the described widget.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gtk3-GtkWidgetPath.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-widget-path-append-type"></a><h3>gtk_widget_path_append_typeÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_widget_path_append_type (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                             <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>);</pre>
+<p>Appends a widget type to the widget hierarchy represented by <em class="parameter"><code>path</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>widget type to append</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.2.6"></a><h4>Returns</h4>
+<p> the position where the element was inserted</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-append-with-siblings"></a><h3>gtk_widget_path_append_with_siblingsÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_widget_path_append_with_siblings (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                      <em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *siblings</code></em>,
+                                      <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> sibling_index</code></em>);</pre>
+<p>Appends a widget type with all its siblings to the widget hierarchy
+represented by <em class="parameter"><code>path</code></em>
+. Using this function instead of
+<a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-append-type" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-append-type" title="gtk_widget_path_append_typeÂ ()"><code class="function">gtk_widget_path_append_type()</code></a> will allow the CSS theming to use
+sibling matches in selectors and apply :nth-<a class="link" href="glossary.html#child" tppabs="https://developer.gnome.org/gtk3/stable/glossary.html#child" title="child"><code class="function">child()</code></a> pseudo classes.
+In turn, it requires a lot more care in widget implementations as
+widgets need to make sure to call <a class="link" href="GtkWidget.html#gtk-widget-reset-style" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#gtk-widget-reset-style" title="gtk_widget_reset_styleÂ ()"><code class="function">gtk_widget_reset_style()</code></a> on all
+involved widgets when the <em class="parameter"><code>siblings</code></em>
+ path changes.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>the widget path to append to</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>siblings</p></td>
+<td class="parameter_description"><p>a widget path describing a list of siblings. This path
+may not contain any siblings itself and it must not be modified
+afterwards.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sibling_index</p></td>
+<td class="parameter_description"><p>index into <em class="parameter"><code>siblings</code></em>
+for where the added element is
+positioned.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.3.6"></a><h4>Returns</h4>
+<p> the position where the element was inserted.</p>
+<p></p>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-append-for-widget"></a><h3>gtk_widget_path_append_for_widgetÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_widget_path_append_for_widget (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                   <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>);</pre>
+<p>Appends the data from <em class="parameter"><code>widget</code></em>
+ to the widget hierarchy represented
+by <em class="parameter"><code>path</code></em>
+. This function is a shortcut for adding information from
+<em class="parameter"><code>widget</code></em>
+ to the given <em class="parameter"><code>path</code></em>
+. This includes setting the name or
+adding the style classes from <em class="parameter"><code>widget</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a widget path</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>the widget to append to the widget path</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.4.6"></a><h4>Returns</h4>
+<p> the position where the data was inserted</p>
+<p></p>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-copy"></a><h3>gtk_widget_path_copyÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="returnvalue">GtkWidgetPath</span></a>Â *
+gtk_widget_path_copy (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>);</pre>
+<p>Returns a copy of <em class="parameter"><code>path</code></em>
+</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.5.6"></a><h4>Returns</h4>
+<p> a copy of <em class="parameter"><code>path</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-ref"></a><h3>gtk_widget_path_refÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="returnvalue">GtkWidgetPath</span></a>Â *
+gtk_widget_path_ref (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>);</pre>
+<p>Increments the reference count on <em class="parameter"><code>path</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.6.6"></a><h4>Returns</h4>
+<p> <em class="parameter"><code>path</code></em>
+itself.</p>
+<p></p>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-unref"></a><h3>gtk_widget_path_unrefÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_widget_path_unref (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>);</pre>
+<p>Decrements the reference count on <em class="parameter"><code>path</code></em>
+, freeing the structure
+if the reference count reaches 0.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-free"></a><h3>gtk_widget_path_freeÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_widget_path_free (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>);</pre>
+<p>Decrements the reference count on <em class="parameter"><code>path</code></em>
+, freeing the structure
+if the reference count reaches 0.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-get-object-type"></a><h3>gtk_widget_path_get_object_typeÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>
+gtk_widget_path_get_object_type (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>);</pre>
+<p>Returns the topmost object type, that is, the object type this path
+is representing.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.9.6"></a><h4>Returns</h4>
+<p> The object type</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-has-parent"></a><h3>gtk_widget_path_has_parentÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_widget_path_has_parent (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                            <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>);</pre>
+<p>Returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if any of the parents of the widget represented
+in <em class="parameter"><code>path</code></em>
+ is of type <em class="parameter"><code>type</code></em>
+, or any subtype of it.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>widget type to check in parents</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.10.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if any parent is of type <em class="parameter"><code>type</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-is-type"></a><h3>gtk_widget_path_is_typeÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_widget_path_is_type (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                         <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>);</pre>
+<p>Returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget type represented by this path
+is <em class="parameter"><code>type</code></em>
+, or a subtype of it.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>widget type to match</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.11.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget represented by <em class="parameter"><code>path</code></em>
+is of type <em class="parameter"><code>type</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-add-class"></a><h3>gtk_widget_path_iter_add_classÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_widget_path_iter_add_class (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>,
+                                <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>Adds the class <em class="parameter"><code>name</code></em>
+ to the widget at position <em class="parameter"><code>pos</code></em>
+ in
+the hierarchy defined in <em class="parameter"><code>path</code></em>
+. See
+<a class="link" href="GtkStyleContext.html#gtk-style-context-add-class" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#gtk-style-context-add-class" title="gtk_style_context_add_classÂ ()"><code class="function">gtk_style_context_add_class()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to modify, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>a class name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-add-region"></a><h3>gtk_widget_path_iter_add_regionÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_widget_path_iter_add_region (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>,
+                                 <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                 <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkRegionFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkRegionFlags" title="enum GtkRegionFlags"><span class="type">GtkRegionFlags</span></a> flags</code></em>);</pre>
+<p>Adds the region <em class="parameter"><code>name</code></em>
+ to the widget at position <em class="parameter"><code>pos</code></em>
+ in
+the hierarchy defined in <em class="parameter"><code>path</code></em>
+. See
+<a class="link" href="GtkStyleContext.html#gtk-style-context-add-region" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#gtk-style-context-add-region" title="gtk_style_context_add_regionÂ ()"><code class="function">gtk_style_context_add_region()</code></a>.</p>
+<p>Region names must only contain lowercase letters
+and â€œ-â€, starting always with a lowercase letter.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.13.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to modify, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>region name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>flags affecting the region</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-clear-classes"></a><h3>gtk_widget_path_iter_clear_classesÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_widget_path_iter_clear_classes (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                    <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>);</pre>
+<p>Removes all classes from the widget at position <em class="parameter"><code>pos</code></em>
+ in the
+hierarchy defined in <em class="parameter"><code>path</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to modify, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-clear-regions"></a><h3>gtk_widget_path_iter_clear_regionsÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_widget_path_iter_clear_regions (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                    <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>);</pre>
+<p>Removes all regions from the widget at position <em class="parameter"><code>pos</code></em>
+ in the
+hierarchy defined in <em class="parameter"><code>path</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to modify, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-get-name"></a><h3>gtk_widget_path_iter_get_nameÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_widget_path_iter_get_name (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                               <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>);</pre>
+<p>Returns the name corresponding to the widget found at
+the position <em class="parameter"><code>pos</code></em>
+ in the widget hierarchy defined by
+<em class="parameter"><code>path</code></em>
+</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to get the widget name for, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.16.6"></a><h4>Returns</h4>
+<p> The widget name, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none was set.</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-get-object-type"></a><h3>gtk_widget_path_iter_get_object_typeÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>
+gtk_widget_path_iter_get_object_type (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                      <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>);</pre>
+<p>Returns the object <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> that is at position <em class="parameter"><code>pos</code></em>
+ in the widget
+hierarchy defined in <em class="parameter"><code>path</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to get the object type for, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.17.6"></a><h4>Returns</h4>
+<p> a widget type</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-get-siblings"></a><h3>gtk_widget_path_iter_get_siblingsÂ ()</h3>
+<pre class="programlisting">const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="returnvalue">GtkWidgetPath</span></a>Â *
+gtk_widget_path_iter_get_siblings (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                   <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>);</pre>
+<p>Returns the list of siblings for the element at <em class="parameter"><code>pos</code></em>
+. If the element
+was not added with siblings, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to get the siblings for, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.18.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> or the list of siblings for the element at <em class="parameter"><code>pos</code></em>
+.</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-get-sibling-index"></a><h3>gtk_widget_path_iter_get_sibling_indexÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+gtk_widget_path_iter_get_sibling_index
+                               (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>);</pre>
+<p>Returns the index into the list of siblings for the element at <em class="parameter"><code>pos</code></em>
+ as
+returned by <a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-get-siblings" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-get-siblings" title="gtk_widget_path_iter_get_siblingsÂ ()"><code class="function">gtk_widget_path_iter_get_siblings()</code></a>. If that function would
+return <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> because the element at <em class="parameter"><code>pos</code></em>
+ has no siblings, this function
+will return 0.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to get the sibling index for, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.19.6"></a><h4>Returns</h4>
+<p> 0 or the index into the list of siblings for the element at <em class="parameter"><code>pos</code></em>
+.</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-has-class"></a><h3>gtk_widget_path_iter_has_classÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_widget_path_iter_has_class (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>,
+                                <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>Returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget at position <em class="parameter"><code>pos</code></em>
+ has the class <em class="parameter"><code>name</code></em>
+
+defined, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to query, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>class name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.20.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the class <em class="parameter"><code>name</code></em>
+is defined for the widget at <em class="parameter"><code>pos</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-has-name"></a><h3>gtk_widget_path_iter_has_nameÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_widget_path_iter_has_name (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                               <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>,
+                               <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>Returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget at position <em class="parameter"><code>pos</code></em>
+ has the name <em class="parameter"><code>name</code></em>
+,
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to query, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>a widget name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.21.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget at <em class="parameter"><code>pos</code></em>
+has this name</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-has-qclass"></a><h3>gtk_widget_path_iter_has_qclassÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_widget_path_iter_has_qclass (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Quarks.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark'" tppabs="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a> qname</code></em>);</pre>
+<p>See <a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-class" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-class" title="gtk_widget_path_iter_has_classÂ ()"><code class="function">gtk_widget_path_iter_has_class()</code></a>. This is a version that operates
+with GQuarks.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to query, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>qname</p></td>
+<td class="parameter_description"><p>class name as a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Quarks.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark'" tppabs="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.22.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget at <em class="parameter"><code>pos</code></em>
+has the class defined.</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-has-qname"></a><h3>gtk_widget_path_iter_has_qnameÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_widget_path_iter_has_qname (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Quarks.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark'" tppabs="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a> qname</code></em>);</pre>
+<p>See <a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-name" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-name" title="gtk_widget_path_iter_has_nameÂ ()"><code class="function">gtk_widget_path_iter_has_name()</code></a>. This is a version
+that operates on <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Quarks.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark'" tppabs="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuarks</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to query, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>qname</p></td>
+<td class="parameter_description"><p>widget name as a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Quarks.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark'" tppabs="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.23.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget at <em class="parameter"><code>pos</code></em>
+has this name</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-has-qregion"></a><h3>gtk_widget_path_iter_has_qregionÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_widget_path_iter_has_qregion (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                  <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>,
+                                  <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Quarks.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark'" tppabs="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a> qname</code></em>,
+                                  <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkRegionFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkRegionFlags" title="enum GtkRegionFlags"><span class="type">GtkRegionFlags</span></a> *flags</code></em>);</pre>
+<p>See <a class="link" href="gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-region" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#gtk-widget-path-iter-has-region" title="gtk_widget_path_iter_has_regionÂ ()"><code class="function">gtk_widget_path_iter_has_region()</code></a>. This is a version that operates
+with GQuarks.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to query, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>qname</p></td>
+<td class="parameter_description"><p>region name as a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Quarks.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark'" tppabs="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p> return location for the region flags. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.24.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget at <em class="parameter"><code>pos</code></em>
+has the region defined.</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-has-region"></a><h3>gtk_widget_path_iter_has_regionÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_widget_path_iter_has_region (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>,
+                                 <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                 <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkRegionFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkRegionFlags" title="enum GtkRegionFlags"><span class="type">GtkRegionFlags</span></a> *flags</code></em>);</pre>
+<p>Returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the widget at position <em class="parameter"><code>pos</code></em>
+ has the class <em class="parameter"><code>name</code></em>
+
+defined, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to query, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>region name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p> return location for the region flags. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.25.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the class <em class="parameter"><code>name</code></em>
+is defined for the widget at <em class="parameter"><code>pos</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-list-classes"></a><h3>gtk_widget_path_iter_list_classesÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a>Â *
+gtk_widget_path_iter_list_classes (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                   <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>);</pre>
+<p>Returns a list with all the class names defined for the widget
+at position <em class="parameter"><code>pos</code></em>
+ in the hierarchy defined in <em class="parameter"><code>path</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to query, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.26.6"></a><h4>Returns</h4>
+<p> The list of
+classes, This is a list of strings, the <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> contents
+are owned by GTK+, but you should use <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free"><code class="function">g_slist_free()</code></a> to
+free the list itself. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-list-regions"></a><h3>gtk_widget_path_iter_list_regionsÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a>Â *
+gtk_widget_path_iter_list_regions (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                   <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>);</pre>
+<p>Returns a list with all the region names defined for the widget
+at position <em class="parameter"><code>pos</code></em>
+ in the hierarchy defined in <em class="parameter"><code>path</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to query, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.27.6"></a><h4>Returns</h4>
+<p> The list of
+regions, This is a list of strings, the <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> contents
+are owned by GTK+, but you should use <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free"><code class="function">g_slist_free()</code></a> to
+free the list itself. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-remove-class"></a><h3>gtk_widget_path_iter_remove_classÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_widget_path_iter_remove_class (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                   <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>,
+                                   <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>Removes the class <em class="parameter"><code>name</code></em>
+ from the widget at position <em class="parameter"><code>pos</code></em>
+ in
+the hierarchy defined in <em class="parameter"><code>path</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.28.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to modify, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>class name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-remove-region"></a><h3>gtk_widget_path_iter_remove_regionÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_widget_path_iter_remove_region (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                    <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>,
+                                    <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>Removes the region <em class="parameter"><code>name</code></em>
+ from the widget at position <em class="parameter"><code>pos</code></em>
+ in
+the hierarchy defined in <em class="parameter"><code>path</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.29.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to modify, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>region name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-set-name"></a><h3>gtk_widget_path_iter_set_nameÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_widget_path_iter_set_name (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                               <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>,
+                               <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>Sets the widget name for the widget found at position <em class="parameter"><code>pos</code></em>
+
+in the widget hierarchy defined by <em class="parameter"><code>path</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to modify, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>widget name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-iter-set-object-type"></a><h3>gtk_widget_path_iter_set_object_typeÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_widget_path_iter_set_object_type (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                                      <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>,
+                                      <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>);</pre>
+<p>Sets the object type for a given position in the widget hierarchy
+defined by <em class="parameter"><code>path</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.31.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>position to modify, -1 for the path head</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>object type to set</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-length"></a><h3>gtk_widget_path_lengthÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_widget_path_length (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>);</pre>
+<p>Returns the number of <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GTypes</span></a> between the represented
+widget and its topmost container.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.32.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.32.6"></a><h4>Returns</h4>
+<p> the number of elements in the path</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-new"></a><h3>gtk_widget_path_newÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="returnvalue">GtkWidgetPath</span></a>Â *
+gtk_widget_path_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Returns an empty widget path.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.33.5"></a><h4>Returns</h4>
+<p> A newly created, empty, <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-prepend-type"></a><h3>gtk_widget_path_prepend_typeÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_widget_path_prepend_type (<em class="parameter"><code><a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>,
+                              <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>);</pre>
+<p>Prepends a widget type to the widget hierachy represented by <em class="parameter"><code>path</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.34.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>widget type to prepend</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-widget-path-to-string"></a><h3>gtk_widget_path_to_stringÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span>Â *
+gtk_widget_path_to_string (<em class="parameter"><code>const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a> *path</code></em>);</pre>
+<p>Dumps the widget path into a string representation. It tries to match
+the CSS style as closely as possible (Note that there might be paths
+that cannot be represented in CSS).</p>
+<p>The main use of this code is for debugging purposes, so that you can
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Warnings-and-Assertions.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Warnings-and-Assertions.html#g-print'" tppabs="https://developer.gnome.org/glib/unstable/glib-Warnings-and-Assertions.html#g-print"><code class="function">g_print()</code></a> the path or dump it in a gdb session.</p>
+<div class="refsect3">
+<a name="id-1.5.7.7.35.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>the path</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.7.7.35.7"></a><h4>Returns</h4>
+<p> A new string describing <em class="parameter"><code>path</code></em>
+.</p>
+<p></p>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gtk3-GtkWidgetPath.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkWidgetPath"></a><h3>GtkWidgetPath</h3>
+<pre class="programlisting">typedef struct _GtkWidgetPath GtkWidgetPath;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="gtk3-GtkWidgetPath.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GtkStyleContext.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html" title="GtkStyleContext"><span class="type">GtkStyleContext</span></a></p>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

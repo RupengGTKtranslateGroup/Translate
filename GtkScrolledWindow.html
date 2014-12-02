@@ -1,0 +1,1487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: GtkScrolledWindow</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="ScrollingWidgets.html" rel="up" title="Scrolling"></link><link href="GtkScrollbar.html" rel="prev" title="GtkScrollbar"></link><link href="GtkScrollable.html" rel="next" title="GtkScrollable"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkScrolledWindow.description">Description</a></span><span id="nav_hierarchy">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkScrolledWindow.object-hierarchy">Object Hierarchy</a></span><span id="nav_interfaces">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkScrolledWindow.implemented-interfaces">Implemented Interfaces</a></span><span id="nav_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkScrolledWindow.properties">Properties</a></span><span id="nav_style_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkScrolledWindow.style-properties">Style Properties</a></span><span id="nav_signals">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkScrolledWindow.signals">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="ScrollingWidgets.html" tppabs="https://developer.gnome.org/gtk3/stable/ScrollingWidgets.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="GtkScrollbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrollbar.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="GtkScrollable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrollable.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="GtkScrolledWindow"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkScrolledWindow.top_of_page"></a>GtkScrolledWindow</span></h2>
+<p>GtkScrolledWindow â€” Adds scrollbars to its child widget</p>
+</td>
+<td align="right" class="gallery_image" valign="top"><img src="scrolledwindow.png" tppabs="https://developer.gnome.org/gtk3/stable/scrolledwindow.png"></img></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-new" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-new" title="gtk_scrolled_window_newÂ ()">gtk_scrolled_window_new</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="returnvalue">GtkAdjustment</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-hadjustment" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-hadjustment" title="gtk_scrolled_window_get_hadjustmentÂ ()">gtk_scrolled_window_get_hadjustment</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="returnvalue">GtkAdjustment</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-vadjustment" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-vadjustment" title="gtk_scrolled_window_get_vadjustmentÂ ()">gtk_scrolled_window_get_vadjustment</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-hscrollbar" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-hscrollbar" title="gtk_scrolled_window_get_hscrollbarÂ ()">gtk_scrolled_window_get_hscrollbar</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-vscrollbar" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-vscrollbar" title="gtk_scrolled_window_get_vscrollbarÂ ()">gtk_scrolled_window_get_vscrollbar</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-policy" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-policy" title="gtk_scrolled_window_set_policyÂ ()">gtk_scrolled_window_set_policy</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-add-with-viewport" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-add-with-viewport" title="gtk_scrolled_window_add_with_viewportÂ ()">gtk_scrolled_window_add_with_viewport</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-placement" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-placement" title="gtk_scrolled_window_set_placementÂ ()">gtk_scrolled_window_set_placement</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-unset-placement" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-unset-placement" title="gtk_scrolled_window_unset_placementÂ ()">gtk_scrolled_window_unset_placement</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-shadow-type" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-shadow-type" title="gtk_scrolled_window_set_shadow_typeÂ ()">gtk_scrolled_window_set_shadow_type</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-hadjustment" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-hadjustment" title="gtk_scrolled_window_set_hadjustmentÂ ()">gtk_scrolled_window_set_hadjustment</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-vadjustment" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-vadjustment" title="gtk_scrolled_window_set_vadjustmentÂ ()">gtk_scrolled_window_set_vadjustment</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Standard-Enumerations.html#GtkCornerType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkCornerType" title="enum GtkCornerType"><span class="returnvalue">GtkCornerType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-placement" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-placement" title="gtk_scrolled_window_get_placementÂ ()">gtk_scrolled_window_get_placement</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-policy" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-policy" title="gtk_scrolled_window_get_policyÂ ()">gtk_scrolled_window_get_policy</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Standard-Enumerations.html#GtkShadowType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkShadowType" title="enum GtkShadowType"><span class="returnvalue">GtkShadowType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-shadow-type" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-shadow-type" title="gtk_scrolled_window_get_shadow_typeÂ ()">gtk_scrolled_window_get_shadow_type</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-min-content-width" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-min-content-width" title="gtk_scrolled_window_get_min_content_widthÂ ()">gtk_scrolled_window_get_min_content_width</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-min-content-width" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-min-content-width" title="gtk_scrolled_window_set_min_content_widthÂ ()">gtk_scrolled_window_set_min_content_width</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-min-content-height" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-min-content-height" title="gtk_scrolled_window_get_min_content_heightÂ ()">gtk_scrolled_window_get_min_content_height</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-min-content-height" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-min-content-height" title="gtk_scrolled_window_set_min_content_heightÂ ()">gtk_scrolled_window_set_min_content_height</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-kinetic-scrolling" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-kinetic-scrolling" title="gtk_scrolled_window_set_kinetic_scrollingÂ ()">gtk_scrolled_window_set_kinetic_scrolling</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-kinetic-scrolling" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-kinetic-scrolling" title="gtk_scrolled_window_get_kinetic_scrollingÂ ()">gtk_scrolled_window_get_kinetic_scrolling</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-capture-button-press" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-capture-button-press" title="gtk_scrolled_window_set_capture_button_pressÂ ()">gtk_scrolled_window_set_capture_button_press</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-capture-button-press" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-capture-button-press" title="gtk_scrolled_window_get_capture_button_pressÂ ()">gtk_scrolled_window_get_capture_button_press</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="properties_type" width="150px"></col>
+<col class="properties_name" width="300px"></col>
+<col class="properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--hadjustment" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--hadjustment" title="The â€œhadjustmentâ€ property">hadjustment</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="gtk3-Standard-Enumerations.html#GtkPolicyType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPolicyType" title="enum GtkPolicyType"><span class="type">GtkPolicyType</span></a></td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--hscrollbar-policy" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--hscrollbar-policy" title="The â€œhscrollbar-policyâ€ property">hscrollbar-policy</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--kinetic-scrolling" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--kinetic-scrolling" title="The â€œkinetic-scrollingâ€ property">kinetic-scrolling</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--min-content-height" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--min-content-height" title="The â€œmin-content-heightâ€ property">min-content-height</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--min-content-width" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--min-content-width" title="The â€œmin-content-widthâ€ property">min-content-width</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="gtk3-Standard-Enumerations.html#GtkShadowType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkShadowType" title="enum GtkShadowType"><span class="type">GtkShadowType</span></a></td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--shadow-type" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--shadow-type" title="The â€œshadow-typeâ€ property">shadow-type</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--vadjustment" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--vadjustment" title="The â€œvadjustmentâ€ property">vadjustment</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="gtk3-Standard-Enumerations.html#GtkPolicyType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPolicyType" title="enum GtkPolicyType"><span class="type">GtkPolicyType</span></a></td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--vscrollbar-policy" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--vscrollbar-policy" title="The â€œvscrollbar-policyâ€ property">vscrollbar-policy</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="gtk3-Standard-Enumerations.html#GtkCornerType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkCornerType" title="enum GtkCornerType"><span class="type">GtkCornerType</span></a></td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--window-placement" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--window-placement" title="The â€œwindow-placementâ€ property">window-placement</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--window-placement-set" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--window-placement-set" title="The â€œwindow-placement-setâ€ property">window-placement-set</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.style-properties"></a><h2>Style Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="style_properties_type" width="150px"></col>
+<col class="style_properties_name" width="300px"></col>
+<col class="style_properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--s-scrollbar-spacing" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--s-scrollbar-spacing" title="The â€œscrollbar-spacingâ€ style property">scrollbar-spacing</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--s-scrollbars-within-bevel" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--s-scrollbars-within-bevel" title="The â€œscrollbars-within-bevelâ€ style property">scrollbars-within-bevel</a></td>
+<td class="property_flags">Read</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="signals_return" width="150px"></col>
+<col class="signals_name" width="300px"></col>
+<col class="signals_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow-move-focus-out" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow-move-focus-out" title="The â€œmove-focus-outâ€ signal">move-focus-out</a></td>
+<td class="signal_flags">Action</td>
+</tr>
+<tr>
+<td class="signal_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow-scroll-child" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow-scroll-child" title="The â€œscroll-childâ€ signal">scroll-child</a></td>
+<td class="signal_flags">Action</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow-struct" title="struct GtkScrolledWindow">GtkScrolledWindow</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkScrolledWindow.html#GtkScrolledWindowClass" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindowClass" title="struct GtkScrolledWindowClass">GtkScrolledWindowClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">â•°â”€â”€</span> <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget">GtkWidget</a>
+            <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkContainer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkContainer.html" title="GtkContainer">GtkContainer</a>
+                <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkBin.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html" title="GtkBin">GtkBin</a>
+                    <span class="lineart">â•°â”€â”€</span> GtkScrolledWindow
+                        <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar">GtkPlacesSidebar</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkScrolledWindow implements
+ AtkImplementorIface and  <a class="link" href="GtkBuildable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBuildable.html" title="GtkBuildable">GtkBuildable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.description"></a><h2>Description</h2>
+<p><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> is a <a class="link" href="GtkBin.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html" title="GtkBin"><span class="type">GtkBin</span></a> subclass: itâ€™s a container
+the accepts a single child widget. <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> adds scrollbars
+to the child widget and optionally draws a beveled frame around the
+child widget.</p>
+<p>The scrolled window can work in two ways. Some widgets have native
+scrolling support; these widgets implement the <a class="link" href="GtkScrollable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrollable.html" title="GtkScrollable"><span class="type">GtkScrollable</span></a> interface.
+Widgets with native scroll support include <a class="link" href="GtkTreeView.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeView.html" title="GtkTreeView"><span class="type">GtkTreeView</span></a>, <a class="link" href="GtkTextView.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTextView.html" title="GtkTextView"><span class="type">GtkTextView</span></a>,
+and <a class="link" href="GtkLayout.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkLayout.html" title="GtkLayout"><span class="type">GtkLayout</span></a>.</p>
+<p>For widgets that lack native scrolling support, the <a class="link" href="GtkViewport.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkViewport.html" title="GtkViewport"><span class="type">GtkViewport</span></a>
+widget acts as an adaptor class, implementing scrollability for child
+widgets that lack their own scrolling capabilities. Use <a class="link" href="GtkViewport.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkViewport.html" title="GtkViewport"><span class="type">GtkViewport</span></a>
+to scroll child widgets such as <a class="link" href="GtkGrid.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkGrid.html" title="GtkGrid"><span class="type">GtkGrid</span></a>, <a class="link" href="GtkBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBox.html" title="GtkBox"><span class="type">GtkBox</span></a>, and so on.</p>
+<p>If a widget has native scrolling abilities, it can be added to the
+<a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> with <a class="link" href="GtkContainer.html#gtk-container-add" tppabs="https://developer.gnome.org/gtk3/stable/GtkContainer.html#gtk-container-add" title="gtk_container_addÂ ()"><code class="function">gtk_container_add()</code></a>. If a widget does not, you
+must first add the widget to a <a class="link" href="GtkViewport.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkViewport.html" title="GtkViewport"><span class="type">GtkViewport</span></a>, then add the <a class="link" href="GtkViewport.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkViewport.html" title="GtkViewport"><span class="type">GtkViewport</span></a>
+to the scrolled window. <a class="link" href="GtkContainer.html#gtk-container-add" tppabs="https://developer.gnome.org/gtk3/stable/GtkContainer.html#gtk-container-add" title="gtk_container_addÂ ()"><code class="function">gtk_container_add()</code></a> will do this for you for
+widgets that donâ€™t implement <a class="link" href="GtkScrollable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrollable.html" title="GtkScrollable"><span class="type">GtkScrollable</span></a> natively, so you can
+ignore the presence of the viewport.</p>
+<p>The position of the scrollbars is controlled by the scroll
+adjustments. See <a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a> for the fields in an adjustment - for
+<a class="link" href="GtkScrollbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrollbar.html" title="GtkScrollbar"><span class="type">GtkScrollbar</span></a>, used by <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a>, the â€œvalueâ€ field
+represents the position of the scrollbar, which must be between the
+â€œlowerâ€ field and â€œupper - page_size.â€ The â€œpage_sizeâ€ field
+represents the size of the visible scrollable area. The
+â€œstep_incrementâ€ and â€œpage_incrementâ€ fields are used when the user
+asks to step down (using the small stepper arrows) or page down (using
+for example the PageDown key).</p>
+<p>If a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> doesnâ€™t behave quite as you would like, or
+doesnâ€™t have exactly the right layout, itâ€™s very possible to set up
+your own scrolling with <a class="link" href="GtkScrollbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrollbar.html" title="GtkScrollbar"><span class="type">GtkScrollbar</span></a> and for example a <a class="link" href="GtkGrid.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkGrid.html" title="GtkGrid"><span class="type">GtkGrid</span></a>.</p>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-scrolled-window-new"></a><h3>gtk_scrolled_window_newÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_scrolled_window_new (<em class="parameter"><code><a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a> *hadjustment</code></em>,
+                         <em class="parameter"><code><a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a> *vadjustment</code></em>);</pre>
+<p>Creates a new scrolled window.</p>
+<p>The two arguments are the scrolled windowâ€™s adjustments; these will be
+shared with the scrollbars and the child widget to keep the bars in sync 
+with the child. Usually you want to pass <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for the adjustments, which 
+will cause the scrolled window to create them for you.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.2.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>hadjustment</p></td>
+<td class="parameter_description"><p> horizontal adjustment. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>vadjustment</p></td>
+<td class="parameter_description"><p> vertical adjustment. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.2.7"></a><h4>Returns</h4>
+<p> a new scrolled window</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-get-hadjustment"></a><h3>gtk_scrolled_window_get_hadjustmentÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="returnvalue">GtkAdjustment</span></a>Â *
+gtk_scrolled_window_get_hadjustment (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
+<p>Returns the horizontal scrollbarâ€™s adjustment, used to connect the
+horizontal scrollbar to the child widgetâ€™s horizontal scroll
+functionality.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.3.6"></a><h4>Returns</h4>
+<p> the horizontal <a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-get-vadjustment"></a><h3>gtk_scrolled_window_get_vadjustmentÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="returnvalue">GtkAdjustment</span></a>Â *
+gtk_scrolled_window_get_vadjustment (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
+<p>Returns the vertical scrollbarâ€™s adjustment, used to connect the
+vertical scrollbar to the child widgetâ€™s vertical scroll functionality.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.4.6"></a><h4>Returns</h4>
+<p> the vertical <a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-get-hscrollbar"></a><h3>gtk_scrolled_window_get_hscrollbarÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_scrolled_window_get_hscrollbar (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
+<p>Returns the horizontal scrollbar of <em class="parameter"><code>scrolled_window</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.5.6"></a><h4>Returns</h4>
+<p> the horizontal scrollbar of the scrolled window,
+or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it does not have one. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.8</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-get-vscrollbar"></a><h3>gtk_scrolled_window_get_vscrollbarÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_scrolled_window_get_vscrollbar (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
+<p>Returns the vertical scrollbar of <em class="parameter"><code>scrolled_window</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.6.6"></a><h4>Returns</h4>
+<p> the vertical scrollbar of the scrolled window,
+or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it does not have one. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.8</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-set-policy"></a><h3>gtk_scrolled_window_set_policyÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_set_policy (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>,
+                                <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkPolicyType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPolicyType" title="enum GtkPolicyType"><span class="type">GtkPolicyType</span></a> hscrollbar_policy</code></em>,
+                                <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkPolicyType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPolicyType" title="enum GtkPolicyType"><span class="type">GtkPolicyType</span></a> vscrollbar_policy</code></em>);</pre>
+<p>Sets the scrollbar policy for the horizontal and vertical scrollbars.</p>
+<p>The policy determines when the scrollbar should appear; it is a value
+from the <a class="link" href="gtk3-Standard-Enumerations.html#GtkPolicyType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPolicyType" title="enum GtkPolicyType"><span class="type">GtkPolicyType</span></a> enumeration. If <a class="link" href="gtk3-Standard-Enumerations.html#GTK-POLICY-ALWAYS:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GTK-POLICY-ALWAYS:CAPS"><code class="literal">GTK_POLICY_ALWAYS</code></a>, the
+scrollbar is always present; if <a class="link" href="gtk3-Standard-Enumerations.html#GTK-POLICY-NEVER:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GTK-POLICY-NEVER:CAPS"><code class="literal">GTK_POLICY_NEVER</code></a>, the scrollbar is
+never present; if <a class="link" href="gtk3-Standard-Enumerations.html#GTK-POLICY-AUTOMATIC:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GTK-POLICY-AUTOMATIC:CAPS"><code class="literal">GTK_POLICY_AUTOMATIC</code></a>, the scrollbar is present only
+if needed (that is, if the slider part of the bar would be smaller
+than the trough - the display is larger than the page size).</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.7.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>hscrollbar_policy</p></td>
+<td class="parameter_description"><p>policy for horizontal bar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>vscrollbar_policy</p></td>
+<td class="parameter_description"><p>policy for vertical bar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-add-with-viewport"></a><h3>gtk_scrolled_window_add_with_viewportÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_add_with_viewport (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>,
+                                       <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *child</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_scrolled_window_add_with_viewport</code> has been deprecated since version 3.8 and should not be used in newly-written code.</p>
+<p>gtk_container_add() will now automatically add
+a <a class="link" href="GtkViewport.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkViewport.html" title="GtkViewport"><span class="type">GtkViewport</span></a> if the child doesnâ€™t implement <a class="link" href="GtkScrollable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrollable.html" title="GtkScrollable"><span class="type">GtkScrollable</span></a>.</p>
+</div>
+<p>Used to add children without native scrolling capabilities. This
+is simply a convenience function; it is equivalent to adding the
+unscrollable child to a viewport, then adding the viewport to the
+scrolled window. If a child has native scrolling, use
+<a class="link" href="GtkContainer.html#gtk-container-add" tppabs="https://developer.gnome.org/gtk3/stable/GtkContainer.html#gtk-container-add" title="gtk_container_addÂ ()"><code class="function">gtk_container_add()</code></a> instead of this function.</p>
+<p>The viewport scrolls the child by moving its <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkWindow'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a>, and takes
+the size of the child to be the size of its toplevel <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkWindow'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkWindow"><span class="type">GdkWindow</span></a>. 
+This will be very wrong for most widgets that support native scrolling;
+for example, if you add a widget such as <a class="link" href="GtkTreeView.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeView.html" title="GtkTreeView"><span class="type">GtkTreeView</span></a> with a viewport,
+the whole widget will scroll, including the column headings. Thus, 
+widgets with native scrolling support should not be used with the 
+<a class="link" href="GtkViewport.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkViewport.html" title="GtkViewport"><span class="type">GtkViewport</span></a> proxy.</p>
+<p>A widget supports scrolling natively if it implements the
+<a class="link" href="GtkScrollable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrollable.html" title="GtkScrollable"><span class="type">GtkScrollable</span></a> interface.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.8.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>child</p></td>
+<td class="parameter_description"><p>the widget you want to scroll</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-set-placement"></a><h3>gtk_scrolled_window_set_placementÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_set_placement (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>,
+                                   <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkCornerType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkCornerType" title="enum GtkCornerType"><span class="type">GtkCornerType</span></a> window_placement</code></em>);</pre>
+<p>Sets the placement of the contents with respect to the scrollbars
+for the scrolled window.</p>
+<p>The default is <a class="link" href="gtk3-Standard-Enumerations.html#GTK-CORNER-TOP-LEFT:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GTK-CORNER-TOP-LEFT:CAPS"><code class="literal">GTK_CORNER_TOP_LEFT</code></a>, meaning the child is
+in the top left, with the scrollbars underneath and to the right.
+Other values in <a class="link" href="gtk3-Standard-Enumerations.html#GtkCornerType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkCornerType" title="enum GtkCornerType"><span class="type">GtkCornerType</span></a> are <a class="link" href="gtk3-Standard-Enumerations.html#GTK-CORNER-TOP-RIGHT:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GTK-CORNER-TOP-RIGHT:CAPS"><code class="literal">GTK_CORNER_TOP_RIGHT</code></a>,
+<a class="link" href="gtk3-Standard-Enumerations.html#GTK-CORNER-BOTTOM-LEFT:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GTK-CORNER-BOTTOM-LEFT:CAPS"><code class="literal">GTK_CORNER_BOTTOM_LEFT</code></a>, and <a class="link" href="gtk3-Standard-Enumerations.html#GTK-CORNER-BOTTOM-RIGHT:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GTK-CORNER-BOTTOM-RIGHT:CAPS"><code class="literal">GTK_CORNER_BOTTOM_RIGHT</code></a>.</p>
+<p>See also <a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-placement" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-placement" title="gtk_scrolled_window_get_placementÂ ()"><code class="function">gtk_scrolled_window_get_placement()</code></a> and
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-unset-placement" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-unset-placement" title="gtk_scrolled_window_unset_placementÂ ()"><code class="function">gtk_scrolled_window_unset_placement()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.9.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>window_placement</p></td>
+<td class="parameter_description"><p>position of the child window</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-unset-placement"></a><h3>gtk_scrolled_window_unset_placementÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_unset_placement (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
+<p>Unsets the placement of the contents with respect to the scrollbars
+for the scrolled window. If no window placement is set for a scrolled
+window, it defaults to GTK_CORNER_TOP_LEFT.</p>
+<p>See also <a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-placement" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-placement" title="gtk_scrolled_window_set_placementÂ ()"><code class="function">gtk_scrolled_window_set_placement()</code></a> and
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-get-placement" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-get-placement" title="gtk_scrolled_window_get_placementÂ ()"><code class="function">gtk_scrolled_window_get_placement()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.10.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-set-shadow-type"></a><h3>gtk_scrolled_window_set_shadow_typeÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_set_shadow_type (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>,
+                                     <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkShadowType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkShadowType" title="enum GtkShadowType"><span class="type">GtkShadowType</span></a> type</code></em>);</pre>
+<p>Changes the type of shadow drawn around the contents of
+<em class="parameter"><code>scrolled_window</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>kind of shadow to draw around scrolled window contents</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-set-hadjustment"></a><h3>gtk_scrolled_window_set_hadjustmentÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_set_hadjustment (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>,
+                                     <em class="parameter"><code><a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a> *hadjustment</code></em>);</pre>
+<p>Sets the <a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a> for the horizontal scrollbar.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>hadjustment</p></td>
+<td class="parameter_description"><p>horizontal scroll adjustment</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-set-vadjustment"></a><h3>gtk_scrolled_window_set_vadjustmentÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_set_vadjustment (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>,
+                                     <em class="parameter"><code><a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a> *vadjustment</code></em>);</pre>
+<p>Sets the <a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a> for the vertical scrollbar.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>vadjustment</p></td>
+<td class="parameter_description"><p>vertical scroll adjustment</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-get-placement"></a><h3>gtk_scrolled_window_get_placementÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Standard-Enumerations.html#GtkCornerType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkCornerType" title="enum GtkCornerType"><span class="returnvalue">GtkCornerType</span></a>
+gtk_scrolled_window_get_placement (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
+<p>Gets the placement of the contents with respect to the scrollbars
+for the scrolled window. See <a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-placement" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-placement" title="gtk_scrolled_window_set_placementÂ ()"><code class="function">gtk_scrolled_window_set_placement()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.14.6"></a><h4>Returns</h4>
+<p> the current placement value.</p>
+<p>See also <a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-placement" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-placement" title="gtk_scrolled_window_set_placementÂ ()"><code class="function">gtk_scrolled_window_set_placement()</code></a> and
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-unset-placement" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-unset-placement" title="gtk_scrolled_window_unset_placementÂ ()"><code class="function">gtk_scrolled_window_unset_placement()</code></a>.</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-get-policy"></a><h3>gtk_scrolled_window_get_policyÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_get_policy (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>,
+                                <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkPolicyType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPolicyType" title="enum GtkPolicyType"><span class="type">GtkPolicyType</span></a> *hscrollbar_policy</code></em>,
+                                <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkPolicyType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPolicyType" title="enum GtkPolicyType"><span class="type">GtkPolicyType</span></a> *vscrollbar_policy</code></em>);</pre>
+<p>Retrieves the current policy values for the horizontal and vertical
+scrollbars. See <a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-policy" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-policy" title="gtk_scrolled_window_set_policyÂ ()"><code class="function">gtk_scrolled_window_set_policy()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>hscrollbar_policy</p></td>
+<td class="parameter_description"><p> location to store the policy
+for the horizontal scrollbar, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>vscrollbar_policy</p></td>
+<td class="parameter_description"><p> location to store the policy
+for the vertical scrollbar, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-get-shadow-type"></a><h3>gtk_scrolled_window_get_shadow_typeÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Standard-Enumerations.html#GtkShadowType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkShadowType" title="enum GtkShadowType"><span class="returnvalue">GtkShadowType</span></a>
+gtk_scrolled_window_get_shadow_type (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
+<p>Gets the shadow type of the scrolled window. See 
+<a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-shadow-type" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-shadow-type" title="gtk_scrolled_window_set_shadow_typeÂ ()"><code class="function">gtk_scrolled_window_set_shadow_type()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.16.6"></a><h4>Returns</h4>
+<p> the current shadow type</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-get-min-content-width"></a><h3>gtk_scrolled_window_get_min_content_widthÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_scrolled_window_get_min_content_width
+                               (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
+<p>Gets the minimum content width of <em class="parameter"><code>scrolled_window</code></em>
+, or -1 if not set.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.17.6"></a><h4>Returns</h4>
+<p> the minimum content width</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-set-min-content-width"></a><h3>gtk_scrolled_window_set_min_content_widthÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_set_min_content_width
+                               (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> width</code></em>);</pre>
+<p>Sets the minimum width that <em class="parameter"><code>scrolled_window</code></em>
+ should keep visible.
+Note that this can and (usually will) be smaller than the minimum
+size of the content.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the minimal content width</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-get-min-content-height"></a><h3>gtk_scrolled_window_get_min_content_heightÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_scrolled_window_get_min_content_height
+                               (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
+<p>Gets the minimal content height of <em class="parameter"><code>scrolled_window</code></em>
+, or -1 if not set.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.19.6"></a><h4>Returns</h4>
+<p> the minimal content height</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-set-min-content-height"></a><h3>gtk_scrolled_window_set_min_content_heightÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_set_min_content_height
+                               (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> height</code></em>);</pre>
+<p>Sets the minimum height that <em class="parameter"><code>scrolled_window</code></em>
+ should keep visible.
+Note that this can and (usually will) be smaller than the minimum
+size of the content.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>the minimal content height</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-set-kinetic-scrolling"></a><h3>gtk_scrolled_window_set_kinetic_scrollingÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_set_kinetic_scrolling
+                               (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> kinetic_scrolling</code></em>);</pre>
+<p>Turns kinetic scrolling on or off.
+Kinetic scrolling only applies to devices with source
+<code class="literal">GDK_SOURCE_TOUCHSCREEN</code>.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>kinetic_scrolling</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to enable kinetic scrolling</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-get-kinetic-scrolling"></a><h3>gtk_scrolled_window_get_kinetic_scrollingÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_scrolled_window_get_kinetic_scrolling
+                               (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
+<p>Returns the specified kinetic scrolling behavior.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.22.6"></a><h4>Returns</h4>
+<p> the scrolling behavior flags.</p>
+<p></p>
+</div>
+<p class="since">Since 3.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-set-capture-button-press"></a><h3>gtk_scrolled_window_set_capture_button_pressÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scrolled_window_set_capture_button_press
+                               (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> capture_button_press</code></em>);</pre>
+<p>Changes the behaviour of <em class="parameter"><code>scrolled_window</code></em>
+ wrt. to the initial
+event that possibly starts kinetic scrolling. When <em class="parameter"><code>capture_button_press</code></em>
+
+is set to <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the event is captured by the scrolled window, and
+then later replayed if it is meant to go to the child widget.</p>
+<p>This should be enabled if any child widgets perform non-reversible
+actions on <a class="link" href="GtkWidget.html#GtkWidget-button-press-event" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-button-press-event" title="The â€œbutton-press-eventâ€ signal"><span class="type">â€œbutton-press-eventâ€</span></a>. If they don't, and handle
+additionally handle <a class="link" href="GtkWidget.html#GtkWidget-grab-broken-event" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-grab-broken-event" title="The â€œgrab-broken-eventâ€ signal"><span class="type">â€œgrab-broken-eventâ€</span></a>, it might be better
+to set <em class="parameter"><code>capture_button_press</code></em>
+ to <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</p>
+<p>This setting only has an effect if kinetic scrolling is enabled.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.23.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>capture_button_press</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to capture button presses</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scrolled-window-get-capture-button-press"></a><h3>gtk_scrolled_window_get_capture_button_pressÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_scrolled_window_get_capture_button_press
+                               (<em class="parameter"><code><a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window</code></em>);</pre>
+<p>Return whether button presses are captured during kinetic
+scrolling. See <a class="link" href="GtkScrolledWindow.html#gtk-scrolled-window-set-capture-button-press" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#gtk-scrolled-window-set-capture-button-press" title="gtk_scrolled_window_set_capture_button_pressÂ ()"><code class="function">gtk_scrolled_window_set_capture_button_press()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.16.3.12.24.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if button presses are captured during kinetic scrolling</p>
+<p></p>
+</div>
+<p class="since">Since 3.4</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkScrolledWindow-struct"></a><h3>struct GtkScrolledWindow</h3>
+<pre class="programlisting">struct GtkScrolledWindow;</pre>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScrolledWindowClass"></a><h3>struct GtkScrolledWindowClass</h3>
+<pre class="programlisting">struct GtkScrolledWindowClass {
+  GtkBinClass parent_class;
+
+  gint scrollbar_spacing;
+
+
+  /* Action signals for keybindings. Do not connect to these signals
+   */
+
+  /* Unfortunately, GtkScrollType is deficient in that there is
+   * no horizontal/vertical variants for GTK_SCROLL_START/END,
+   * so we have to add an additional boolean flag.
+   */
+  gboolean (*scroll_child) (GtkScrolledWindow *scrolled_window,
+	  		    GtkScrollType      scroll,
+			    gboolean           horizontal);
+
+  void (* move_focus_out) (GtkScrolledWindow *scrolled_window,
+			   GtkDirectionType   direction);
+};
+</pre>
+<div class="refsect3">
+<a name="id-1.3.16.3.13.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="struct_members_name" width="300px"></col>
+<col class="struct_members_description"></col>
+<col class="struct_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GtkBin.html#GtkBinClass" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html#GtkBinClass" title="struct GtkBinClass"><span class="type">GtkBinClass</span></a>Â <em class="structfield"><code><a name="GtkScrolledWindowClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>The parent class.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>Â <em class="structfield"><code><a name="GtkScrolledWindowClass.scrollbar-spacing"></a>scrollbar_spacing</code></em>;</p></td>
+<td class="struct_member_description">Â </td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkScrolledWindowClass.scroll-child"></a>scroll_child</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Keybinding signal which gets emitted when a
+keybinding that scrolls is pressed.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkScrolledWindowClass.move-focus-out"></a>move_focus_out</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Keybinding signal which gets emitted when focus is
+moved away from the scrolled window by a keybinding.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GtkScrolledWindow--hadjustment"></a><h3>The <code class="literal">â€œhadjustmentâ€</code> property</h3>
+<pre class="programlisting">  â€œhadjustmentâ€              <a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a>Â *</pre>
+<p>The GtkAdjustment for the horizontal position.</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow--hscrollbar-policy"></a><h3>The <code class="literal">â€œhscrollbar-policyâ€</code> property</h3>
+<pre class="programlisting">  â€œhscrollbar-policyâ€        <a class="link" href="gtk3-Standard-Enumerations.html#GtkPolicyType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPolicyType" title="enum GtkPolicyType"><span class="type">GtkPolicyType</span></a></pre>
+<p>When the horizontal scrollbar is displayed.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_POLICY_AUTOMATIC</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow--kinetic-scrolling"></a><h3>The <code class="literal">â€œkinetic-scrollingâ€</code> property</h3>
+<pre class="programlisting">  â€œkinetic-scrollingâ€        <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>The kinetic scrolling behavior flags. Kinetic scrolling
+only applies to devices with source <code class="literal">GDK_SOURCE_TOUCHSCREEN</code></p>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+<p class="since">Since 3.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow--min-content-height"></a><h3>The <code class="literal">â€œmin-content-heightâ€</code> property</h3>
+<pre class="programlisting">  â€œmin-content-heightâ€       <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>The minimum content height of <em class="parameter"><code>scrolled_window</code></em>
+, or -1 if not set.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow--min-content-width"></a><h3>The <code class="literal">â€œmin-content-widthâ€</code> property</h3>
+<pre class="programlisting">  â€œmin-content-widthâ€        <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>The minimum content width of <em class="parameter"><code>scrolled_window</code></em>
+, or -1 if not set.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow--shadow-type"></a><h3>The <code class="literal">â€œshadow-typeâ€</code> property</h3>
+<pre class="programlisting">  â€œshadow-typeâ€              <a class="link" href="gtk3-Standard-Enumerations.html#GtkShadowType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkShadowType" title="enum GtkShadowType"><span class="type">GtkShadowType</span></a></pre>
+<p>Style of bevel around the contents.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_SHADOW_NONE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow--vadjustment"></a><h3>The <code class="literal">â€œvadjustmentâ€</code> property</h3>
+<pre class="programlisting">  â€œvadjustmentâ€              <a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a>Â *</pre>
+<p>The GtkAdjustment for the vertical position.</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow--vscrollbar-policy"></a><h3>The <code class="literal">â€œvscrollbar-policyâ€</code> property</h3>
+<pre class="programlisting">  â€œvscrollbar-policyâ€        <a class="link" href="gtk3-Standard-Enumerations.html#GtkPolicyType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPolicyType" title="enum GtkPolicyType"><span class="type">GtkPolicyType</span></a></pre>
+<p>When the vertical scrollbar is displayed.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_POLICY_AUTOMATIC</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow--window-placement"></a><h3>The <code class="literal">â€œwindow-placementâ€</code> property</h3>
+<pre class="programlisting">  â€œwindow-placementâ€         <a class="link" href="gtk3-Standard-Enumerations.html#GtkCornerType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkCornerType" title="enum GtkCornerType"><span class="type">GtkCornerType</span></a></pre>
+<p>Where the contents are located with respect to the scrollbars.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_CORNER_TOP_LEFT</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow--window-placement-set"></a><h3>The <code class="literal">â€œwindow-placement-setâ€</code> property</h3>
+<pre class="programlisting">  â€œwindow-placement-setâ€     <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether "window-placement" should be used to determine the location
+
+of the contents with respect to the scrollbars.</p>
+<div class="warning">
+<p><code class="literal">GtkScrolledWindow:window-placement-set</code> has been deprecated since version 3.10 and should not be used in newly-written code.</p>
+<p>This value is ignored and
+<a class="link" href="GtkScrolledWindow.html#GtkScrolledWindow--window-placement" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html#GtkScrolledWindow--window-placement" title="The â€œwindow-placementâ€ property"><span class="type">â€œwindow-placementâ€</span></a> value is always honored.</p>
+</div>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+<p class="since">Since 2.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.style-property-details"></a><h2>Style Property Details</h2>
+<div class="refsect2">
+<a name="GtkScrolledWindow--s-scrollbar-spacing"></a><h3>The <code class="literal">â€œscrollbar-spacingâ€</code> style property</h3>
+<pre class="programlisting">  â€œscrollbar-spacingâ€        <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>Number of pixels between the scrollbars and the scrolled window.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 3</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow--s-scrollbars-within-bevel"></a><h3>The <code class="literal">â€œscrollbars-within-bevelâ€</code> style property</h3>
+<pre class="programlisting">  â€œscrollbars-within-bevelâ€  <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether to place scrollbars within the scrolled window's bevel.</p>
+<p>Flags: Read</p>
+<p>Default value: FALSE</p>
+<p class="since">Since 2.12</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GtkScrolledWindow-move-focus-out"></a><h3>The <code class="literal">â€œmove-focus-outâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window,
+               <a class="link" href="gtk3-Standard-Enumerations.html#GtkDirectionType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkDirectionType" title="enum GtkDirectionType"><span class="type">GtkDirectionType</span></a>   direction_type,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)</pre>
+<p>The ::move-focus-out signal is a
+<a class="link" href="gtk3-Bindings.html#GtkBindingSignal" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Bindings.html#GtkBindingSignal" title="struct GtkBindingSignal">keybinding signal</a> which gets
+emitted when focus is moved away from the scrolled window by a
+keybinding.  The <a class="link" href="GtkWidget.html#GtkWidget-move-focus" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-move-focus" title="The â€œmove-focusâ€ signal"><span class="type">â€œmove-focusâ€</span></a> signal is emitted with
+<em class="parameter"><code>direction_type</code></em>
+ on this scrolled windows toplevel parent in the
+container hierarchy.  The default bindings for this signal are
+<code class="literal">Tab + Ctrl</code> and <code class="literal">Tab + Ctrl + Shift</code>.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.16.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>direction_type</p></td>
+<td class="parameter_description"><p>either <a class="link" href="gtk3-Standard-Enumerations.html#GTK-DIR-TAB-FORWARD:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GTK-DIR-TAB-FORWARD:CAPS"><code class="literal">GTK_DIR_TAB_FORWARD</code></a> or
+<a class="link" href="gtk3-Standard-Enumerations.html#GTK-DIR-TAB-BACKWARD:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GTK-DIR-TAB-BACKWARD:CAPS"><code class="literal">GTK_DIR_TAB_BACKWARD</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Action</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScrolledWindow-scroll-child"></a><h3>The <code class="literal">â€œscroll-childâ€</code> signal</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a> *scrolled_window,
+               <a class="link" href="gtk3-Standard-Enumerations.html#GtkScrollType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkScrollType" title="enum GtkScrollType"><span class="type">GtkScrollType</span></a>      scroll,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>           horizontal,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)</pre>
+<p>The ::scroll-child signal is a
+<a class="link" href="gtk3-Bindings.html#GtkBindingSignal" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Bindings.html#GtkBindingSignal" title="struct GtkBindingSignal">keybinding signal</a>
+which gets emitted when a keybinding that scrolls is pressed.
+The horizontal or vertical adjustment is updated which triggers a
+signal that the scrolled windows child may listen to and scroll itself.</p>
+<div class="refsect3">
+<a name="id-1.3.16.3.16.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>scrolled_window</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow"><span class="type">GtkScrolledWindow</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>scroll</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-Standard-Enumerations.html#GtkScrollType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkScrollType" title="enum GtkScrollType"><span class="type">GtkScrollType</span></a> describing how much to scroll</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>horizontal</p></td>
+<td class="parameter_description"><p>whether the keybinding scrolls the child
+horizontally or not</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Action</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkScrolledWindow.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GtkScrollable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrollable.html" title="GtkScrollable"><span class="type">GtkScrollable</span></a>, <a class="link" href="GtkViewport.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkViewport.html" title="GtkViewport"><span class="type">GtkViewport</span></a>, <a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a></p>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

@@ -1,0 +1,1331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: GtkPlacesSidebar</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="SelectorWidgets.html" rel="up" title="Selector Widgets and Dialogs"></link><link href="GtkFontChooserDialog.html" rel="prev" title="GtkFontChooserDialog"></link><link href="Ornaments.html" rel="next" title="Ornaments"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkPlacesSidebar.description">Description</a></span><span id="nav_hierarchy">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkPlacesSidebar.object-hierarchy">Object Hierarchy</a></span><span id="nav_interfaces">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkPlacesSidebar.implemented-interfaces">Implemented Interfaces</a></span><span id="nav_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkPlacesSidebar.properties">Properties</a></span><span id="nav_signals">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkPlacesSidebar.signals">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="SelectorWidgets.html" tppabs="https://developer.gnome.org/gtk3/stable/SelectorWidgets.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="GtkFontChooserDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooserDialog.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="Ornaments.html" tppabs="https://developer.gnome.org/gtk3/stable/Ornaments.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="GtkPlacesSidebar"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPlacesSidebar.top_of_page"></a>GtkPlacesSidebar</span></h2>
+<p>GtkPlacesSidebar â€” Sidebar that displays frequently-used places in the file system</p>
+</td>
+<td align="right" class="gallery_image" valign="top"><img src="placessidebar.png" tppabs="https://developer.gnome.org/gtk3/stable/placessidebar.png"></img></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-new" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-new" title="gtk_places_sidebar_newÂ ()">gtk_places_sidebar_new</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-open-flags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-open-flags" title="gtk_places_sidebar_set_open_flagsÂ ()">gtk_places_sidebar_set_open_flags</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkPlacesSidebar.html#GtkPlacesOpenFlags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesOpenFlags" title="enum GtkPlacesOpenFlags"><span class="returnvalue">GtkPlacesOpenFlags</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-get-open-flags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-get-open-flags" title="gtk_places_sidebar_get_open_flagsÂ ()">gtk_places_sidebar_get_open_flags</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-location" title="gtk_places_sidebar_set_locationÂ ()">gtk_places_sidebar_set_location</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="returnvalue">GFile</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-get-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-get-location" title="gtk_places_sidebar_get_locationÂ ()">gtk_places_sidebar_get_location</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-show-desktop" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-show-desktop" title="gtk_places_sidebar_set_show_desktopÂ ()">gtk_places_sidebar_set_show_desktop</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-get-show-desktop" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-get-show-desktop" title="gtk_places_sidebar_get_show_desktopÂ ()">gtk_places_sidebar_get_show_desktop</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-add-shortcut" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-add-shortcut" title="gtk_places_sidebar_add_shortcutÂ ()">gtk_places_sidebar_add_shortcut</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-remove-shortcut" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-remove-shortcut" title="gtk_places_sidebar_remove_shortcutÂ ()">gtk_places_sidebar_remove_shortcut</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-list-shortcuts" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-list-shortcuts" title="gtk_places_sidebar_list_shortcutsÂ ()">gtk_places_sidebar_list_shortcuts</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="returnvalue">GFile</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-get-nth-bookmark" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-get-nth-bookmark" title="gtk_places_sidebar_get_nth_bookmarkÂ ()">gtk_places_sidebar_get_nth_bookmark</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-get-show-connect-to-server" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-get-show-connect-to-server" title="gtk_places_sidebar_get_show_connect_to_serverÂ ()">gtk_places_sidebar_get_show_connect_to_server</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-show-connect-to-server" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-show-connect-to-server" title="gtk_places_sidebar_set_show_connect_to_serverÂ ()">gtk_places_sidebar_set_show_connect_to_server</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-get-local-only" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-get-local-only" title="gtk_places_sidebar_get_local_onlyÂ ()">gtk_places_sidebar_get_local_only</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-local-only" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-local-only" title="gtk_places_sidebar_set_local_onlyÂ ()">gtk_places_sidebar_set_local_only</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="properties_type" width="150px"></col>
+<col class="properties_name" width="300px"></col>
+<col class="properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar--local-only" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar--local-only" title="The â€œlocal-onlyâ€ property">local-only</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar--location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar--location" title="The â€œlocationâ€ property">location</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesOpenFlags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesOpenFlags" title="enum GtkPlacesOpenFlags"><span class="type">GtkPlacesOpenFlags</span></a></td>
+<td class="property_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar--open-flags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar--open-flags" title="The â€œopen-flagsâ€ property">open-flags</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar--show-connect-to-server" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar--show-connect-to-server" title="The â€œshow-connect-to-serverâ€ property">show-connect-to-server</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar--show-desktop" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar--show-desktop" title="The â€œshow-desktopâ€ property">show-desktop</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="signals_return" width="150px"></col>
+<col class="signals_name" width="300px"></col>
+<col class="signals_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a></td>
+<td class="signal_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-drag-action-ask" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-drag-action-ask" title="The â€œdrag-action-askâ€ signal">drag-action-ask</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+<tr>
+<td class="signal_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a></td>
+<td class="signal_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-drag-action-requested" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-drag-action-requested" title="The â€œdrag-action-requestedâ€ signal">drag-action-requested</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-drag-perform-drop" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-drag-perform-drop" title="The â€œdrag-perform-dropâ€ signal">drag-perform-drop</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" title="The â€œopen-locationâ€ signal">open-location</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-populate-popup" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-populate-popup" title="The â€œpopulate-popupâ€ signal">populate-popup</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-show-connect-to-server" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-show-connect-to-server" title="The â€œshow-connect-to-serverâ€ signal">show-connect-to-server</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-show-error-message" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-show-error-message" title="The â€œshow-error-messageâ€ signal">show-error-message</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">Â </td>
+<td class="function_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-struct" title="GtkPlacesSidebar">GtkPlacesSidebar</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesOpenFlags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesOpenFlags" title="enum GtkPlacesOpenFlags">GtkPlacesOpenFlags</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">â•°â”€â”€</span> <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget">GtkWidget</a>
+            <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkContainer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkContainer.html" title="GtkContainer">GtkContainer</a>
+                <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkBin.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html" title="GtkBin">GtkBin</a>
+                    <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html" title="GtkScrolledWindow">GtkScrolledWindow</a>
+                        <span class="lineart">â•°â”€â”€</span> GtkPlacesSidebar
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkPlacesSidebar implements
+ AtkImplementorIface and  <a class="link" href="GtkBuildable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBuildable.html" title="GtkBuildable">GtkBuildable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.description"></a><h2>Description</h2>
+<p><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> is a widget that displays a list of frequently-used places in the
+file system:  the userâ€™s home directory, the userâ€™s bookmarks, and volumes and drives.
+This widget is used as a sidebar in <a class="link" href="GtkFileChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFileChooser.html" title="GtkFileChooser"><span class="type">GtkFileChooser</span></a> and may be used by file managers
+and similar programs.</p>
+<p>The places sidebar displays drives and volumes, and will automatically mount
+or unmount them when the user selects them.</p>
+<p>Applications can hook to various signals in the places sidebar to customize
+its behavior.  For example, they can add extra commands to the context menu
+of the sidebar.</p>
+<p>While bookmarks are completely in control of the user, the places sidebar also
+allows individual applications to provide extra shortcut folders that are unique
+to each application.  For example, a Paint program may want to add a shortcut
+for a Clipart folder.  You can do this with <a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-add-shortcut" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-add-shortcut" title="gtk_places_sidebar_add_shortcutÂ ()"><code class="function">gtk_places_sidebar_add_shortcut()</code></a>.</p>
+<p>To make use of the places sidebar, an application at least needs to connect
+to the <a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" title="The â€œopen-locationâ€ signal"><span class="type">â€œopen-locationâ€</span></a> signal.  This is emitted when the
+user selects in the sidebar a location to open.  The application should also
+call <a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-location" title="gtk_places_sidebar_set_locationÂ ()"><code class="function">gtk_places_sidebar_set_location()</code></a> when it changes the currently-viewed
+location.</p>
+</div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-places-sidebar-new"></a><h3>gtk_places_sidebar_newÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_places_sidebar_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> widget.</p>
+<p>The application should connect to at least the
+<a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" title="The â€œopen-locationâ€ signal"><span class="type">â€œopen-locationâ€</span></a> signal to be notified
+when the user makes a selection in the sidebar.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.2.6"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a></p>
+<p></p>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-set-open-flags"></a><h3>gtk_places_sidebar_set_open_flagsÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_places_sidebar_set_open_flags (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>,
+                                   <em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html#GtkPlacesOpenFlags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesOpenFlags" title="enum GtkPlacesOpenFlags"><span class="type">GtkPlacesOpenFlags</span></a> flags</code></em>);</pre>
+<p>Sets the way in which the calling application can open new locations from
+the places sidebar.  For example, some applications only open locations
+â€œdirectlyâ€ into their main view, while others may support opening locations
+in a new notebook tab or a new window.</p>
+<p>This function is used to tell the places <em class="parameter"><code>sidebar</code></em>
+ about the ways in which the
+application can open new locations, so that the sidebar can display (or not)
+the â€œOpen in new tabâ€ and â€œOpen in new windowâ€ menu items as appropriate.</p>
+<p>When the <a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" title="The â€œopen-locationâ€ signal"><span class="type">â€œopen-locationâ€</span></a> signal is emitted, its flags
+argument will be set to one of the <em class="parameter"><code>flags</code></em>
+ that was passed in
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-open-flags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-open-flags" title="gtk_places_sidebar_set_open_flagsÂ ()"><code class="function">gtk_places_sidebar_set_open_flags()</code></a>.</p>
+<p>Passing 0 for <em class="parameter"><code>flags</code></em>
+ will cause <a class="link" href="GtkPlacesSidebar.html#GTK-PLACES-OPEN-NORMAL:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GTK-PLACES-OPEN-NORMAL:CAPS"><span class="type">GTK_PLACES_OPEN_NORMAL</span></a> to always be sent
+to callbacks for the â€œopen-locationâ€ signal.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.3.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>Bitmask of modes in which the calling application can open locations</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-get-open-flags"></a><h3>gtk_places_sidebar_get_open_flagsÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPlacesSidebar.html#GtkPlacesOpenFlags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesOpenFlags" title="enum GtkPlacesOpenFlags"><span class="returnvalue">GtkPlacesOpenFlags</span></a>
+gtk_places_sidebar_get_open_flags (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>);</pre>
+<p>Gets the open flags.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.4.6"></a><h4>Returns</h4>
+<p> the <a class="link" href="GtkPlacesSidebar.html#GtkPlacesOpenFlags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesOpenFlags" title="enum GtkPlacesOpenFlags"><span class="type">GtkPlacesOpenFlags</span></a> of <em class="parameter"><code>sidebar</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-set-location"></a><h3>gtk_places_sidebar_set_locationÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_places_sidebar_set_location (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a> *location</code></em>);</pre>
+<p>Sets the location that is being shown in the widgets surrounding the
+<em class="parameter"><code>sidebar</code></em>
+, for example, in a folder view in a file manager.  In turn, the
+<em class="parameter"><code>sidebar</code></em>
+ will highlight that location if it is being shown in the list of
+places, or it will unhighlight everything if the <em class="parameter"><code>location</code></em>
+ is not among the
+places in the list.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location</p></td>
+<td class="parameter_description"><p> location to select, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> for no current path. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-get-location"></a><h3>gtk_places_sidebar_get_locationÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="returnvalue">GFile</span></a>Â *
+gtk_places_sidebar_get_location (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>);</pre>
+<p>Gets the currently-selected location in the <em class="parameter"><code>sidebar</code></em>
+.  This can be <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> when
+nothing is selected, for example, when <a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-location" title="gtk_places_sidebar_set_locationÂ ()"><code class="function">gtk_places_sidebar_set_location()</code></a> has
+been called with a location that is not among the sidebarâ€™s list of places to
+show.</p>
+<p>You can use this function to get the selection in the <em class="parameter"><code>sidebar</code></em>
+.  Also, if you
+connect to the <a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-populate-popup" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-populate-popup" title="The â€œpopulate-popupâ€ signal"><span class="type">â€œpopulate-popupâ€</span></a> signal, you can use this
+function to get the location that is being referred to during the callbacks
+for your menu items.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.6.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.6.7"></a><h4>Returns</h4>
+<p> a GFile with the selected location, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if nothing is visually
+selected. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-set-show-desktop"></a><h3>gtk_places_sidebar_set_show_desktopÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_places_sidebar_set_show_desktop (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>,
+                                     <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> show_desktop</code></em>);</pre>
+<p>Sets whether the <em class="parameter"><code>sidebar</code></em>
+ should show an item for the Desktop folder.
+The default value for this option is determined by the desktop
+environment and the userâ€™s configuration, but this function can be
+used to override it on a per-application basis.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>show_desktop</p></td>
+<td class="parameter_description"><p>whether to show an item for the Desktop folder</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-get-show-desktop"></a><h3>gtk_places_sidebar_get_show_desktopÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_places_sidebar_get_show_desktop (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>);</pre>
+<p>Returns the value previously set with <a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-show-desktop" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-show-desktop" title="gtk_places_sidebar_set_show_desktopÂ ()"><code class="function">gtk_places_sidebar_set_show_desktop()</code></a></p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.8.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the sidebar will display a builtin shortcut to the desktop folder.</p>
+<p></p>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-add-shortcut"></a><h3>gtk_places_sidebar_add_shortcutÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_places_sidebar_add_shortcut (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a> *location</code></em>);</pre>
+<p>Applications may want to present some folders in the places sidebar if
+they could be immediately useful to users.  For example, a drawing
+program could add a â€œ/usr/share/clipartâ€ location when the sidebar is
+being used in an â€œInsert Clipartâ€ dialog box.</p>
+<p>This function adds the specified <em class="parameter"><code>location</code></em>
+ to a special place for immutable
+shortcuts.  The shortcuts are application-specific; they are not shared
+across applications, and they are not persistent.  If this function
+is called multiple times with different locations, then they are added
+to the sidebarâ€™s list in the same order as the function is called.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.9.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location</p></td>
+<td class="parameter_description"><p>location to add as an application-specific shortcut</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-remove-shortcut"></a><h3>gtk_places_sidebar_remove_shortcutÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_places_sidebar_remove_shortcut (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>,
+                                    <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a> *location</code></em>);</pre>
+<p>Removes an application-specific shortcut that has been previously been
+inserted with <a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-add-shortcut" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-add-shortcut" title="gtk_places_sidebar_add_shortcutÂ ()"><code class="function">gtk_places_sidebar_add_shortcut()</code></a>.  If the <em class="parameter"><code>location</code></em>
+ is not a
+shortcut in the sidebar, then nothing is done.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location</p></td>
+<td class="parameter_description"><p>location to remove</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-list-shortcuts"></a><h3>gtk_places_sidebar_list_shortcutsÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a>Â *
+gtk_places_sidebar_list_shortcuts (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>);</pre>
+<p>Gets the list of shortcuts.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.11.6"></a><h4>Returns</h4>
+<p>    A <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="type">GSList</span></a> of <a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a> of the locations that have been added as
+application-specific shortcuts with <a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-add-shortcut" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-add-shortcut" title="gtk_places_sidebar_add_shortcutÂ ()"><code class="function">gtk_places_sidebar_add_shortcut()</code></a>.
+To free this list, you can use</p>
+<div class="informalexample">
+  <table border="0" cellpadding="0" cellspacing="0" class="listing_frame">
+    <tbody>
+      <tr>
+        <td align="right" class="listing_lines"><pre>1</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="function"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free-full'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free-full">g_slist_free_full</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">list</span><span class="symbol">,</span><span class="normal"> </span><span class="symbol">(</span><span class="normal"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Datasets.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify'" tppabs="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GDestroyNotify</a></span><span class="symbol">)</span><span class="normal"> <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">g_object_unref</a></span><span class="symbol">);</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GFile][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-get-nth-bookmark"></a><h3>gtk_places_sidebar_get_nth_bookmarkÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="returnvalue">GFile</span></a>Â *
+gtk_places_sidebar_get_nth_bookmark (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>,
+                                     <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n</code></em>);</pre>
+<p>This function queries the bookmarks added by the user to the places sidebar,
+and returns one of them.  This function is used by <a class="link" href="GtkFileChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFileChooser.html" title="GtkFileChooser"><span class="type">GtkFileChooser</span></a> to implement
+the â€œAlt-1â€, â€œAlt-2â€, etc. shortcuts, which activate the cooresponding bookmark.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>index of the bookmark to query</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.12.6"></a><h4>Returns</h4>
+<p> The bookmark specified by the index <em class="parameter"><code>n</code></em>
+, or
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if no such index exist.  Note that the indices start at 0, even though
+the file chooser starts them with the keyboard shortcut â€œAlt-1â€. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-get-show-connect-to-server"></a><h3>gtk_places_sidebar_get_show_connect_to_serverÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_places_sidebar_get_show_connect_to_server
+                               (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>);</pre>
+<p>Returns the value previously set with <a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-show-connect-to-server" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-show-connect-to-server" title="gtk_places_sidebar_set_show_connect_to_serverÂ ()"><code class="function">gtk_places_sidebar_set_show_connect_to_server()</code></a></p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.13.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the sidebar will display a â€œConnect to Serverâ€ item.</p>
+<p></p>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-set-show-connect-to-server"></a><h3>gtk_places_sidebar_set_show_connect_to_serverÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_places_sidebar_set_show_connect_to_server
+                               (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> show_connect_to_server</code></em>);</pre>
+<p>Sets whether the <em class="parameter"><code>sidebar</code></em>
+ should show an item for connecting to a network server; this is off by default.
+An application may want to turn this on if it implements a way for the user to connect
+to network servers directly.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>show_connect_to_server</p></td>
+<td class="parameter_description"><p>whether to show an item for the Connect to Server command</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-get-local-only"></a><h3>gtk_places_sidebar_get_local_onlyÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_places_sidebar_get_local_only (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>);</pre>
+<p>Returns the value previously set with <a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-local-only" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-local-only" title="gtk_places_sidebar_set_local_onlyÂ ()"><code class="function">gtk_places_sidebar_set_local_only()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.15.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the sidebar will only show local files.</p>
+<p></p>
+</div>
+<p class="since">Since 3.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-places-sidebar-set-local-only"></a><h3>gtk_places_sidebar_set_local_onlyÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_places_sidebar_set_local_only (<em class="parameter"><code><a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar</code></em>,
+                                   <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> local_only</code></em>);</pre>
+<p>Sets whether the <em class="parameter"><code>sidebar</code></em>
+ should only show local files.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.11.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>a places sidebar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>local_only</p></td>
+<td class="parameter_description"><p>whether to show only local files</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.12</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkPlacesSidebar-struct"></a><h3>GtkPlacesSidebar</h3>
+<pre class="programlisting">typedef struct _GtkPlacesSidebar GtkPlacesSidebar;</pre>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPlacesOpenFlags"></a><h3>enum GtkPlacesOpenFlags</h3>
+<p>These flags serve two purposes.  First, the application can call <a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-open-flags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-open-flags" title="gtk_places_sidebar_set_open_flagsÂ ()"><code class="function">gtk_places_sidebar_set_open_flags()</code></a>
+using these flags as a bitmask.  This tells the sidebar that the application is able to open
+folders selected from the sidebar in various ways, for example, in new tabs or in new windows in
+addition to the normal mode.</p>
+<p>Second, when one of these values gets passed back to the application in the
+<a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" title="The â€œopen-locationâ€ signal"><span class="type">â€œopen-locationâ€</span></a> signal, it means that the application should
+open the selected location in the normal way, in a new tab, or in a new
+window.  The sidebar takes care of determining the desired way to open the location,
+based on the modifier keys that the user is pressing at the time the selection is made.</p>
+<p>If the application never calls <a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-open-flags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-open-flags" title="gtk_places_sidebar_set_open_flagsÂ ()"><code class="function">gtk_places_sidebar_set_open_flags()</code></a>, then the sidebar will only
+use <a class="link" href="GtkPlacesSidebar.html#GTK-PLACES-OPEN-NORMAL:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GTK-PLACES-OPEN-NORMAL:CAPS"><span class="type">GTK_PLACES_OPEN_NORMAL</span></a> in the <a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" title="The â€œopen-locationâ€ signal"><span class="type">â€œopen-locationâ€</span></a> signal.  This is the
+default mode of operation.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.12.3.6"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="enum_members_name" width="300px"></col>
+<col class="enum_members_description"></col>
+<col class="enum_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-PLACES-OPEN-NORMAL:CAPS"></a>GTK_PLACES_OPEN_NORMAL</p></td>
+<td class="enum_member_description">
+<p>This is the default mode that <a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> uses if no other flags
+ are specified.  It indicates that the calling application should open the selected location
+ in the normal way, for example, in the folder view beside the sidebar.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-PLACES-OPEN-NEW-TAB:CAPS"></a>GTK_PLACES_OPEN_NEW_TAB</p></td>
+<td class="enum_member_description">
+<p>When passed to <a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-set-open-flags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-set-open-flags" title="gtk_places_sidebar_set_open_flagsÂ ()"><code class="function">gtk_places_sidebar_set_open_flags()</code></a>, this indicates
+ that the application can open folders selected from the sidebar in new tabs.  This value
+ will be passed to the <a class="link" href="GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesSidebar-open-location" title="The â€œopen-locationâ€ signal"><span class="type">â€œopen-locationâ€</span></a> signal when the user selects
+ that a location be opened in a new tab instead of in the standard fashion.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-PLACES-OPEN-NEW-WINDOW:CAPS"></a>GTK_PLACES_OPEN_NEW_WINDOW</p></td>
+<td class="enum_member_description">
+<p>Similar to <em class="parameter"><code>GTK_PLACES_OPEN_NEW_TAB</code></em>
+, but indicates that the application
+ can open folders in new windows.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GtkPlacesSidebar--local-only"></a><h3>The <code class="literal">â€œlocal-onlyâ€</code> property</h3>
+<pre class="programlisting">  â€œlocal-onlyâ€               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the sidebar only includes local files.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPlacesSidebar--location"></a><h3>The <code class="literal">â€œlocationâ€</code> property</h3>
+<pre class="programlisting">  â€œlocationâ€                 <a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a>Â *</pre>
+<p>The location to highlight in the sidebar.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPlacesSidebar--open-flags"></a><h3>The <code class="literal">â€œopen-flagsâ€</code> property</h3>
+<pre class="programlisting">  â€œopen-flagsâ€               <a class="link" href="GtkPlacesSidebar.html#GtkPlacesOpenFlags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesOpenFlags" title="enum GtkPlacesOpenFlags"><span class="type">GtkPlacesOpenFlags</span></a></pre>
+<p>Modes in which the calling application can open locations selected in the sidebar.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_PLACES_OPEN_NORMAL</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPlacesSidebar--show-connect-to-server"></a><h3>The <code class="literal">â€œshow-connect-to-serverâ€</code> property</h3>
+<pre class="programlisting">  â€œshow-connect-to-serverâ€   <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the sidebar includes a builtin shortcut to a 'Connect to server' dialog.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPlacesSidebar--show-desktop"></a><h3>The <code class="literal">â€œshow-desktopâ€</code> property</h3>
+<pre class="programlisting">  â€œshow-desktopâ€             <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the sidebar includes a builtin shortcut to the Desktop folder.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GtkPlacesSidebar-drag-action-ask"></a><h3>The <code class="literal">â€œdrag-action-askâ€</code> signal</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+user_function (<a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>              actions,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          user_data)</pre>
+<p>The places sidebar emits this signal when it needs to ask the application
+to pop up a menu to ask the user for which drag action to perform.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.14.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>actions</p></td>
+<td class="parameter_description"><p>Possible drag actions that need to be asked for.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.15.14.2.6"></a><h4>Returns</h4>
+<p> the final drag action that the sidebar should pass to the drag side
+of the drag-and-drop operation.</p>
+<p></p>
+</div>
+<p>Flags: Run Last</p>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPlacesSidebar-drag-action-requested"></a><h3>The <code class="literal">â€œdrag-action-requestedâ€</code> signal</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+user_function (<a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar,
+               <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Drag-and-Drop.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Drag-and-Drop.html#GdkDragContext'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Drag-and-Drop.html#GdkDragContext"><span class="type">GdkDragContext</span></a>   *context,
+               <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>          *dest_file,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          source_file_list,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          user_data)</pre>
+<p>When the user starts a drag-and-drop operation and the sidebar needs
+to ask the application for which drag action to perform, then the
+sidebar will emit this signal.</p>
+<p>The application can evaluate the <em class="parameter"><code>context</code></em>
+ for customary actions, or
+it can check the type of the files indicated by <em class="parameter"><code>source_file_list</code></em>
+ against the
+possible actions for the destination <em class="parameter"><code>dest_file</code></em>
+.</p>
+<p>The drag action to use must be the return value of the signal handler.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.14.3.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>context</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Drag-and-Drop.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Drag-and-Drop.html#GdkDragContext'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Drag-and-Drop.html#GdkDragContext"><span class="type">GdkDragContext</span></a> with information about the drag operation</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dest_file</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a> with the tentative location that is being hovered for a drop</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>source_file_list</p></td>
+<td class="parameter_description"><p> List of <a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a> that are being dragged. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GFile][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.15.14.3.8"></a><h4>Returns</h4>
+<p> The drag action to use, for example, <span class="type">GDK_ACTION_COPY</span>
+or <span class="type">GDK_ACTION_MOVE</span>, or 0 if no action is allowed here (i.e. drops
+are not allowed in the specified <em class="parameter"><code>dest_file</code></em>
+).</p>
+<p></p>
+</div>
+<p>Flags: Run Last</p>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPlacesSidebar-drag-perform-drop"></a><h3>The <code class="literal">â€œdrag-perform-dropâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar,
+               <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>          *dest_file,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          source_file_list,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>              action,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          user_data)</pre>
+<p>The places sidebar emits this signal when the user completes a
+drag-and-drop operation and one of the sidebar's items is the
+destination.  This item is in the <em class="parameter"><code>dest_file</code></em>
+, and the
+<em class="parameter"><code>source_file_list</code></em>
+ has the list of files that are dropped into it and
+which should be copied/moved/etc. based on the specified <em class="parameter"><code>action</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.14.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dest_file</p></td>
+<td class="parameter_description"><p>Destination <a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a>.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>source_file_list</p></td>
+<td class="parameter_description"><p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of <a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a> that got dropped. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GFile][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>action</p></td>
+<td class="parameter_description"><p>Drop action to perform.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPlacesSidebar-open-location"></a><h3>The <code class="literal">â€œopen-locationâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a>  *sidebar,
+               <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>           *location,
+               <a class="link" href="GtkPlacesSidebar.html#GtkPlacesOpenFlags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesOpenFlags" title="enum GtkPlacesOpenFlags"><span class="type">GtkPlacesOpenFlags</span></a> open_flags,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)</pre>
+<p>The places sidebar emits this signal when the user selects a location
+in it.  The calling application should display the contents of that
+location; for example, a file manager should show a list of files in
+the specified location.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.14.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>location</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a> to which the caller should switch.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>open_flags</p></td>
+<td class="parameter_description"><p>a single value from <a class="link" href="GtkPlacesSidebar.html#GtkPlacesOpenFlags" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#GtkPlacesOpenFlags" title="enum GtkPlacesOpenFlags"><span class="type">GtkPlacesOpenFlags</span></a> specifying how the <em class="parameter"><code>location</code></em>
+should be opened.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPlacesSidebar-populate-popup"></a><h3>The <code class="literal">â€œpopulate-popupâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar,
+               <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>          *menu,
+               <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>          *selected_item,
+               <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>          *selected_volume,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          user_data)</pre>
+<p>The places sidebar emits this signal when the user invokes a contextual
+menu on one of its items.  In the signal handler, the application may
+add extra items to the menu as appropriate.  For example, a file manager
+may want to add a "Properties" command to the menu.</p>
+<p>It is not necessary to store the <em class="parameter"><code>selected_item</code></em>
+ for each menu item;
+during their GtkMenuItem::activate callbacks, the application can use
+<a class="link" href="GtkPlacesSidebar.html#gtk-places-sidebar-get-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html#gtk-places-sidebar-get-location" title="gtk_places_sidebar_get_locationÂ ()"><code class="function">gtk_places_sidebar_get_location()</code></a> to get the file to which the item
+refers.</p>
+<p>The <em class="parameter"><code>selected_item</code></em>
+ argument may be <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> in case the selection refers to
+a volume.  In this case, <em class="parameter"><code>selected_volume</code></em>
+ will be non-NULL.  In this case,
+the calling application will have to <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-ref'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-ref"><code class="function">g_object_ref()</code></a> the <em class="parameter"><code>selected_volume</code></em>
+ and
+keep it around for the purposes of its menu item's "activate" callback.</p>
+<p>The <em class="parameter"><code>menu</code></em>
+ and all its menu items are destroyed after the user
+dismisses the menu.  The menu is re-created (and thus, this signal is
+emitted) every time the user activates the contextual menu.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.14.6.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>menu</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkMenu.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenu.html" title="GtkMenu"><span class="type">GtkMenu</span></a>.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>selected_item</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html"><span class="type">GFile</span></a> with the item to which the menu should refer, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> in the case of a <em class="parameter"><code>selected_volume</code></em>
+.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>selected_volume</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GVolume.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GVolume.html'" tppabs="https://developer.gnome.org/gio/unstable/GVolume.html"><span class="type">GVolume</span></a> if the selected item is a volume, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> if it is a file.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPlacesSidebar-show-connect-to-server"></a><h3>The <code class="literal">â€œshow-connect-to-serverâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          user_data)</pre>
+<p>The places sidebar emits this signal when it needs the calling
+application to present an way to connect directly to a network server.
+For example, the application may bring up a dialog box asking for
+a URL like "sftp://ftp.example.com".  It is up to the application to create
+the corresponding mount by using, for example, <a href="javascript:if(confirm('https://developer.gnome.org/gio/unstable/GFile.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gio/unstable/GFile.html#g-file-mount-enclosing-volume'" tppabs="https://developer.gnome.org/gio/unstable/GFile.html#g-file-mount-enclosing-volume"><code class="function">g_file_mount_enclosing_volume()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.14.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPlacesSidebar-show-error-message"></a><h3>The <code class="literal">â€œshow-error-messageâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html" title="GtkPlacesSidebar"><span class="type">GtkPlacesSidebar</span></a> *sidebar,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>            *primary,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>            *secondary,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          user_data)</pre>
+<p>The places sidebar emits this signal when it needs the calling
+application to present an error message.  Most of these messages
+refer to mounting or unmounting media, for example, when a drive
+cannot be started for some reason.</p>
+<div class="refsect3">
+<a name="id-1.3.14.15.14.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>sidebar</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>primary</p></td>
+<td class="parameter_description"><p>primary message with a summary of the error to show.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secondary</p></td>
+<td class="parameter_description"><p>secondary message with details of the error to show.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+<p class="since">Since 3.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkPlacesSidebar.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GtkFileChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFileChooser.html" title="GtkFileChooser"><span class="type">GtkFileChooser</span></a></p>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

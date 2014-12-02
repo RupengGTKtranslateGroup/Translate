@@ -1,0 +1,1329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: GtkPrinter</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="Printing.html" rel="up" title="Printing"></link><link href="GtkPaperSize.html" rel="prev" title="GtkPaperSize"></link><link href="GtkPrintJob.html" rel="next" title="GtkPrintJob"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkPrinter.description">Description</a></span><span id="nav_hierarchy">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkPrinter.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkPrinter.properties">Properties</a></span><span id="nav_signals">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkPrinter.signals">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="Printing.html" tppabs="https://developer.gnome.org/gtk3/stable/Printing.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="GtkPaperSize.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPaperSize.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="GtkPrintJob.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrintJob.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="GtkPrinter"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkPrinter.top_of_page"></a>GtkPrinter</span></h2>
+<p>GtkPrinter â€” Represents a printer</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="GtkPrinter.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="returnvalue">GtkPrinter</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-new" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-new" title="gtk_printer_newÂ ()">gtk_printer_new</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkPrinter.html#GtkPrintBackend" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrintBackend"><span class="returnvalue">GtkPrintBackend</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-get-backend" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-get-backend" title="gtk_printer_get_backendÂ ()">gtk_printer_get_backend</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-get-name" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-get-name" title="gtk_printer_get_nameÂ ()">gtk_printer_get_name</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-get-state-message" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-get-state-message" title="gtk_printer_get_state_messageÂ ()">gtk_printer_get_state_message</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-get-description" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-get-description" title="gtk_printer_get_descriptionÂ ()">gtk_printer_get_description</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-get-location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-get-location" title="gtk_printer_get_locationÂ ()">gtk_printer_get_location</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-get-icon-name" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-get-icon-name" title="gtk_printer_get_icon_nameÂ ()">gtk_printer_get_icon_name</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-get-job-count" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-get-job-count" title="gtk_printer_get_job_countÂ ()">gtk_printer_get_job_count</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-is-active" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-is-active" title="gtk_printer_is_activeÂ ()">gtk_printer_is_active</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-is-paused" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-is-paused" title="gtk_printer_is_pausedÂ ()">gtk_printer_is_paused</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-is-accepting-jobs" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-is-accepting-jobs" title="gtk_printer_is_accepting_jobsÂ ()">gtk_printer_is_accepting_jobs</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-is-virtual" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-is-virtual" title="gtk_printer_is_virtualÂ ()">gtk_printer_is_virtual</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-is-default" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-is-default" title="gtk_printer_is_defaultÂ ()">gtk_printer_is_default</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-accepts-ps" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-accepts-ps" title="gtk_printer_accepts_psÂ ()">gtk_printer_accepts_ps</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-accepts-pdf" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-accepts-pdf" title="gtk_printer_accepts_pdfÂ ()">gtk_printer_accepts_pdf</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-list-papers" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-list-papers" title="gtk_printer_list_papersÂ ()">gtk_printer_list_papers</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-compare" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-compare" title="gtk_printer_compareÂ ()">gtk_printer_compare</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-has-details" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-has-details" title="gtk_printer_has_detailsÂ ()">gtk_printer_has_details</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-request-details" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-request-details" title="gtk_printer_request_detailsÂ ()">gtk_printer_request_details</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkPrintUnixDialog.html#GtkPrintCapabilities" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrintUnixDialog.html#GtkPrintCapabilities" title="enum GtkPrintCapabilities"><span class="returnvalue">GtkPrintCapabilities</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-get-capabilities" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-get-capabilities" title="gtk_printer_get_capabilitiesÂ ()">gtk_printer_get_capabilities</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkPageSetup.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPageSetup.html" title="GtkPageSetup"><span class="returnvalue">GtkPageSetup</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-get-default-page-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-get-default-page-size" title="gtk_printer_get_default_page_sizeÂ ()">gtk_printer_get_default_page_size</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-printer-get-hard-margins" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-get-hard-margins" title="gtk_printer_get_hard_marginsÂ ()">gtk_printer_get_hard_margins</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="GtkPrinter.html#GtkPrinterFunc" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinterFunc" title="GtkPrinterFuncÂ ()">*GtkPrinterFunc</a><span class="c_punctuation">)</span>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkPrinter.html#gtk-enumerate-printers" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-enumerate-printers" title="gtk_enumerate_printersÂ ()">gtk_enumerate_printers</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkPrinter.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="properties_type" width="150px"></col>
+<col class="properties_name" width="300px"></col>
+<col class="properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkPrinter.html#GtkPrinter--accepting-jobs" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter--accepting-jobs" title="The â€œaccepting-jobsâ€ property">accepting-jobs</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkPrinter.html#GtkPrinter--accepts-pdf" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter--accepts-pdf" title="The â€œaccepts-pdfâ€ property">accepts-pdf</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkPrinter.html#GtkPrinter--accepts-ps" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter--accepts-ps" title="The â€œaccepts-psâ€ property">accepts-ps</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="GtkPrinter.html#GtkPrintBackend" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrintBackend"><span class="type">GtkPrintBackend</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkPrinter.html#GtkPrinter--backend" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter--backend" title="The â€œbackendâ€ property">backend</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkPrinter.html#GtkPrinter--icon-name" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter--icon-name" title="The â€œicon-nameâ€ property">icon-name</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkPrinter.html#GtkPrinter--is-virtual" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter--is-virtual" title="The â€œis-virtualâ€ property">is-virtual</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkPrinter.html#GtkPrinter--job-count" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter--job-count" title="The â€œjob-countâ€ property">job-count</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkPrinter.html#GtkPrinter--location" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter--location" title="The â€œlocationâ€ property">location</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkPrinter.html#GtkPrinter--name" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter--name" title="The â€œnameâ€ property">name</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkPrinter.html#GtkPrinter--paused" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter--paused" title="The â€œpausedâ€ property">paused</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkPrinter.html#GtkPrinter--state-message" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter--state-message" title="The â€œstate-messageâ€ property">state-message</a></td>
+<td class="property_flags">Read</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkPrinter.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="signals_return" width="150px"></col>
+<col class="signals_name" width="300px"></col>
+<col class="signals_flags" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkPrinter.html#GtkPrinter-details-acquired" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter-details-acquired" title="The â€œdetails-acquiredâ€ signal">details-acquired</a></td>
+<td class="signal_flags">Run Last</td>
+</tr></tbody>
+</table></div>
+</div>
+<a name="GtkPrintBackend"></a><div class="refsect1">
+<a name="GtkPrinter.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkPrinter.html#GtkPrinter-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter-struct" title="struct GtkPrinter">GtkPrinter</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">Â </td>
+<td class="function_name"><a class="link" href="GtkPrinter.html#GtkPrintBackend-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrintBackend-struct" title="GtkPrintBackend">GtkPrintBackend</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkPrinter.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">â”œâ”€â”€</span> GtkPrintBackend
+    <span class="lineart">â•°â”€â”€</span> GtkPrinter
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkPrinter.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkPrinter.description"></a><h2>Description</h2>
+<p>A <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> object represents a printer. You only need to
+deal directly with printers if you use the non-portable
+<a class="link" href="GtkPrintUnixDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrintUnixDialog.html" title="GtkPrintUnixDialog"><span class="type">GtkPrintUnixDialog</span></a> API.</p>
+<p>A <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> allows to get status information about the printer,
+such as its description, its location, the number of queued jobs,
+etc. Most importantly, a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> object can be used to create
+a <a class="link" href="GtkPrintJob.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrintJob.html" title="GtkPrintJob"><span class="type">GtkPrintJob</span></a> object, which lets you print to the printer.</p>
+<p>Printing support was added in GTK+ 2.10.</p>
+</div>
+<div class="refsect1">
+<a name="GtkPrinter.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-printer-new"></a><h3>gtk_printer_newÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="returnvalue">GtkPrinter</span></a>Â *
+gtk_printer_new (<em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                 <em class="parameter"><code><a class="link" href="GtkPrinter.html#GtkPrintBackend" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrintBackend"><span class="type">GtkPrintBackend</span></a> *backend</code></em>,
+                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> virtual_</code></em>);</pre>
+<p>Creates a new <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>the name of the printer</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>backend</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html#GtkPrintBackend" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrintBackend"><span class="type">GtkPrintBackend</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>virtual_</p></td>
+<td class="parameter_description"><p>whether the printer is virtual</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.2.6"></a><h4>Returns</h4>
+<p> a new <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-get-backend"></a><h3>gtk_printer_get_backendÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPrinter.html#GtkPrintBackend" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrintBackend"><span class="returnvalue">GtkPrintBackend</span></a>Â *
+gtk_printer_get_backend (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns the backend of the printer.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.3.6"></a><h4>Returns</h4>
+<p> the backend of <em class="parameter"><code>printer</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-get-name"></a><h3>gtk_printer_get_nameÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_printer_get_name (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns the name of the printer.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.4.6"></a><h4>Returns</h4>
+<p> the name of <em class="parameter"><code>printer</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-get-state-message"></a><h3>gtk_printer_get_state_messageÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_printer_get_state_message (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns the state message describing the current state
+of the printer.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.5.6"></a><h4>Returns</h4>
+<p> the state message of <em class="parameter"><code>printer</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-get-description"></a><h3>gtk_printer_get_descriptionÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_printer_get_description (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Gets the description of the printer.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.6.6"></a><h4>Returns</h4>
+<p> the description of <em class="parameter"><code>printer</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-get-location"></a><h3>gtk_printer_get_locationÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_printer_get_location (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns a description of the location of the printer.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.7.6"></a><h4>Returns</h4>
+<p> the location of <em class="parameter"><code>printer</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-get-icon-name"></a><h3>gtk_printer_get_icon_nameÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_printer_get_icon_name (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Gets the name of the icon to use for the printer.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.8.6"></a><h4>Returns</h4>
+<p> the icon name for <em class="parameter"><code>printer</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-get-job-count"></a><h3>gtk_printer_get_job_countÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_printer_get_job_count (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Gets the number of jobs currently queued on the printer.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.9.6"></a><h4>Returns</h4>
+<p> the number of jobs on <em class="parameter"><code>printer</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-is-active"></a><h3>gtk_printer_is_activeÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_printer_is_active (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns whether the printer is currently active (i.e. 
+accepts new jobs).</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.10.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>printer</code></em>
+is active</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-is-paused"></a><h3>gtk_printer_is_pausedÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_printer_is_paused (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns whether the printer is currently paused.
+A paused printer still accepts jobs, but it is not
+printing them.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.11.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>printer</code></em>
+is paused</p>
+<p></p>
+</div>
+<p class="since">Since 2.14</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-is-accepting-jobs"></a><h3>gtk_printer_is_accepting_jobsÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_printer_is_accepting_jobs (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns whether the printer is accepting jobs</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.12.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>printer</code></em>
+is accepting jobs</p>
+<p></p>
+</div>
+<p class="since">Since 2.14</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-is-virtual"></a><h3>gtk_printer_is_virtualÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_printer_is_virtual (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns whether the printer is virtual (i.e. does not
+represent actual printer hardware, but something like 
+a CUPS class).</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.13.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>printer</code></em>
+is virtual</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-is-default"></a><h3>gtk_printer_is_defaultÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_printer_is_default (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns whether the printer is the default printer.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.14.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>printer</code></em>
+is the default</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-accepts-ps"></a><h3>gtk_printer_accepts_psÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_printer_accepts_ps (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns whether the printer accepts input in
+PostScript format.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.15.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>printer</code></em>
+accepts PostScript</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-accepts-pdf"></a><h3>gtk_printer_accepts_pdfÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_printer_accepts_pdf (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns whether the printer accepts input in
+PDF format.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.16.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>printer</code></em>
+accepts PDF</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-list-papers"></a><h3>gtk_printer_list_papersÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a>Â *
+gtk_printer_list_papers (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Lists all the paper sizes <em class="parameter"><code>printer</code></em>
+ supports.
+This will return and empty list unless the printerâ€™s details are 
+available, see <a class="link" href="GtkPrinter.html#gtk-printer-has-details" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-has-details" title="gtk_printer_has_detailsÂ ()"><code class="function">gtk_printer_has_details()</code></a> and <a class="link" href="GtkPrinter.html#gtk-printer-request-details" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-request-details" title="gtk_printer_request_detailsÂ ()"><code class="function">gtk_printer_request_details()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.17.6"></a><h4>Returns</h4>
+<p> a newly allocated list of newly allocated <a class="link" href="GtkPageSetup.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPageSetup.html" title="GtkPageSetup"><span class="type">GtkPageSetup</span></a> s. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GtkPageSetup][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-compare"></a><h3>gtk_printer_compareÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_printer_compare (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *a</code></em>,
+                     <em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *b</code></em>);</pre>
+<p>Compares two printers.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>a</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>b</p></td>
+<td class="parameter_description"><p>another <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.18.6"></a><h4>Returns</h4>
+<p> 0 if the printer match, a negative value if <em class="parameter"><code>a</code></em>
+&lt; <em class="parameter"><code>b</code></em>
+,
+or a positive value if <em class="parameter"><code>a</code></em>
+&gt; <em class="parameter"><code>b</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-has-details"></a><h3>gtk_printer_has_detailsÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_printer_has_details (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns whether the printer details are available.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.19.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>printer</code></em>
+details are available</p>
+<p></p>
+</div>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-request-details"></a><h3>gtk_printer_request_detailsÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_printer_request_details (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Requests the printer details. When the details are available,
+the <a class="link" href="GtkPrinter.html#GtkPrinter-details-acquired" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinter-details-acquired" title="The â€œdetails-acquiredâ€ signal"><span class="type">â€œdetails-acquiredâ€</span></a> signal will be emitted on <em class="parameter"><code>printer</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-get-capabilities"></a><h3>gtk_printer_get_capabilitiesÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPrintUnixDialog.html#GtkPrintCapabilities" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrintUnixDialog.html#GtkPrintCapabilities" title="enum GtkPrintCapabilities"><span class="returnvalue">GtkPrintCapabilities</span></a>
+gtk_printer_get_capabilities (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns the printerâ€™s capabilities.</p>
+<p>This is useful when youâ€™re using <a class="link" href="GtkPrintUnixDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrintUnixDialog.html" title="GtkPrintUnixDialog"><span class="type">GtkPrintUnixDialog</span></a>â€™s manual-capabilities 
+setting and need to know which settings the printer can handle and which 
+you must handle yourself.</p>
+<p>This will return 0 unless the printerâ€™s details are available, see
+<a class="link" href="GtkPrinter.html#gtk-printer-has-details" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-has-details" title="gtk_printer_has_detailsÂ ()"><code class="function">gtk_printer_has_details()</code></a> and <a class="link" href="GtkPrinter.html#gtk-printer-request-details" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-request-details" title="gtk_printer_request_detailsÂ ()"><code class="function">gtk_printer_request_details()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.21.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.21.8"></a><h4>Returns</h4>
+<p> the printerâ€™s capabilities</p>
+<p></p>
+</div>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-get-default-page-size"></a><h3>gtk_printer_get_default_page_sizeÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkPageSetup.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPageSetup.html" title="GtkPageSetup"><span class="returnvalue">GtkPageSetup</span></a>Â *
+gtk_printer_get_default_page_size (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>);</pre>
+<p>Returns default page size of <em class="parameter"><code>printer</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.22.6"></a><h4>Returns</h4>
+<p> a newly allocated <a class="link" href="GtkPageSetup.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPageSetup.html" title="GtkPageSetup"><span class="type">GtkPageSetup</span></a> with default page size of the printer.</p>
+<p></p>
+</div>
+<p class="since">Since 2.14</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-printer-get-hard-margins"></a><h3>gtk_printer_get_hard_marginsÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_printer_get_hard_margins (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>,
+                              <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *top</code></em>,
+                              <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *bottom</code></em>,
+                              <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *left</code></em>,
+                              <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *right</code></em>);</pre>
+<p>Retrieve the hard margins of <em class="parameter"><code>printer</code></em>
+, i.e. the margins that define
+the area at the borders of the paper that the printer cannot print to.</p>
+<p>Note: This will not succeed unless the printerâ€™s details are available,
+see <a class="link" href="GtkPrinter.html#gtk-printer-has-details" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-has-details" title="gtk_printer_has_detailsÂ ()"><code class="function">gtk_printer_has_details()</code></a> and <a class="link" href="GtkPrinter.html#gtk-printer-request-details" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-printer-request-details" title="gtk_printer_request_detailsÂ ()"><code class="function">gtk_printer_request_details()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.23.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>top</p></td>
+<td class="parameter_description"><p> a location to store the top margin in. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bottom</p></td>
+<td class="parameter_description"><p> a location to store the bottom margin in. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>left</p></td>
+<td class="parameter_description"><p> a location to store the left margin in. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>right</p></td>
+<td class="parameter_description"><p> a location to store the right margin in. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.23.7"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> iff the hard margins were retrieved</p>
+<p></p>
+</div>
+<p class="since">Since 2.20</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPrinterFunc"></a><h3>GtkPrinterFuncÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*GtkPrinterFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer</code></em>,
+                   <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
+<p>The type of function passed to <a class="link" href="GtkPrinter.html#gtk-enumerate-printers" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-enumerate-printers" title="gtk_enumerate_printersÂ ()"><code class="function">gtk_enumerate_printers()</code></a>.
+Note that you need to ref <em class="parameter"><code>printer</code></em>
+, if you want to keep
+a reference to it after the function has returned.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p> user data passed to <a class="link" href="GtkPrinter.html#gtk-enumerate-printers" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#gtk-enumerate-printers" title="gtk_enumerate_printersÂ ()"><code class="function">gtk_enumerate_printers()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.24.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop the enumeration, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to continue</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-enumerate-printers"></a><h3>gtk_enumerate_printersÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_enumerate_printers (<em class="parameter"><code><a class="link" href="GtkPrinter.html#GtkPrinterFunc" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrinterFunc" title="GtkPrinterFuncÂ ()"><span class="type">GtkPrinterFunc</span></a> func</code></em>,
+                        <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
+                        <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Datasets.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify'" tppabs="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy</code></em>,
+                        <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> wait</code></em>);</pre>
+<p>Calls a function for all <a href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html"><span class="type">GtkPrinters</span></a>. 
+If <em class="parameter"><code>func</code></em>
+ returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the enumeration is stopped.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.11.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>a function to call for each printer</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>user data to pass to <em class="parameter"><code>func</code></em>
+</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>function to call if <em class="parameter"><code>data</code></em>
+is no longer needed</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>wait</p></td>
+<td class="parameter_description"><p>if <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, wait in a recursive mainloop until
+all printers are enumerated; otherwise return early</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkPrinter.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkPrinter-struct"></a><h3>struct GtkPrinter</h3>
+<pre class="programlisting">struct GtkPrinter;</pre>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPrintBackend-struct"></a><h3>GtkPrintBackend</h3>
+<pre class="programlisting">typedef struct _GtkPrintBackend GtkPrintBackend;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkPrinter.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GtkPrinter--accepting-jobs"></a><h3>The <code class="literal">â€œaccepting-jobsâ€</code> property</h3>
+<pre class="programlisting">  â€œaccepting-jobsâ€           <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>This property is <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the printer is accepting jobs.</p>
+<p>Flags: Read</p>
+<p>Default value: TRUE</p>
+<p class="since">Since 2.14</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPrinter--accepts-pdf"></a><h3>The <code class="literal">â€œaccepts-pdfâ€</code> property</h3>
+<pre class="programlisting">  â€œaccepts-pdfâ€              <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>TRUE if this printer can accept PDF.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: FALSE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPrinter--accepts-ps"></a><h3>The <code class="literal">â€œaccepts-psâ€</code> property</h3>
+<pre class="programlisting">  â€œaccepts-psâ€               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>TRUE if this printer can accept PostScript.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: TRUE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPrinter--backend"></a><h3>The <code class="literal">â€œbackendâ€</code> property</h3>
+<pre class="programlisting">  â€œbackendâ€                  <a class="link" href="GtkPrinter.html#GtkPrintBackend" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html#GtkPrintBackend"><span class="type">GtkPrintBackend</span></a>Â *</pre>
+<p>Backend for the printer.</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPrinter--icon-name"></a><h3>The <code class="literal">â€œicon-nameâ€</code> property</h3>
+<pre class="programlisting">  â€œicon-nameâ€                <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</pre>
+<p>The icon name to use for the printer.</p>
+<p>Flags: Read</p>
+<p>Default value: ""</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPrinter--is-virtual"></a><h3>The <code class="literal">â€œis-virtualâ€</code> property</h3>
+<pre class="programlisting">  â€œis-virtualâ€               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>FALSE if this represents a real hardware printer.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: FALSE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPrinter--job-count"></a><h3>The <code class="literal">â€œjob-countâ€</code> property</h3>
+<pre class="programlisting">  â€œjob-countâ€                <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>Number of jobs queued in the printer.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPrinter--location"></a><h3>The <code class="literal">â€œlocationâ€</code> property</h3>
+<pre class="programlisting">  â€œlocationâ€                 <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</pre>
+<p>The location of the printer.</p>
+<p>Flags: Read</p>
+<p>Default value: ""</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPrinter--name"></a><h3>The <code class="literal">â€œnameâ€</code> property</h3>
+<pre class="programlisting">  â€œnameâ€                     <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</pre>
+<p>Name of the printer.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: ""</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPrinter--paused"></a><h3>The <code class="literal">â€œpausedâ€</code> property</h3>
+<pre class="programlisting">  â€œpausedâ€                   <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>This property is <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if this printer is paused.
+
+A paused printer still accepts jobs, but it does
+
+not print them.</p>
+<p>Flags: Read</p>
+<p>Default value: FALSE</p>
+<p class="since">Since 2.14</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkPrinter--state-message"></a><h3>The <code class="literal">â€œstate-messageâ€</code> property</h3>
+<pre class="programlisting">  â€œstate-messageâ€            <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</pre>
+<p>String giving the current state of the printer.</p>
+<p>Flags: Read</p>
+<p>Default value: ""</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkPrinter.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GtkPrinter-details-acquired"></a><h3>The <code class="literal">â€œdetails-acquiredâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> *printer,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>    success,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>    user_data)</pre>
+<p>Gets emitted in response to a request for detailed information
+about a printer from the print backend. The <em class="parameter"><code>success</code></em>
+ parameter
+indicates if the information was actually obtained.</p>
+<div class="refsect3">
+<a name="id-1.3.17.7.14.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>printer</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html" title="GtkPrinter"><span class="type">GtkPrinter</span></a> on which the signal is emitted</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>success</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the details were successfully acquired</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run Last</p>
+<p class="since">Since 2.10</p>
+</div>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

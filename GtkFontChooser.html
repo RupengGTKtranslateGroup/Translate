@@ -1,0 +1,801 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: GtkFontChooser</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="SelectorWidgets.html" rel="up" title="Selector Widgets and Dialogs"></link><link href="GtkFileFilter.html" rel="prev" title="GtkFileFilter"></link><link href="GtkFontButton.html" rel="next" title="GtkFontButton"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkFontChooser.description">Description</a></span><span id="nav_hierarchy">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkFontChooser.object-hierarchy">Object Hierarchy</a></span><span id="nav_prerequisites">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkFontChooser.prerequisites">Prerequisites</a></span><span id="nav_implementations">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkFontChooser.implementations">Known Implementations</a></span><span id="nav_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkFontChooser.properties">Properties</a></span><span id="nav_signals">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkFontChooser.signals">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="SelectorWidgets.html" tppabs="https://developer.gnome.org/gtk3/stable/SelectorWidgets.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="GtkFileFilter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFileFilter.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="GtkFontButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontButton.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="GtkFontChooser"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkFontChooser.top_of_page"></a>GtkFontChooser</span></h2>
+<p>GtkFontChooser â€” Interface implemented by widgets displaying fonts</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="GtkFontChooser.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFamily'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFamily"><span class="returnvalue">PangoFontFamily</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-get-font-family" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-get-font-family" title="gtk_font_chooser_get_font_familyÂ ()">gtk_font_chooser_get_font_family</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFace'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFace"><span class="returnvalue">PangoFontFace</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-get-font-face" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-get-font-face" title="gtk_font_chooser_get_font_faceÂ ()">gtk_font_chooser_get_font_face</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-get-font-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-get-font-size" title="gtk_font_chooser_get_font_sizeÂ ()">gtk_font_chooser_get_font_size</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-get-font" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-get-font" title="gtk_font_chooser_get_fontÂ ()">gtk_font_chooser_get_font</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-set-font" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-set-font" title="gtk_font_chooser_set_fontÂ ()">gtk_font_chooser_set_font</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription"><span class="returnvalue">PangoFontDescription</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-get-font-desc" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-get-font-desc" title="gtk_font_chooser_get_font_descÂ ()">gtk_font_chooser_get_font_desc</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-set-font-desc" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-set-font-desc" title="gtk_font_chooser_set_font_descÂ ()">gtk_font_chooser_set_font_desc</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-get-preview-text" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-get-preview-text" title="gtk_font_chooser_get_preview_textÂ ()">gtk_font_chooser_get_preview_text</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-set-preview-text" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-set-preview-text" title="gtk_font_chooser_set_preview_textÂ ()">gtk_font_chooser_set_preview_text</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-get-show-preview-entry" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-get-show-preview-entry" title="gtk_font_chooser_get_show_preview_entryÂ ()">gtk_font_chooser_get_show_preview_entry</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-set-show-preview-entry" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-set-show-preview-entry" title="gtk_font_chooser_set_show_preview_entryÂ ()">gtk_font_chooser_set_show_preview_entry</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="GtkFontChooser.html#GtkFontFilterFunc" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#GtkFontFilterFunc" title="GtkFontFilterFuncÂ ()">*GtkFontFilterFunc</a><span class="c_punctuation">)</span>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-set-filter-func" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-set-filter-func" title="gtk_font_chooser_set_filter_funcÂ ()">gtk_font_chooser_set_filter_func</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="properties_type" width="150px"></col>
+<col class="properties_name" width="300px"></col>
+<col class="properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkFontChooser.html#GtkFontChooser--font" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#GtkFontChooser--font" title="The â€œfontâ€ property">font</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription"><span class="type">PangoFontDescription</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkFontChooser.html#GtkFontChooser--font-desc" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#GtkFontChooser--font-desc" title="The â€œfont-descâ€ property">font-desc</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkFontChooser.html#GtkFontChooser--preview-text" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#GtkFontChooser--preview-text" title="The â€œpreview-textâ€ property">preview-text</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkFontChooser.html#GtkFontChooser--show-preview-entry" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#GtkFontChooser--show-preview-entry" title="The â€œshow-preview-entryâ€ property">show-preview-entry</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="signals_return" width="150px"></col>
+<col class="signals_name" width="300px"></col>
+<col class="signals_flags" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkFontChooser.html#GtkFontChooser-font-activated" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#GtkFontChooser-font-activated" title="The â€œfont-activatedâ€ signal">font-activated</a></td>
+<td class="signal_flags">Run First</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">Â </td>
+<td class="function_name"><a class="link" href="GtkFontChooser.html#GtkFontChooser-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#GtkFontChooser-struct" title="GtkFontChooser">GtkFontChooser</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GInterface
+    <span class="lineart">â•°â”€â”€</span> GtkFontChooser
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+GtkFontChooser requires
+ <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.implementations"></a><h2>Known Implementations</h2>
+<p>
+GtkFontChooser is implemented by
+ <a class="link" href="GtkFontButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontButton.html" title="GtkFontButton">GtkFontButton</a>,  <a class="link" href="GtkFontChooserDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooserDialog.html" title="GtkFontChooserDialog">GtkFontChooserDialog</a> and  <a class="link" href="GtkFontChooserWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooserWidget.html" title="GtkFontChooserWidget">GtkFontChooserWidget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.description"></a><h2>Description</h2>
+<p><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> is an interface that can be implemented by widgets
+displaying the list of fonts.  In GTK+, the main objects
+that implement this interface are <a class="link" href="GtkFontChooserWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooserWidget.html" title="GtkFontChooserWidget"><span class="type">GtkFontChooserWidget</span></a>,
+<a class="link" href="GtkFontChooserDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooserDialog.html" title="GtkFontChooserDialog"><span class="type">GtkFontChooserDialog</span></a> and <a class="link" href="GtkFontButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontButton.html" title="GtkFontButton"><span class="type">GtkFontButton</span></a>.</p>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-font-chooser-get-font-family"></a><h3>gtk_font_chooser_get_font_familyÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFamily'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFamily"><span class="returnvalue">PangoFontFamily</span></a>Â *
+gtk_font_chooser_get_font_family (<em class="parameter"><code><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *fontchooser</code></em>);</pre>
+<p>Gets the <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFamily'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFamily"><span class="type">PangoFontFamily</span></a> representing the selected font family.
+Font families are a collection of font faces.</p>
+<p>If the selected font is not installed, returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.2.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fontchooser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.2.7"></a><h4>Returns</h4>
+<p> A <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFamily'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFamily"><span class="type">PangoFontFamily</span></a> representing the
+selected font family, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. The returned object is owned by <em class="parameter"><code>fontchooser</code></em>
+and must not be modified or freed. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-font-chooser-get-font-face"></a><h3>gtk_font_chooser_get_font_faceÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFace'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFace"><span class="returnvalue">PangoFontFace</span></a>Â *
+gtk_font_chooser_get_font_face (<em class="parameter"><code><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *fontchooser</code></em>);</pre>
+<p>Gets the <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFace'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFace"><span class="type">PangoFontFace</span></a> representing the selected font group
+details (i.e. family, slant, weight, width, etc).</p>
+<p>If the selected font is not installed, returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.3.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fontchooser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.3.7"></a><h4>Returns</h4>
+<p> A <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFace'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFace"><span class="type">PangoFontFace</span></a> representing the
+selected font group details, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. The returned object is owned by
+<em class="parameter"><code>fontchooser</code></em>
+and must not be modified or freed. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-font-chooser-get-font-size"></a><h3>gtk_font_chooser_get_font_sizeÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_font_chooser_get_font_size (<em class="parameter"><code><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *fontchooser</code></em>);</pre>
+<p>The selected font size.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fontchooser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.4.6"></a><h4>Returns</h4>
+<p> A n integer representing the selected font size,
+or -1 if no font size is selected.</p>
+<p></p>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-font-chooser-get-font"></a><h3>gtk_font_chooser_get_fontÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_font_chooser_get_font (<em class="parameter"><code><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *fontchooser</code></em>);</pre>
+<p>Gets the currently-selected font name.</p>
+<p>Note that this can be a different string than what you set with
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-set-font" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-set-font" title="gtk_font_chooser_set_fontÂ ()"><code class="function">gtk_font_chooser_set_font()</code></a>, as the font chooser widget may
+normalize font names and thus return a string with a different
+structure. For example, â€œHelvetica Italic Bold 12â€ could be
+normalized to â€œHelvetica Bold Italic 12â€.</p>
+<p>Use <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#pango-font-description-equal'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#pango-font-description-equal"><code class="function">pango_font_description_equal()</code></a> if you want to compare two
+font descriptions.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.5.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fontchooser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.5.8"></a><h4>Returns</h4>
+<p> A string with the name
+of the current font, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if  no font is selected. You must
+free this string with <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free'" tppabs="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-font-chooser-set-font"></a><h3>gtk_font_chooser_set_fontÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_font_chooser_set_font (<em class="parameter"><code><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *fontchooser</code></em>,
+                           <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *fontname</code></em>);</pre>
+<p>Sets the currently-selected font.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fontchooser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>fontname</p></td>
+<td class="parameter_description"><p>a font name like â€œHelvetica 12â€ or â€œTimes Bold 18â€</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-font-chooser-get-font-desc"></a><h3>gtk_font_chooser_get_font_descÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription"><span class="returnvalue">PangoFontDescription</span></a>Â *
+gtk_font_chooser_get_font_desc (<em class="parameter"><code><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *fontchooser</code></em>);</pre>
+<p>Gets the currently-selected font.</p>
+<p>Note that this can be a different string than what you set with
+<a class="link" href="GtkFontChooser.html#gtk-font-chooser-set-font" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-set-font" title="gtk_font_chooser_set_fontÂ ()"><code class="function">gtk_font_chooser_set_font()</code></a>, as the font chooser widget may
+normalize font names and thus return a string with a different
+structure. For example, â€œHelvetica Italic Bold 12â€ could be
+normalized to â€œHelvetica Bold Italic 12â€.</p>
+<p>Use <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#pango-font-description-equal'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#pango-font-description-equal"><code class="function">pango_font_description_equal()</code></a> if you want to compare two
+font descriptions.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.7.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fontchooser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.7.8"></a><h4>Returns</h4>
+<p> A <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription"><span class="type">PangoFontDescription</span></a> for the
+current font, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if  no font is selected. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-font-chooser-set-font-desc"></a><h3>gtk_font_chooser_set_font_descÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_font_chooser_set_font_desc (<em class="parameter"><code><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *fontchooser</code></em>,
+                                <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription"><span class="type">PangoFontDescription</span></a> *font_desc</code></em>);</pre>
+<p>Sets the currently-selected font from <em class="parameter"><code>font_desc</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fontchooser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>font_desc</p></td>
+<td class="parameter_description"><p>a <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription"><span class="type">PangoFontDescription</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-font-chooser-get-preview-text"></a><h3>gtk_font_chooser_get_preview_textÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_font_chooser_get_preview_text (<em class="parameter"><code><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *fontchooser</code></em>);</pre>
+<p>Gets the text displayed in the preview area.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fontchooser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.9.6"></a><h4>Returns</h4>
+<p> the text displayed in the
+preview area. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-font-chooser-set-preview-text"></a><h3>gtk_font_chooser_set_preview_textÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_font_chooser_set_preview_text (<em class="parameter"><code><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *fontchooser</code></em>,
+                                   <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *text</code></em>);</pre>
+<p>Sets the text displayed in the preview area.
+The <em class="parameter"><code>text</code></em>
+ is used to show how the selected font looks.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fontchooser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>text</p></td>
+<td class="parameter_description"><p> the text to display in the preview area. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-font-chooser-get-show-preview-entry"></a><h3>gtk_font_chooser_get_show_preview_entryÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_font_chooser_get_show_preview_entry
+                               (<em class="parameter"><code><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *fontchooser</code></em>);</pre>
+<p>Returns whether the preview entry is shown or not.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>fontchooser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.11.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the preview entry is shown
+or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if it is hidden.</p>
+<p></p>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-font-chooser-set-show-preview-entry"></a><h3>gtk_font_chooser_set_show_preview_entryÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_font_chooser_set_show_preview_entry
+                               (<em class="parameter"><code><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *fontchooser</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> show_preview_entry</code></em>);</pre>
+<p>Shows or hides the editable preview entry.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fontchooser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>show_preview_entry</p></td>
+<td class="parameter_description"><p>whether to show the editable preview entry or not</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkFontFilterFunc"></a><h3>GtkFontFilterFuncÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*GtkFontFilterFunc<span class="c_punctuation">)</span> (<em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFamily'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFamily"><span class="type">PangoFontFamily</span></a> *family</code></em>,
+                      <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFace'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFace"><span class="type">PangoFontFace</span></a> *face</code></em>,
+                      <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
+<p>The type of function that is used for deciding what fonts get
+shown in a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a>. See <a class="link" href="GtkFontChooser.html#gtk-font-chooser-set-filter-func" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-set-filter-func" title="gtk_font_chooser_set_filter_funcÂ ()"><code class="function">gtk_font_chooser_set_filter_func()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>family</p></td>
+<td class="parameter_description"><p>a <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFamily'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFamily"><span class="type">PangoFontFamily</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>face</p></td>
+<td class="parameter_description"><p>a <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFace'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontFace"><span class="type">PangoFontFace</span></a> belonging to <em class="parameter"><code>family</code></em>
+</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p> user data passed to <a class="link" href="GtkFontChooser.html#gtk-font-chooser-set-filter-func" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#gtk-font-chooser-set-filter-func" title="gtk_font_chooser_set_filter_funcÂ ()"><code class="function">gtk_font_chooser_set_filter_func()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.13.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the font should be displayed</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-font-chooser-set-filter-func"></a><h3>gtk_font_chooser_set_filter_funcÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_font_chooser_set_filter_func (<em class="parameter"><code><a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *fontchooser</code></em>,
+                                  <em class="parameter"><code><a class="link" href="GtkFontChooser.html#GtkFontFilterFunc" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#GtkFontFilterFunc" title="GtkFontFilterFuncÂ ()"><span class="type">GtkFontFilterFunc</span></a> filter</code></em>,
+                                  <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
+                                  <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Datasets.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify'" tppabs="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> destroy</code></em>);</pre>
+<p>Adds a filter function that decides which fonts to display
+in the font chooser.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.12.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>fontchooser</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filter</p></td>
+<td class="parameter_description"><p> a <a class="link" href="GtkFontChooser.html#GtkFontFilterFunc" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html#GtkFontFilterFunc" title="GtkFontFilterFuncÂ ()"><span class="type">GtkFontFilterFunc</span></a>, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>data to pass to <em class="parameter"><code>filter</code></em>
+</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>destroy</p></td>
+<td class="parameter_description"><p>function to call to free <em class="parameter"><code>data</code></em>
+when it is no longer needed</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.2</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkFontChooser-struct"></a><h3>GtkFontChooser</h3>
+<pre class="programlisting">typedef struct _GtkFontChooser GtkFontChooser;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GtkFontChooser--font"></a><h3>The <code class="literal">â€œfontâ€</code> property</h3>
+<pre class="programlisting">  â€œfontâ€                     <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</pre>
+<p>The font description as a string, e.g. "Sans Italic 12".</p>
+<p>Flags: Read / Write</p>
+<p>Default value: "Sans 10"</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkFontChooser--font-desc"></a><h3>The <code class="literal">â€œfont-descâ€</code> property</h3>
+<pre class="programlisting">  â€œfont-descâ€                <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription"><span class="type">PangoFontDescription</span></a>Â *</pre>
+<p>The font description as a <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription"><span class="type">PangoFontDescription</span></a>.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkFontChooser--preview-text"></a><h3>The <code class="literal">â€œpreview-textâ€</code> property</h3>
+<pre class="programlisting">  â€œpreview-textâ€             <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</pre>
+<p>The string with which to preview the font.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: "The quick brown fox jumps over the lazy dog."</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkFontChooser--show-preview-entry"></a><h3>The <code class="literal">â€œshow-preview-entryâ€</code> property</h3>
+<pre class="programlisting">  â€œshow-preview-entryâ€       <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether to show an entry to change the preview text.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GtkFontChooser-font-activated"></a><h3>The <code class="literal">â€œfont-activatedâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html" title="GtkFontChooser"><span class="type">GtkFontChooser</span></a> *self,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>          *fontname,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
+<p>Emitted when a font is activated.
+This usually happens when the user double clicks an item,
+or an item is selected and the user presses one of the keys
+Space, Shift+Space, Return or Enter.</p>
+<div class="refsect3">
+<a name="id-1.3.14.11.15.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>the object which received the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>fontname</p></td>
+<td class="parameter_description"><p>the font name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkFontChooser.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GtkFontChooserDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooserDialog.html" title="GtkFontChooserDialog"><span class="type">GtkFontChooserDialog</span></a>, <a class="link" href="GtkFontChooserWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooserWidget.html" title="GtkFontChooserWidget"><span class="type">GtkFontChooserWidget</span></a>, <a class="link" href="GtkFontButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontButton.html" title="GtkFontButton"><span class="type">GtkFontButton</span></a></p>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

@@ -1,0 +1,1503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: GtkThemingEngine</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="theming.html" rel="up" title="PartÂ IV.Â Theming in GTK+"></link><link href="gtk3-GtkStyleProperties.html" rel="prev" title="GtkStyleProperties"></link><link href="gtk3-GtkWidgetPath.html" rel="next" title="GtkWidgetPath"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkThemingEngine.description">Description</a></span><span id="nav_hierarchy">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkThemingEngine.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkThemingEngine.properties">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="theming.html" tppabs="https://developer.gnome.org/gtk3/stable/theming.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="gtk3-GtkStyleProperties.html" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkStyleProperties.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="gtk3-GtkWidgetPath.html" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="GtkThemingEngine"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkThemingEngine.top_of_page"></a>GtkThemingEngine</span></h2>
+<p>GtkThemingEngine â€” Theming renderers</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="GtkThemingEngine.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get" title="gtk_theming_engine_getÂ ()">gtk_theming_engine_get</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html#GtkTextDirection" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkTextDirection" title="enum GtkTextDirection"><span class="returnvalue">GtkTextDirection</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-direction" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-direction" title="gtk_theming_engine_get_directionÂ ()">gtk_theming_engine_get_direction</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Standard-Enumerations.html#GtkJunctionSides" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkJunctionSides" title="enum GtkJunctionSides"><span class="returnvalue">GtkJunctionSides</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-junction-sides" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-junction-sides" title="gtk_theming_engine_get_junction_sidesÂ ()">gtk_theming_engine_get_junction_sides</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="returnvalue">GtkWidgetPath</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-path" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-path" title="gtk_theming_engine_get_pathÂ ()">gtk_theming_engine_get_path</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-property" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-property" title="gtk_theming_engine_get_propertyÂ ()">gtk_theming_engine_get_property</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/GdkScreen.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/GdkScreen.html'" tppabs="https://developer.gnome.org/gdk3/stable/GdkScreen.html"><span class="returnvalue">GdkScreen</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-screen" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-screen" title="gtk_theming_engine_get_screenÂ ()">gtk_theming_engine_get_screen</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="returnvalue">GtkStateFlags</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-state" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-state" title="gtk_theming_engine_get_stateÂ ()">gtk_theming_engine_get_state</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-style" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-style" title="gtk_theming_engine_get_styleÂ ()">gtk_theming_engine_get_style</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-style-property" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-style-property" title="gtk_theming_engine_get_style_propertyÂ ()">gtk_theming_engine_get_style_property</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-style-valist" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-style-valist" title="gtk_theming_engine_get_style_valistÂ ()">gtk_theming_engine_get_style_valist</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-valist" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-valist" title="gtk_theming_engine_get_valistÂ ()">gtk_theming_engine_get_valist</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-color" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-color" title="gtk_theming_engine_get_colorÂ ()">gtk_theming_engine_get_color</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-background-color" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-background-color" title="gtk_theming_engine_get_background_colorÂ ()">gtk_theming_engine_get_background_color</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-border-color" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-border-color" title="gtk_theming_engine_get_border_colorÂ ()">gtk_theming_engine_get_border_color</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-border" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-border" title="gtk_theming_engine_get_borderÂ ()">gtk_theming_engine_get_border</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-padding" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-padding" title="gtk_theming_engine_get_paddingÂ ()">gtk_theming_engine_get_padding</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-margin" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-margin" title="gtk_theming_engine_get_marginÂ ()">gtk_theming_engine_get_margin</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription"><span class="returnvalue">PangoFontDescription</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-font" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-font" title="gtk_theming_engine_get_fontÂ ()">gtk_theming_engine_get_font</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-has-class" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-has-class" title="gtk_theming_engine_has_classÂ ()">gtk_theming_engine_has_class</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-has-region" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-has-region" title="gtk_theming_engine_has_regionÂ ()">gtk_theming_engine_has_region</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-lookup-color" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-lookup-color" title="gtk_theming_engine_lookup_colorÂ ()">gtk_theming_engine_lookup_color</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-state-is-running" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-state-is-running" title="gtk_theming_engine_state_is_runningÂ ()">gtk_theming_engine_state_is_running</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="returnvalue">GtkThemingEngine</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-load" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-load" title="gtk_theming_engine_loadÂ ()">gtk_theming_engine_load</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkThemingEngine.html#gtk-theming-engine-register-property" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-register-property" title="gtk_theming_engine_register_propertyÂ ()">gtk_theming_engine_register_property</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkThemingEngine.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="properties_type" width="150px"></col>
+<col class="properties_name" width="300px"></col>
+<col class="properties_flags" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkThemingEngine.html#GtkThemingEngine--name" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#GtkThemingEngine--name" title="The â€œnameâ€ property">name</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkThemingEngine.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkThemingEngine.html#GtkThemingEngineClass" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#GtkThemingEngineClass" title="struct GtkThemingEngineClass">GtkThemingEngineClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkThemingEngine.html#GtkThemingEngine-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#GtkThemingEngine-struct" title="struct GtkThemingEngine">GtkThemingEngine</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkThemingEngine.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">â•°â”€â”€</span> GtkThemingEngine
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkThemingEngine.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkThemingEngine.description"></a><h2>Description</h2>
+<p><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> is the object used for rendering themed content
+in GTK+ widgets. Even though GTK+ has a default implementation,
+it can be overridden in CSS files by enforcing a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a>
+object to be loaded as a module.</p>
+<p>In order to implement a theming engine, a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> subclass
+must be created, alongside the CSS file that will reference it, the
+theming engine would be created as an .so library, and installed in
+$(gtk-modules-dir)/theming-engines/.</p>
+<p><a href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html"><span class="type">GtkThemingEngines</span></a> have limited access to the object they are
+rendering, the <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> API has read-only accessors to the
+style information contained in the rendered objectâ€™s <a class="link" href="GtkStyleContext.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html" title="GtkStyleContext"><span class="type">GtkStyleContext</span></a>.</p>
+</div>
+<div class="refsect1">
+<a name="GtkThemingEngine.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-theming-engine-get"></a><h3>gtk_theming_engine_getÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_get (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                        <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a> state</code></em>,
+                        <em class="parameter"><code>...</code></em>);</pre>
+<p>Retrieves several style property values that apply to the currently
+rendered element.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>state to retrieve values for</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>property name /return value pairs, followed by <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-direction"></a><h3>gtk_theming_engine_get_directionÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html#GtkTextDirection" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkTextDirection" title="enum GtkTextDirection"><span class="returnvalue">GtkTextDirection</span></a>
+gtk_theming_engine_get_direction (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_theming_engine_get_direction</code> has been deprecated since version 3.8 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get-state" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get-state" title="gtk_theming_engine_get_stateÂ ()"><code class="function">gtk_theming_engine_get_state()</code></a> and
+  check for <a class="link" href="gtk3-Standard-Enumerations.html#GTK-STATE-FLAG-DIR-LTR:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GTK-STATE-FLAG-DIR-LTR:CAPS"><span class="type">GTK_STATE_FLAG_DIR_LTR</span></a> and
+  <a class="link" href="gtk3-Standard-Enumerations.html#GTK-STATE-FLAG-DIR-RTL:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GTK-STATE-FLAG-DIR-RTL:CAPS"><span class="type">GTK_STATE_FLAG_DIR_RTL</span></a> instead.</p>
+</div>
+<p>Returns the widget direction used for rendering.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.3.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.9.3.8"></a><h4>Returns</h4>
+<p> the widget direction</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-junction-sides"></a><h3>gtk_theming_engine_get_junction_sidesÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Standard-Enumerations.html#GtkJunctionSides" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkJunctionSides" title="enum GtkJunctionSides"><span class="returnvalue">GtkJunctionSides</span></a>
+gtk_theming_engine_get_junction_sides (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>);</pre>
+<p>Returns the widget direction used for rendering.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.9.4.6"></a><h4>Returns</h4>
+<p> the widget direction</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-path"></a><h3>gtk_theming_engine_get_pathÂ ()</h3>
+<pre class="programlisting">const <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="returnvalue">GtkWidgetPath</span></a>Â *
+gtk_theming_engine_get_path (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>);</pre>
+<p>Returns the widget path used for style matching.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.9.5.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="gtk3-GtkWidgetPath.html#GtkWidgetPath" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkWidgetPath.html#GtkWidgetPath" title="GtkWidgetPath"><span class="type">GtkWidgetPath</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-property"></a><h3>gtk_theming_engine_get_propertyÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_get_property (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                                 <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *property</code></em>,
+                                 <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a> state</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>);</pre>
+<p>Gets a property value as retrieved from the style settings that apply
+to the currently rendered element.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>property</p></td>
+<td class="parameter_description"><p>the property name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>state to retrieve the value for</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p> return location for the property value,
+you must free this memory using <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#g-value-unset'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#g-value-unset"><code class="function">g_value_unset()</code></a> once you are
+done with it. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-screen"></a><h3>gtk_theming_engine_get_screenÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/GdkScreen.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/GdkScreen.html'" tppabs="https://developer.gnome.org/gdk3/stable/GdkScreen.html"><span class="returnvalue">GdkScreen</span></a>Â *
+gtk_theming_engine_get_screen (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>);</pre>
+<p>Returns the <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/GdkScreen.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/GdkScreen.html'" tppabs="https://developer.gnome.org/gdk3/stable/GdkScreen.html"><span class="type">GdkScreen</span></a> to which <em class="parameter"><code>engine</code></em>
+ currently rendering to.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.9.7.6"></a><h4>Returns</h4>
+<p> a <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/GdkScreen.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/GdkScreen.html'" tppabs="https://developer.gnome.org/gdk3/stable/GdkScreen.html"><span class="type">GdkScreen</span></a>, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-state"></a><h3>gtk_theming_engine_get_stateÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="returnvalue">GtkStateFlags</span></a>
+gtk_theming_engine_get_state (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>);</pre>
+<p>returns the state used when rendering.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.9.8.6"></a><h4>Returns</h4>
+<p> the state flags</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-style"></a><h3>gtk_theming_engine_get_styleÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_get_style (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                              <em class="parameter"><code>...</code></em>);</pre>
+<p>Retrieves several widget style properties from <em class="parameter"><code>engine</code></em>
+ according
+to the currently rendered contentâ€™s style.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>property name /return value pairs, followed by <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-style-property"></a><h3>gtk_theming_engine_get_style_propertyÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_get_style_property (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                                       <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *property_name</code></em>,
+                                       <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>);</pre>
+<p>Gets the value for a widget style property.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>property_name</p></td>
+<td class="parameter_description"><p>the name of the widget style property</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>Return location for the property value, free with
+<a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#g-value-unset'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#g-value-unset"><code class="function">g_value_unset()</code></a> after use.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-style-valist"></a><h3>gtk_theming_engine_get_style_valistÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_get_style_valist (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                                     <em class="parameter"><code><span class="type">va_list</span> args</code></em>);</pre>
+<p>Retrieves several widget style properties from <em class="parameter"><code>engine</code></em>
+ according to the
+currently rendered contentâ€™s style.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>args</p></td>
+<td class="parameter_description"><p>va_list of property name/return location pairs, followed by <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-valist"></a><h3>gtk_theming_engine_get_valistÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_get_valist (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                               <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a> state</code></em>,
+                               <em class="parameter"><code><span class="type">va_list</span> args</code></em>);</pre>
+<p>Retrieves several style property values that apply to the currently
+rendered element.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>state to retrieve values for</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>args</p></td>
+<td class="parameter_description"><p>va_list of property name/return location pairs, followed by <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-color"></a><h3>gtk_theming_engine_get_colorÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_get_color (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                              <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a> state</code></em>,
+                              <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a> *color</code></em>);</pre>
+<p>Gets the foreground color for a given state.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>state to retrieve the color for</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>color</p></td>
+<td class="parameter_description"><p> return value for the foreground color. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-background-color"></a><h3>gtk_theming_engine_get_background_colorÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_get_background_color
+                               (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                                <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a> state</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a> *color</code></em>);</pre>
+<p>Gets the background color for a given state.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>state to retrieve the color for</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>color</p></td>
+<td class="parameter_description"><p> return value for the background color. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-border-color"></a><h3>gtk_theming_engine_get_border_colorÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_get_border_color (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                                     <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a> state</code></em>,
+                                     <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a> *color</code></em>);</pre>
+<p>Gets the border color for a given state.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>state to retrieve the color for</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>color</p></td>
+<td class="parameter_description"><p> return value for the border color. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-border"></a><h3>gtk_theming_engine_get_borderÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_get_border (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                               <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a> state</code></em>,
+                               <em class="parameter"><code><a class="link" href="GtkStyleContext.html#GtkBorder" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a> *border</code></em>);</pre>
+<p>Gets the border for a given state as a <a class="link" href="GtkStyleContext.html#GtkBorder" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>state to retrieve the border for</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>border</p></td>
+<td class="parameter_description"><p> return value for the border settings. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-padding"></a><h3>gtk_theming_engine_get_paddingÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_get_padding (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                                <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a> state</code></em>,
+                                <em class="parameter"><code><a class="link" href="GtkStyleContext.html#GtkBorder" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a> *padding</code></em>);</pre>
+<p>Gets the padding for a given state as a <a class="link" href="GtkStyleContext.html#GtkBorder" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>state to retrieve the padding for</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>padding</p></td>
+<td class="parameter_description"><p> return value for the padding settings. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-margin"></a><h3>gtk_theming_engine_get_marginÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_get_margin (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                               <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a> state</code></em>,
+                               <em class="parameter"><code><a class="link" href="GtkStyleContext.html#GtkBorder" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a> *margin</code></em>);</pre>
+<p>Gets the margin for a given state as a <a class="link" href="GtkStyleContext.html#GtkBorder" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>state to retrieve the border for</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>margin</p></td>
+<td class="parameter_description"><p> return value for the margin settings. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-get-font"></a><h3>gtk_theming_engine_get_fontÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription"><span class="returnvalue">PangoFontDescription</span></a>Â *
+gtk_theming_engine_get_font (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                             <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a> state</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_theming_engine_get_font</code> has been deprecated since version 3.8 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="GtkThemingEngine.html#gtk-theming-engine-get" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html#gtk-theming-engine-get" title="gtk_theming_engine_getÂ ()"><code class="function">gtk_theming_engine_get()</code></a></p>
+</div>
+<p>Returns the font description for a given state.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.19.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>state to retrieve the font for</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.9.19.8"></a><h4>Returns</h4>
+<p> the <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Fonts.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription'" tppabs="https://developer.gnome.org/pango/stable/pango-Fonts.html#PangoFontDescription"><span class="type">PangoFontDescription</span></a> for the given
+state. This object is owned by GTK+ and should not be
+freed. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-has-class"></a><h3>gtk_theming_engine_has_classÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_theming_engine_has_class (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                              <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *style_class</code></em>);</pre>
+<p>Returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the currently rendered contents have
+defined the given class name.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>style_class</p></td>
+<td class="parameter_description"><p>class name to look up</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.9.20.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>engine</code></em>
+has <em class="parameter"><code>class_name</code></em>
+defined</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-has-region"></a><h3>gtk_theming_engine_has_regionÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_theming_engine_has_region (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                               <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *style_region</code></em>,
+                               <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkRegionFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkRegionFlags" title="enum GtkRegionFlags"><span class="type">GtkRegionFlags</span></a> *flags</code></em>);</pre>
+<p>Returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the currently rendered contents have the
+region defined. If <em class="parameter"><code>flags_return</code></em>
+ is not <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, it is set
+to the flags affecting the region.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>style_region</p></td>
+<td class="parameter_description"><p>a region name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p> return location for region flags. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.9.21.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if region is defined</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-lookup-color"></a><h3>gtk_theming_engine_lookup_colorÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_theming_engine_lookup_color (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                                 <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *color_name</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a> *color</code></em>);</pre>
+<p>Looks up and resolves a color name in the current styleâ€™s color map.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>color_name</p></td>
+<td class="parameter_description"><p>color name to lookup</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>color</p></td>
+<td class="parameter_description"><p> Return location for the looked up color. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.9.22.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>color_name</code></em>
+was found and resolved, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-state-is-running"></a><h3>gtk_theming_engine_state_is_runningÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_theming_engine_state_is_running (<em class="parameter"><code><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a> *engine</code></em>,
+                                     <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateType" title="enum GtkStateType"><span class="type">GtkStateType</span></a> state</code></em>,
+                                     <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *progress</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_theming_engine_state_is_running</code> has been deprecated since version 3.6 and should not be used in newly-written code.</p>
+<p>Always returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a></p>
+</div>
+<p>Returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there is a transition animation running for the
+current region (see <a class="link" href="GtkStyleContext.html#gtk-style-context-push-animatable-region" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#gtk-style-context-push-animatable-region" title="gtk_style_context_push_animatable_regionÂ ()"><code class="function">gtk_style_context_push_animatable_region()</code></a>).</p>
+<p>If <em class="parameter"><code>progress</code></em>
+ is not <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, the animation progress will be returned
+there, 0.0 means the state is closest to being <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>, while 1.0 means
+itâ€™s closest to being <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>. This means transition animations will
+run from 0 to 1 when <em class="parameter"><code>state</code></em>
+ is being set to <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> and from 1 to 0 when
+itâ€™s being set to <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.23.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>engine</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="type">GtkThemingEngine</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>a widget state</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>progress</p></td>
+<td class="parameter_description"><p> return location for the transition progress. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.9.23.9"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there is a running transition animation for <em class="parameter"><code>state</code></em>
+.</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-load"></a><h3>gtk_theming_engine_loadÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkThemingEngine.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkThemingEngine.html" title="GtkThemingEngine"><span class="returnvalue">GtkThemingEngine</span></a>Â *
+gtk_theming_engine_load (<em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>Loads and initializes a theming engine module from the
+standard directories.</p>
+<div class="refsect3">
+<a name="id-1.5.6.9.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>Theme engine name to load</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.9.24.6"></a><h4>Returns</h4>
+<p> A theming engine, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if
+the engine <em class="parameter"><code>name</code></em>
+doesnâ€™t exist. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-theming-engine-register-property"></a><h3>gtk_theming_engine_register_propertyÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_theming_engine_register_property (<em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name_space</code></em>,
+                                      <em class="parameter"><code><a class="link" href="gtk3-GtkStyleProperties.html#GtkStylePropertyParser" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkStyleProperties.html#GtkStylePropertyParser" title="GtkStylePropertyParserÂ ()"><span class="type">GtkStylePropertyParser</span></a> parse_func</code></em>,
+                                      <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec"><span class="type">GParamSpec</span></a> *pspec</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_theming_engine_register_property</code> has been deprecated since version 3.8 and should not be used in newly-written code.</p>
+<p>Code should use the default properties provided by CSS.</p>
+</div>
+<p>Registers a property so it can be used in the CSS file format,
+on the CSS file the property will look like
+"-${<em class="parameter"><code>name_space</code></em>
+}-${property_name}". being
+${property_name} the given to <em class="parameter"><code>pspec</code></em>
+. <em class="parameter"><code>name_space</code></em>
+ will usually
+be the theme engine name.</p>
+<p>For any type a <em class="parameter"><code>parse_func</code></em>
+ may be provided, being this function
+used for turning any property value (between â€œ:â€ and â€œ;â€) in
+CSS to the <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> needed. For basic types there is already
+builtin parsing support, so <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> may be provided for these
+cases.</p>
+<p>Engines must ensure property registration happens exactly once,
+usually GTK+ deals with theming engines as singletons, so this
+should be guaranteed to happen once, but bear this in mind
+when creating <span class="type">GtkThemeEngines</span> yourself.</p>
+<p>In order to make use of the custom registered properties in
+the CSS file, make sure the engine is loaded first by specifying
+the engine property, either in a previous rule or within the same
+one.</p>
+<div class="informalexample">
+  <table border="0" cellpadding="0" cellspacing="0" class="listing_frame">
+    <tbody>
+      <tr>
+        <td align="right" class="listing_lines"><pre>1
+2
+3
+4</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="symbol">*</span><span class="normal"> </span><span class="cbracket">{</span>
+<span class="normal">    engine</span><span class="symbol">:</span><span class="normal"> someengine</span><span class="symbol">;</span>
+<span class="normal">    </span><span class="symbol">-</span><span class="normal">SomeEngine</span><span class="symbol">-</span><span class="normal">custom</span><span class="symbol">-</span><span class="normal">property</span><span class="symbol">:</span><span class="normal"> </span><span class="number">2</span><span class="symbol">;</span>
+<span class="cbracket">}</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<div class="refsect3">
+<a name="id-1.5.6.9.25.12"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>name_space</p></td>
+<td class="parameter_description"><p>namespace for the property name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>parse_func</p></td>
+<td class="parameter_description"><p>parsing function to use, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pspec</p></td>
+<td class="parameter_description"><p>the <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec"><span class="type">GParamSpec</span></a> for the new property</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkThemingEngine.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkThemingEngineClass"></a><h3>struct GtkThemingEngineClass</h3>
+<pre class="programlisting">struct GtkThemingEngineClass {
+  GObjectClass parent_class;
+
+
+  void (* render_line) (GtkThemingEngine *engine,
+                        cairo_t          *cr,
+                        gdouble           x0,
+                        gdouble           y0,
+                        gdouble           x1,
+                        gdouble           y1);
+  void (* render_background) (GtkThemingEngine *engine,
+                              cairo_t          *cr,
+                              gdouble           x,
+                              gdouble           y,
+                              gdouble           width,
+                              gdouble           height);
+  void (* render_frame) (GtkThemingEngine *engine,
+                         cairo_t          *cr,
+                         gdouble           x,
+                         gdouble           y,
+                         gdouble           width,
+                         gdouble           height);
+  void (* render_frame_gap) (GtkThemingEngine *engine,
+                             cairo_t          *cr,
+                             gdouble           x,
+                             gdouble           y,
+                             gdouble           width,
+                             gdouble           height,
+                             GtkPositionType   gap_side,
+                             gdouble           xy0_gap,
+                             gdouble           xy1_gap);
+  void (* render_extension) (GtkThemingEngine *engine,
+                             cairo_t          *cr,
+                             gdouble           x,
+                             gdouble           y,
+                             gdouble           width,
+                             gdouble           height,
+                             GtkPositionType   gap_side);
+  void (* render_check) (GtkThemingEngine *engine,
+                         cairo_t          *cr,
+                         gdouble           x,
+                         gdouble           y,
+                         gdouble           width,
+                         gdouble           height);
+  void (* render_option) (GtkThemingEngine *engine,
+                          cairo_t          *cr,
+                          gdouble           x,
+                          gdouble           y,
+                          gdouble           width,
+                          gdouble           height);
+  void (* render_arrow) (GtkThemingEngine *engine,
+                         cairo_t          *cr,
+                         gdouble           angle,
+                         gdouble           x,
+                         gdouble           y,
+                         gdouble           size);
+  void (* render_expander) (GtkThemingEngine *engine,
+                            cairo_t          *cr,
+                            gdouble           x,
+                            gdouble           y,
+                            gdouble           width,
+                            gdouble           height);
+  void (* render_focus) (GtkThemingEngine *engine,
+                         cairo_t          *cr,
+                         gdouble           x,
+                         gdouble           y,
+                         gdouble           width,
+                         gdouble           height);
+  void (* render_layout) (GtkThemingEngine *engine,
+                          cairo_t          *cr,
+                          gdouble           x,
+                          gdouble           y,
+                          PangoLayout      *layout);
+  void (* render_slider) (GtkThemingEngine *engine,
+                          cairo_t          *cr,
+                          gdouble           x,
+                          gdouble           y,
+                          gdouble           width,
+                          gdouble           height,
+                          GtkOrientation    orientation);
+  void (* render_handle)    (GtkThemingEngine *engine,
+                             cairo_t          *cr,
+                             gdouble           x,
+                             gdouble           y,
+                             gdouble           width,
+                             gdouble           height);
+  void (* render_activity) (GtkThemingEngine *engine,
+                            cairo_t          *cr,
+                            gdouble           x,
+                            gdouble           y,
+                            gdouble           width,
+                            gdouble           height);
+
+  GdkPixbuf * (* render_icon_pixbuf) (GtkThemingEngine    *engine,
+                                      const GtkIconSource *source,
+                                      GtkIconSize          size);
+  void (* render_icon) (GtkThemingEngine *engine,
+                        cairo_t          *cr,
+			GdkPixbuf        *pixbuf,
+                        gdouble           x,
+                        gdouble           y);
+  void (* render_icon_surface) (GtkThemingEngine *engine,
+				cairo_t          *cr,
+				cairo_surface_t  *surface,
+				gdouble           x,
+				gdouble           y);
+};
+</pre>
+<p>Base class for theming engines.</p>
+<div class="refsect3">
+<a name="id-1.5.6.10.2.5"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="struct_members_name" width="300px"></col>
+<col class="struct_members_description"></col>
+<col class="struct_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a>Â <em class="structfield"><code><a name="GtkThemingEngineClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>The parent class.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-line"></a>render_line</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders a line between two points.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-background"></a>render_background</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders the background area of a widget region.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-frame"></a>render_frame</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders the frame around a widget area.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-frame-gap"></a>render_frame_gap</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders the frame around a widget area with a gap in it.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-extension"></a>render_extension</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders a extension to a box, usually a notebook tab.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-check"></a>render_check</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders a checkmark, as in <a class="link" href="GtkCheckButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCheckButton.html" title="GtkCheckButton"><span class="type">GtkCheckButton</span></a>.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-option"></a>render_option</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders an option, as in <a class="link" href="GtkRadioButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRadioButton.html" title="GtkRadioButton"><span class="type">GtkRadioButton</span></a>.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-arrow"></a>render_arrow</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders an arrow pointing to a certain direction.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-expander"></a>render_expander</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders an element what will expose/expand part of
+the UI, as in <a class="link" href="GtkExpander.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkExpander.html" title="GtkExpander"><span class="type">GtkExpander</span></a>.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-focus"></a>render_focus</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders the focus indicator.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-layout"></a>render_layout</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders a <a href="javascript:if(confirm('https://developer.gnome.org/pango/stable/pango-Layout-Objects.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/pango/stable/pango-Layout-Objects.html#PangoLayout'" tppabs="https://developer.gnome.org/pango/stable/pango-Layout-Objects.html#PangoLayout"><span class="type">PangoLayout</span></a></p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-slider"></a>render_slider</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders a slider control, as in <a class="link" href="GtkScale.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScale.html" title="GtkScale"><span class="type">GtkScale</span></a>.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-handle"></a>render_handle</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders a handle to drag UI elements, as in <a class="link" href="GtkPaned.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPaned.html" title="GtkPaned"><span class="type">GtkPaned</span></a>.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-activity"></a>render_activity</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders an area displaying activity, such as in <a class="link" href="GtkSpinner.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSpinner.html" title="GtkSpinner"><span class="type">GtkSpinner</span></a>,
+or <a class="link" href="GtkProgressBar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkProgressBar.html" title="GtkProgressBar"><span class="type">GtkProgressBar</span></a>.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-icon-pixbuf"></a>render_icon_pixbuf</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders an icon as a <a href="javascript:if(confirm('https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf'" tppabs="https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a>.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-icon"></a>render_icon</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders an icon given as a <a href="javascript:if(confirm('https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf'" tppabs="https://developer.gnome.org/gdk-pixbuf/unstable//gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf"><span class="type">GdkPixbuf</span></a>.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkThemingEngineClass.render-icon-surface"></a>render_icon_surface</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Renders an icon given as a <span class="type">cairo_surface_t</span>.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkThemingEngine-struct"></a><h3>struct GtkThemingEngine</h3>
+<pre class="programlisting">struct GtkThemingEngine;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkThemingEngine.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GtkThemingEngine--name"></a><h3>The <code class="literal">â€œnameâ€</code> property</h3>
+<pre class="programlisting">  â€œnameâ€                     <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</pre>
+<p>The theming engine name, this name will be used when registering
+custom properties, for a theming engine named "Clearlooks" registering
+a "glossy" custom property, it could be referenced in the CSS file as</p>
+<div class="informalexample">
+  <table border="0" cellpadding="0" cellspacing="0" class="listing_frame">
+    <tbody>
+      <tr>
+        <td align="right" class="listing_lines"><pre>1</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="symbol">-</span><span class="normal">Clearlooks</span><span class="symbol">-</span><span class="normal">glossy</span><span class="symbol">:</span><span class="normal"> true</span><span class="symbol">;</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: NULL</p>
+<p class="since">Since 3.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkThemingEngine.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GtkStyleContext.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html" title="GtkStyleContext"><span class="type">GtkStyleContext</span></a></p>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

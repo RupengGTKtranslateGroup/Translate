@@ -1,0 +1,1270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: GtkToolbar</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="MenusAndCombos.html" rel="up" title="Menus, Combo Box, Toolbar"></link><link href="GtkToolShell.html" rel="prev" title="GtkToolShell"></link><link href="GtkToolItem.html" rel="next" title="GtkToolItem"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkToolbar.description">Description</a></span><span id="nav_hierarchy">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkToolbar.object-hierarchy">Object Hierarchy</a></span><span id="nav_interfaces">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkToolbar.implemented-interfaces">Implemented Interfaces</a></span><span id="nav_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkToolbar.properties">Properties</a></span><span id="nav_child_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkToolbar.child-properties">Child Properties</a></span><span id="nav_style_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkToolbar.style-properties">Style Properties</a></span><span id="nav_signals">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkToolbar.signals">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="MenusAndCombos.html" tppabs="https://developer.gnome.org/gtk3/stable/MenusAndCombos.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="GtkToolShell.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolShell.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="GtkToolbar"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkToolbar.top_of_page"></a>GtkToolbar</span></h2>
+<p>GtkToolbar â€” Create bars of buttons and other widgets</p>
+</td>
+<td align="right" class="gallery_image" valign="top"><img src="toolbar.png" tppabs="https://developer.gnome.org/gtk3/stable/toolbar.png"></img></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="GtkToolbar.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-new" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-new" title="gtk_toolbar_newÂ ()">gtk_toolbar_new</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-insert" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-insert" title="gtk_toolbar_insertÂ ()">gtk_toolbar_insert</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-get-item-index" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-get-item-index" title="gtk_toolbar_get_item_indexÂ ()">gtk_toolbar_get_item_index</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-get-n-items" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-get-n-items" title="gtk_toolbar_get_n_itemsÂ ()">gtk_toolbar_get_n_items</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="returnvalue">GtkToolItem</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-get-nth-item" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-get-nth-item" title="gtk_toolbar_get_nth_itemÂ ()">gtk_toolbar_get_nth_item</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-get-drop-index" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-get-drop-index" title="gtk_toolbar_get_drop_indexÂ ()">gtk_toolbar_get_drop_index</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-set-drop-highlight-item" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-set-drop-highlight-item" title="gtk_toolbar_set_drop_highlight_itemÂ ()">gtk_toolbar_set_drop_highlight_item</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-set-show-arrow" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-set-show-arrow" title="gtk_toolbar_set_show_arrowÂ ()">gtk_toolbar_set_show_arrow</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-unset-icon-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-unset-icon-size" title="gtk_toolbar_unset_icon_sizeÂ ()">gtk_toolbar_unset_icon_size</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-get-show-arrow" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-get-show-arrow" title="gtk_toolbar_get_show_arrowÂ ()">gtk_toolbar_get_show_arrow</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Standard-Enumerations.html#GtkToolbarStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkToolbarStyle" title="enum GtkToolbarStyle"><span class="returnvalue">GtkToolbarStyle</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-get-style" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-get-style" title="gtk_toolbar_get_styleÂ ()">gtk_toolbar_get_style</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSize" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Themeable-Stock-Images.html#GtkIconSize" title="enum GtkIconSize"><span class="returnvalue">GtkIconSize</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-get-icon-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-get-icon-size" title="gtk_toolbar_get_icon_sizeÂ ()">gtk_toolbar_get_icon_size</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Standard-Enumerations.html#GtkReliefStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkReliefStyle" title="enum GtkReliefStyle"><span class="returnvalue">GtkReliefStyle</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-get-relief-style" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-get-relief-style" title="gtk_toolbar_get_relief_styleÂ ()">gtk_toolbar_get_relief_style</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-set-style" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-set-style" title="gtk_toolbar_set_styleÂ ()">gtk_toolbar_set_style</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-set-icon-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-set-icon-size" title="gtk_toolbar_set_icon_sizeÂ ()">gtk_toolbar_set_icon_size</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkToolbar.html#gtk-toolbar-unset-style" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-unset-style" title="gtk_toolbar_unset_styleÂ ()">gtk_toolbar_unset_style</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="properties_type" width="150px"></col>
+<col class="properties_name" width="300px"></col>
+<col class="properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSize" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Themeable-Stock-Images.html#GtkIconSize" title="enum GtkIconSize"><span class="type">GtkIconSize</span></a></td>
+<td class="property_name"><a class="link" href="GtkToolbar.html#GtkToolbar--icon-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar--icon-size" title="The â€œicon-sizeâ€ property">icon-size</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkToolbar.html#GtkToolbar--icon-size-set" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar--icon-size-set" title="The â€œicon-size-setâ€ property">icon-size-set</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkToolbar.html#GtkToolbar--show-arrow" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar--show-arrow" title="The â€œshow-arrowâ€ property">show-arrow</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="gtk3-Standard-Enumerations.html#GtkToolbarStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkToolbarStyle" title="enum GtkToolbarStyle"><span class="type">GtkToolbarStyle</span></a></td>
+<td class="property_name"><a class="link" href="GtkToolbar.html#GtkToolbar--toolbar-style" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar--toolbar-style" title="The â€œtoolbar-styleâ€ property">toolbar-style</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.child-properties"></a><h2>Child Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="child_properties_type" width="150px"></col>
+<col class="child_properties_name" width="300px"></col>
+<col class="child_properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkToolbar.html#GtkToolbar--c-expand" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar--c-expand" title="The â€œexpandâ€ child property">expand</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkToolbar.html#GtkToolbar--c-homogeneous" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar--c-homogeneous" title="The â€œhomogeneousâ€ child property">homogeneous</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.style-properties"></a><h2>Style Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="style_properties_type" width="150px"></col>
+<col class="style_properties_name" width="300px"></col>
+<col class="style_properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a class="link" href="gtk3-Standard-Enumerations.html#GtkReliefStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkReliefStyle" title="enum GtkReliefStyle"><span class="type">GtkReliefStyle</span></a></td>
+<td class="property_name"><a class="link" href="GtkToolbar.html#GtkToolbar--s-button-relief" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar--s-button-relief" title="The â€œbutton-reliefâ€ style property">button-relief</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkToolbar.html#GtkToolbar--s-internal-padding" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar--s-internal-padding" title="The â€œinternal-paddingâ€ style property">internal-padding</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkToolbar.html#GtkToolbar--s-max-child-expand" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar--s-max-child-expand" title="The â€œmax-child-expandâ€ style property">max-child-expand</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="gtk3-Standard-Enumerations.html#GtkShadowType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkShadowType" title="enum GtkShadowType"><span class="type">GtkShadowType</span></a></td>
+<td class="property_name"><a class="link" href="GtkToolbar.html#GtkToolbar--s-shadow-type" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar--s-shadow-type" title="The â€œshadow-typeâ€ style property">shadow-type</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkToolbar.html#GtkToolbar--s-space-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar--s-space-size" title="The â€œspace-sizeâ€ style property">space-size</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="GtkToolbar.html#GtkToolbarSpaceStyle" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbarSpaceStyle" title="enum GtkToolbarSpaceStyle"><span class="type">GtkToolbarSpaceStyle</span></a></td>
+<td class="property_name"><a class="link" href="GtkToolbar.html#GtkToolbar--s-space-style" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar--s-space-style" title="The â€œspace-styleâ€ style property">space-style</a></td>
+<td class="property_flags">Read</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="signals_return" width="150px"></col>
+<col class="signals_name" width="300px"></col>
+<col class="signals_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="GtkToolbar.html#GtkToolbar-focus-home-or-end" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar-focus-home-or-end" title="The â€œfocus-home-or-endâ€ signal">focus-home-or-end</a></td>
+<td class="signal_flags">Action</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkToolbar.html#GtkToolbar-orientation-changed" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar-orientation-changed" title="The â€œorientation-changedâ€ signal">orientation-changed</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="GtkToolbar.html#GtkToolbar-popup-context-menu" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar-popup-context-menu" title="The â€œpopup-context-menuâ€ signal">popup-context-menu</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkToolbar.html#GtkToolbar-style-changed" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar-style-changed" title="The â€œstyle-changedâ€ signal">style-changed</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkToolbar.html#GtkToolbar-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar-struct" title="struct GtkToolbar">GtkToolbar</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GtkToolbar.html#GtkToolbarSpaceStyle" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbarSpaceStyle" title="enum GtkToolbarSpaceStyle">GtkToolbarSpaceStyle</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">â•°â”€â”€</span> <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget">GtkWidget</a>
+            <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkContainer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkContainer.html" title="GtkContainer">GtkContainer</a>
+                <span class="lineart">â•°â”€â”€</span> GtkToolbar
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkToolbar implements
+ AtkImplementorIface,  <a class="link" href="GtkBuildable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBuildable.html" title="GtkBuildable">GtkBuildable</a>,  <a class="link" href="GtkToolShell.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolShell.html" title="GtkToolShell">GtkToolShell</a> and  <a class="link" href="gtk3-Orientable.html#GtkOrientable" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Orientable.html#GtkOrientable">GtkOrientable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.description"></a><h2>Description</h2>
+<p>A toolbar is created with a call to <a class="link" href="GtkToolbar.html#gtk-toolbar-new" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-new" title="gtk_toolbar_newÂ ()"><code class="function">gtk_toolbar_new()</code></a>.</p>
+<p>A toolbar can contain instances of a subclass of <a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="type">GtkToolItem</span></a>. To add
+a <a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="type">GtkToolItem</span></a> to the a toolbar, use <a class="link" href="GtkToolbar.html#gtk-toolbar-insert" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-insert" title="gtk_toolbar_insertÂ ()"><code class="function">gtk_toolbar_insert()</code></a>. To remove
+an item from the toolbar use <a class="link" href="GtkContainer.html#gtk-container-remove" tppabs="https://developer.gnome.org/gtk3/stable/GtkContainer.html#gtk-container-remove" title="gtk_container_removeÂ ()"><code class="function">gtk_container_remove()</code></a>. To add a button
+to the toolbar, add an instance of <a class="link" href="GtkToolButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolButton.html" title="GtkToolButton"><span class="type">GtkToolButton</span></a>.</p>
+<p>Toolbar items can be visually grouped by adding instances of
+<a class="link" href="GtkSeparatorToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSeparatorToolItem.html" title="GtkSeparatorToolItem"><span class="type">GtkSeparatorToolItem</span></a> to the toolbar. If the GtkToolbar child property
+â€œexpandâ€ is <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> and the property <a class="link" href="GtkSeparatorToolItem.html#GtkSeparatorToolItem--draw" tppabs="https://developer.gnome.org/gtk3/stable/GtkSeparatorToolItem.html#GtkSeparatorToolItem--draw" title="The â€œdrawâ€ property"><span class="type">â€œdrawâ€</span></a> is set to
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a>, the effect is to force all following items to the end of the toolbar.</p>
+<p>Creating a context menu for the toolbar can be done by connecting to
+the <a class="link" href="GtkToolbar.html#GtkToolbar-popup-context-menu" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbar-popup-context-menu" title="The â€œpopup-context-menuâ€ signal"><span class="type">â€œpopup-context-menuâ€</span></a> signal.</p>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-toolbar-new"></a><h3>gtk_toolbar_newÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_toolbar_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new toolbar.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.2.5"></a><h4>Returns</h4>
+<p> the newly-created toolbar.</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-insert"></a><h3>gtk_toolbar_insertÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_toolbar_insert (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>,
+                    <em class="parameter"><code><a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="type">GtkToolItem</span></a> *item</code></em>,
+                    <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> pos</code></em>);</pre>
+<p>Insert a <a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="type">GtkToolItem</span></a> into the toolbar at position <em class="parameter"><code>pos</code></em>
+. If <em class="parameter"><code>pos</code></em>
+ is
+0 the item is prepended to the start of the toolbar. If <em class="parameter"><code>pos</code></em>
+ is
+negative, the item is appended to the end of the toolbar.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="type">GtkToolItem</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pos</p></td>
+<td class="parameter_description"><p>the position of the new item</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-get-item-index"></a><h3>gtk_toolbar_get_item_indexÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_toolbar_get_item_index (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>,
+                            <em class="parameter"><code><a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="type">GtkToolItem</span></a> *item</code></em>);</pre>
+<p>Returns the position of <em class="parameter"><code>item</code></em>
+ on the toolbar, starting from 0.
+It is an error if <em class="parameter"><code>item</code></em>
+ is not a child of the toolbar.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="type">GtkToolItem</span></a> that is a child of <em class="parameter"><code>toolbar</code></em>
+</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.4.6"></a><h4>Returns</h4>
+<p> the position of item on the toolbar.</p>
+<p></p>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-get-n-items"></a><h3>gtk_toolbar_get_n_itemsÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_toolbar_get_n_items (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>);</pre>
+<p>Returns the number of items on the toolbar.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.5.6"></a><h4>Returns</h4>
+<p> the number of items on the toolbar</p>
+<p></p>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-get-nth-item"></a><h3>gtk_toolbar_get_nth_itemÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="returnvalue">GtkToolItem</span></a>Â *
+gtk_toolbar_get_nth_item (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> n</code></em>);</pre>
+<p>Returns the <em class="parameter"><code>n</code></em>
+'th item on <em class="parameter"><code>toolbar</code></em>
+, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the
+toolbar does not contain an <em class="parameter"><code>n</code></em>
+'th item.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n</p></td>
+<td class="parameter_description"><p>A position on the toolbar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.6.6"></a><h4>Returns</h4>
+<p> The <em class="parameter"><code>n</code></em>
+'th <a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="type">GtkToolItem</span></a> on <em class="parameter"><code>toolbar</code></em>
+,
+or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there isnâ€™t an <em class="parameter"><code>n</code></em>
+'th item. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-get-drop-index"></a><h3>gtk_toolbar_get_drop_indexÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gtk_toolbar_get_drop_index (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>,
+                            <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> x</code></em>,
+                            <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> y</code></em>);</pre>
+<p>Returns the position corresponding to the indicated point on
+<em class="parameter"><code>toolbar</code></em>
+. This is useful when dragging items to the toolbar:
+this function returns the position a new item should be
+inserted.</p>
+<p><em class="parameter"><code>x</code></em>
+ and <em class="parameter"><code>y</code></em>
+ are in <em class="parameter"><code>toolbar</code></em>
+ coordinates.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.7.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>x coordinate of a point on the toolbar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y</p></td>
+<td class="parameter_description"><p>y coordinate of a point on the toolbar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.7.7"></a><h4>Returns</h4>
+<p> The position corresponding to the point (<em class="parameter"><code>x</code></em>
+, <em class="parameter"><code>y</code></em>
+) on the toolbar.</p>
+<p></p>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-set-drop-highlight-item"></a><h3>gtk_toolbar_set_drop_highlight_itemÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_toolbar_set_drop_highlight_item (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>,
+                                     <em class="parameter"><code><a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="type">GtkToolItem</span></a> *tool_item</code></em>,
+                                     <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> index_</code></em>);</pre>
+<p>Highlights <em class="parameter"><code>toolbar</code></em>
+ to give an idea of what it would look like
+if <em class="parameter"><code>item</code></em>
+ was added to <em class="parameter"><code>toolbar</code></em>
+ at the position indicated by <em class="parameter"><code>index_</code></em>
+.
+If <em class="parameter"><code>item</code></em>
+ is <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, highlighting is turned off. In that case <em class="parameter"><code>index_</code></em>
+ 
+is ignored.</p>
+<p>The <em class="parameter"><code>tool_item</code></em>
+ passed to this function must not be part of any widget
+hierarchy. When an item is set as drop highlight item it can not
+added to any widget hierarchy or used as highlight item for another
+toolbar.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.8.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tool_item</p></td>
+<td class="parameter_description"><p> a <a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="type">GtkToolItem</span></a>, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to turn of highlighting. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>index_</p></td>
+<td class="parameter_description"><p>a position on <em class="parameter"><code>toolbar</code></em>
+</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-set-show-arrow"></a><h3>gtk_toolbar_set_show_arrowÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_toolbar_set_show_arrow (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>,
+                            <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> show_arrow</code></em>);</pre>
+<p>Sets whether to show an overflow menu when
+<em class="parameter"><code>toolbar</code></em>
+ doesnâ€™t have room for all items on it. If <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>,
+items that there are not room are available through an
+overflow menu.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>show_arrow</p></td>
+<td class="parameter_description"><p>Whether to show an overflow menu</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-unset-icon-size"></a><h3>gtk_toolbar_unset_icon_sizeÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_toolbar_unset_icon_size (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>);</pre>
+<p>Unsets toolbar icon size set with <a class="link" href="GtkToolbar.html#gtk-toolbar-set-icon-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-set-icon-size" title="gtk_toolbar_set_icon_sizeÂ ()"><code class="function">gtk_toolbar_set_icon_size()</code></a>, so that
+user preferences will be used to determine the icon size.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-get-show-arrow"></a><h3>gtk_toolbar_get_show_arrowÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_toolbar_get_show_arrow (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>);</pre>
+<p>Returns whether the toolbar has an overflow menu.
+See <a class="link" href="GtkToolbar.html#gtk-toolbar-set-show-arrow" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-set-show-arrow" title="gtk_toolbar_set_show_arrowÂ ()"><code class="function">gtk_toolbar_set_show_arrow()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.11.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the toolbar has an overflow menu.</p>
+<p></p>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-get-style"></a><h3>gtk_toolbar_get_styleÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Standard-Enumerations.html#GtkToolbarStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkToolbarStyle" title="enum GtkToolbarStyle"><span class="returnvalue">GtkToolbarStyle</span></a>
+gtk_toolbar_get_style (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>);</pre>
+<p>Retrieves whether the toolbar has text, icons, or both . See
+<a class="link" href="GtkToolbar.html#gtk-toolbar-set-style" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-set-style" title="gtk_toolbar_set_styleÂ ()"><code class="function">gtk_toolbar_set_style()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.12.6"></a><h4>Returns</h4>
+<p> the current style of <em class="parameter"><code>toolbar</code></em>
+</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-get-icon-size"></a><h3>gtk_toolbar_get_icon_sizeÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSize" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Themeable-Stock-Images.html#GtkIconSize" title="enum GtkIconSize"><span class="returnvalue">GtkIconSize</span></a>
+gtk_toolbar_get_icon_size (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>);</pre>
+<p>Retrieves the icon size for the toolbar. See <a class="link" href="GtkToolbar.html#gtk-toolbar-set-icon-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-set-icon-size" title="gtk_toolbar_set_icon_sizeÂ ()"><code class="function">gtk_toolbar_set_icon_size()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.13.6"></a><h4>Returns</h4>
+<p> the current icon size for the icons on the toolbar.</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-get-relief-style"></a><h3>gtk_toolbar_get_relief_styleÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Standard-Enumerations.html#GtkReliefStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkReliefStyle" title="enum GtkReliefStyle"><span class="returnvalue">GtkReliefStyle</span></a>
+gtk_toolbar_get_relief_style (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>);</pre>
+<p>Returns the relief style of buttons on <em class="parameter"><code>toolbar</code></em>
+. See
+<a class="link" href="GtkButton.html#gtk-button-set-relief" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-relief" title="gtk_button_set_reliefÂ ()"><code class="function">gtk_button_set_relief()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.14.6"></a><h4>Returns</h4>
+<p> The relief style of buttons on <em class="parameter"><code>toolbar</code></em>
+.</p>
+<p></p>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-set-style"></a><h3>gtk_toolbar_set_styleÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_toolbar_set_style (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>,
+                       <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkToolbarStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkToolbarStyle" title="enum GtkToolbarStyle"><span class="type">GtkToolbarStyle</span></a> style</code></em>);</pre>
+<p>Alters the view of <em class="parameter"><code>toolbar</code></em>
+ to display either icons only, text only, or both.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a>.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>style</p></td>
+<td class="parameter_description"><p>the new style for <em class="parameter"><code>toolbar</code></em>
+.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-set-icon-size"></a><h3>gtk_toolbar_set_icon_sizeÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_toolbar_set_icon_size (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>,
+                           <em class="parameter"><code><a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSize" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Themeable-Stock-Images.html#GtkIconSize" title="enum GtkIconSize"><span class="type">GtkIconSize</span></a> icon_size</code></em>);</pre>
+<p>This function sets the size of stock icons in the toolbar. You
+can call it both before you add the icons and after theyâ€™ve been
+added. The size you set will override user preferences for the default
+icon size.</p>
+<p>This should only be used for special-purpose toolbars, normal
+application toolbars should respect the user preferences for the
+size of icons.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.16.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>icon_size</p></td>
+<td class="parameter_description"><p>The <a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSize" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Themeable-Stock-Images.html#GtkIconSize" title="enum GtkIconSize"><span class="type">GtkIconSize</span></a> that stock icons in the toolbar shall have.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-toolbar-unset-style"></a><h3>gtk_toolbar_unset_styleÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_toolbar_unset_style (<em class="parameter"><code><a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar</code></em>);</pre>
+<p>Unsets a toolbar style set with <a class="link" href="GtkToolbar.html#gtk-toolbar-set-style" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#gtk-toolbar-set-style" title="gtk_toolbar_set_styleÂ ()"><code class="function">gtk_toolbar_set_style()</code></a>, so that
+user preferences will be used to determine the toolbar style.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.13.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkToolbar-struct"></a><h3>struct GtkToolbar</h3>
+<pre class="programlisting">struct GtkToolbar;</pre>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbarSpaceStyle"></a><h3>enum GtkToolbarSpaceStyle</h3>
+<p>Whether spacers are vertical lines or just blank.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.14.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="enum_members_name" width="300px"></col>
+<col class="enum_members_description"></col>
+<col class="enum_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-TOOLBAR-SPACE-EMPTY:CAPS"></a>GTK_TOOLBAR_SPACE_EMPTY</p></td>
+<td class="enum_member_description">
+<p>Use blank spacers.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-TOOLBAR-SPACE-LINE:CAPS"></a>GTK_TOOLBAR_SPACE_LINE</p></td>
+<td class="enum_member_description">
+<p>Use vertical lines for spacers.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GtkToolbar--icon-size"></a><h3>The <code class="literal">â€œicon-sizeâ€</code> property</h3>
+<pre class="programlisting">  â€œicon-sizeâ€                <a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSize" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Themeable-Stock-Images.html#GtkIconSize" title="enum GtkIconSize"><span class="type">GtkIconSize</span></a></pre>
+<p>The size of the icons in a toolbar is normally determined by
+the toolbar-icon-size setting. When this property is set, it
+
+overrides the setting. </p>
+<p>This should only be used for special-purpose toolbars, normal
+application toolbars should respect the user preferences for the
+size of icons.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_ICON_SIZE_LARGE_TOOLBAR</p>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbar--icon-size-set"></a><h3>The <code class="literal">â€œicon-size-setâ€</code> property</h3>
+<pre class="programlisting">  â€œicon-size-setâ€            <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Is <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the icon-size property has been set.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbar--show-arrow"></a><h3>The <code class="literal">â€œshow-arrowâ€</code> property</h3>
+<pre class="programlisting">  â€œshow-arrowâ€               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>If an arrow should be shown if the toolbar doesn't fit.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbar--toolbar-style"></a><h3>The <code class="literal">â€œtoolbar-styleâ€</code> property</h3>
+<pre class="programlisting">  â€œtoolbar-styleâ€            <a class="link" href="gtk3-Standard-Enumerations.html#GtkToolbarStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkToolbarStyle" title="enum GtkToolbarStyle"><span class="type">GtkToolbarStyle</span></a></pre>
+<p>How to draw the toolbar.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_TOOLBAR_BOTH_HORIZ</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.child-property-details"></a><h2>Child Property Details</h2>
+<div class="refsect2">
+<a name="GtkToolbar--c-expand"></a><h3>The <code class="literal">â€œexpandâ€</code> child property</h3>
+<pre class="programlisting">  â€œexpandâ€                   <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the item should receive extra space when the toolbar grows.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbar--c-homogeneous"></a><h3>The <code class="literal">â€œhomogeneousâ€</code> child property</h3>
+<pre class="programlisting">  â€œhomogeneousâ€              <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the item should be the same size as other homogeneous items.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.style-property-details"></a><h2>Style Property Details</h2>
+<div class="refsect2">
+<a name="GtkToolbar--s-button-relief"></a><h3>The <code class="literal">â€œbutton-reliefâ€</code> style property</h3>
+<pre class="programlisting">  â€œbutton-reliefâ€            <a class="link" href="gtk3-Standard-Enumerations.html#GtkReliefStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkReliefStyle" title="enum GtkReliefStyle"><span class="type">GtkReliefStyle</span></a></pre>
+<p>Type of bevel around toolbar buttons.</p>
+<p>Flags: Read</p>
+<p>Default value: GTK_RELIEF_NONE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbar--s-internal-padding"></a><h3>The <code class="literal">â€œinternal-paddingâ€</code> style property</h3>
+<pre class="programlisting">  â€œinternal-paddingâ€         <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>Amount of border space between the toolbar shadow and the buttons.</p>
+<div class="warning">
+<p><code class="literal">GtkToolbar:internal-padding</code> has been deprecated since version 3.6 and should not be used in newly-written code.</p>
+<p>Use the standard padding CSS property
+  (through objects like <a class="link" href="GtkStyleContext.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html" title="GtkStyleContext"><span class="type">GtkStyleContext</span></a> and <a class="link" href="GtkCssProvider.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCssProvider.html" title="GtkCssProvider"><span class="type">GtkCssProvider</span></a>); the value
+  of this style property is ignored.</p>
+</div>
+<p>Flags: Read</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbar--s-max-child-expand"></a><h3>The <code class="literal">â€œmax-child-expandâ€</code> style property</h3>
+<pre class="programlisting">  â€œmax-child-expandâ€         <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>Maximum amount of space an expandable item will be given.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 2147483647</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbar--s-shadow-type"></a><h3>The <code class="literal">â€œshadow-typeâ€</code> style property</h3>
+<pre class="programlisting">  â€œshadow-typeâ€              <a class="link" href="gtk3-Standard-Enumerations.html#GtkShadowType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkShadowType" title="enum GtkShadowType"><span class="type">GtkShadowType</span></a></pre>
+<p>Style of bevel around the toolbar.</p>
+<div class="warning">
+<p><code class="literal">GtkToolbar:shadow-type</code> has been deprecated since version 3.6 and should not be used in newly-written code.</p>
+<p>Use the standard border CSS property
+  (through objects like <a class="link" href="GtkStyleContext.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html" title="GtkStyleContext"><span class="type">GtkStyleContext</span></a> and <a class="link" href="GtkCssProvider.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCssProvider.html" title="GtkCssProvider"><span class="type">GtkCssProvider</span></a>); the value
+  of this style property is ignored.</p>
+</div>
+<p>Flags: Read</p>
+<p>Default value: GTK_SHADOW_OUT</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbar--s-space-size"></a><h3>The <code class="literal">â€œspace-sizeâ€</code> style property</h3>
+<pre class="programlisting">  â€œspace-sizeâ€               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>Size of spacers.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbar--s-space-style"></a><h3>The <code class="literal">â€œspace-styleâ€</code> style property</h3>
+<pre class="programlisting">  â€œspace-styleâ€              <a class="link" href="GtkToolbar.html#GtkToolbarSpaceStyle" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html#GtkToolbarSpaceStyle" title="enum GtkToolbarSpaceStyle"><span class="type">GtkToolbarSpaceStyle</span></a></pre>
+<p>Whether spacers are vertical lines or just blank.</p>
+<p>Flags: Read</p>
+<p>Default value: GTK_TOOLBAR_SPACE_LINE</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GtkToolbar-focus-home-or-end"></a><h3>The <code class="literal">â€œfocus-home-or-endâ€</code> signal</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>    focus_home,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>    user_data)</pre>
+<p>A keybinding signal used internally by GTK+. This signal can't
+be used in application code</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.18.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> which emitted the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>focus_home</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the first item should be focused</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.11.18.2.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the signal was handled, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if not</p>
+<p></p>
+</div>
+<p>Flags: Action</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbar-orientation-changed"></a><h3>The <code class="literal">â€œorientation-changedâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a>    *toolbar,
+               <a class="link" href="gtk3-Standard-Enumerations.html#GtkOrientation" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkOrientation" title="enum GtkOrientation"><span class="type">GtkOrientation</span></a> orientation,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
+<p>Emitted when the orientation of the toolbar changes.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.18.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>the object which emitted the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>orientation</p></td>
+<td class="parameter_description"><p>the new <a class="link" href="gtk3-Standard-Enumerations.html#GtkOrientation" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkOrientation" title="enum GtkOrientation"><span class="type">GtkOrientation</span></a> of the toolbar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbar-popup-context-menu"></a><h3>The <code class="literal">â€œpopup-context-menuâ€</code> signal</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> *toolbar,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>        x,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>        y,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>        button,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>    user_data)</pre>
+<p>Emitted when the user right-clicks the toolbar or uses the
+keybinding to display a popup menu.</p>
+<p>Application developers should handle this signal if they want
+to display a context menu on the toolbar. The context-menu should
+appear at the coordinates given by <em class="parameter"><code>x</code></em>
+ and <em class="parameter"><code>y</code></em>
+. The mouse button
+number is given by the <em class="parameter"><code>button</code></em>
+ parameter. If the menu was popped
+up using the keybaord, <em class="parameter"><code>button</code></em>
+ is -1.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.18.4.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> which emitted the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>the x coordinate of the point where the menu should appear</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y</p></td>
+<td class="parameter_description"><p>the y coordinate of the point where the menu should appear</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>the mouse button the user pressed, or -1</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.11.18.4.7"></a><h4>Returns</h4>
+<p> return <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the signal was handled, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if not</p>
+<p></p>
+</div>
+<p>Flags: Run Last</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkToolbar-style-changed"></a><h3>The <code class="literal">â€œstyle-changedâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a>     *toolbar,
+               <a class="link" href="gtk3-Standard-Enumerations.html#GtkToolbarStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkToolbarStyle" title="enum GtkToolbarStyle"><span class="type">GtkToolbarStyle</span></a> style,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
+<p>Emitted when the style of the toolbar changes.</p>
+<div class="refsect3">
+<a name="id-1.3.13.11.18.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>toolbar</p></td>
+<td class="parameter_description"><p>The <a class="link" href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html" title="GtkToolbar"><span class="type">GtkToolbar</span></a> which emitted the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>style</p></td>
+<td class="parameter_description"><p>the new <a class="link" href="gtk3-Standard-Enumerations.html#GtkToolbarStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkToolbarStyle" title="enum GtkToolbarStyle"><span class="type">GtkToolbarStyle</span></a> of the toolbar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkToolbar.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html" title="GtkToolItem"><span class="type">GtkToolItem</span></a></p>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

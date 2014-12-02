@@ -1,0 +1,1379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: GtkMenuItem</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="MenusAndCombos.html" rel="up" title="Menus, Combo Box, Toolbar"></link><link href="GtkMenuBar.html" rel="prev" title="GtkMenuBar"></link><link href="GtkRadioMenuItem.html" rel="next" title="GtkRadioMenuItem"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkMenuItem.description">Description</a></span><span id="nav_hierarchy">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkMenuItem.object-hierarchy">Object Hierarchy</a></span><span id="nav_interfaces">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkMenuItem.implemented-interfaces">Implemented Interfaces</a></span><span id="nav_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkMenuItem.properties">Properties</a></span><span id="nav_style_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkMenuItem.style-properties">Style Properties</a></span><span id="nav_signals">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkMenuItem.signals">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="MenusAndCombos.html" tppabs="https://developer.gnome.org/gtk3/stable/MenusAndCombos.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="GtkMenuBar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuBar.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="GtkRadioMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRadioMenuItem.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="GtkMenuItem"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkMenuItem.top_of_page"></a>GtkMenuItem</span></h2>
+<p>GtkMenuItem â€” The widget used for item in menus</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="GtkMenuItem.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-new" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-new" title="gtk_menu_item_newÂ ()">gtk_menu_item_new</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-new-with-label" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-new-with-label" title="gtk_menu_item_new_with_labelÂ ()">gtk_menu_item_new_with_label</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-new-with-mnemonic" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-new-with-mnemonic" title="gtk_menu_item_new_with_mnemonicÂ ()">gtk_menu_item_new_with_mnemonic</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-set-right-justified" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-set-right-justified" title="gtk_menu_item_set_right_justifiedÂ ()">gtk_menu_item_set_right_justified</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-get-right-justified" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-get-right-justified" title="gtk_menu_item_get_right_justifiedÂ ()">gtk_menu_item_get_right_justified</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-get-label" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-get-label" title="gtk_menu_item_get_labelÂ ()">gtk_menu_item_get_label</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-set-label" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-set-label" title="gtk_menu_item_set_labelÂ ()">gtk_menu_item_set_label</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-get-use-underline" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-get-use-underline" title="gtk_menu_item_get_use_underlineÂ ()">gtk_menu_item_get_use_underline</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-set-use-underline" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-set-use-underline" title="gtk_menu_item_set_use_underlineÂ ()">gtk_menu_item_set_use_underline</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-set-submenu" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-set-submenu" title="gtk_menu_item_set_submenuÂ ()">gtk_menu_item_set_submenu</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-get-submenu" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-get-submenu" title="gtk_menu_item_get_submenuÂ ()">gtk_menu_item_get_submenu</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-set-accel-path" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-set-accel-path" title="gtk_menu_item_set_accel_pathÂ ()">gtk_menu_item_set_accel_path</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-get-accel-path" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-get-accel-path" title="gtk_menu_item_get_accel_pathÂ ()">gtk_menu_item_get_accel_path</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-select" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-select" title="gtk_menu_item_selectÂ ()">gtk_menu_item_select</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-deselect" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-deselect" title="gtk_menu_item_deselectÂ ()">gtk_menu_item_deselect</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-activate" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-activate" title="gtk_menu_item_activateÂ ()">gtk_menu_item_activate</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-toggle-size-request" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-toggle-size-request" title="gtk_menu_item_toggle_size_requestÂ ()">gtk_menu_item_toggle_size_request</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-toggle-size-allocate" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-toggle-size-allocate" title="gtk_menu_item_toggle_size_allocateÂ ()">gtk_menu_item_toggle_size_allocate</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-get-reserve-indicator" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-get-reserve-indicator" title="gtk_menu_item_get_reserve_indicatorÂ ()">gtk_menu_item_get_reserve_indicator</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkMenuItem.html#gtk-menu-item-set-reserve-indicator" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-set-reserve-indicator" title="gtk_menu_item_set_reserve_indicatorÂ ()">gtk_menu_item_set_reserve_indicator</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="properties_type" width="150px"></col>
+<col class="properties_name" width="300px"></col>
+<col class="properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem--accel-path" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem--accel-path" title="The â€œaccel-pathâ€ property">accel-path</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem--label" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem--label" title="The â€œlabelâ€ property">label</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem--right-justified" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem--right-justified" title="The â€œright-justifiedâ€ property">right-justified</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="GtkMenu.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenu.html" title="GtkMenu"><span class="type">GtkMenu</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem--submenu" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem--submenu" title="The â€œsubmenuâ€ property">submenu</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem--use-underline" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem--use-underline" title="The â€œuse-underlineâ€ property">use-underline</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.style-properties"></a><h2>Style Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="style_properties_type" width="150px"></col>
+<col class="style_properties_name" width="300px"></col>
+<col class="style_properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a></td>
+<td class="property_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem--s-arrow-scaling" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem--s-arrow-scaling" title="The â€œarrow-scalingâ€ style property">arrow-scaling</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem--s-arrow-spacing" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem--s-arrow-spacing" title="The â€œarrow-spacingâ€ style property">arrow-spacing</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem--s-horizontal-padding" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem--s-horizontal-padding" title="The â€œhorizontal-paddingâ€ style property">horizontal-padding</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="gtk3-Standard-Enumerations.html#GtkShadowType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkShadowType" title="enum GtkShadowType"><span class="type">GtkShadowType</span></a></td>
+<td class="property_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem--s-selected-shadow-type" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem--s-selected-shadow-type" title="The â€œselected-shadow-typeâ€ style property">selected-shadow-type</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem--s-toggle-spacing" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem--s-toggle-spacing" title="The â€œtoggle-spacingâ€ style property">toggle-spacing</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem--s-width-chars" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem--s-width-chars" title="The â€œwidth-charsâ€ style property">width-chars</a></td>
+<td class="property_flags">Read</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="signals_return" width="150px"></col>
+<col class="signals_name" width="300px"></col>
+<col class="signals_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem-activate" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-activate" title="The â€œactivateâ€ signal">activate</a></td>
+<td class="signal_flags">Action</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem-activate-item" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-activate-item" title="The â€œactivate-itemâ€ signal">activate-item</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem-deselect" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-deselect" title="The â€œdeselectâ€ signal">deselect</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem-select" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-select" title="The â€œselectâ€ signal">select</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem-toggle-size-allocate" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-toggle-size-allocate" title="The â€œtoggle-size-allocateâ€ signal">toggle-size-allocate</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem-toggle-size-request" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-toggle-size-request" title="The â€œtoggle-size-requestâ€ signal">toggle-size-request</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkMenuItem.html#GtkMenuItem-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-struct" title="struct GtkMenuItem">GtkMenuItem</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkMenuItem.html#GtkMenuItemClass" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItemClass" title="struct GtkMenuItemClass">GtkMenuItemClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">â•°â”€â”€</span> <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget">GtkWidget</a>
+            <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkContainer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkContainer.html" title="GtkContainer">GtkContainer</a>
+                <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkBin.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html" title="GtkBin">GtkBin</a>
+                    <span class="lineart">â•°â”€â”€</span> GtkMenuItem
+                        <span class="lineart">â”œâ”€â”€</span> <a class="link" href="GtkCheckMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCheckMenuItem.html" title="GtkCheckMenuItem">GtkCheckMenuItem</a>
+                        <span class="lineart">â”œâ”€â”€</span> <a class="link" href="GtkImageMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkImageMenuItem.html" title="GtkImageMenuItem">GtkImageMenuItem</a>
+                        <span class="lineart">â”œâ”€â”€</span> <a class="link" href="GtkSeparatorMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSeparatorMenuItem.html" title="GtkSeparatorMenuItem">GtkSeparatorMenuItem</a>
+                        <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkTearoffMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTearoffMenuItem.html" title="GtkTearoffMenuItem">GtkTearoffMenuItem</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkMenuItem implements
+ AtkImplementorIface,  <a class="link" href="GtkBuildable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBuildable.html" title="GtkBuildable">GtkBuildable</a>,  <a class="link" href="GtkActivatable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkActivatable.html" title="GtkActivatable">GtkActivatable</a> and  <a class="link" href="GtkActionable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkActionable.html" title="GtkActionable">GtkActionable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.description"></a><h2>Description</h2>
+<p>The <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> widget and the derived widgets are the only valid
+children for menus. Their function is to correctly handle highlighting,
+alignment, events and submenus.</p>
+<p>As a GtkMenuItem derives from <a class="link" href="GtkBin.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html" title="GtkBin"><span class="type">GtkBin</span></a> it can hold any valid child widget,
+although only a few are really useful.</p>
+<p>By default, a GtkMenuItem sets a <a class="link" href="GtkAccelLabel.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAccelLabel.html" title="GtkAccelLabel"><span class="type">GtkAccelLabel</span></a> as its child.
+GtkMenuItem has direct functions to set the label and its mnemonic.
+For more advanced label settings, you can fetch the child widget from the GtkBin.</p>
+<p>An example for setting markup and accelerator on a MenuItem:</p>
+<div class="informalexample">
+  <table border="0" cellpadding="0" cellspacing="0" class="listing_frame">
+    <tbody>
+      <tr>
+        <td align="right" class="listing_lines"><pre>1
+2
+3</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="usertype">GtkWidget</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">child </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="GtkBin.html#gtk-bin-get-child" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html#gtk-bin-get-child">gtk_bin_get_child</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function">GTK_BIN</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">menu_item</span><span class="symbol">));</span>
+<span class="function"><a href="GtkLabel.html#gtk-label-set-markup" tppabs="https://developer.gnome.org/gtk3/stable/GtkLabel.html#gtk-label-set-markup">gtk_label_set_markup</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function">GTK_LABEL</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">child</span><span class="symbol">),</span><span class="normal"> </span><span class="string">"&lt;i&gt;new label&lt;/i&gt; with &lt;b&gt;markup&lt;/b&gt;"</span><span class="symbol">);</span>
+<span class="function"><a href="GtkAccelLabel.html#gtk-accel-label-set-accel" tppabs="https://developer.gnome.org/gtk3/stable/GtkAccelLabel.html#gtk-accel-label-set-accel">gtk_accel_label_set_accel</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function">GTK_ACCEL_LABEL</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">child</span><span class="symbol">),</span><span class="normal"> GDK_KEY_1</span><span class="symbol">,</span><span class="normal"> </span><span class="number">0</span><span class="symbol">);</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<div class="refsect2">
+<a name="id-1.3.13.6.11.8"></a><h3>GtkMenuItem as GtkBuildable</h3>
+<p>The GtkMenuItem implementation of the <a class="link" href="GtkBuildable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBuildable.html" title="GtkBuildable"><span class="type">GtkBuildable</span></a> interface supports
+adding a submenu by specifying â€œsubmenuâ€ as the â€œtypeâ€ attribute of
+a &lt;child&gt; element.</p>
+<p>An example of UI definition fragment with submenus:</p>
+<div class="informalexample">
+  <table border="0" cellpadding="0" cellspacing="0" class="listing_frame">
+    <tbody>
+      <tr>
+        <td align="right" class="listing_lines"><pre>1
+2
+3
+4
+5</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkMenuItem"</span><span class="symbol">&gt;</span>
+<span class="normal">  </span><span class="symbol">&lt;</span><span class="usertype">child</span><span class="normal"> type</span><span class="symbol">=</span><span class="string">"submenu"</span><span class="symbol">&gt;</span>
+<span class="normal">    </span><span class="symbol">&lt;</span><span class="usertype">object</span><span class="normal"> class</span><span class="symbol">=</span><span class="string">"GtkMenu"</span><span class="symbol">/&gt;</span>
+<span class="normal">  </span><span class="symbol">&lt;/</span><span class="normal">child</span><span class="symbol">&gt;</span>
+<span class="symbol">&lt;/</span><span class="normal">object</span><span class="symbol">&gt;</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-menu-item-new"></a><h3>gtk_menu_item_newÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_menu_item_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.2.5"></a><h4>Returns</h4>
+<p> the newly created <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-new-with-label"></a><h3>gtk_menu_item_new_with_labelÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_menu_item_new_with_label (<em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);</pre>
+<p>Creates a new <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> whose child is a <a class="link" href="GtkLabel.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkLabel.html" title="GtkLabel"><span class="type">GtkLabel</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>label</p></td>
+<td class="parameter_description"><p>the text for the label</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.3.6"></a><h4>Returns</h4>
+<p> the newly created <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-new-with-mnemonic"></a><h3>gtk_menu_item_new_with_mnemonicÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_menu_item_new_with_mnemonic (<em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);</pre>
+<p>Creates a new <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> containing a label.</p>
+<p>The label will be created using <a class="link" href="GtkLabel.html#gtk-label-new-with-mnemonic" tppabs="https://developer.gnome.org/gtk3/stable/GtkLabel.html#gtk-label-new-with-mnemonic" title="gtk_label_new_with_mnemonicÂ ()"><code class="function">gtk_label_new_with_mnemonic()</code></a>,
+so underscores in <em class="parameter"><code>label</code></em>
+ indicate the mnemonic for the menu item.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.4.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>label</p></td>
+<td class="parameter_description"><p>The text of the button, with an underscore in front of the
+mnemonic character</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.4.7"></a><h4>Returns</h4>
+<p> a new <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-set-right-justified"></a><h3>gtk_menu_item_set_right_justifiedÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_menu_item_set_right_justified (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>,
+                                   <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> right_justified</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_menu_item_set_right_justified</code> has been deprecated since version 3.2 and should not be used in newly-written code.</p>
+<p>If you insist on using it, use
+  <a class="link" href="GtkWidget.html#gtk-widget-set-hexpand" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#gtk-widget-set-hexpand" title="gtk_widget_set_hexpandÂ ()"><code class="function">gtk_widget_set_hexpand()</code></a> and <a class="link" href="GtkWidget.html#gtk-widget-set-halign" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#gtk-widget-set-halign" title="gtk_widget_set_halignÂ ()"><code class="function">gtk_widget_set_halign()</code></a>.</p>
+</div>
+<p>Sets whether the menu item appears justified at the right
+side of a menu bar. This was traditionally done for â€œHelpâ€
+menu items, but is now considered a bad idea. (If the widget
+layout is reversed for a right-to-left language like Hebrew
+or Arabic, right-justified-menu-items appear at the left.)</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.5.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a>.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>right_justified</p></td>
+<td class="parameter_description"><p>if <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> the menu item will appear at the
+far right if added to a menu bar</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-get-right-justified"></a><h3>gtk_menu_item_get_right_justifiedÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_menu_item_get_right_justified (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_menu_item_get_right_justified</code> has been deprecated since version 3.2 and should not be used in newly-written code.</p>
+<p>See <a class="link" href="GtkMenuItem.html#gtk-menu-item-set-right-justified" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-set-right-justified" title="gtk_menu_item_set_right_justifiedÂ ()"><code class="function">gtk_menu_item_set_right_justified()</code></a></p>
+</div>
+<p>Gets whether the menu item appears justified at the right
+side of the menu bar.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.6.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.6.7"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the menu item will appear at the
+far right if added to a menu bar.</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-get-label"></a><h3>gtk_menu_item_get_labelÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_menu_item_get_label (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>);</pre>
+<p>Sets <em class="parameter"><code>text</code></em>
+ on the <em class="parameter"><code>menu_item</code></em>
+ label</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.7.6"></a><h4>Returns</h4>
+<p> The text in the <em class="parameter"><code>menu_item</code></em>
+label. This is the internal
+string used by the label, and must not be modified.</p>
+<p></p>
+</div>
+<p class="since">Since 2.16</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-set-label"></a><h3>gtk_menu_item_set_labelÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_menu_item_set_label (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>,
+                         <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);</pre>
+<p>Sets <em class="parameter"><code>text</code></em>
+ on the <em class="parameter"><code>menu_item</code></em>
+ label</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>label</p></td>
+<td class="parameter_description"><p>the text you want to set</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.16</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-get-use-underline"></a><h3>gtk_menu_item_get_use_underlineÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_menu_item_get_use_underline (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>);</pre>
+<p>Checks if an underline in the text indicates the next character
+should be used for the mnemonic accelerator key.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.9.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if an embedded underline in the label
+indicates the mnemonic accelerator key.</p>
+<p></p>
+</div>
+<p class="since">Since 2.16</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-set-use-underline"></a><h3>gtk_menu_item_set_use_underlineÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_menu_item_set_use_underline (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> setting</code></em>);</pre>
+<p>If true, an underline in the text indicates the next character
+should be used for the mnemonic accelerator key.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>setting</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if underlines in the text indicate mnemonics</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.16</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-set-submenu"></a><h3>gtk_menu_item_set_submenuÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_menu_item_set_submenu (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>,
+                           <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *submenu</code></em>);</pre>
+<p>Sets or replaces the menu itemâ€™s submenu, or removes it when a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+submenu is passed.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>submenu</p></td>
+<td class="parameter_description"><p> the submenu, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-get-submenu"></a><h3>gtk_menu_item_get_submenuÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_menu_item_get_submenu (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>);</pre>
+<p>Gets the submenu underneath this menu item, if any.
+See <a class="link" href="GtkMenuItem.html#gtk-menu-item-set-submenu" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-set-submenu" title="gtk_menu_item_set_submenuÂ ()"><code class="function">gtk_menu_item_set_submenu()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.12.6"></a><h4>Returns</h4>
+<p> submenu for this menu item, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if none. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-set-accel-path"></a><h3>gtk_menu_item_set_accel_pathÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_menu_item_set_accel_path (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>,
+                              <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *accel_path</code></em>);</pre>
+<p>Set the accelerator path on <em class="parameter"><code>menu_item</code></em>
+, through which runtime
+changes of the menu itemâ€™s accelerator caused by the user can be
+identified and saved to persistent storage (see <a class="link" href="gtk3-Accelerator-Maps.html#gtk-accel-map-save" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Accelerator-Maps.html#gtk-accel-map-save" title="gtk_accel_map_saveÂ ()"><code class="function">gtk_accel_map_save()</code></a>
+on this). To set up a default accelerator for this menu item, call
+<a class="link" href="gtk3-Accelerator-Maps.html#gtk-accel-map-add-entry" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Accelerator-Maps.html#gtk-accel-map-add-entry" title="gtk_accel_map_add_entryÂ ()"><code class="function">gtk_accel_map_add_entry()</code></a> with the same <em class="parameter"><code>accel_path</code></em>
+. See also
+<a class="link" href="gtk3-Accelerator-Maps.html#gtk-accel-map-add-entry" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Accelerator-Maps.html#gtk-accel-map-add-entry" title="gtk_accel_map_add_entryÂ ()"><code class="function">gtk_accel_map_add_entry()</code></a> on the specifics of accelerator paths,
+and <a class="link" href="GtkMenu.html#gtk-menu-set-accel-path" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenu.html#gtk-menu-set-accel-path" title="gtk_menu_set_accel_pathÂ ()"><code class="function">gtk_menu_set_accel_path()</code></a> for a more convenient variant of
+this function.</p>
+<p>This function is basically a convenience wrapper that handles
+calling <a class="link" href="GtkWidget.html#gtk-widget-set-accel-path" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#gtk-widget-set-accel-path" title="gtk_widget_set_accel_pathÂ ()"><code class="function">gtk_widget_set_accel_path()</code></a> with the appropriate accelerator
+group for the menu item.</p>
+<p>Note that you do need to set an accelerator on the parent menu with
+<a class="link" href="GtkMenu.html#gtk-menu-set-accel-group" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenu.html#gtk-menu-set-accel-group" title="gtk_menu_set_accel_groupÂ ()"><code class="function">gtk_menu_set_accel_group()</code></a> for this to work.</p>
+<p>Note that <em class="parameter"><code>accel_path</code></em>
+ string will be stored in a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Quarks.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark'" tppabs="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a>.
+Therefore, if you pass a static string, you can save some memory
+by interning it first with <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Quarks.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string'" tppabs="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string"><code class="function">g_intern_static_string()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.13.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>a valid <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_path</p></td>
+<td class="parameter_description"><p> accelerator path, corresponding to this menu
+itemâ€™s functionality, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to unset the current path. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-get-accel-path"></a><h3>gtk_menu_item_get_accel_pathÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_menu_item_get_accel_path (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>);</pre>
+<p>Retrieve the accelerator path that was previously set on <em class="parameter"><code>menu_item</code></em>
+.</p>
+<p>See <a class="link" href="GtkMenuItem.html#gtk-menu-item-set-accel-path" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#gtk-menu-item-set-accel-path" title="gtk_menu_item_set_accel_pathÂ ()"><code class="function">gtk_menu_item_set_accel_path()</code></a> for details.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.14.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>a valid <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.14.7"></a><h4>Returns</h4>
+<p> the accelerator path corresponding to this menu
+itemâ€™s functionality, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not set</p>
+<p></p>
+</div>
+<p class="since">Since 2.14</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-select"></a><h3>gtk_menu_item_selectÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_menu_item_select (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>);</pre>
+<p>Emits the <a class="link" href="GtkMenuItem.html#GtkMenuItem-select" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-select" title="The â€œselectâ€ signal"><span class="type">â€œselectâ€</span></a> signal on the given item.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>the menu item</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-deselect"></a><h3>gtk_menu_item_deselectÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_menu_item_deselect (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>);</pre>
+<p>Emits the <a class="link" href="GtkMenuItem.html#GtkMenuItem-deselect" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-deselect" title="The â€œdeselectâ€ signal"><span class="type">â€œdeselectâ€</span></a> signal on the given item.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>the menu item</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-activate"></a><h3>gtk_menu_item_activateÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_menu_item_activate (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>);</pre>
+<p>Emits the <a class="link" href="GtkMenuItem.html#GtkMenuItem-activate" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-activate" title="The â€œactivateâ€ signal"><span class="type">â€œactivateâ€</span></a> signal on the given item</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>the menu item</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-toggle-size-request"></a><h3>gtk_menu_item_toggle_size_requestÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_menu_item_toggle_size_request (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>,
+                                   <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *requisition</code></em>);</pre>
+<p>Emits the <a class="link" href="GtkMenuItem.html#GtkMenuItem-toggle-size-request" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-toggle-size-request" title="The â€œtoggle-size-requestâ€ signal"><span class="type">â€œtoggle-size-requestâ€</span></a> signal on the given item.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>the menu item</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>requisition</p></td>
+<td class="parameter_description"><p> the requisition to use as signal data. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-toggle-size-allocate"></a><h3>gtk_menu_item_toggle_size_allocateÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_menu_item_toggle_size_allocate (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>,
+                                    <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> allocation</code></em>);</pre>
+<p>Emits the <a class="link" href="GtkMenuItem.html#GtkMenuItem-toggle-size-allocate" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-toggle-size-allocate" title="The â€œtoggle-size-allocateâ€ signal"><span class="type">â€œtoggle-size-allocateâ€</span></a> signal on the given item.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>the menu item.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>allocation</p></td>
+<td class="parameter_description"><p>the allocation to use as signal data.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-get-reserve-indicator"></a><h3>gtk_menu_item_get_reserve_indicatorÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_menu_item_get_reserve_indicator (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>);</pre>
+<p>Returns whether the <em class="parameter"><code>menu_item</code></em>
+ reserves space for
+the submenu indicator, regardless if it has a submenu
+or not.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.20.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>menu_item</code></em>
+always reserves space for the
+submenu indicator</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-menu-item-set-reserve-indicator"></a><h3>gtk_menu_item_set_reserve_indicatorÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_menu_item_set_reserve_indicator (<em class="parameter"><code><a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menu_item</code></em>,
+                                     <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> reserve</code></em>);</pre>
+<p>Sets whether the <em class="parameter"><code>menu_item</code></em>
+ should reserve space for
+the submenu indicator, regardless if it actually has
+a submenu or not.</p>
+<p>There should be little need for applications to call
+this functions.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.12.21.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>menu_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>reserve</p></td>
+<td class="parameter_description"><p>the new value</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkMenuItem-struct"></a><h3>struct GtkMenuItem</h3>
+<pre class="programlisting">struct GtkMenuItem;</pre>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItemClass"></a><h3>struct GtkMenuItemClass</h3>
+<pre class="programlisting">struct GtkMenuItemClass {
+  GtkBinClass parent_class;
+
+
+  /* If the following flag is true, then we should always
+   * hide the menu when the MenuItem is activated. Otherwise,
+   * it is up to the caller. For instance, when navigating
+   * a menu with the keyboard, &lt;Space&gt; doesn't hide, but
+   * &lt;Return&gt; does.
+   */
+  guint hide_on_activate : 1;
+
+  void (* activate)             (GtkMenuItem *menu_item);
+  void (* activate_item)        (GtkMenuItem *menu_item);
+  void (* toggle_size_request)  (GtkMenuItem *menu_item,
+                                 gint        *requisition);
+  void (* toggle_size_allocate) (GtkMenuItem *menu_item,
+                                 gint         allocation);
+  void (* set_label)            (GtkMenuItem *menu_item,
+                                 const gchar *label);
+  const gchar * (* get_label)   (GtkMenuItem *menu_item);
+
+  void (* select)               (GtkMenuItem *menu_item);
+  void (* deselect)             (GtkMenuItem *menu_item);
+};
+</pre>
+<div class="refsect3">
+<a name="id-1.3.13.6.13.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="struct_members_name" width="300px"></col>
+<col class="struct_members_description"></col>
+<col class="struct_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GtkBin.html#GtkBinClass" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html#GtkBinClass" title="struct GtkBinClass"><span class="type">GtkBinClass</span></a>Â <em class="structfield"><code><a name="GtkMenuItemClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>The parent class.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>Â <em class="structfield"><code><a name="GtkMenuItemClass.hide-on-activate"></a>hide_on_activate</code></em>Â :Â 1;</p></td>
+<td class="struct_member_description"><p>If <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, then we should always
+hide the menu when the <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><code class="literal">GtkMenuItem</code></a> is activated. Otherwise,
+it is up to the caller.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkMenuItemClass.activate"></a>activate</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Signal emitted when the item is activated.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkMenuItemClass.activate-item"></a>activate_item</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Signal emitted when the item is activated, but also
+if the menu item has a submenu.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkMenuItemClass.toggle-size-request"></a>toggle_size_request</code></em>Â ()</p></td>
+<td class="struct_member_description">Â </td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkMenuItemClass.toggle-size-allocate"></a>toggle_size_allocate</code></em>Â ()</p></td>
+<td class="struct_member_description">Â </td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkMenuItemClass.set-label"></a>set_label</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Sets <em class="parameter"><code>text</code></em>
+on the <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> label</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkMenuItemClass.get-label"></a>get_label</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Gets <em class="parameter"><code>text</code></em>
+from the <a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> label</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkMenuItemClass.select"></a>select</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Signal emitted when the item is selected.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkMenuItemClass.deselect"></a>deselect</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Signal emitted when the item is deselected.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GtkMenuItem--accel-path"></a><h3>The <code class="literal">â€œaccel-pathâ€</code> property</h3>
+<pre class="programlisting">  â€œaccel-pathâ€               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</pre>
+<p>Sets the accelerator path of the menu item, through which runtime
+changes of the menu item's accelerator caused by the user can be
+identified and saved to persistant storage.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: NULL</p>
+<p class="since">Since 2.14</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem--label"></a><h3>The <code class="literal">â€œlabelâ€</code> property</h3>
+<pre class="programlisting">  â€œlabelâ€                    <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</pre>
+<p>The text for the child label.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: ""</p>
+<p class="since">Since 2.16</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem--right-justified"></a><h3>The <code class="literal">â€œright-justifiedâ€</code> property</h3>
+<pre class="programlisting">  â€œright-justifiedâ€          <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Sets whether the menu item appears justified
+at the right side of a menu bar.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since 2.14</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem--submenu"></a><h3>The <code class="literal">â€œsubmenuâ€</code> property</h3>
+<pre class="programlisting">  â€œsubmenuâ€                  <a class="link" href="GtkMenu.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenu.html" title="GtkMenu"><span class="type">GtkMenu</span></a>Â *</pre>
+<p>The submenu attached to the menu item, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if it has none.</p>
+<p>Flags: Read / Write</p>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem--use-underline"></a><h3>The <code class="literal">â€œuse-underlineâ€</code> property</h3>
+<pre class="programlisting">  â€œuse-underlineâ€            <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if underlines in the text indicate mnemonics.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since 2.16</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.style-property-details"></a><h2>Style Property Details</h2>
+<div class="refsect2">
+<a name="GtkMenuItem--s-arrow-scaling"></a><h3>The <code class="literal">â€œarrow-scalingâ€</code> style property</h3>
+<pre class="programlisting">  â€œarrow-scalingâ€            <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a></pre>
+<p>Amount of space used up by arrow, relative to the menu item's font size.</p>
+<p>Flags: Read</p>
+<p>Allowed values: [0,2]</p>
+<p>Default value: 0.8</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem--s-arrow-spacing"></a><h3>The <code class="literal">â€œarrow-spacingâ€</code> style property</h3>
+<pre class="programlisting">  â€œarrow-spacingâ€            <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>Space between label and arrow.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem--s-horizontal-padding"></a><h3>The <code class="literal">â€œhorizontal-paddingâ€</code> style property</h3>
+<pre class="programlisting">  â€œhorizontal-paddingâ€       <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>Padding to left and right of the menu item.</p>
+<div class="warning">
+<p><code class="literal">GtkMenuItem:horizontal-padding</code> has been deprecated since version 3.8 and should not be used in newly-written code.</p>
+<p>use the standard padding CSS property (through objects
+  like <a class="link" href="GtkStyleContext.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html" title="GtkStyleContext"><span class="type">GtkStyleContext</span></a> and <a class="link" href="GtkCssProvider.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCssProvider.html" title="GtkCssProvider"><span class="type">GtkCssProvider</span></a>); the value of this style
+  property is ignored.</p>
+</div>
+<p>Flags: Read</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem--s-selected-shadow-type"></a><h3>The <code class="literal">â€œselected-shadow-typeâ€</code> style property</h3>
+<pre class="programlisting">  â€œselected-shadow-typeâ€     <a class="link" href="gtk3-Standard-Enumerations.html#GtkShadowType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkShadowType" title="enum GtkShadowType"><span class="type">GtkShadowType</span></a></pre>
+<p>Shadow type when item is selected.</p>
+<p>Flags: Read</p>
+<p>Default value: GTK_SHADOW_NONE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem--s-toggle-spacing"></a><h3>The <code class="literal">â€œtoggle-spacingâ€</code> style property</h3>
+<pre class="programlisting">  â€œtoggle-spacingâ€           <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>Space between icon and label.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 5</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem--s-width-chars"></a><h3>The <code class="literal">â€œwidth-charsâ€</code> style property</h3>
+<pre class="programlisting">  â€œwidth-charsâ€              <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>The minimum desired width of the menu item in characters.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 12</p>
+<p class="since">Since 2.14</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GtkMenuItem-activate"></a><h3>The <code class="literal">â€œactivateâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menuitem,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)</pre>
+<p>Emitted when the item is activated.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.16.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>menuitem</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Action</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem-activate-item"></a><h3>The <code class="literal">â€œactivate-itemâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menuitem,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)</pre>
+<p>Emitted when the item is activated, but also if the menu item has a
+submenu. For normal applications, the relevant signal is
+<a class="link" href="GtkMenuItem.html#GtkMenuItem-activate" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html#GtkMenuItem-activate" title="The â€œactivateâ€ signal"><span class="type">â€œactivateâ€</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.13.6.16.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>menuitem</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem-deselect"></a><h3>The <code class="literal">â€œdeselectâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menuitem,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)</pre>
+<p>Flags: Run First</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem-select"></a><h3>The <code class="literal">â€œselectâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menuitem,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)</pre>
+<p>Flags: Run First</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem-toggle-size-allocate"></a><h3>The <code class="literal">â€œtoggle-size-allocateâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menuitem,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>         arg1,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)</pre>
+<p>Flags: Run First</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkMenuItem-toggle-size-request"></a><h3>The <code class="literal">â€œtoggle-size-requestâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html" title="GtkMenuItem"><span class="type">GtkMenuItem</span></a> *menuitem,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     arg1,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)</pre>
+<p>Flags: Run First</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkMenuItem.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GtkBin.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html" title="GtkBin"><span class="type">GtkBin</span></a>, <a class="link" href="GtkMenuShell.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuShell.html" title="GtkMenuShell"><span class="type">GtkMenuShell</span></a></p>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

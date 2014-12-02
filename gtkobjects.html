@@ -1,0 +1,734 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: PartÂ II.Â GTK+ Widgets and Objects</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="index.html" rel="up" title="GTK+ 3 Reference Manual"></link><link href="chap-drawing-model.html" rel="prev" title="The GTK+ Drawing Model"></link><link href="ch02.html" rel="next" title="Object Hierarchy"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc two_columns"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%"></td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><img border="0" height="16" src="up-insensitive.png" tppabs="https://developer.gnome.org/gtk3/stable/up-insensitive.png" width="16"></img></td>
+<td><a accesskey="p" href="chap-drawing-model.html" tppabs="https://developer.gnome.org/gtk3/stable/chap-drawing-model.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="ch02.html" tppabs="https://developer.gnome.org/gtk3/stable/ch02.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="part">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="gtkobjects"></a>PartÂ II.Â GTK+ Widgets and Objects</h1></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc">
+<dt><span class="chapter"><a href="ch02.html" tppabs="https://developer.gnome.org/gtk3/stable/ch02.html">Object Hierarchy</a></span></dt>
+<dt><span class="chapter"><a href="ch03.html" tppabs="https://developer.gnome.org/gtk3/stable/ch03.html">Widget Gallery</a></span></dt>
+<dt><span class="chapter"><a href="Application.html" tppabs="https://developer.gnome.org/gtk3/stable/Application.html">Application support</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkApplication.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkApplication.html">GtkApplication</a></span><span class="refpurpose"> â€” Application class</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkApplicationWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkApplicationWindow.html">GtkApplicationWindow</a></span><span class="refpurpose"> â€” GtkWindow subclass with GtkApplication support</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkActionable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkActionable.html">GtkActionable</a></span><span class="refpurpose"> â€” An interface for widgets that can be associated
+    with actions</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="Builder.html" tppabs="https://developer.gnome.org/gtk3/stable/Builder.html">Interface builder</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkBuilder.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBuilder.html">GtkBuilder</a></span><span class="refpurpose"> â€” Build an interface from an XML UI definition</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkBuildable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBuildable.html">GtkBuildable</a></span><span class="refpurpose"> â€” Interface for objects that can be built by GtkBuilder</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="WindowWidgets.html" tppabs="https://developer.gnome.org/gtk3/stable/WindowWidgets.html">Windows</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWindow.html">GtkWindow</a></span><span class="refpurpose"> â€” Toplevel which can contain other widgets</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkDialog.html">GtkDialog</a></span><span class="refpurpose"> â€” Create popup windows</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkMessageDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMessageDialog.html">GtkMessageDialog</a></span><span class="refpurpose"> â€” A convenient message window</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkAboutDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAboutDialog.html">GtkAboutDialog</a></span><span class="refpurpose"> â€” Display information about an application</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkAssistant.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAssistant.html">GtkAssistant</a></span><span class="refpurpose"> â€” A widget used to guide users through multi-step operations</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkInvisible.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkInvisible.html">GtkInvisible</a></span><span class="refpurpose"> â€” A widget which is not displayed</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkOffscreenWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkOffscreenWindow.html">GtkOffscreenWindow</a></span><span class="refpurpose"> â€” A toplevel to manage offscreen rendering of child widgets</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkWindowGroup.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWindowGroup.html">GtkWindowGroup</a></span><span class="refpurpose"> â€” Limit the effect of grabs</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="LayoutContainers.html" tppabs="https://developer.gnome.org/gtk3/stable/LayoutContainers.html">Layout Containers</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBox.html">GtkBox</a></span><span class="refpurpose"> â€” A container box</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkGrid.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkGrid.html">GtkGrid</a></span><span class="refpurpose"> â€” Pack widgets in a rows and columns</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkRevealer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRevealer.html">GtkRevealer</a></span><span class="refpurpose"> â€” Hide and show with animation</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkListBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkListBox.html">GtkListBox</a></span><span class="refpurpose"> â€” A list container</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFlowBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFlowBox.html">GtkFlowBox</a></span><span class="refpurpose"> â€” A container that allows reflowing its children</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkStack.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStack.html">GtkStack</a></span><span class="refpurpose"> â€” A stacking container</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkStackSwitcher.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStackSwitcher.html">GtkStackSwitcher</a></span><span class="refpurpose"> â€” A controller for GtkStack</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gtk3-GtkActionBar.html" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkActionBar.html">GtkActionBar</a></span><span class="refpurpose"> â€” A full width bar for presenting contextual actions</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkHeaderBar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkHeaderBar.html">GtkHeaderBar</a></span><span class="refpurpose"> â€” A box with a centered child</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkOverlay.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkOverlay.html">GtkOverlay</a></span><span class="refpurpose"> â€” A container which overlays widgets on top of each other</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkAlignment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAlignment.html">GtkAlignment</a></span><span class="refpurpose"> â€” A widget which controls the alignment and size of its child</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkButtonBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButtonBox.html">GtkButtonBox</a></span><span class="refpurpose"> â€” A container for arranging buttons</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPaned.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPaned.html">GtkPaned</a></span><span class="refpurpose"> â€” A widget with two adjustable panes</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkLayout.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkLayout.html">GtkLayout</a></span><span class="refpurpose"> â€” Infinite scrollable area containing child widgets
+  and/or custom drawing</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkNotebook.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkNotebook.html">GtkNotebook</a></span><span class="refpurpose"> â€” A tabbed notebook container</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkExpander.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkExpander.html">GtkExpander</a></span><span class="refpurpose"> â€” A container which can hide its child</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gtk3-Orientable.html" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Orientable.html">GtkOrientable</a></span><span class="refpurpose"> â€” An interface for flippable widgets</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkAspectFrame.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAspectFrame.html">GtkAspectFrame</a></span><span class="refpurpose"> â€” A frame that constrains its child to a particular aspect ratio</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFixed.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFixed.html">GtkFixed</a></span><span class="refpurpose"> â€” A container which allows you to position
+widgets at fixed coordinates</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="DisplayWidgets.html" tppabs="https://developer.gnome.org/gtk3/stable/DisplayWidgets.html">Display Widgets</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkLabel.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkLabel.html">GtkLabel</a></span><span class="refpurpose"> â€” A widget that displays a small to medium amount of text</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkImage.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkImage.html">GtkImage</a></span><span class="refpurpose"> â€” A widget displaying an image</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkSpinner.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSpinner.html">GtkSpinner</a></span><span class="refpurpose"> â€” Show a spinner animation</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkInfoBar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkInfoBar.html">GtkInfoBar</a></span><span class="refpurpose"> â€” Report important messages to the user</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkProgressBar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkProgressBar.html">GtkProgressBar</a></span><span class="refpurpose"> â€” A widget which indicates progress visually</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkLevelBar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkLevelBar.html">GtkLevelBar</a></span><span class="refpurpose"> â€” A bar that can used as a level indicator</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkStatusbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStatusbar.html">GtkStatusbar</a></span><span class="refpurpose"> â€” Report messages of minor importance to the user</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkAccelLabel.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAccelLabel.html">GtkAccelLabel</a></span><span class="refpurpose"> â€” A label which displays an accelerator key on the right of the text</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkStatusIcon.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStatusIcon.html">GtkStatusIcon</a></span><span class="refpurpose"> â€” Display an icon in the system tray</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ButtonWidgets.html" tppabs="https://developer.gnome.org/gtk3/stable/ButtonWidgets.html">Buttons and Toggles</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html">GtkButton</a></span><span class="refpurpose"> â€” A widget that emits a signal when clicked on</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCheckButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCheckButton.html">GtkCheckButton</a></span><span class="refpurpose"> â€” Create widgets with a discrete toggle button</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkRadioButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRadioButton.html">GtkRadioButton</a></span><span class="refpurpose"> â€” A choice from multiple check buttons</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkToggleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToggleButton.html">GtkToggleButton</a></span><span class="refpurpose"> â€” Create buttons which retain their state</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkLinkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkLinkButton.html">GtkLinkButton</a></span><span class="refpurpose"> â€” Create buttons bound to a URL</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkMenuButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuButton.html">GtkMenuButton</a></span><span class="refpurpose"> â€” A widget that shows a popup when clicked on</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkSwitch.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSwitch.html">GtkSwitch</a></span><span class="refpurpose"> â€” A â€œlight switchâ€ style toggle</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html">GtkScaleButton</a></span><span class="refpurpose"> â€” A button which pops up a scale</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkVolumeButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkVolumeButton.html">GtkVolumeButton</a></span><span class="refpurpose"> â€” A button which pops up a volume control</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkLockButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkLockButton.html">GtkLockButton</a></span><span class="refpurpose"> â€” A widget to unlock or lock privileged operations</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="NumericEntry.html" tppabs="https://developer.gnome.org/gtk3/stable/NumericEntry.html">Numeric and Text Data Entry</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkEntry.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkEntry.html">GtkEntry</a></span><span class="refpurpose"> â€” A single line text entry field</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkEntryBuffer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkEntryBuffer.html">GtkEntryBuffer</a></span><span class="refpurpose"> â€” Text buffer for GtkEntry</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkEntryCompletion.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkEntryCompletion.html">GtkEntryCompletion</a></span><span class="refpurpose"> â€” Completion functionality for GtkEntry</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkScale.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScale.html">GtkScale</a></span><span class="refpurpose"> â€” A slider widget for selecting a value from a range</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkSpinButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSpinButton.html">GtkSpinButton</a></span><span class="refpurpose"> â€” Retrieve an integer or floating-point number from
+    the user</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkSearchEntry.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSearchEntry.html">GtkSearchEntry</a></span><span class="refpurpose"> â€” An entry which shows a search icon</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkSearchBar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSearchBar.html">GtkSearchBar</a></span><span class="refpurpose"> â€” A toolbar to integrate a search entry with</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkEditable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkEditable.html">GtkEditable</a></span><span class="refpurpose"> â€” Interface for text-editing widgets</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="TextWidgetObjects.html" tppabs="https://developer.gnome.org/gtk3/stable/TextWidgetObjects.html">Multiline Text Editor</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="TextWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/TextWidget.html">Text Widget Overview</a></span><span class="refpurpose"> â€” Overview of GtkTextBuffer, GtkTextView, and friends</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTextIter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTextIter.html">GtkTextIter</a></span><span class="refpurpose"> â€” Text buffer iterator</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTextMark.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTextMark.html">GtkTextMark</a></span><span class="refpurpose"> â€” A position in the buffer preserved across buffer modifications</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTextBuffer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTextBuffer.html">GtkTextBuffer</a></span><span class="refpurpose"> â€” Stores attributed text for display in a GtkTextView</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTextTag.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTextTag.html">GtkTextTag</a></span><span class="refpurpose"> â€” A tag that can be applied to text in a GtkTextBuffer</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTextTagTable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTextTagTable.html">GtkTextTagTable</a></span><span class="refpurpose"> â€” Collection of tags that can be used together</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTextView.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTextView.html">GtkTextView</a></span><span class="refpurpose"> â€” Widget that displays a GtkTextBuffer</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="TreeWidgetObjects.html" tppabs="https://developer.gnome.org/gtk3/stable/TreeWidgetObjects.html">Tree, List and Icon Grid Widgets</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="TreeWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/TreeWidget.html">Tree and List Widget Overview</a></span><span class="refpurpose"> â€” Overview of GtkTreeModel, GtkTreeView, and friends</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTreeModel.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeModel.html">GtkTreeModel</a></span><span class="refpurpose"> â€” The tree interface used by GtkTreeView</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTreeSelection.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeSelection.html">GtkTreeSelection</a></span><span class="refpurpose"> â€” The selection object for GtkTreeView</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTreeViewColumn.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeViewColumn.html">GtkTreeViewColumn</a></span><span class="refpurpose"> â€” A visible column in a GtkTreeView widget</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTreeView.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeView.html">GtkTreeView</a></span><span class="refpurpose"> â€” A widget for displaying both trees and lists</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gtk3-GtkTreeView-drag-and-drop.html" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkTreeView-drag-and-drop.html">GtkTreeView drag-and-drop</a></span><span class="refpurpose"> â€” Interfaces for drag-and-drop support in GtkTreeView</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellView.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellView.html">GtkCellView</a></span><span class="refpurpose"> â€” A widget displaying a single row of a GtkTreeModel</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkIconView.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkIconView.html">GtkIconView</a></span><span class="refpurpose"> â€” A widget which displays a list of icons in a grid</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTreeSortable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeSortable.html">GtkTreeSortable</a></span><span class="refpurpose"> â€” The interface for sortable models used by GtkTreeView</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTreeModelSort.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeModelSort.html">GtkTreeModelSort</a></span><span class="refpurpose"> â€” A GtkTreeModel which makes an underlying tree model sortable</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTreeModelFilter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeModelFilter.html">GtkTreeModelFilter</a></span><span class="refpurpose"> â€” A GtkTreeModel which hides parts of an underlying tree model</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellLayout.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellLayout.html">GtkCellLayout</a></span><span class="refpurpose"> â€” An interface for packing cells</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellArea.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellArea.html">GtkCellArea</a></span><span class="refpurpose"> â€” An abstract class for laying out GtkCellRenderers</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellAreaBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellAreaBox.html">GtkCellAreaBox</a></span><span class="refpurpose"> â€” A cell area that renders GtkCellRenderers
+    into a row or a column</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellAreaContext.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellAreaContext.html">GtkCellAreaContext</a></span><span class="refpurpose"> â€” Stores geometrical information for a series of rows in a GtkCellArea</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html">GtkCellRenderer</a></span><span class="refpurpose"> â€” An object for rendering a single cell</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellEditable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellEditable.html">GtkCellEditable</a></span><span class="refpurpose"> â€” Interface for widgets which can are used for editing
+ cells</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellRendererAccel.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererAccel.html">GtkCellRendererAccel</a></span><span class="refpurpose"> â€” Renders a keyboard accelerator in a cell</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellRendererCombo.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererCombo.html">GtkCellRendererCombo</a></span><span class="refpurpose"> â€” Renders a combobox in a cell</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellRendererPixbuf.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererPixbuf.html">GtkCellRendererPixbuf</a></span><span class="refpurpose"> â€” Renders a pixbuf in a cell</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellRendererProgress.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererProgress.html">GtkCellRendererProgress</a></span><span class="refpurpose"> â€” Renders numbers as progress bars</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellRendererSpin.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererSpin.html">GtkCellRendererSpin</a></span><span class="refpurpose"> â€” Renders a spin button in a cell</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellRendererText.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererText.html">GtkCellRendererText</a></span><span class="refpurpose"> â€” Renders text in a cell</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellRendererToggle.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererToggle.html">GtkCellRendererToggle</a></span><span class="refpurpose"> â€” Renders a toggle button in a cell</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCellRendererSpinner.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererSpinner.html">GtkCellRendererSpinner</a></span><span class="refpurpose"> â€” Renders a spinning animation in a cell</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkListStore.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkListStore.html">GtkListStore</a></span><span class="refpurpose"> â€” A list-like data structure that can be used with the GtkTreeView</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTreeStore.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeStore.html">GtkTreeStore</a></span><span class="refpurpose"> â€” A tree-like data structure that can be used with the GtkTreeView</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="MenusAndCombos.html" tppabs="https://developer.gnome.org/gtk3/stable/MenusAndCombos.html">Menus, Combo Box, Toolbar</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkComboBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkComboBox.html">GtkComboBox</a></span><span class="refpurpose"> â€” A widget used to choose from a list of items</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkComboBoxText.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkComboBoxText.html">GtkComboBoxText</a></span><span class="refpurpose"> â€” A simple, text-only combo box</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkMenu.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenu.html">GtkMenu</a></span><span class="refpurpose"> â€” A menu widget</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkMenuBar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuBar.html">GtkMenuBar</a></span><span class="refpurpose"> â€” A subclass of GtkMenuShell which holds GtkMenuItem widgets</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuItem.html">GtkMenuItem</a></span><span class="refpurpose"> â€” The widget used for item in menus</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkRadioMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRadioMenuItem.html">GtkRadioMenuItem</a></span><span class="refpurpose"> â€” A choice from multiple check menu items</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCheckMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCheckMenuItem.html">GtkCheckMenuItem</a></span><span class="refpurpose"> â€” A menu item with a check box</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkSeparatorMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSeparatorMenuItem.html">GtkSeparatorMenuItem</a></span><span class="refpurpose"> â€” A separator used in menus</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkToolShell.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolShell.html">GtkToolShell</a></span><span class="refpurpose"> â€” Interface for containers containing GtkToolItem widgets</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkToolbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolbar.html">GtkToolbar</a></span><span class="refpurpose"> â€” Create bars of buttons and other widgets</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItem.html">GtkToolItem</a></span><span class="refpurpose"> â€” The base class of widgets that can be added to GtkToolShell</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkToolPalette.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolPalette.html">GtkToolPalette</a></span><span class="refpurpose"> â€” A tool palette with categories</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkToolItemGroup.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolItemGroup.html">GtkToolItemGroup</a></span><span class="refpurpose"> â€” A sub container used in a tool palette</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkSeparatorToolItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSeparatorToolItem.html">GtkSeparatorToolItem</a></span><span class="refpurpose"> â€” A toolbar item that separates groups of other
+  toolbar items</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkToolButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToolButton.html">GtkToolButton</a></span><span class="refpurpose"> â€” A GtkToolItem subclass that displays buttons</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkMenuToolButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuToolButton.html">GtkMenuToolButton</a></span><span class="refpurpose"> â€” A GtkToolItem containing a button with an additional dropdown menu</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkToggleToolButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToggleToolButton.html">GtkToggleToolButton</a></span><span class="refpurpose"> â€” A GtkToolItem containing a toggle button</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkRadioToolButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRadioToolButton.html">GtkRadioToolButton</a></span><span class="refpurpose"> â€” A toolbar item that contains a radio button</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPopover.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPopover.html">GtkPopover</a></span><span class="refpurpose"> â€” Context dependent bubbles</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="SelectorWidgets.html" tppabs="https://developer.gnome.org/gtk3/stable/SelectorWidgets.html">Selector Widgets and Dialogs</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkColorChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkColorChooser.html">GtkColorChooser</a></span><span class="refpurpose"> â€” Interface implemented by widgets for choosing colors</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkColorButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkColorButton.html">GtkColorButton</a></span><span class="refpurpose"> â€” A button to launch a color selection dialog</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkColorChooserWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkColorChooserWidget.html">GtkColorChooserWidget</a></span><span class="refpurpose"> â€” A widget for choosing colors</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkColorChooserDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkColorChooserDialog.html">GtkColorChooserDialog</a></span><span class="refpurpose"> â€” A dialog for choosing colors</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFileChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFileChooser.html">GtkFileChooser</a></span><span class="refpurpose"> â€” File chooser interface used by GtkFileChooserWidget and GtkFileChooserDialog</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFileChooserButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFileChooserButton.html">GtkFileChooserButton</a></span><span class="refpurpose"> â€” A button to launch a file selection dialog</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFileChooserDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFileChooserDialog.html">GtkFileChooserDialog</a></span><span class="refpurpose"> â€” A file chooser dialog, suitable for â€œFile/Openâ€ or â€œFile/Saveâ€ commands</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFileChooserWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFileChooserWidget.html">GtkFileChooserWidget</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFileFilter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFileFilter.html">GtkFileFilter</a></span><span class="refpurpose"> â€” A filter for selecting a file subset</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFontChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooser.html">GtkFontChooser</a></span><span class="refpurpose"> â€” Interface implemented by widgets displaying fonts</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFontButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontButton.html">GtkFontButton</a></span><span class="refpurpose"> â€” A button to launch a font chooser dialog</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFontChooserWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooserWidget.html">GtkFontChooserWidget</a></span><span class="refpurpose"> â€” A widget for selecting fonts</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFontChooserDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontChooserDialog.html">GtkFontChooserDialog</a></span><span class="refpurpose"> â€” A dialog for selecting fonts</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPlacesSidebar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlacesSidebar.html">GtkPlacesSidebar</a></span><span class="refpurpose"> â€” Sidebar that displays frequently-used places in the file system</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="Ornaments.html" tppabs="https://developer.gnome.org/gtk3/stable/Ornaments.html">Ornaments</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkFrame.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFrame.html">GtkFrame</a></span><span class="refpurpose"> â€” A bin with a decorative frame and optional label</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkSeparator.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSeparator.html">GtkSeparator</a></span><span class="refpurpose"> â€” A separator widget</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ScrollingWidgets.html" tppabs="https://developer.gnome.org/gtk3/stable/ScrollingWidgets.html">Scrolling</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkScrollbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrollbar.html">GtkScrollbar</a></span><span class="refpurpose"> â€” A Scrollbar</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkScrolledWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrolledWindow.html">GtkScrolledWindow</a></span><span class="refpurpose"> â€” Adds scrollbars to its child widget</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkScrollable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScrollable.html">GtkScrollable</a></span><span class="refpurpose"> â€” An interface for scrollable widgets</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="Printing.html" tppabs="https://developer.gnome.org/gtk3/stable/Printing.html">Printing</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="gtk3-High-level-Printing-API.html" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-High-level-Printing-API.html">GtkPrintOperation</a></span><span class="refpurpose"> â€” High-level Printing API</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPrintContext.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrintContext.html">GtkPrintContext</a></span><span class="refpurpose"> â€” Encapsulates context for drawing pages</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPrintSettings.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrintSettings.html">GtkPrintSettings</a></span><span class="refpurpose"> â€” Stores print settings</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPageSetup.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPageSetup.html">GtkPageSetup</a></span><span class="refpurpose"> â€” Stores page setup information</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPaperSize.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPaperSize.html">GtkPaperSize</a></span><span class="refpurpose"> â€” Support for named paper sizes</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPrinter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrinter.html">GtkPrinter</a></span><span class="refpurpose"> â€” Represents a printer</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPrintJob.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrintJob.html">GtkPrintJob</a></span><span class="refpurpose"> â€” Represents a print job</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPrintUnixDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPrintUnixDialog.html">GtkPrintUnixDialog</a></span><span class="refpurpose"> â€” A print dialog</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkPageSetupUnixDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPageSetupUnixDialog.html">GtkPageSetupUnixDialog</a></span><span class="refpurpose"> â€” A page setup dialog</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="MiscObjects.html" tppabs="https://developer.gnome.org/gtk3/stable/MiscObjects.html">Miscellaneous</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html">GtkAdjustment</a></span><span class="refpurpose"> â€” A representation of an adjustable bounded value</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkArrow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkArrow.html">GtkArrow</a></span><span class="refpurpose"> â€” Displays an arrow</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkCalendar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCalendar.html">GtkCalendar</a></span><span class="refpurpose"> â€” Displays a calendar and allows the user to select a date</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkDrawingArea.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkDrawingArea.html">GtkDrawingArea</a></span><span class="refpurpose"> â€” A widget for custom user interface elements</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkEventBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkEventBox.html">GtkEventBox</a></span><span class="refpurpose"> â€” A widget used to catch events for widgets which
+    do not have their own window</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkHandleBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkHandleBox.html">GtkHandleBox</a></span><span class="refpurpose"> â€” a widget for detachable window portions</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkIMContextSimple.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkIMContextSimple.html">GtkIMContextSimple</a></span><span class="refpurpose"> â€” An input method context supporting table-based input methods</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkIMMulticontext.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkIMMulticontext.html">GtkIMMulticontext</a></span><span class="refpurpose"> â€” An input method context supporting multiple, loadable input methods</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkSizeGroup.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSizeGroup.html">GtkSizeGroup</a></span><span class="refpurpose"> â€” Grouping widgets so they request the same size</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTooltip.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTooltip.html">GtkTooltip</a></span><span class="refpurpose"> â€” Add tips to your widgets</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkViewport.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkViewport.html">GtkViewport</a></span><span class="refpurpose"> â€” An adapter which makes widgets scrollable</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkAccessible.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAccessible.html">GtkAccessible</a></span><span class="refpurpose"> â€” Accessibility support for widgets</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="AbstractObjects.html" tppabs="https://developer.gnome.org/gtk3/stable/AbstractObjects.html">Abstract Base Classes</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html">GtkWidget</a></span><span class="refpurpose"> â€” Base class for all widgets</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkContainer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkContainer.html">GtkContainer</a></span><span class="refpurpose"> â€” Base class for widgets which contain other widgets</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkBin.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html">GtkBin</a></span><span class="refpurpose"> â€” A container with just one child</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkMenuShell.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMenuShell.html">GtkMenuShell</a></span><span class="refpurpose"> â€” A base class for menu objects</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkMisc.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMisc.html">GtkMisc</a></span><span class="refpurpose"> â€” Base class for widgets with alignments and padding</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkRange.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRange.html">GtkRange</a></span><span class="refpurpose"> â€” Base class for widgets which visualize an adjustment</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkIMContext.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkIMContext.html">GtkIMContext</a></span><span class="refpurpose"> â€” Base class for input method contexts</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="PlugSocket.html" tppabs="https://developer.gnome.org/gtk3/stable/PlugSocket.html">Cross-process Embedding</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkPlug.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkPlug.html">GtkPlug</a></span><span class="refpurpose"> â€” Toplevel for embedding into other processes</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkSocket.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSocket.html">GtkSocket</a></span><span class="refpurpose"> â€” Container for widgets from other processes</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="RecentDocuments.html" tppabs="https://developer.gnome.org/gtk3/stable/RecentDocuments.html">Recently Used Documents</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkRecentManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentManager.html">GtkRecentManager</a></span><span class="refpurpose"> â€” Managing recently used files</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkRecentChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentChooser.html">GtkRecentChooser</a></span><span class="refpurpose"> â€” Interface implemented by widgets displaying recently
+  used files</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkRecentChooserDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentChooserDialog.html">GtkRecentChooserDialog</a></span><span class="refpurpose"> â€” Displays recently used files in a dialog</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkRecentChooserMenu.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentChooserMenu.html">GtkRecentChooserMenu</a></span><span class="refpurpose"> â€” Displays recently used files in a menu</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkRecentChooserWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentChooserWidget.html">GtkRecentChooserWidget</a></span><span class="refpurpose"> â€” Displays recently used files</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkRecentFilter.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentFilter.html">GtkRecentFilter</a></span><span class="refpurpose"> â€” A filter for selecting a subset of recently used files</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ApplicationChoosing.html" tppabs="https://developer.gnome.org/gtk3/stable/ApplicationChoosing.html">Choosing from installed applications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GtkAppChooser.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAppChooser.html">GtkAppChooser</a></span><span class="refpurpose"> â€” Interface implemented by widgets for choosing an application</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkAppChooserButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAppChooserButton.html">GtkAppChooserButton</a></span><span class="refpurpose"> â€” A button to launch an application chooser dialog</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkAppChooserDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAppChooserDialog.html">GtkAppChooserDialog</a></span><span class="refpurpose"> â€” An application chooser dialog</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkAppChooserWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAppChooserWidget.html">GtkAppChooserWidget</a></span><span class="refpurpose"> â€” Application chooser widget that can be embedded in other widgets</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="DeprecatedObjects.html" tppabs="https://developer.gnome.org/gtk3/stable/DeprecatedObjects.html">Deprecated</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="gtk3-GtkSymbolicColor.html" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkSymbolicColor.html">GtkSymbolicColor</a></span><span class="refpurpose"> â€” Symbolic colors</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gtk3-GtkGradient.html" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-GtkGradient.html">GtkGradient</a></span><span class="refpurpose"> â€” Gradients</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gtk3-Resource-Files.html" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Resource-Files.html">Resource Files</a></span><span class="refpurpose"> â€” Deprecated routines for handling resource files</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkStyle.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyle.html">GtkStyle</a></span><span class="refpurpose"> â€” Deprecated object that holds style information
+    for widgets</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkHScale.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkHScale.html">GtkHScale</a></span><span class="refpurpose"> â€” A horizontal slider widget for selecting a value from a range</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkVScale.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkVScale.html">GtkVScale</a></span><span class="refpurpose"> â€” A vertical slider widget for selecting a value from a range</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTearoffMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTearoffMenuItem.html">GtkTearoffMenuItem</a></span><span class="refpurpose"> â€” A menu item used to tear off and reattach its menu</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkColorSelection.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkColorSelection.html">GtkColorSelection</a></span><span class="refpurpose"> â€” Deprecated widget used to select a color</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkColorSelectionDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkColorSelectionDialog.html">GtkColorSelectionDialog</a></span><span class="refpurpose"> â€” Deprecated dialog box for selecting a color</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkHSV.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkHSV.html">GtkHSV</a></span><span class="refpurpose"> â€” A â€œcolor wheelâ€ widget</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFontSelection.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontSelection.html">GtkFontSelection</a></span><span class="refpurpose"> â€” Deprecated widget for selecting fonts</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkFontSelectionDialog.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontSelectionDialog.html">GtkFontSelectionDialog</a></span><span class="refpurpose"> â€” Deprecated dialog box for selecting fonts</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkHBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkHBox.html">GtkHBox</a></span><span class="refpurpose"> â€” A horizontal container box</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkVBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkVBox.html">GtkVBox</a></span><span class="refpurpose"> â€” A vertical container box</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkHButtonBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkHButtonBox.html">GtkHButtonBox</a></span><span class="refpurpose"> â€” A container for arranging buttons horizontally</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkVButtonBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkVButtonBox.html">GtkVButtonBox</a></span><span class="refpurpose"> â€” A container for arranging buttons vertically</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkHPaned.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkHPaned.html">GtkHPaned</a></span><span class="refpurpose"> â€” A container with two panes arranged horizontally</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkVPaned.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkVPaned.html">GtkVPaned</a></span><span class="refpurpose"> â€” A container with two panes arranged vertically</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkTable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTable.html">GtkTable</a></span><span class="refpurpose"> â€” Pack widgets in regular patterns</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkHSeparator.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkHSeparator.html">GtkHSeparator</a></span><span class="refpurpose"> â€” A horizontal separator</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkVSeparator.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkVSeparator.html">GtkVSeparator</a></span><span class="refpurpose"> â€” A vertical separator</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkHScrollbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkHScrollbar.html">GtkHScrollbar</a></span><span class="refpurpose"> â€” A horizontal scrollbar</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkVScrollbar.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkVScrollbar.html">GtkVScrollbar</a></span><span class="refpurpose"> â€” A vertical scrollbar</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkUIManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkUIManager.html">GtkUIManager</a></span><span class="refpurpose"> â€” Constructing menus and toolbars from an XML description</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkActionGroup.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkActionGroup.html">GtkActionGroup</a></span><span class="refpurpose"> â€” A group of actions</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkAction.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAction.html">GtkAction</a></span><span class="refpurpose"> â€” A deprecated action which can be triggered by a menu or toolbar item</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkToggleAction.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToggleAction.html">GtkToggleAction</a></span><span class="refpurpose"> â€” An action which can be toggled between two states</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkRadioAction.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRadioAction.html">GtkRadioAction</a></span><span class="refpurpose"> â€” An action of which only one in a group can be active</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkRecentAction.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkRecentAction.html">GtkRecentAction</a></span><span class="refpurpose"> â€” An action of which represents a list of recently used files</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkActivatable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkActivatable.html">GtkActivatable</a></span><span class="refpurpose"> â€” An interface for activatable widgets</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GtkImageMenuItem.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkImageMenuItem.html">GtkImageMenuItem</a></span><span class="refpurpose"> â€” A menu item with an icon</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gtk3-Stock-Items.html" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Stock-Items.html">Stock Items</a></span><span class="refpurpose"> â€” Prebuilt common menu/toolbar items and corresponding icons</span>
+</dt>
+</dl></dd>
+</dl>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

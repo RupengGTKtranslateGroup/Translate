@@ -1,0 +1,2089 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: GtkCellRenderer</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="TreeWidgetObjects.html" rel="up" title="Tree, List and Icon Grid Widgets"></link><link href="GtkCellAreaContext.html" rel="prev" title="GtkCellAreaContext"></link><link href="GtkCellEditable.html" rel="next" title="GtkCellEditable"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkCellRenderer.description">Description</a></span><span id="nav_hierarchy">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkCellRenderer.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkCellRenderer.properties">Properties</a></span><span id="nav_signals">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkCellRenderer.signals">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="TreeWidgetObjects.html" tppabs="https://developer.gnome.org/gtk3/stable/TreeWidgetObjects.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="GtkCellAreaContext.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellAreaContext.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="GtkCellEditable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellEditable.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="GtkCellRenderer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkCellRenderer.top_of_page"></a>GtkCellRenderer</span></h2>
+<p>GtkCellRenderer â€” An object for rendering a single cell</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="GtkCellRenderer.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-class-set-accessible-type" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-class-set-accessible-type" title="gtk_cell_renderer_class_set_accessible_typeÂ ()">gtk_cell_renderer_class_set_accessible_type</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-aligned-area" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-aligned-area" title="gtk_cell_renderer_get_aligned_areaÂ ()">gtk_cell_renderer_get_aligned_area</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-size" title="gtk_cell_renderer_get_sizeÂ ()">gtk_cell_renderer_get_size</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-render" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-render" title="gtk_cell_renderer_renderÂ ()">gtk_cell_renderer_render</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-activate" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-activate" title="gtk_cell_renderer_activateÂ ()">gtk_cell_renderer_activate</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkCellEditable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellEditable.html" title="GtkCellEditable"><span class="returnvalue">GtkCellEditable</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-start-editing" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-start-editing" title="gtk_cell_renderer_start_editingÂ ()">gtk_cell_renderer_start_editing</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-stop-editing" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-stop-editing" title="gtk_cell_renderer_stop_editingÂ ()">gtk_cell_renderer_stop_editing</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-fixed-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-fixed-size" title="gtk_cell_renderer_get_fixed_sizeÂ ()">gtk_cell_renderer_get_fixed_size</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-set-fixed-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-set-fixed-size" title="gtk_cell_renderer_set_fixed_sizeÂ ()">gtk_cell_renderer_set_fixed_size</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-visible" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-visible" title="gtk_cell_renderer_get_visibleÂ ()">gtk_cell_renderer_get_visible</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-set-visible" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-set-visible" title="gtk_cell_renderer_set_visibleÂ ()">gtk_cell_renderer_set_visible</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-sensitive" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-sensitive" title="gtk_cell_renderer_get_sensitiveÂ ()">gtk_cell_renderer_get_sensitive</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-set-sensitive" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-set-sensitive" title="gtk_cell_renderer_set_sensitiveÂ ()">gtk_cell_renderer_set_sensitive</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-alignment" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-alignment" title="gtk_cell_renderer_get_alignmentÂ ()">gtk_cell_renderer_get_alignment</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-set-alignment" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-set-alignment" title="gtk_cell_renderer_set_alignmentÂ ()">gtk_cell_renderer_set_alignment</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-padding" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-padding" title="gtk_cell_renderer_get_paddingÂ ()">gtk_cell_renderer_get_padding</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-set-padding" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-set-padding" title="gtk_cell_renderer_set_paddingÂ ()">gtk_cell_renderer_set_padding</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="returnvalue">GtkStateFlags</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-state" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-state" title="gtk_cell_renderer_get_stateÂ ()">gtk_cell_renderer_get_state</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-is-activatable" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-is-activatable" title="gtk_cell_renderer_is_activatableÂ ()">gtk_cell_renderer_is_activatable</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-preferred-height" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-preferred-height" title="gtk_cell_renderer_get_preferred_heightÂ ()">gtk_cell_renderer_get_preferred_height</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-preferred-height-for-width" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-preferred-height-for-width" title="gtk_cell_renderer_get_preferred_height_for_widthÂ ()">gtk_cell_renderer_get_preferred_height_for_width</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-preferred-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-preferred-size" title="gtk_cell_renderer_get_preferred_sizeÂ ()">gtk_cell_renderer_get_preferred_size</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-preferred-width" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-preferred-width" title="gtk_cell_renderer_get_preferred_widthÂ ()">gtk_cell_renderer_get_preferred_width</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-preferred-width-for-height" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-preferred-width-for-height" title="gtk_cell_renderer_get_preferred_width_for_heightÂ ()">gtk_cell_renderer_get_preferred_width_for_height</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html#GtkSizeRequestMode" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkSizeRequestMode" title="enum GtkSizeRequestMode"><span class="returnvalue">GtkSizeRequestMode</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-request-mode" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-request-mode" title="gtk_cell_renderer_get_request_modeÂ ()">gtk_cell_renderer_get_request_mode</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkCellRenderer.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="properties_type" width="150px"></col>
+<col class="properties_name" width="300px"></col>
+<col class="properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--cell-background" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--cell-background" title="The â€œcell-backgroundâ€ property">cell-background</a></td>
+<td class="property_flags">Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Colors.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Colors.html#GdkColor'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Colors.html#GdkColor"><span class="type">GdkColor</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--cell-background-gdk" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--cell-background-gdk" title="The â€œcell-background-gdkâ€ property">cell-background-gdk</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--cell-background-rgba" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--cell-background-rgba" title="The â€œcell-background-rgbaâ€ property">cell-background-rgba</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--cell-background-set" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--cell-background-set" title="The â€œcell-background-setâ€ property">cell-background-set</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--editing" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--editing" title="The â€œeditingâ€ property">editing</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--height" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--height" title="The â€œheightâ€ property">height</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--is-expanded" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--is-expanded" title="The â€œis-expandedâ€ property">is-expanded</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--is-expander" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--is-expander" title="The â€œis-expanderâ€ property">is-expander</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="GtkCellRenderer.html#GtkCellRendererMode" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererMode" title="enum GtkCellRendererMode"><span class="type">GtkCellRendererMode</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--mode" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--mode" title="The â€œmodeâ€ property">mode</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--sensitive" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--sensitive" title="The â€œsensitiveâ€ property">sensitive</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--visible" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--visible" title="The â€œvisibleâ€ property">visible</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--width" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--width" title="The â€œwidthâ€ property">width</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--xalign" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--xalign" title="The â€œxalignâ€ property">xalign</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--xpad" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--xpad" title="The â€œxpadâ€ property">xpad</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--yalign" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--yalign" title="The â€œyalignâ€ property">yalign</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer--ypad" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--ypad" title="The â€œypadâ€ property">ypad</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkCellRenderer.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="signals_return" width="150px"></col>
+<col class="signals_name" width="300px"></col>
+<col class="signals_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer-editing-canceled" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer-editing-canceled" title="The â€œediting-canceledâ€ signal">editing-canceled</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer-editing-started" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer-editing-started" title="The â€œediting-startedâ€ signal">editing-started</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkCellRenderer.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GtkCellRenderer.html#GtkCellRendererState" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererState" title="enum GtkCellRendererState">GtkCellRendererState</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="GtkCellRenderer.html#GtkCellRendererMode" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererMode" title="enum GtkCellRendererMode">GtkCellRendererMode</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkCellRenderer.html#GtkCellRenderer-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer-struct" title="struct GtkCellRenderer">GtkCellRenderer</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkCellRenderer.html#GtkCellRendererClass" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererClass" title="struct GtkCellRendererClass">GtkCellRendererClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkCellRenderer.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">â•°â”€â”€</span> <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">â•°â”€â”€</span> GtkCellRenderer
+            <span class="lineart">â”œâ”€â”€</span> <a class="link" href="GtkCellRendererText.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererText.html" title="GtkCellRendererText">GtkCellRendererText</a>
+            <span class="lineart">â”œâ”€â”€</span> <a class="link" href="GtkCellRendererPixbuf.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererPixbuf.html" title="GtkCellRendererPixbuf">GtkCellRendererPixbuf</a>
+            <span class="lineart">â”œâ”€â”€</span> <a class="link" href="GtkCellRendererProgress.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererProgress.html" title="GtkCellRendererProgress">GtkCellRendererProgress</a>
+            <span class="lineart">â”œâ”€â”€</span> <a class="link" href="GtkCellRendererSpinner.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererSpinner.html" title="GtkCellRendererSpinner">GtkCellRendererSpinner</a>
+            <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkCellRendererToggle.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererToggle.html" title="GtkCellRendererToggle">GtkCellRendererToggle</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkCellRenderer.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkCellRenderer.description"></a><h2>Description</h2>
+<p>The <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> is a base class of a set of objects used for
+rendering a cell to a <span class="type">cairo_t</span>.  These objects are used primarily by
+the <a class="link" href="GtkTreeView.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeView.html" title="GtkTreeView"><span class="type">GtkTreeView</span></a> widget, though they arenâ€™t tied to them in any
+specific way.  It is worth noting that <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> is not a
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> and cannot be treated as such.</p>
+<p>The primary use of a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> is for drawing a certain graphical
+elements on a <span class="type">cairo_t</span>. Typically, one cell renderer is used to
+draw many cells on the screen.  To this extent, it isnâ€™t expected that a
+CellRenderer keep any permanent state around.  Instead, any state is set
+just prior to use using <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObjects</span></a> property system.  Then, the
+cell is measured using <a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-size" title="gtk_cell_renderer_get_sizeÂ ()"><code class="function">gtk_cell_renderer_get_size()</code></a>. Finally, the cell
+is rendered in the correct location using <a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-render" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-render" title="gtk_cell_renderer_renderÂ ()"><code class="function">gtk_cell_renderer_render()</code></a>.</p>
+<p>There are a number of rules that must be followed when writing a new
+<a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a>.  First and foremost, itâ€™s important that a certain set
+of properties will always yield a cell renderer of the same size,
+barring a <a class="link" href="GtkStyle.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyle.html" title="GtkStyle"><span class="type">GtkStyle</span></a> change.  The <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> also has a number of
+generic properties that are expected to be honored by all children.</p>
+<p>Beyond merely rendering a cell, cell renderers can optionally
+provide active user interface elements. A cell renderer can be
+â€œactivatableâ€ like <a class="link" href="GtkCellRendererToggle.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererToggle.html" title="GtkCellRendererToggle"><span class="type">GtkCellRendererToggle</span></a>,
+which toggles when it gets activated by a mouse click, or it can be
+â€œeditableâ€ like <a class="link" href="GtkCellRendererText.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererText.html" title="GtkCellRendererText"><span class="type">GtkCellRendererText</span></a>, which
+allows the user to edit the text using a <a class="link" href="GtkEntry.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkEntry.html" title="GtkEntry"><span class="type">GtkEntry</span></a>.
+To make a cell renderer activatable or editable, you have to
+implement the <a class="link" href="GtkCellRenderer.html#GtkCellRendererClass.activate" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererClass.activate"><span class="type">GtkCellRendererClass.activate</span></a> or
+<a class="link" href="GtkCellRenderer.html#GtkCellRendererClass.start-editing" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererClass.start-editing"><span class="type">GtkCellRendererClass.start_editing</span></a> virtual functions, respectively.</p>
+<p>Many properties of <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> and its subclasses have a
+corresponding â€œsetâ€ property, e.g. â€œcell-background-setâ€ corresponds
+to â€œcell-backgroundâ€. These â€œsetâ€ properties reflect whether a property
+has been set or not. You should not set them independently.</p>
+</div>
+<div class="refsect1">
+<a name="GtkCellRenderer.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-cell-renderer-class-set-accessible-type"></a><h3>gtk_cell_renderer_class_set_accessible_typeÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_class_set_accessible_type
+                               (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html#GtkCellRendererClass" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererClass" title="struct GtkCellRendererClass"><span class="type">GtkCellRendererClass</span></a> *renderer_class</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>);</pre>
+<p>Sets the type to be used for creating accessibles for cells rendered by
+cell renderers of <em class="parameter"><code>renderer_class</code></em>
+. Note that multiple accessibles will
+be created.</p>
+<p>This function should only be called from class init functions of cell
+renderers.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.2.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>renderer_class</p></td>
+<td class="parameter_description"><p>class to set the accessible type for</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>type</p></td>
+<td class="parameter_description"><p>The object type that implements the accessible for <em class="parameter"><code>widget_class</code></em>
+.
+The type must be a subtype of <span class="type">GtkRendererCellAccessible</span></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-aligned-area"></a><h3>gtk_cell_renderer_get_aligned_areaÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_get_aligned_area (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                    <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
+                                    <em class="parameter"><code><a class="link" href="GtkCellRenderer.html#GtkCellRendererState" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererState" title="enum GtkCellRendererState"><span class="type">GtkCellRendererState</span></a> flags</code></em>,
+                                    <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle"><span class="type">GdkRectangle</span></a> *cell_area</code></em>,
+                                    <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle"><span class="type">GdkRectangle</span></a> *aligned_area</code></em>);</pre>
+<p>Gets the aligned area used by <em class="parameter"><code>cell</code></em>
+ inside <em class="parameter"><code>cell_area</code></em>
+. Used for finding
+the appropriate edit and focus rectangle.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> instance</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> this cell will be rendering to</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>render flags</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cell_area</p></td>
+<td class="parameter_description"><p>cell area which would be passed to <a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-render" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-render" title="gtk_cell_renderer_renderÂ ()"><code class="function">gtk_cell_renderer_render()</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>aligned_area</p></td>
+<td class="parameter_description"><p> the return location for the space inside <em class="parameter"><code>cell_area</code></em>
+that would acually be used to render. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-size"></a><h3>gtk_cell_renderer_get_sizeÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_get_size (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                            <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
+                            <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle"><span class="type">GdkRectangle</span></a> *cell_area</code></em>,
+                            <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *x_offset</code></em>,
+                            <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *y_offset</code></em>,
+                            <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *width</code></em>,
+                            <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *height</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_cell_renderer_get_size</code> has been deprecated since version 3.0 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-get-preferred-size" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-get-preferred-size" title="gtk_cell_renderer_get_preferred_sizeÂ ()"><code class="function">gtk_cell_renderer_get_preferred_size()</code></a> instead.</p>
+</div>
+<p>Obtains the width and height needed to render the cell. Used by view 
+widgets to determine the appropriate size for the cell_area passed to
+<a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-render" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-render" title="gtk_cell_renderer_renderÂ ()"><code class="function">gtk_cell_renderer_render()</code></a>.  If <em class="parameter"><code>cell_area</code></em>
+ is not <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, fills in the
+x and y offsets (if set) of the cell relative to this location. </p>
+<p>Please note that the values set in <em class="parameter"><code>width</code></em>
+ and <em class="parameter"><code>height</code></em>
+, as well as those 
+in <em class="parameter"><code>x_offset</code></em>
+ and <em class="parameter"><code>y_offset</code></em>
+ are inclusive of the xpad and ypad properties.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.4.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>the widget the renderer is rendering to</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cell_area</p></td>
+<td class="parameter_description"><p> The area a cell will be allocated, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_offset</p></td>
+<td class="parameter_description"><p> location to return x offset of cell relative to <em class="parameter"><code>cell_area</code></em>
+, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_offset</p></td>
+<td class="parameter_description"><p> location to return y offset of cell relative to <em class="parameter"><code>cell_area</code></em>
+, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p> location to return width needed to render a cell, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p> location to return height needed to render a cell, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-render"></a><h3>gtk_cell_renderer_renderÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_render (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                          <em class="parameter"><code><span class="type">cairo_t</span> *cr</code></em>,
+                          <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
+                          <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle"><span class="type">GdkRectangle</span></a> *background_area</code></em>,
+                          <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle"><span class="type">GdkRectangle</span></a> *cell_area</code></em>,
+                          <em class="parameter"><code><a class="link" href="GtkCellRenderer.html#GtkCellRendererState" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererState" title="enum GtkCellRendererState"><span class="type">GtkCellRendererState</span></a> flags</code></em>);</pre>
+<p>Invokes the virtual render function of the <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a>. The three
+passed-in rectangles are areas in <em class="parameter"><code>cr</code></em>
+. Most renderers will draw within
+<em class="parameter"><code>cell_area</code></em>
+; the xalign, yalign, xpad, and ypad fields of the <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a>
+should be honored with respect to <em class="parameter"><code>cell_area</code></em>
+. <em class="parameter"><code>background_area</code></em>
+ includes the
+blank space around the cell, and also the area containing the tree expander;
+so the <em class="parameter"><code>background_area</code></em>
+ rectangles for all cells tile to cover the entire
+<em class="parameter"><code>window</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cr</p></td>
+<td class="parameter_description"><p>a cairo context to draw to</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>the widget owning <em class="parameter"><code>window</code></em>
+</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>background_area</p></td>
+<td class="parameter_description"><p>entire cell area (including tree expanders and maybe
+padding on the sides)</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cell_area</p></td>
+<td class="parameter_description"><p>area normally rendered by a cell renderer</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>flags that affect rendering</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-activate"></a><h3>gtk_cell_renderer_activateÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_cell_renderer_activate (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                            <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html#GdkEvent'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html#GdkEvent"><span class="type">GdkEvent</span></a> *event</code></em>,
+                            <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
+                            <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                            <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle"><span class="type">GdkRectangle</span></a> *background_area</code></em>,
+                            <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle"><span class="type">GdkRectangle</span></a> *cell_area</code></em>,
+                            <em class="parameter"><code><a class="link" href="GtkCellRenderer.html#GtkCellRendererState" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererState" title="enum GtkCellRendererState"><span class="type">GtkCellRendererState</span></a> flags</code></em>);</pre>
+<p>Passes an activate event to the cell renderer for possible processing.  
+Some cell renderers may use events; for example, <a class="link" href="GtkCellRendererToggle.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererToggle.html" title="GtkCellRendererToggle"><span class="type">GtkCellRendererToggle</span></a> 
+toggles when it gets a mouse click.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event</p></td>
+<td class="parameter_description"><p>a <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html#GdkEvent'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html#GdkEvent"><span class="type">GdkEvent</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>widget that received the event</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>widget-dependent string representation of the event location;
+e.g. for <a class="link" href="GtkTreeView.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeView.html" title="GtkTreeView"><span class="type">GtkTreeView</span></a>, a string representation of <a class="link" href="GtkTreeModel.html#GtkTreePath" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeModel.html#GtkTreePath"><span class="type">GtkTreePath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>background_area</p></td>
+<td class="parameter_description"><p>background area as passed to <a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-render" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-render" title="gtk_cell_renderer_renderÂ ()"><code class="function">gtk_cell_renderer_render()</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cell_area</p></td>
+<td class="parameter_description"><p>cell area as passed to <a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-render" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-render" title="gtk_cell_renderer_renderÂ ()"><code class="function">gtk_cell_renderer_render()</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>render flags</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.6.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the event was consumed/handled</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-start-editing"></a><h3>gtk_cell_renderer_start_editingÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkCellEditable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellEditable.html" title="GtkCellEditable"><span class="returnvalue">GtkCellEditable</span></a>Â *
+gtk_cell_renderer_start_editing (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html#GdkEvent'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html#GdkEvent"><span class="type">GdkEvent</span></a> *event</code></em>,
+                                 <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
+                                 <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                                 <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle"><span class="type">GdkRectangle</span></a> *background_area</code></em>,
+                                 <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle"><span class="type">GdkRectangle</span></a> *cell_area</code></em>,
+                                 <em class="parameter"><code><a class="link" href="GtkCellRenderer.html#GtkCellRendererState" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererState" title="enum GtkCellRendererState"><span class="type">GtkCellRendererState</span></a> flags</code></em>);</pre>
+<p>Passes an activate event to the cell renderer for possible processing.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event</p></td>
+<td class="parameter_description"><p>a <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html#GdkEvent'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html#GdkEvent"><span class="type">GdkEvent</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>widget that received the event</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>widget-dependent string representation of the event location;
+e.g. for <a class="link" href="GtkTreeView.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeView.html" title="GtkTreeView"><span class="type">GtkTreeView</span></a>, a string representation of <a class="link" href="GtkTreeModel.html#GtkTreePath" tppabs="https://developer.gnome.org/gtk3/stable/GtkTreeModel.html#GtkTreePath"><span class="type">GtkTreePath</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>background_area</p></td>
+<td class="parameter_description"><p>background area as passed to <a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-render" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-render" title="gtk_cell_renderer_renderÂ ()"><code class="function">gtk_cell_renderer_render()</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cell_area</p></td>
+<td class="parameter_description"><p>cell area as passed to <a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-render" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-render" title="gtk_cell_renderer_renderÂ ()"><code class="function">gtk_cell_renderer_render()</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>render flags</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.7.6"></a><h4>Returns</h4>
+<p> A new <a class="link" href="GtkCellEditable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellEditable.html" title="GtkCellEditable"><span class="type">GtkCellEditable</span></a>, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-stop-editing"></a><h3>gtk_cell_renderer_stop_editingÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_stop_editing (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> canceled</code></em>);</pre>
+<p>Informs the cell renderer that the editing is stopped.
+If <em class="parameter"><code>canceled</code></em>
+ is <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the cell renderer will emit the 
+<a class="link" href="GtkCellRenderer.html#GtkCellRenderer-editing-canceled" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer-editing-canceled" title="The â€œediting-canceledâ€ signal"><span class="type">â€œediting-canceledâ€</span></a> signal. </p>
+<p>This function should be called by cell renderer implementations 
+in response to the <a class="link" href="GtkCellEditable.html#GtkCellEditable-editing-done" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellEditable.html#GtkCellEditable-editing-done" title="The â€œediting-doneâ€ signal"><span class="type">â€œediting-doneâ€</span></a> signal of 
+<a class="link" href="GtkCellEditable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellEditable.html" title="GtkCellEditable"><span class="type">GtkCellEditable</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.8.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>canceled</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the editing has been canceled</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.6</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-fixed-size"></a><h3>gtk_cell_renderer_get_fixed_sizeÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_get_fixed_size (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                  <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *width</code></em>,
+                                  <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *height</code></em>);</pre>
+<p>Fills in <em class="parameter"><code>width</code></em>
+ and <em class="parameter"><code>height</code></em>
+ with the appropriate size of <em class="parameter"><code>cell</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p> location to fill in with the fixed width of the cell, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p> location to fill in with the fixed height of the cell, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-set-fixed-size"></a><h3>gtk_cell_renderer_set_fixed_sizeÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_set_fixed_size (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                  <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> width</code></em>,
+                                  <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> height</code></em>);</pre>
+<p>Sets the renderer size to be explicit, independent of the properties set.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the width of the cell renderer, or -1</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>the height of the cell renderer, or -1</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-visible"></a><h3>gtk_cell_renderer_get_visibleÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_cell_renderer_get_visible (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>);</pre>
+<p>Returns the cell rendererâ€™s visibility.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.11.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the cell renderer is visible</p>
+<p></p>
+</div>
+<p class="since">Since 2.18</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-set-visible"></a><h3>gtk_cell_renderer_set_visibleÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_set_visible (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                               <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> visible</code></em>);</pre>
+<p>Sets the cell rendererâ€™s visibility.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>visible</p></td>
+<td class="parameter_description"><p>the visibility of the cell</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.18</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-sensitive"></a><h3>gtk_cell_renderer_get_sensitiveÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_cell_renderer_get_sensitive (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>);</pre>
+<p>Returns the cell rendererâ€™s sensitivity.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.13.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the cell renderer is sensitive</p>
+<p></p>
+</div>
+<p class="since">Since 2.18</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-set-sensitive"></a><h3>gtk_cell_renderer_set_sensitiveÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_set_sensitive (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> sensitive</code></em>);</pre>
+<p>Sets the cell rendererâ€™s sensitivity.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sensitive</p></td>
+<td class="parameter_description"><p>the sensitivity of the cell</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.18</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-alignment"></a><h3>gtk_cell_renderer_get_alignmentÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_get_alignment (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *xalign</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *yalign</code></em>);</pre>
+<p>Fills in <em class="parameter"><code>xalign</code></em>
+ and <em class="parameter"><code>yalign</code></em>
+ with the appropriate values of <em class="parameter"><code>cell</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xalign</p></td>
+<td class="parameter_description"><p> location to fill in with the x alignment of the cell, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yalign</p></td>
+<td class="parameter_description"><p> location to fill in with the y alignment of the cell, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.18</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-set-alignment"></a><h3>gtk_cell_renderer_set_alignmentÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_set_alignment (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> xalign</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> yalign</code></em>);</pre>
+<p>Sets the rendererâ€™s alignment within its available space.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xalign</p></td>
+<td class="parameter_description"><p>the x alignment of the cell renderer</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yalign</p></td>
+<td class="parameter_description"><p>the y alignment of the cell renderer</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.18</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-padding"></a><h3>gtk_cell_renderer_get_paddingÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_get_padding (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                               <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *xpad</code></em>,
+                               <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *ypad</code></em>);</pre>
+<p>Fills in <em class="parameter"><code>xpad</code></em>
+ and <em class="parameter"><code>ypad</code></em>
+ with the appropriate values of <em class="parameter"><code>cell</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xpad</p></td>
+<td class="parameter_description"><p> location to fill in with the x padding of the cell, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ypad</p></td>
+<td class="parameter_description"><p> location to fill in with the y padding of the cell, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.18</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-set-padding"></a><h3>gtk_cell_renderer_set_paddingÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_set_padding (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                               <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> xpad</code></em>,
+                               <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> ypad</code></em>);</pre>
+<p>Sets the rendererâ€™s padding.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xpad</p></td>
+<td class="parameter_description"><p>the x padding of the cell renderer</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ypad</p></td>
+<td class="parameter_description"><p>the y padding of the cell renderer</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.18</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-state"></a><h3>gtk_cell_renderer_get_stateÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="returnvalue">GtkStateFlags</span></a>
+gtk_cell_renderer_get_state (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                             <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
+                             <em class="parameter"><code><a class="link" href="GtkCellRenderer.html#GtkCellRendererState" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererState" title="enum GtkCellRendererState"><span class="type">GtkCellRendererState</span></a> cell_state</code></em>);</pre>
+<p>Translates the cell renderer state to <a class="link" href="gtk3-Standard-Enumerations.html#GtkStateFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkStateFlags" title="enum GtkStateFlags"><span class="type">GtkStateFlags</span></a>,
+based on the cell renderer and widget sensitivity, and
+the given <a class="link" href="GtkCellRenderer.html#GtkCellRendererState" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererState" title="enum GtkCellRendererState"><span class="type">GtkCellRendererState</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a>, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a>, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cell_state</p></td>
+<td class="parameter_description"><p>cell renderer state</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.19.6"></a><h4>Returns</h4>
+<p> the widget state flags applying to <em class="parameter"><code>cell</code></em>
+</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-is-activatable"></a><h3>gtk_cell_renderer_is_activatableÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_cell_renderer_is_activatable (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>);</pre>
+<p>Checks whether the cell renderer can do something when activated.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>A <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.20.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the cell renderer can do anything when activated</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-preferred-height"></a><h3>gtk_cell_renderer_get_preferred_heightÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_get_preferred_height
+                               (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *minimum_size</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *natural_size</code></em>);</pre>
+<p>Retreives a rendererâ€™s natural size when rendered to <em class="parameter"><code>widget</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> instance</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> this cell will be rendering to</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>minimum_size</p></td>
+<td class="parameter_description"><p> location to store the minimum size, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>natural_size</p></td>
+<td class="parameter_description"><p> location to store the natural size, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-preferred-height-for-width"></a><h3>gtk_cell_renderer_get_preferred_height_for_widthÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_get_preferred_height_for_width
+                               (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> width</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *minimum_height</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *natural_height</code></em>);</pre>
+<p>Retreives a cell renderersâ€™s minimum and natural height if it were rendered to 
+<em class="parameter"><code>widget</code></em>
+ with the specified <em class="parameter"><code>width</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> instance</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> this cell will be rendering to</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>width</p></td>
+<td class="parameter_description"><p>the size which is available for allocation</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>minimum_height</p></td>
+<td class="parameter_description"><p> location for storing the minimum size, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>natural_height</p></td>
+<td class="parameter_description"><p> location for storing the preferred size, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-preferred-size"></a><h3>gtk_cell_renderer_get_preferred_sizeÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_get_preferred_size (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                      <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
+                                      <em class="parameter"><code><a class="link" href="GtkWidget.html#GtkRequisition" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkRequisition"><span class="type">GtkRequisition</span></a> *minimum_size</code></em>,
+                                      <em class="parameter"><code><a class="link" href="GtkWidget.html#GtkRequisition" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkRequisition"><span class="type">GtkRequisition</span></a> *natural_size</code></em>);</pre>
+<p>Retrieves the minimum and natural size of a cell taking
+into account the widgetâ€™s preference for height-for-width management.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> instance</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> this cell will be rendering to</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>minimum_size</p></td>
+<td class="parameter_description"><p> location for storing the minimum size, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>natural_size</p></td>
+<td class="parameter_description"><p> location for storing the natural size, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-preferred-width"></a><h3>gtk_cell_renderer_get_preferred_widthÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_get_preferred_width (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                       <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
+                                       <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *minimum_size</code></em>,
+                                       <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *natural_size</code></em>);</pre>
+<p>Retreives a rendererâ€™s natural size when rendered to <em class="parameter"><code>widget</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> instance</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> this cell will be rendering to</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>minimum_size</p></td>
+<td class="parameter_description"><p> location to store the minimum size, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>natural_size</p></td>
+<td class="parameter_description"><p> location to store the natural size, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-preferred-width-for-height"></a><h3>gtk_cell_renderer_get_preferred_width_for_heightÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_cell_renderer_get_preferred_width_for_height
+                               (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>,
+                                <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *widget</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> height</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *minimum_width</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *natural_width</code></em>);</pre>
+<p>Retreives a cell renderersâ€™s minimum and natural width if it were rendered to 
+<em class="parameter"><code>widget</code></em>
+ with the specified <em class="parameter"><code>height</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> instance</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> this cell will be rendering to</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>height</p></td>
+<td class="parameter_description"><p>the size which is available for allocation</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>minimum_width</p></td>
+<td class="parameter_description"><p> location for storing the minimum size, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>natural_width</p></td>
+<td class="parameter_description"><p> location for storing the preferred size, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-cell-renderer-get-request-mode"></a><h3>gtk_cell_renderer_get_request_modeÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html#GtkSizeRequestMode" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkSizeRequestMode" title="enum GtkSizeRequestMode"><span class="returnvalue">GtkSizeRequestMode</span></a>
+gtk_cell_renderer_get_request_mode (<em class="parameter"><code><a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *cell</code></em>);</pre>
+<p>Gets whether the cell renderer prefers a height-for-width layout
+or a width-for-height layout.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>cell</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a>    instance</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.12.17.10.26.6"></a><h4>Returns</h4>
+<p> The <a class="link" href="GtkWidget.html#GtkSizeRequestMode" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkSizeRequestMode" title="enum GtkSizeRequestMode"><span class="type">GtkSizeRequestMode</span></a> preferred by this renderer.</p>
+<p></p>
+</div>
+<p class="since">Since 3.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkCellRenderer.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkCellRendererState"></a><h3>enum GtkCellRendererState</h3>
+<p>Tells how a cell is to be rendered.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.11.2.4"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="enum_members_name" width="300px"></col>
+<col class="enum_members_description"></col>
+<col class="enum_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-CELL-RENDERER-SELECTED:CAPS"></a>GTK_CELL_RENDERER_SELECTED</p></td>
+<td class="enum_member_description">
+<p>The cell is currently selected, and
+ probably has a selection colored background to render to.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-CELL-RENDERER-PRELIT:CAPS"></a>GTK_CELL_RENDERER_PRELIT</p></td>
+<td class="enum_member_description">
+<p>The mouse is hovering over the cell.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-CELL-RENDERER-INSENSITIVE:CAPS"></a>GTK_CELL_RENDERER_INSENSITIVE</p></td>
+<td class="enum_member_description">
+<p>The cell is drawn in an insensitive manner</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-CELL-RENDERER-SORTED:CAPS"></a>GTK_CELL_RENDERER_SORTED</p></td>
+<td class="enum_member_description">
+<p>The cell is in a sorted row</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-CELL-RENDERER-FOCUSED:CAPS"></a>GTK_CELL_RENDERER_FOCUSED</p></td>
+<td class="enum_member_description">
+<p>The cell is in the focus row.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-CELL-RENDERER-EXPANDABLE:CAPS"></a>GTK_CELL_RENDERER_EXPANDABLE</p></td>
+<td class="enum_member_description">
+<p>The cell is in a row that can be expanded. Since 3.4</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-CELL-RENDERER-EXPANDED:CAPS"></a>GTK_CELL_RENDERER_EXPANDED</p></td>
+<td class="enum_member_description">
+<p>The cell is in a row that is expanded. Since 3.4</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRendererMode"></a><h3>enum GtkCellRendererMode</h3>
+<p>Identifies how the user can interact with a particular cell.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.11.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="enum_members_name" width="300px"></col>
+<col class="enum_members_description"></col>
+<col class="enum_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-CELL-RENDERER-MODE-INERT:CAPS"></a>GTK_CELL_RENDERER_MODE_INERT</p></td>
+<td class="enum_member_description">
+<p>The cell is just for display
+ and cannot be interacted with.  Note that this doesnâ€™t mean that eg. the
+ row being drawn canâ€™t be selected -- just that a particular element of
+ it cannot be individually modified.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-CELL-RENDERER-MODE-ACTIVATABLE:CAPS"></a>GTK_CELL_RENDERER_MODE_ACTIVATABLE</p></td>
+<td class="enum_member_description">
+<p>The cell can be clicked.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GTK-CELL-RENDERER-MODE-EDITABLE:CAPS"></a>GTK_CELL_RENDERER_MODE_EDITABLE</p></td>
+<td class="enum_member_description">
+<p>The cell can be edited or otherwise modified.</p>
+</td>
+<td class="enum_member_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer-struct"></a><h3>struct GtkCellRenderer</h3>
+<pre class="programlisting">struct GtkCellRenderer;</pre>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRendererClass"></a><h3>struct GtkCellRendererClass</h3>
+<pre class="programlisting">struct GtkCellRendererClass {
+  /* vtable - not signals */
+  GtkSizeRequestMode (* get_request_mode)                (GtkCellRenderer      *cell);
+  void               (* get_preferred_width)             (GtkCellRenderer      *cell,
+                                                          GtkWidget            *widget,
+                                                          gint                 *minimum_size,
+                                                          gint                 *natural_size);
+  void               (* get_preferred_height_for_width)  (GtkCellRenderer      *cell,
+                                                          GtkWidget            *widget,
+                                                          gint                  width,
+                                                          gint                 *minimum_height,
+                                                          gint                 *natural_height);
+  void               (* get_preferred_height)            (GtkCellRenderer      *cell,
+                                                          GtkWidget            *widget,
+                                                          gint                 *minimum_size,
+                                                          gint                 *natural_size);
+  void               (* get_preferred_width_for_height)  (GtkCellRenderer      *cell,
+                                                          GtkWidget            *widget,
+                                                          gint                  height,
+                                                          gint                 *minimum_width,
+                                                          gint                 *natural_width);
+  void               (* get_aligned_area)                (GtkCellRenderer      *cell,
+                                                          GtkWidget            *widget,
+							  GtkCellRendererState  flags,
+                                                          const GdkRectangle   *cell_area,
+                                                          GdkRectangle         *aligned_area);
+  void               (* get_size)                        (GtkCellRenderer      *cell,
+                                                          GtkWidget            *widget,
+                                                          const GdkRectangle   *cell_area,
+                                                          gint                 *x_offset,
+                                                          gint                 *y_offset,
+                                                          gint                 *width,
+                                                          gint                 *height);
+  void               (* render)                          (GtkCellRenderer      *cell,
+                                                          cairo_t              *cr,
+                                                          GtkWidget            *widget,
+                                                          const GdkRectangle   *background_area,
+                                                          const GdkRectangle   *cell_area,
+                                                          GtkCellRendererState  flags);
+  gboolean           (* activate)                        (GtkCellRenderer      *cell,
+                                                          GdkEvent             *event,
+                                                          GtkWidget            *widget,
+                                                          const gchar          *path,
+                                                          const GdkRectangle   *background_area,
+                                                          const GdkRectangle   *cell_area,
+                                                          GtkCellRendererState  flags);
+  GtkCellEditable *  (* start_editing)                   (GtkCellRenderer      *cell,
+                                                          GdkEvent             *event,
+                                                          GtkWidget            *widget,
+                                                          const gchar          *path,
+                                                          const GdkRectangle   *background_area,
+                                                          const GdkRectangle   *cell_area,
+                                                          GtkCellRendererState  flags);
+
+  /* Signals */
+  void (* editing_canceled) (GtkCellRenderer *cell);
+  void (* editing_started)  (GtkCellRenderer *cell,
+			     GtkCellEditable *editable,
+			     const gchar     *path);
+};
+</pre>
+<div class="refsect3">
+<a name="id-1.3.12.17.11.5.4"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="struct_members_name" width="300px"></col>
+<col class="struct_members_description"></col>
+<col class="struct_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkCellRendererClass.get-request-mode"></a>get_request_mode</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Called to gets whether the cell renderer prefers
+a height-for-width layout or a width-for-height layout.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkCellRendererClass.get-preferred-width"></a>get_preferred_width</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Called to get a rendererâ€™s natural width.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkCellRendererClass.get-preferred-height-for-width"></a>get_preferred_height_for_width</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Called to get a rendererâ€™s natural height for width.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkCellRendererClass.get-preferred-height"></a>get_preferred_height</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Called to get a rendererâ€™s natural height.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkCellRendererClass.get-preferred-width-for-height"></a>get_preferred_width_for_height</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Called to get a rendererâ€™s natural width for height.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkCellRendererClass.get-aligned-area"></a>get_aligned_area</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Called to get the aligned area used by <em class="parameter"><code>cell</code></em>
+inside <em class="parameter"><code>cell_area</code></em>
+.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkCellRendererClass.get-size"></a>get_size</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Called to get the width and height needed to render the cell. Deprecated: 3.0.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkCellRendererClass.render"></a>render</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Called to render the content of the <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a>.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkCellRendererClass.activate"></a>activate</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Called to activate the content of the <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a>.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkCellRendererClass.start-editing"></a>start_editing</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Called to initiate editing the content of the <a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a>.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkCellRendererClass.editing-canceled"></a>editing_canceled</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Signal gets emitted when the user cancels the process of editing a cell.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkCellRendererClass.editing-started"></a>editing_started</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Signal gets emitted when a cell starts to be edited.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkCellRenderer.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GtkCellRenderer--cell-background"></a><h3>The <code class="literal">â€œcell-backgroundâ€</code> property</h3>
+<pre class="programlisting">  â€œcell-backgroundâ€          <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</pre>
+<p>Cell background color as a string.</p>
+<p>Flags: Write</p>
+<p>Default value: NULL</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--cell-background-gdk"></a><h3>The <code class="literal">â€œcell-background-gdkâ€</code> property</h3>
+<pre class="programlisting">  â€œcell-background-gdkâ€      <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Colors.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Colors.html#GdkColor'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Colors.html#GdkColor"><span class="type">GdkColor</span></a>Â *</pre>
+<p>Cell background as a <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Colors.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Colors.html#GdkColor'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Colors.html#GdkColor"><span class="type">GdkColor</span></a></p>
+<div class="warning">
+<p><code class="literal">GtkCellRenderer:cell-background-gdk</code> has been deprecated since version 3.4 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="GtkCellRenderer.html#GtkCellRenderer--cell-background-rgba" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRenderer--cell-background-rgba" title="The â€œcell-background-rgbaâ€ property"><span class="type">â€œcell-background-rgbaâ€</span></a> instead.</p>
+</div>
+<p>Flags: Read / Write</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--cell-background-rgba"></a><h3>The <code class="literal">â€œcell-background-rgbaâ€</code> property</h3>
+<pre class="programlisting">  â€œcell-background-rgbaâ€     <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a>Â *</pre>
+<p>Cell background as a <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a></p>
+<p>Flags: Read / Write</p>
+<p class="since">Since 3.0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--cell-background-set"></a><h3>The <code class="literal">â€œcell-background-setâ€</code> property</h3>
+<pre class="programlisting">  â€œcell-background-setâ€      <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the cell background color is set.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--editing"></a><h3>The <code class="literal">â€œeditingâ€</code> property</h3>
+<pre class="programlisting">  â€œeditingâ€                  <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the cell renderer is currently in editing mode.</p>
+<p>Flags: Read</p>
+<p>Default value: FALSE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--height"></a><h3>The <code class="literal">â€œheightâ€</code> property</h3>
+<pre class="programlisting">  â€œheightâ€                   <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>The fixed height.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--is-expanded"></a><h3>The <code class="literal">â€œis-expandedâ€</code> property</h3>
+<pre class="programlisting">  â€œis-expandedâ€              <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Row is an expander row, and is expanded.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--is-expander"></a><h3>The <code class="literal">â€œis-expanderâ€</code> property</h3>
+<pre class="programlisting">  â€œis-expanderâ€              <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Row has children.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--mode"></a><h3>The <code class="literal">â€œmodeâ€</code> property</h3>
+<pre class="programlisting">  â€œmodeâ€                     <a class="link" href="GtkCellRenderer.html#GtkCellRendererMode" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#GtkCellRendererMode" title="enum GtkCellRendererMode"><span class="type">GtkCellRendererMode</span></a></pre>
+<p>Editable mode of the CellRenderer.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_CELL_RENDERER_MODE_INERT</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--sensitive"></a><h3>The <code class="literal">â€œsensitiveâ€</code> property</h3>
+<pre class="programlisting">  â€œsensitiveâ€                <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Display the cell sensitive.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--visible"></a><h3>The <code class="literal">â€œvisibleâ€</code> property</h3>
+<pre class="programlisting">  â€œvisibleâ€                  <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Display the cell.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--width"></a><h3>The <code class="literal">â€œwidthâ€</code> property</h3>
+<pre class="programlisting">  â€œwidthâ€                    <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>The fixed width.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--xalign"></a><h3>The <code class="literal">â€œxalignâ€</code> property</h3>
+<pre class="programlisting">  â€œxalignâ€                   <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a></pre>
+<p>The x-align.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 0.5</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--xpad"></a><h3>The <code class="literal">â€œxpadâ€</code> property</h3>
+<pre class="programlisting">  â€œxpadâ€                     <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>The xpad.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--yalign"></a><h3>The <code class="literal">â€œyalignâ€</code> property</h3>
+<pre class="programlisting">  â€œyalignâ€                   <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a></pre>
+<p>The y-align.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 0.5</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer--ypad"></a><h3>The <code class="literal">â€œypadâ€</code> property</h3>
+<pre class="programlisting">  â€œypadâ€                     <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>The ypad.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkCellRenderer.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GtkCellRenderer-editing-canceled"></a><h3>The <code class="literal">â€œediting-canceledâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *renderer,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)</pre>
+<p>This signal gets emitted when the user cancels the process of editing a
+cell.  For example, an editable cell renderer could be written to cancel
+editing when the user presses Escape. </p>
+<p>See also: <a class="link" href="GtkCellRenderer.html#gtk-cell-renderer-stop-editing" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html#gtk-cell-renderer-stop-editing" title="gtk_cell_renderer_stop_editingÂ ()"><code class="function">gtk_cell_renderer_stop_editing()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.12.17.13.2.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>renderer</p></td>
+<td class="parameter_description"><p>the object which received the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkCellRenderer-editing-started"></a><h3>The <code class="literal">â€œediting-startedâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkCellRenderer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRenderer.html" title="GtkCellRenderer"><span class="type">GtkCellRenderer</span></a> *renderer,
+               <a class="link" href="GtkCellEditable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellEditable.html" title="GtkCellEditable"><span class="type">GtkCellEditable</span></a> *editable,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>           *path,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)</pre>
+<p>This signal gets emitted when a cell starts to be edited.
+The intended use of this signal is to do special setup
+on <em class="parameter"><code>editable</code></em>
+, e.g. adding a <a class="link" href="GtkEntryCompletion.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkEntryCompletion.html" title="GtkEntryCompletion"><span class="type">GtkEntryCompletion</span></a> or setting
+up additional columns in a <a class="link" href="GtkComboBox.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkComboBox.html" title="GtkComboBox"><span class="type">GtkComboBox</span></a>.</p>
+<p>Note that GTK+ doesn't guarantee that cell renderers will
+continue to use the same kind of widget for editing in future
+releases, therefore you should check the type of <em class="parameter"><code>editable</code></em>
+
+before doing any specific setup, as in the following example:</p>
+<div class="informalexample">
+  <table border="0" cellpadding="0" cellspacing="0" class="listing_frame">
+    <tbody>
+      <tr>
+        <td align="right" class="listing_lines"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="keyword">static</span><span class="normal"> </span><span class="type">void</span>
+<span class="function">text_editing_started</span><span class="normal"> </span><span class="symbol">(</span><span class="usertype">GtkCellRenderer</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">cell</span><span class="symbol">,</span>
+<span class="normal">                      </span><span class="usertype">GtkCellEditable</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">editable</span><span class="symbol">,</span>
+<span class="normal">                      </span><span class="keyword">const</span><span class="normal"> </span><span class="usertype">gchar</span><span class="normal">     </span><span class="symbol">*</span><span class="normal">path</span><span class="symbol">,</span>
+<span class="normal">                      </span><span class="usertype">gpointer</span><span class="normal">         data</span><span class="symbol">)</span>
+<span class="cbracket">{</span>
+<span class="normal">  </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="function">GTK_IS_ENTRY</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">editable</span><span class="symbol">))</span>
+
+<span class="normal">    </span><span class="cbracket">{</span>
+<span class="normal">      </span><span class="usertype">GtkEntry</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">entry </span><span class="symbol">=</span><span class="normal"> </span><span class="function">GTK_ENTRY</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">editable</span><span class="symbol">);</span>
+
+<span class="normal">      </span><span class="comment">// ... create a GtkEntryCompletion</span>
+
+<span class="normal">      </span><span class="function"><a href="GtkEntry.html#gtk-entry-set-completion" tppabs="https://developer.gnome.org/gtk3/stable/GtkEntry.html#gtk-entry-set-completion">gtk_entry_set_completion</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">entry</span><span class="symbol">,</span><span class="normal"> completion</span><span class="symbol">);</span>
+<span class="normal">    </span><span class="cbracket">}</span>
+<span class="cbracket">}</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<div class="refsect3">
+<a name="id-1.3.12.17.13.3.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>renderer</p></td>
+<td class="parameter_description"><p>the object which received the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>editable</p></td>
+<td class="parameter_description"><p>the <a class="link" href="GtkCellEditable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellEditable.html" title="GtkCellEditable"><span class="type">GtkCellEditable</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>the path identifying the edited cell</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+<p class="since">Since 2.6</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkCellRenderer.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="GtkCellRendererText.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererText.html" title="GtkCellRendererText"><span class="type">GtkCellRendererText</span></a>, <a class="link" href="GtkCellRendererPixbuf.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererPixbuf.html" title="GtkCellRendererPixbuf"><span class="type">GtkCellRendererPixbuf</span></a>, <a class="link" href="GtkCellRendererToggle.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCellRendererToggle.html" title="GtkCellRendererToggle"><span class="type">GtkCellRendererToggle</span></a></p>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

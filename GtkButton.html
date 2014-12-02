@@ -1,0 +1,1855 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: GtkButton</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="ButtonWidgets.html" rel="up" title="Buttons and Toggles"></link><link href="ButtonWidgets.html" rel="prev" title="Buttons and Toggles"></link><link href="GtkCheckButton.html" rel="next" title="GtkCheckButton"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkButton.description">Description</a></span><span id="nav_hierarchy">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkButton.object-hierarchy">Object Hierarchy</a></span><span id="nav_interfaces">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkButton.implemented-interfaces">Implemented Interfaces</a></span><span id="nav_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkButton.properties">Properties</a></span><span id="nav_style_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkButton.style-properties">Style Properties</a></span><span id="nav_signals">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkButton.signals">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="ButtonWidgets.html" tppabs="https://developer.gnome.org/gtk3/stable/ButtonWidgets.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="ButtonWidgets.html" tppabs="https://developer.gnome.org/gtk3/stable/ButtonWidgets.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="GtkCheckButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkCheckButton.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="GtkButton"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkButton.top_of_page"></a>GtkButton</span></h2>
+<p>GtkButton â€” A widget that emits a signal when clicked on</p>
+</td>
+<td align="right" class="gallery_image" valign="top"><img src="button.png" tppabs="https://developer.gnome.org/gtk3/stable/button.png"></img></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="GtkButton.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-new" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-new" title="gtk_button_newÂ ()">gtk_button_new</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-new-with-label" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-new-with-label" title="gtk_button_new_with_labelÂ ()">gtk_button_new_with_label</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-new-with-mnemonic" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-new-with-mnemonic" title="gtk_button_new_with_mnemonicÂ ()">gtk_button_new_with_mnemonic</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-new-from-icon-name" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-new-from-icon-name" title="gtk_button_new_from_icon_nameÂ ()">gtk_button_new_from_icon_name</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-new-from-stock" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-new-from-stock" title="gtk_button_new_from_stockÂ ()">gtk_button_new_from_stock</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-pressed" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-pressed" title="gtk_button_pressedÂ ()">gtk_button_pressed</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-released" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-released" title="gtk_button_releasedÂ ()">gtk_button_released</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-clicked" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-clicked" title="gtk_button_clickedÂ ()">gtk_button_clicked</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-enter" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-enter" title="gtk_button_enterÂ ()">gtk_button_enter</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-leave" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-leave" title="gtk_button_leaveÂ ()">gtk_button_leave</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-set-relief" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-relief" title="gtk_button_set_reliefÂ ()">gtk_button_set_relief</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Standard-Enumerations.html#GtkReliefStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkReliefStyle" title="enum GtkReliefStyle"><span class="returnvalue">GtkReliefStyle</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-get-relief" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-get-relief" title="gtk_button_get_reliefÂ ()">gtk_button_get_relief</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-get-label" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-get-label" title="gtk_button_get_labelÂ ()">gtk_button_get_label</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-set-label" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-label" title="gtk_button_set_labelÂ ()">gtk_button_set_label</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-get-use-stock" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-get-use-stock" title="gtk_button_get_use_stockÂ ()">gtk_button_get_use_stock</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-set-use-stock" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-use-stock" title="gtk_button_set_use_stockÂ ()">gtk_button_set_use_stock</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-get-use-underline" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-get-use-underline" title="gtk_button_get_use_underlineÂ ()">gtk_button_get_use_underline</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-set-use-underline" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-use-underline" title="gtk_button_set_use_underlineÂ ()">gtk_button_set_use_underline</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-set-focus-on-click" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-focus-on-click" title="gtk_button_set_focus_on_clickÂ ()">gtk_button_set_focus_on_click</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-get-focus-on-click" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-get-focus-on-click" title="gtk_button_get_focus_on_clickÂ ()">gtk_button_get_focus_on_click</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-set-alignment" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-alignment" title="gtk_button_set_alignmentÂ ()">gtk_button_set_alignment</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-get-alignment" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-get-alignment" title="gtk_button_get_alignmentÂ ()">gtk_button_get_alignment</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-set-image" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-image" title="gtk_button_set_imageÂ ()">gtk_button_set_image</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-get-image" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-get-image" title="gtk_button_get_imageÂ ()">gtk_button_get_image</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-set-image-position" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-image-position" title="gtk_button_set_image_positionÂ ()">gtk_button_set_image_position</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Standard-Enumerations.html#GtkPositionType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPositionType" title="enum GtkPositionType"><span class="returnvalue">GtkPositionType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-get-image-position" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-get-image-position" title="gtk_button_get_image_positionÂ ()">gtk_button_get_image_position</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-set-always-show-image" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-always-show-image" title="gtk_button_set_always_show_imageÂ ()">gtk_button_set_always_show_image</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-get-always-show-image" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-get-always-show-image" title="gtk_button_get_always_show_imageÂ ()">gtk_button_get_always_show_image</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkWindow'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkWindow"><span class="returnvalue">GdkWindow</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkButton.html#gtk-button-get-event-window" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-get-event-window" title="gtk_button_get_event_windowÂ ()">gtk_button_get_event_window</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkButton.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="properties_type" width="150px"></col>
+<col class="properties_name" width="300px"></col>
+<col class="properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--always-show-image" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--always-show-image" title="The â€œalways-show-imageâ€ property">always-show-image</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--focus-on-click" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--focus-on-click" title="The â€œfocus-on-clickâ€ property">focus-on-click</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--image" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--image" title="The â€œimageâ€ property">image</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="gtk3-Standard-Enumerations.html#GtkPositionType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPositionType" title="enum GtkPositionType"><span class="type">GtkPositionType</span></a></td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--image-position" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--image-position" title="The â€œimage-positionâ€ property">image-position</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--label" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--label" title="The â€œlabelâ€ property">label</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="gtk3-Standard-Enumerations.html#GtkReliefStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkReliefStyle" title="enum GtkReliefStyle"><span class="type">GtkReliefStyle</span></a></td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--relief" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--relief" title="The â€œreliefâ€ property">relief</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--use-stock" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--use-stock" title="The â€œuse-stockâ€ property">use-stock</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--use-underline" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--use-underline" title="The â€œuse-underlineâ€ property">use-underline</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a></td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--xalign" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--xalign" title="The â€œxalignâ€ property">xalign</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a></td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--yalign" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--yalign" title="The â€œyalignâ€ property">yalign</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkButton.style-properties"></a><h2>Style Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="style_properties_type" width="150px"></col>
+<col class="style_properties_name" width="300px"></col>
+<col class="style_properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--s-child-displacement-x" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--s-child-displacement-x" title="The â€œchild-displacement-xâ€ style property">child-displacement-x</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--s-child-displacement-y" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--s-child-displacement-y" title="The â€œchild-displacement-yâ€ style property">child-displacement-y</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="GtkStyleContext.html#GtkBorder" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--s-default-border" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--s-default-border" title="The â€œdefault-borderâ€ style property">default-border</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="GtkStyleContext.html#GtkBorder" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--s-default-outside-border" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--s-default-outside-border" title="The â€œdefault-outside-borderâ€ style property">default-outside-border</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--s-displace-focus" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--s-displace-focus" title="The â€œdisplace-focusâ€ style property">displace-focus</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--s-image-spacing" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--s-image-spacing" title="The â€œimage-spacingâ€ style property">image-spacing</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="GtkStyleContext.html#GtkBorder" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkButton.html#GtkButton--s-inner-border" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--s-inner-border" title="The â€œinner-borderâ€ style property">inner-border</a></td>
+<td class="property_flags">Read</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkButton.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="signals_return" width="150px"></col>
+<col class="signals_name" width="300px"></col>
+<col class="signals_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkButton.html#GtkButton-activate" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-activate" title="The â€œactivateâ€ signal">activate</a></td>
+<td class="signal_flags">Action</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkButton.html#GtkButton-clicked" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-clicked" title="The â€œclickedâ€ signal">clicked</a></td>
+<td class="signal_flags">Action</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkButton.html#GtkButton-enter" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-enter" title="The â€œenterâ€ signal">enter</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkButton.html#GtkButton-leave" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-leave" title="The â€œleaveâ€ signal">leave</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkButton.html#GtkButton-pressed" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-pressed" title="The â€œpressedâ€ signal">pressed</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkButton.html#GtkButton-released" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-released" title="The â€œreleasedâ€ signal">released</a></td>
+<td class="signal_flags">Run First</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkButton.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkButton.html#GtkButton-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-struct" title="struct GtkButton">GtkButton</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkButton.html#GtkButtonClass" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButtonClass" title="struct GtkButtonClass">GtkButtonClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkButton.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">â•°â”€â”€</span> <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget">GtkWidget</a>
+            <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkContainer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkContainer.html" title="GtkContainer">GtkContainer</a>
+                <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkBin.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html" title="GtkBin">GtkBin</a>
+                    <span class="lineart">â•°â”€â”€</span> GtkButton
+                        <span class="lineart">â”œâ”€â”€</span> <a class="link" href="GtkToggleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkToggleButton.html" title="GtkToggleButton">GtkToggleButton</a>
+                        <span class="lineart">â”œâ”€â”€</span> <a class="link" href="GtkColorButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkColorButton.html" title="GtkColorButton">GtkColorButton</a>
+                        <span class="lineart">â”œâ”€â”€</span> <a class="link" href="GtkFontButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkFontButton.html" title="GtkFontButton">GtkFontButton</a>
+                        <span class="lineart">â”œâ”€â”€</span> <a class="link" href="GtkLinkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkLinkButton.html" title="GtkLinkButton">GtkLinkButton</a>
+                        <span class="lineart">â”œâ”€â”€</span> <a class="link" href="GtkLockButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkLockButton.html" title="GtkLockButton">GtkLockButton</a>
+                        <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton">GtkScaleButton</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkButton.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkButton implements
+ AtkImplementorIface,  <a class="link" href="GtkBuildable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBuildable.html" title="GtkBuildable">GtkBuildable</a>,  <a class="link" href="GtkActionable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkActionable.html" title="GtkActionable">GtkActionable</a> and  <a class="link" href="GtkActivatable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkActivatable.html" title="GtkActivatable">GtkActivatable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GtkButton.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkButton.description"></a><h2>Description</h2>
+<p>The <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> widget is generally used to trigger a callback function that is
+called when the button is pressed.  The various signals and how to use them
+are outlined below.</p>
+<p>The <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> widget can hold any valid child widget.  That is, it can hold
+almost any other standard <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a>.  The most commonly used child is the
+<a class="link" href="GtkLabel.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkLabel.html" title="GtkLabel"><span class="type">GtkLabel</span></a>.</p>
+</div>
+<div class="refsect1">
+<a name="GtkButton.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-button-new"></a><h3>gtk_button_newÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_button_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> widget. To add a child widget to the button,
+use <a class="link" href="GtkContainer.html#gtk-container-add" tppabs="https://developer.gnome.org/gtk3/stable/GtkContainer.html#gtk-container-add" title="gtk_container_addÂ ()"><code class="function">gtk_container_add()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.2.5"></a><h4>Returns</h4>
+<p> The newly created <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> widget.</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-new-with-label"></a><h3>gtk_button_new_with_labelÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_button_new_with_label (<em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);</pre>
+<p>Creates a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> widget with a <a class="link" href="GtkLabel.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkLabel.html" title="GtkLabel"><span class="type">GtkLabel</span></a> child containing the given
+text.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>label</p></td>
+<td class="parameter_description"><p>The text you want the <a class="link" href="GtkLabel.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkLabel.html" title="GtkLabel"><span class="type">GtkLabel</span></a> to hold.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.3.6"></a><h4>Returns</h4>
+<p> The newly created <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> widget.</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-new-with-mnemonic"></a><h3>gtk_button_new_with_mnemonicÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_button_new_with_mnemonic (<em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);</pre>
+<p>Creates a new <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> containing a label.
+If characters in <em class="parameter"><code>label</code></em>
+ are preceded by an underscore, they are underlined.
+If you need a literal underscore character in a label, use â€œ__â€ (two
+underscores). The first underlined character represents a keyboard
+accelerator called a mnemonic.
+Pressing Alt and that key activates the button.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>label</p></td>
+<td class="parameter_description"><p>The text of the button, with an underscore in front of the
+mnemonic character</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.4.6"></a><h4>Returns</h4>
+<p> a new <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-new-from-icon-name"></a><h3>gtk_button_new_from_icon_nameÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_button_new_from_icon_name (<em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *icon_name</code></em>,
+                               <em class="parameter"><code><a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSize" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Themeable-Stock-Images.html#GtkIconSize" title="enum GtkIconSize"><span class="type">GtkIconSize</span></a> size</code></em>);</pre>
+<p>Creates a new button containing an icon from the current icon theme.</p>
+<p>If the icon name isnâ€™t known, a â€œbroken imageâ€ icon will be
+displayed instead. If the current icon theme is changed, the icon
+will be updated appropriately.</p>
+<p>This function is a convenience wrapper around <a class="link" href="GtkButton.html#gtk-button-new" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-new" title="gtk_button_newÂ ()"><code class="function">gtk_button_new()</code></a> and
+<a class="link" href="GtkButton.html#gtk-button-set-image" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-image" title="gtk_button_set_imageÂ ()"><code class="function">gtk_button_set_image()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.5.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>icon_name</p></td>
+<td class="parameter_description"><p>an icon name</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p> an icon size. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> int]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.5.8"></a><h4>Returns</h4>
+<p> a new <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> displaying the themed icon</p>
+<p></p>
+</div>
+<p class="since">Since 3.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-new-from-stock"></a><h3>gtk_button_new_from_stockÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_button_new_from_stock (<em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *stock_id</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_button_new_from_stock</code> has been deprecated since version 3.10 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="GtkButton.html#gtk-button-new-with-label" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-new-with-label" title="gtk_button_new_with_labelÂ ()"><code class="function">gtk_button_new_with_label()</code></a> instead.</p>
+</div>
+<p>Creates a new <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> containing the image and text from a stock item.
+Some stock ids have preprocessor macros like <a class="link" href="gtk3-Stock-Items.html#GTK-STOCK-OK:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Stock-Items.html#GTK-STOCK-OK:CAPS" title="GTK_STOCK_OK"><span class="type">GTK_STOCK_OK</span></a> and
+<a class="link" href="gtk3-Stock-Items.html#GTK-STOCK-APPLY:CAPS" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Stock-Items.html#GTK-STOCK-APPLY:CAPS" title="GTK_STOCK_APPLY"><span class="type">GTK_STOCK_APPLY</span></a>.</p>
+<p>If <em class="parameter"><code>stock_id</code></em>
+ is unknown, then it will be treated as a mnemonic
+label (as for <a class="link" href="GtkButton.html#gtk-button-new-with-mnemonic" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-new-with-mnemonic" title="gtk_button_new_with_mnemonicÂ ()"><code class="function">gtk_button_new_with_mnemonic()</code></a>).</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.6.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>stock_id</p></td>
+<td class="parameter_description"><p>the name of the stock item </p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.6.8"></a><h4>Returns</h4>
+<p> a new <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-pressed"></a><h3>gtk_button_pressedÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_pressed (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_button_pressed</code> has been deprecated since version 2.20 and should not be used in newly-written code.</p>
+<p>Use the <a class="link" href="GtkWidget.html#GtkWidget-button-press-event" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-button-press-event" title="The â€œbutton-press-eventâ€ signal"><span class="type">â€œbutton-press-eventâ€</span></a> signal.</p>
+</div>
+<p>Emits a <a class="link" href="GtkButton.html#GtkButton-pressed" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-pressed" title="The â€œpressedâ€ signal"><span class="type">â€œpressedâ€</span></a> signal to the given <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.7.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>The <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> you want to send the signal to.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-released"></a><h3>gtk_button_releasedÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_released (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_button_released</code> has been deprecated since version 2.20 and should not be used in newly-written code.</p>
+<p>Use the <a class="link" href="GtkWidget.html#GtkWidget-button-release-event" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-button-release-event" title="The â€œbutton-release-eventâ€ signal"><span class="type">â€œbutton-release-eventâ€</span></a> signal.</p>
+</div>
+<p>Emits a <a class="link" href="GtkButton.html#GtkButton-released" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-released" title="The â€œreleasedâ€ signal"><span class="type">â€œreleasedâ€</span></a> signal to the given <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.8.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>The <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> you want to send the signal to.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-clicked"></a><h3>gtk_button_clickedÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_clicked (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<p>Emits a <a class="link" href="GtkButton.html#GtkButton-clicked" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-clicked" title="The â€œclickedâ€ signal"><span class="type">â€œclickedâ€</span></a> signal to the given <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>The <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> you want to send the signal to.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-enter"></a><h3>gtk_button_enterÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_enter (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_button_enter</code> has been deprecated since version 2.20 and should not be used in newly-written code.</p>
+<p>Use the <a class="link" href="GtkWidget.html#GtkWidget-enter-notify-event" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-enter-notify-event" title="The â€œenter-notify-eventâ€ signal"><span class="type">â€œenter-notify-eventâ€</span></a> signal.</p>
+</div>
+<p>Emits a <a class="link" href="GtkButton.html#GtkButton-enter" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-enter" title="The â€œenterâ€ signal"><span class="type">â€œenterâ€</span></a> signal to the given <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.10.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>The <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> you want to send the signal to.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-leave"></a><h3>gtk_button_leaveÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_leave (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">gtk_button_leave</code> has been deprecated since version 2.20 and should not be used in newly-written code.</p>
+<p>Use the <a class="link" href="GtkWidget.html#GtkWidget-leave-notify-event" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-leave-notify-event" title="The â€œleave-notify-eventâ€ signal"><span class="type">â€œleave-notify-eventâ€</span></a> signal.</p>
+</div>
+<p>Emits a <a class="link" href="GtkButton.html#GtkButton-leave" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-leave" title="The â€œleaveâ€ signal"><span class="type">â€œleaveâ€</span></a> signal to the given <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.11.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>The <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> you want to send the signal to.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-set-relief"></a><h3>gtk_button_set_reliefÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_set_relief (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>,
+                       <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkReliefStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkReliefStyle" title="enum GtkReliefStyle"><span class="type">GtkReliefStyle</span></a> newstyle</code></em>);</pre>
+<p>Sets the relief style of the edges of the given <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> widget.
+Three styles exist, GTK_RELIEF_NORMAL, GTK_RELIEF_HALF, GTK_RELIEF_NONE.
+The default style is, as one can guess, GTK_RELIEF_NORMAL.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>The <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> you want to set relief styles of.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>newstyle</p></td>
+<td class="parameter_description"><p>The GtkReliefStyle as described above.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-get-relief"></a><h3>gtk_button_get_reliefÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Standard-Enumerations.html#GtkReliefStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkReliefStyle" title="enum GtkReliefStyle"><span class="returnvalue">GtkReliefStyle</span></a>
+gtk_button_get_relief (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<p>Returns the current relief style of the given <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>The <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> you want the <a class="link" href="gtk3-Standard-Enumerations.html#GtkReliefStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkReliefStyle" title="enum GtkReliefStyle"><span class="type">GtkReliefStyle</span></a> from.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.13.6"></a><h4>Returns</h4>
+<p> The current <a class="link" href="gtk3-Standard-Enumerations.html#GtkReliefStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkReliefStyle" title="enum GtkReliefStyle"><span class="type">GtkReliefStyle</span></a></p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-get-label"></a><h3>gtk_button_get_labelÂ ()</h3>
+<pre class="programlisting">const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>Â *
+gtk_button_get_label (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<p>Fetches the text from the label of the button, as set by
+<a class="link" href="GtkButton.html#gtk-button-set-label" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-label" title="gtk_button_set_labelÂ ()"><code class="function">gtk_button_set_label()</code></a>. If the label text has not 
+been set the return value will be <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. This will be the 
+case if you create an empty button with <a class="link" href="GtkButton.html#gtk-button-new" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-new" title="gtk_button_newÂ ()"><code class="function">gtk_button_new()</code></a> to 
+use as a container.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.14.6"></a><h4>Returns</h4>
+<p> The text of the label widget. This string is owned
+by the widget and must not be modified or freed.</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-set-label"></a><h3>gtk_button_set_labelÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_set_label (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>,
+                      <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);</pre>
+<p>Sets the text of the label of the button to <em class="parameter"><code>str</code></em>
+. This text is
+also used to select the stock item if <a class="link" href="GtkButton.html#gtk-button-set-use-stock" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-use-stock" title="gtk_button_set_use_stockÂ ()"><code class="function">gtk_button_set_use_stock()</code></a>
+is used.</p>
+<p>This will also clear any previously set labels.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.15.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>label</p></td>
+<td class="parameter_description"><p>a string</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-get-use-stock"></a><h3>gtk_button_get_use_stockÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_button_get_use_stock (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<div class="warning"><p><code class="literal">gtk_button_get_use_stock</code> has been deprecated since version 3.10 and should not be used in newly-written code.</p></div>
+<p>Returns whether the button label is a stock item.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.16.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.16.7"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the button label is used to
+select a stock item instead of being
+used directly as the label text.</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-set-use-stock"></a><h3>gtk_button_set_use_stockÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_set_use_stock (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_stock</code></em>);</pre>
+<div class="warning"><p><code class="literal">gtk_button_set_use_stock</code> has been deprecated since version 3.10 and should not be used in newly-written code.</p></div>
+<p>If <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the label set on the button is used as a
+stock id to select the stock item for the button.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.17.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>use_stock</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the button should use a stock item</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-get-use-underline"></a><h3>gtk_button_get_use_underlineÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_button_get_use_underline (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<p>Returns whether an embedded underline in the button label indicates a
+mnemonic. See <a class="link" href="GtkButton.html#gtk-button-set-use-underline" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-use-underline" title="gtk_button_set_use_underlineÂ ()"><code class="function">gtk_button_set_use_underline()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.18.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if an embedded underline in the button label
+indicates the mnemonic accelerator keys.</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-set-use-underline"></a><h3>gtk_button_set_use_underlineÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_set_use_underline (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>,
+                              <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_underline</code></em>);</pre>
+<p>If true, an underline in the text of the button label indicates
+the next character should be used for the mnemonic accelerator key.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>use_underline</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if underlines in the text indicate mnemonics</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-set-focus-on-click"></a><h3>gtk_button_set_focus_on_clickÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_set_focus_on_click (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>,
+                               <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> focus_on_click</code></em>);</pre>
+<p>Sets whether the button will grab focus when it is clicked with the mouse.
+Making mouse clicks not grab focus is useful in places like toolbars where
+you donâ€™t want the keyboard focus removed from the main area of the
+application.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>focus_on_click</p></td>
+<td class="parameter_description"><p>whether the button grabs focus when clicked with the mouse</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-get-focus-on-click"></a><h3>gtk_button_get_focus_on_clickÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_button_get_focus_on_click (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<p>Returns whether the button grabs focus when it is clicked with the mouse.
+See <a class="link" href="GtkButton.html#gtk-button-set-focus-on-click" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-focus-on-click" title="gtk_button_set_focus_on_clickÂ ()"><code class="function">gtk_button_set_focus_on_click()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.21.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the button grabs focus when it is clicked with
+the mouse.</p>
+<p></p>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-set-alignment"></a><h3>gtk_button_set_alignmentÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_set_alignment (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> xalign</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> yalign</code></em>);</pre>
+<p>Sets the alignment of the child. This property has no effect unless 
+the child is a <a class="link" href="GtkMisc.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMisc.html" title="GtkMisc"><span class="type">GtkMisc</span></a> or a <a class="link" href="GtkAlignment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAlignment.html" title="GtkAlignment"><span class="type">GtkAlignment</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xalign</p></td>
+<td class="parameter_description"><p>the horizontal position of the child, 0.0 is left aligned,
+1.0 is right aligned</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yalign</p></td>
+<td class="parameter_description"><p>the vertical position of the child, 0.0 is top aligned,
+1.0 is bottom aligned</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-get-alignment"></a><h3>gtk_button_get_alignmentÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_get_alignment (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *xalign</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *yalign</code></em>);</pre>
+<p>Gets the alignment of the child in the button.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>xalign</p></td>
+<td class="parameter_description"><p> return location for horizontal alignment. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>yalign</p></td>
+<td class="parameter_description"><p> return location for vertical alignment. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-set-image"></a><h3>gtk_button_set_imageÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_set_image (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>,
+                      <em class="parameter"><code><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> *image</code></em>);</pre>
+<p>Set the image of <em class="parameter"><code>button</code></em>
+ to the given widget. The image will be
+displayed if the label text is <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> or if
+<a class="link" href="GtkButton.html#GtkButton--always-show-image" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton--always-show-image" title="The â€œalways-show-imageâ€ property"><span class="type">â€œalways-show-imageâ€</span></a> is <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>. You donâ€™t have to call
+<a class="link" href="GtkWidget.html#gtk-widget-show" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#gtk-widget-show" title="gtk_widget_showÂ ()"><code class="function">gtk_widget_show()</code></a> on <em class="parameter"><code>image</code></em>
+ yourself.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>image</p></td>
+<td class="parameter_description"><p>a widget to set as the image for the button</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.6</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-get-image"></a><h3>gtk_button_get_imageÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_button_get_image (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<p>Gets the widget that is currenty set as the image of <em class="parameter"><code>button</code></em>
+.
+This may have been explicitly set by <a class="link" href="GtkButton.html#gtk-button-set-image" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-set-image" title="gtk_button_set_imageÂ ()"><code class="function">gtk_button_set_image()</code></a>
+or constructed by <a class="link" href="GtkButton.html#gtk-button-new-from-stock" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#gtk-button-new-from-stock" title="gtk_button_new_from_stockÂ ()"><code class="function">gtk_button_new_from_stock()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.25.6"></a><h4>Returns</h4>
+<p> a <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a> or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> in case there is no image. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.6</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-set-image-position"></a><h3>gtk_button_set_image_positionÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_set_image_position (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>,
+                               <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkPositionType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPositionType" title="enum GtkPositionType"><span class="type">GtkPositionType</span></a> position</code></em>);</pre>
+<p>Sets the position of the image relative to the text 
+inside the button.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>position</p></td>
+<td class="parameter_description"><p>the position</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-get-image-position"></a><h3>gtk_button_get_image_positionÂ ()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Standard-Enumerations.html#GtkPositionType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPositionType" title="enum GtkPositionType"><span class="returnvalue">GtkPositionType</span></a>
+gtk_button_get_image_position (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<p>Gets the position of the image relative to the text 
+inside the button.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.27.6"></a><h4>Returns</h4>
+<p> the position</p>
+<p></p>
+</div>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-set-always-show-image"></a><h3>gtk_button_set_always_show_imageÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_button_set_always_show_image (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>,
+                                  <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> always_show</code></em>);</pre>
+<p>If <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the button will ignore the <a class="link" href="GtkSettings.html#GtkSettings--gtk-button-images" tppabs="https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-button-images" title="The â€œgtk-button-imagesâ€ property"><span class="type">â€œgtk-button-imagesâ€</span></a>
+setting and always show the image, if available.</p>
+<p>Use this property if the button  would be useless or hard to use
+without the image.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.28.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>always_show</p></td>
+<td class="parameter_description"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the menuitem should always show the image</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.6</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-get-always-show-image"></a><h3>gtk_button_get_always_show_imageÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_button_get_always_show_image (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<p>Returns whether the button will ignore the <a class="link" href="GtkSettings.html#GtkSettings--gtk-button-images" tppabs="https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-button-images" title="The â€œgtk-button-imagesâ€ property"><span class="type">â€œgtk-button-imagesâ€</span></a>
+setting and always show the image, if available.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.29.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.29.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the button will always show the image</p>
+<p></p>
+</div>
+<p class="since">Since 3.6</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-button-get-event-window"></a><h3>gtk_button_get_event_windowÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkWindow'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkWindow"><span class="returnvalue">GdkWindow</span></a>Â *
+gtk_button_get_event_window (<em class="parameter"><code><a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button</code></em>);</pre>
+<p>Returns the buttonâ€™s event window if it is realized, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> otherwise.
+This function should be rarely needed.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.12.30.6"></a><h4>Returns</h4>
+<p> <em class="parameter"><code>button</code></em>
+â€™s event window. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.22</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkButton.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkButton-struct"></a><h3>struct GtkButton</h3>
+<pre class="programlisting">struct GtkButton;</pre>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButtonClass"></a><h3>struct GtkButtonClass</h3>
+<pre class="programlisting">struct GtkButtonClass {
+  GtkBinClass        parent_class;
+
+
+  void (* pressed)  (GtkButton *button);
+  void (* released) (GtkButton *button);
+  void (* clicked)  (GtkButton *button);
+  void (* enter)    (GtkButton *button);
+  void (* leave)    (GtkButton *button);
+  void (* activate) (GtkButton *button);
+};
+</pre>
+<div class="refsect3">
+<a name="id-1.3.9.2.13.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="struct_members_name" width="300px"></col>
+<col class="struct_members_description"></col>
+<col class="struct_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="GtkBin.html#GtkBinClass" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html#GtkBinClass" title="struct GtkBinClass"><span class="type">GtkBinClass</span></a>Â <em class="structfield"><code><a name="GtkButtonClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>The parent class.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkButtonClass.pressed"></a>pressed</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Signal emitted when the button is pressed. Deprecated: 2.8.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkButtonClass.released"></a>released</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Signal emitted when the button is released. Deprecated: 2.8.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkButtonClass.clicked"></a>clicked</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Signal emitted when the button has been activated (pressed and released).</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkButtonClass.enter"></a>enter</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Signal emitted when the pointer enters the button. Deprecated: 2.8.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkButtonClass.leave"></a>leave</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Signal emitted when the pointer leaves the button. Deprecated: 2.8.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkButtonClass.activate"></a>activate</code></em>Â ()</p></td>
+<td class="struct_member_description"><p>Signal that causes the button to animate press then
+release. Applications should never connect to this signal, but use
+the <em class="parameter"><code>clicked</code></em>
+signal.</p></td>
+<td class="struct_member_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkButton.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GtkButton--always-show-image"></a><h3>The <code class="literal">â€œalways-show-imageâ€</code> property</h3>
+<pre class="programlisting">  â€œalways-show-imageâ€        <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>If <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the button will ignore the <a class="link" href="GtkSettings.html#GtkSettings--gtk-button-images" tppabs="https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings--gtk-button-images" title="The â€œgtk-button-imagesâ€ property"><span class="type">â€œgtk-button-imagesâ€</span></a>
+setting and always show the image, if available.</p>
+<p>Use this property if the button would be useless or hard to use
+without the image.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: FALSE</p>
+<p class="since">Since 3.6</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--focus-on-click"></a><h3>The <code class="literal">â€œfocus-on-clickâ€</code> property</h3>
+<pre class="programlisting">  â€œfocus-on-clickâ€           <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the button grabs focus when it is clicked with the mouse.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--image"></a><h3>The <code class="literal">â€œimageâ€</code> property</h3>
+<pre class="programlisting">  â€œimageâ€                    <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="type">GtkWidget</span></a>Â *</pre>
+<p>The child widget to appear next to the button text.</p>
+<p>Flags: Read / Write</p>
+<p class="since">Since 2.6</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--image-position"></a><h3>The <code class="literal">â€œimage-positionâ€</code> property</h3>
+<pre class="programlisting">  â€œimage-positionâ€           <a class="link" href="gtk3-Standard-Enumerations.html#GtkPositionType" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkPositionType" title="enum GtkPositionType"><span class="type">GtkPositionType</span></a></pre>
+<p>The position of the image relative to the text inside the button.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_POS_LEFT</p>
+<p class="since">Since 2.10</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--label"></a><h3>The <code class="literal">â€œlabelâ€</code> property</h3>
+<pre class="programlisting">  â€œlabelâ€                    <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>Â *</pre>
+<p>Text of the label widget inside the button, if the button contains a label widget.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: NULL</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--relief"></a><h3>The <code class="literal">â€œreliefâ€</code> property</h3>
+<pre class="programlisting">  â€œreliefâ€                   <a class="link" href="gtk3-Standard-Enumerations.html#GtkReliefStyle" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkReliefStyle" title="enum GtkReliefStyle"><span class="type">GtkReliefStyle</span></a></pre>
+<p>The border relief style.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_RELIEF_NORMAL</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--use-stock"></a><h3>The <code class="literal">â€œuse-stockâ€</code> property</h3>
+<pre class="programlisting">  â€œuse-stockâ€                <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>If set, the label is used to pick a stock item instead of being displayed.</p>
+<div class="warning"><p><code class="literal">GtkButton:use-stock</code> has been deprecated since version 3.10 and should not be used in newly-written code.</p></div>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: FALSE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--use-underline"></a><h3>The <code class="literal">â€œuse-underlineâ€</code> property</h3>
+<pre class="programlisting">  â€œuse-underlineâ€            <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>If set, an underline in the text indicates the next character should be used for the mnemonic accelerator key.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: FALSE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--xalign"></a><h3>The <code class="literal">â€œxalignâ€</code> property</h3>
+<pre class="programlisting">  â€œxalignâ€                   <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a></pre>
+<p>If the child of the button is a <a class="link" href="GtkMisc.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMisc.html" title="GtkMisc"><span class="type">GtkMisc</span></a> or <a class="link" href="GtkAlignment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAlignment.html" title="GtkAlignment"><span class="type">GtkAlignment</span></a>, this property
+
+can be used to control its horizontal alignment. 0.0 is left aligned,
+
+1.0 is right aligned.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 0.5</p>
+<p class="since">Since 2.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--yalign"></a><h3>The <code class="literal">â€œyalignâ€</code> property</h3>
+<pre class="programlisting">  â€œyalignâ€                   <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a></pre>
+<p>If the child of the button is a <a class="link" href="GtkMisc.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkMisc.html" title="GtkMisc"><span class="type">GtkMisc</span></a> or <a class="link" href="GtkAlignment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAlignment.html" title="GtkAlignment"><span class="type">GtkAlignment</span></a>, this property
+
+can be used to control its vertical alignment. 0.0 is top aligned,
+
+1.0 is bottom aligned.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 0.5</p>
+<p class="since">Since 2.4</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkButton.style-property-details"></a><h2>Style Property Details</h2>
+<div class="refsect2">
+<a name="GtkButton--s-child-displacement-x"></a><h3>The <code class="literal">â€œchild-displacement-xâ€</code> style property</h3>
+<pre class="programlisting">  â€œchild-displacement-xâ€     <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>How far in the x direction to move the child when the button is depressed.</p>
+<p>Flags: Read</p>
+<p>Default value: 0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--s-child-displacement-y"></a><h3>The <code class="literal">â€œchild-displacement-yâ€</code> style property</h3>
+<pre class="programlisting">  â€œchild-displacement-yâ€     <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>How far in the y direction to move the child when the button is depressed.</p>
+<p>Flags: Read</p>
+<p>Default value: 0</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--s-default-border"></a><h3>The <code class="literal">â€œdefault-borderâ€</code> style property</h3>
+<pre class="programlisting">  â€œdefault-borderâ€           <a class="link" href="GtkStyleContext.html#GtkBorder" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a>Â *</pre>
+<p>The "default-border" style property defines the extra space to add
+around a button that can become the default widget of its window.
+For more information about default widgets, see <a class="link" href="GtkWidget.html#gtk-widget-grab-default" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#gtk-widget-grab-default" title="gtk_widget_grab_defaultÂ ()"><code class="function">gtk_widget_grab_default()</code></a>.</p>
+<p>Flags: Read</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--s-default-outside-border"></a><h3>The <code class="literal">â€œdefault-outside-borderâ€</code> style property</h3>
+<pre class="programlisting">  â€œdefault-outside-borderâ€   <a class="link" href="GtkStyleContext.html#GtkBorder" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a>Â *</pre>
+<p>The "default-outside-border" style property defines the extra outside
+space to add around a button that can become the default widget of its
+window. Extra outside space is always drawn outside the button border.
+For more information about default widgets, see <a class="link" href="GtkWidget.html#gtk-widget-grab-default" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#gtk-widget-grab-default" title="gtk_widget_grab_defaultÂ ()"><code class="function">gtk_widget_grab_default()</code></a>.</p>
+<p>Flags: Read</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--s-displace-focus"></a><h3>The <code class="literal">â€œdisplace-focusâ€</code> style property</h3>
+<pre class="programlisting">  â€œdisplace-focusâ€           <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the child_displacement_x/child_displacement_y properties
+
+should also affect the focus rectangle.</p>
+<p>Flags: Read</p>
+<p>Default value: FALSE</p>
+<p class="since">Since 2.6</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--s-image-spacing"></a><h3>The <code class="literal">â€œimage-spacingâ€</code> style property</h3>
+<pre class="programlisting">  â€œimage-spacingâ€            <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>Spacing in pixels between the image and label.</p>
+<p>Flags: Read</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton--s-inner-border"></a><h3>The <code class="literal">â€œinner-borderâ€</code> style property</h3>
+<pre class="programlisting">  â€œinner-borderâ€             <a class="link" href="GtkStyleContext.html#GtkBorder" tppabs="https://developer.gnome.org/gtk3/stable/GtkStyleContext.html#GtkBorder"><span class="type">GtkBorder</span></a>Â *</pre>
+<p>Sets the border between the button edges and child.</p>
+<div class="warning">
+<p><code class="literal">GtkButton:inner-border</code> has been deprecated since version 3.4 and should not be used in newly-written code.</p>
+<p>Use the standard border and padding CSS properties;
+  the value of this style property is ignored.</p>
+</div>
+<p>Flags: Read</p>
+<p class="since">Since 2.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkButton.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GtkButton-activate"></a><h3>The <code class="literal">â€œactivateâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *widget,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>   user_data)</pre>
+<p>The ::activate signal on GtkButton is an action signal and
+emitting it causes the button to animate press then release.
+
+Applications should never connect to this signal, but use the
+<a class="link" href="GtkButton.html#GtkButton-clicked" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-clicked" title="The â€œclickedâ€ signal"><span class="type">â€œclickedâ€</span></a> signal.</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.16.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>the object which received the signal.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Action</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton-clicked"></a><h3>The <code class="literal">â€œclickedâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>   user_data)</pre>
+<p>Emitted when the button has been activated (pressed and released).</p>
+<div class="refsect3">
+<a name="id-1.3.9.2.16.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>the object that received the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Action</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton-enter"></a><h3>The <code class="literal">â€œenterâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>   user_data)</pre>
+<p>Emitted when the pointer enters the button.</p>
+<div class="warning">
+<p><code class="literal">GtkButton::enter</code> has been deprecated since version 2.8 and should not be used in newly-written code.</p>
+<p>Use the <a class="link" href="GtkWidget.html#GtkWidget-enter-notify-event" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-enter-notify-event" title="The â€œenter-notify-eventâ€ signal"><span class="type">â€œenter-notify-eventâ€</span></a> signal.</p>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.16.4.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>the object that received the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton-leave"></a><h3>The <code class="literal">â€œleaveâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>   user_data)</pre>
+<p>Emitted when the pointer leaves the button.</p>
+<div class="warning">
+<p><code class="literal">GtkButton::leave</code> has been deprecated since version 2.8 and should not be used in newly-written code.</p>
+<p>Use the <a class="link" href="GtkWidget.html#GtkWidget-leave-notify-event" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-leave-notify-event" title="The â€œleave-notify-eventâ€ signal"><span class="type">â€œleave-notify-eventâ€</span></a> signal.</p>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.16.5.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>the object that received the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton-pressed"></a><h3>The <code class="literal">â€œpressedâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>   user_data)</pre>
+<p>Emitted when the button is pressed.</p>
+<div class="warning">
+<p><code class="literal">GtkButton::pressed</code> has been deprecated since version 2.8 and should not be used in newly-written code.</p>
+<p>Use the <a class="link" href="GtkWidget.html#GtkWidget-button-press-event" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-button-press-event" title="The â€œbutton-press-eventâ€ signal"><span class="type">â€œbutton-press-eventâ€</span></a> signal.</p>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.16.6.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>the object that received the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkButton-released"></a><h3>The <code class="literal">â€œreleasedâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton"><span class="type">GtkButton</span></a> *button,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>   user_data)</pre>
+<p>Emitted when the button is released.</p>
+<div class="warning">
+<p><code class="literal">GtkButton::released</code> has been deprecated since version 2.8 and should not be used in newly-written code.</p>
+<p>Use the <a class="link" href="GtkWidget.html#GtkWidget-button-release-event" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-button-release-event" title="The â€œbutton-release-eventâ€ signal"><span class="type">â€œbutton-release-eventâ€</span></a> signal.</p>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.2.16.7.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>the object that received the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run First</p>
+</div>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

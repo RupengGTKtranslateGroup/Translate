@@ -1,0 +1,715 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: GtkScaleButton</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="ButtonWidgets.html" rel="up" title="Buttons and Toggles"></link><link href="GtkSwitch.html" rel="prev" title="GtkSwitch"></link><link href="GtkVolumeButton.html" rel="next" title="GtkVolumeButton"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkScaleButton.description">Description</a></span><span id="nav_hierarchy">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkScaleButton.object-hierarchy">Object Hierarchy</a></span><span id="nav_interfaces">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkScaleButton.implemented-interfaces">Implemented Interfaces</a></span><span id="nav_properties">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkScaleButton.properties">Properties</a></span><span id="nav_signals">Â Â <span class="dim">|</span>Â 
+                  <a class="shortcut" href="#GtkScaleButton.signals">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="ButtonWidgets.html" tppabs="https://developer.gnome.org/gtk3/stable/ButtonWidgets.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="GtkSwitch.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkSwitch.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="GtkVolumeButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkVolumeButton.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="GtkScaleButton"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkScaleButton.top_of_page"></a>GtkScaleButton</span></h2>
+<p>GtkScaleButton â€” A button which pops up a scale</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="GtkScaleButton.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkScaleButton.html#gtk-scale-button-new" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#gtk-scale-button-new" title="gtk_scale_button_newÂ ()">gtk_scale_button_new</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScaleButton.html#gtk-scale-button-set-adjustment" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#gtk-scale-button-set-adjustment" title="gtk_scale_button_set_adjustmentÂ ()">gtk_scale_button_set_adjustment</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScaleButton.html#gtk-scale-button-set-icons" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#gtk-scale-button-set-icons" title="gtk_scale_button_set_iconsÂ ()">gtk_scale_button_set_icons</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScaleButton.html#gtk-scale-button-set-value" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#gtk-scale-button-set-value" title="gtk_scale_button_set_valueÂ ()">gtk_scale_button_set_value</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="returnvalue">GtkAdjustment</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkScaleButton.html#gtk-scale-button-get-adjustment" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#gtk-scale-button-get-adjustment" title="gtk_scale_button_get_adjustmentÂ ()">gtk_scale_button_get_adjustment</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="GtkScaleButton.html#gtk-scale-button-get-value" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#gtk-scale-button-get-value" title="gtk_scale_button_get_valueÂ ()">gtk_scale_button_get_value</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkScaleButton.html#gtk-scale-button-get-popup" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#gtk-scale-button-get-popup" title="gtk_scale_button_get_popupÂ ()">gtk_scale_button_get_popup</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkScaleButton.html#gtk-scale-button-get-plus-button" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#gtk-scale-button-get-plus-button" title="gtk_scale_button_get_plus_buttonÂ ()">gtk_scale_button_get_plus_button</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+</td>
+<td class="function_name">
+<a class="link" href="GtkScaleButton.html#gtk-scale-button-get-minus-button" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#gtk-scale-button-get-minus-button" title="gtk_scale_button_get_minus_buttonÂ ()">gtk_scale_button_get_minus_button</a>Â <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkScaleButton.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="properties_type" width="150px"></col>
+<col class="properties_name" width="300px"></col>
+<col class="properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a>Â *</td>
+<td class="property_name"><a class="link" href="GtkScaleButton.html#GtkScaleButton--adjustment" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#GtkScaleButton--adjustment" title="The â€œadjustmentâ€ property">adjustment</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html#GStrv'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html#GStrv"><span class="type">GStrv</span></a></td>
+<td class="property_name"><a class="link" href="GtkScaleButton.html#GtkScaleButton--icons" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#GtkScaleButton--icons" title="The â€œiconsâ€ property">icons</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSize" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Themeable-Stock-Images.html#GtkIconSize" title="enum GtkIconSize"><span class="type">GtkIconSize</span></a></td>
+<td class="property_name"><a class="link" href="GtkScaleButton.html#GtkScaleButton--size" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#GtkScaleButton--size" title="The â€œsizeâ€ property">size</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="GtkScaleButton.html#GtkScaleButton--value" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#GtkScaleButton--value" title="The â€œvalueâ€ property">value</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkScaleButton.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="signals_return" width="150px"></col>
+<col class="signals_name" width="300px"></col>
+<col class="signals_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkScaleButton.html#GtkScaleButton-popdown" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#GtkScaleButton-popdown" title="The â€œpopdownâ€ signal">popdown</a></td>
+<td class="signal_flags">Action</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkScaleButton.html#GtkScaleButton-popup" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#GtkScaleButton-popup" title="The â€œpopupâ€ signal">popup</a></td>
+<td class="signal_flags">Action</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="GtkScaleButton.html#GtkScaleButton-value-changed" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#GtkScaleButton-value-changed" title="The â€œvalue-changedâ€ signal">value-changed</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkScaleButton.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="GtkScaleButton.html#GtkScaleButton-struct" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#GtkScaleButton-struct" title="struct GtkScaleButton">GtkScaleButton</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="GtkScaleButton.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">â•°â”€â”€</span> <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget">GtkWidget</a>
+            <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkContainer.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkContainer.html" title="GtkContainer">GtkContainer</a>
+                <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkBin.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBin.html" title="GtkBin">GtkBin</a>
+                    <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkButton.html" title="GtkButton">GtkButton</a>
+                        <span class="lineart">â•°â”€â”€</span> GtkScaleButton
+                            <span class="lineart">â•°â”€â”€</span> <a class="link" href="GtkVolumeButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkVolumeButton.html" title="GtkVolumeButton">GtkVolumeButton</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkScaleButton.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GtkScaleButton implements
+ AtkImplementorIface,  <a class="link" href="GtkBuildable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkBuildable.html" title="GtkBuildable">GtkBuildable</a>,  <a class="link" href="GtkActionable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkActionable.html" title="GtkActionable">GtkActionable</a>,  <a class="link" href="GtkActivatable.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkActivatable.html" title="GtkActivatable">GtkActivatable</a> and  <a class="link" href="gtk3-Orientable.html#GtkOrientable" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Orientable.html#GtkOrientable">GtkOrientable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GtkScaleButton.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GtkScaleButton.description"></a><h2>Description</h2>
+<p><a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> provides a button which pops up a scale widget.
+This kind of widget is commonly used for volume controls in multimedia
+applications, and GTK+ provides a <a class="link" href="GtkVolumeButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkVolumeButton.html" title="GtkVolumeButton"><span class="type">GtkVolumeButton</span></a> subclass that
+is tailored for this use case.</p>
+</div>
+<div class="refsect1">
+<a name="GtkScaleButton.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-scale-button-new"></a><h3>gtk_scale_button_newÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_scale_button_new (<em class="parameter"><code><a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSize" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Themeable-Stock-Images.html#GtkIconSize" title="enum GtkIconSize"><span class="type">GtkIconSize</span></a> size</code></em>,
+                      <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> min</code></em>,
+                      <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> max</code></em>,
+                      <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> step</code></em>,
+                      <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **icons</code></em>);</pre>
+<p>Creates a <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a>, with a range between <em class="parameter"><code>min</code></em>
+ and <em class="parameter"><code>max</code></em>
+, with
+a stepping of <em class="parameter"><code>step</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p> a stock icon size. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> int]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>min</p></td>
+<td class="parameter_description"><p>the minimum value of the scale (usually 0)</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>max</p></td>
+<td class="parameter_description"><p>the maximum value of the scale (usually 100)</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>step</p></td>
+<td class="parameter_description"><p>the stepping of value when a scroll-wheel event,
+or up/down arrow event occurs (usually 2)</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>icons</p></td>
+<td class="parameter_description"><p> a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated
+array of icon names, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if you want to set the list
+later with <a class="link" href="GtkScaleButton.html#gtk-scale-button-set-icons" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#gtk-scale-button-set-icons" title="gtk_scale_button_set_iconsÂ ()"><code class="function">gtk_scale_button_set_icons()</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.2.6"></a><h4>Returns</h4>
+<p> a new <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a></p>
+<p></p>
+</div>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scale-button-set-adjustment"></a><h3>gtk_scale_button_set_adjustmentÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scale_button_set_adjustment (<em class="parameter"><code><a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> *button</code></em>,
+                                 <em class="parameter"><code><a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a> *adjustment</code></em>);</pre>
+<p>Sets the <a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a> to be used as a model
+for the <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a>â€™s scale.
+See <a class="link" href="GtkRange.html#gtk-range-set-adjustment" tppabs="https://developer.gnome.org/gtk3/stable/GtkRange.html#gtk-range-set-adjustment" title="gtk_range_set_adjustmentÂ ()"><code class="function">gtk_range_set_adjustment()</code></a> for details.</p>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>adjustment</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scale-button-set-icons"></a><h3>gtk_scale_button_set_iconsÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scale_button_set_icons (<em class="parameter"><code><a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> *button</code></em>,
+                            <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **icons</code></em>);</pre>
+<p>Sets the icons to be used by the scale button.
+For details, see the <a class="link" href="GtkScaleButton.html#GtkScaleButton--icons" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#GtkScaleButton--icons" title="The â€œiconsâ€ property"><span class="type">â€œiconsâ€</span></a> property.</p>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>icons</p></td>
+<td class="parameter_description"><p> a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of icon names. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scale-button-set-value"></a><h3>gtk_scale_button_set_valueÂ ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_scale_button_set_value (<em class="parameter"><code><a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> *button</code></em>,
+                            <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);</pre>
+<p>Sets the current value of the scale; if the value is outside
+the minimum or maximum range values, it will be clamped to fit
+inside them. The scale button emits the <a class="link" href="GtkScaleButton.html#GtkScaleButton-value-changed" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html#GtkScaleButton-value-changed" title="The â€œvalue-changedâ€ signal"><span class="type">â€œvalue-changedâ€</span></a>
+signal if the value changes.</p>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>new value of the scale button</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scale-button-get-adjustment"></a><h3>gtk_scale_button_get_adjustmentÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="returnvalue">GtkAdjustment</span></a>Â *
+gtk_scale_button_get_adjustment (<em class="parameter"><code><a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> *button</code></em>);</pre>
+<p>Gets the <a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a> associated with the <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a>â€™s scale.
+See <a class="link" href="GtkRange.html#gtk-range-get-adjustment" tppabs="https://developer.gnome.org/gtk3/stable/GtkRange.html#gtk-range-get-adjustment" title="gtk_range_get_adjustmentÂ ()"><code class="function">gtk_range_get_adjustment()</code></a> for details.</p>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.6.6"></a><h4>Returns</h4>
+<p> the adjustment associated with the scale. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scale-button-get-value"></a><h3>gtk_scale_button_get_valueÂ ()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+gtk_scale_button_get_value (<em class="parameter"><code><a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> *button</code></em>);</pre>
+<p>Gets the current value of the scale button.</p>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.7.6"></a><h4>Returns</h4>
+<p> current value of the scale button</p>
+<p></p>
+</div>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scale-button-get-popup"></a><h3>gtk_scale_button_get_popupÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_scale_button_get_popup (<em class="parameter"><code><a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> *button</code></em>);</pre>
+<p>Retrieves the popup of the <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.8.6"></a><h4>Returns</h4>
+<p> the popup of the <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.14</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scale-button-get-plus-button"></a><h3>gtk_scale_button_get_plus_buttonÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_scale_button_get_plus_button (<em class="parameter"><code><a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> *button</code></em>);</pre>
+<p>Retrieves the plus button of the <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.9.6"></a><h4>Returns</h4>
+<p> the plus button of the <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.14</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-scale-button-get-minus-button"></a><h3>gtk_scale_button_get_minus_buttonÂ ()</h3>
+<pre class="programlisting"><a class="link" href="GtkWidget.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWidget.html" title="GtkWidget"><span class="returnvalue">GtkWidget</span></a>Â *
+gtk_scale_button_get_minus_button (<em class="parameter"><code><a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> *button</code></em>);</pre>
+<p>Retrieves the minus button of the <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>a <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a></p></td>
+<td class="parameter_annotations">Â </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.9.9.11.10.6"></a><h4>Returns</h4>
+<p> the minus button of the <a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.14</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkScaleButton.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkScaleButton-struct"></a><h3>struct GtkScaleButton</h3>
+<pre class="programlisting">struct GtkScaleButton;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkScaleButton.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GtkScaleButton--adjustment"></a><h3>The <code class="literal">â€œadjustmentâ€</code> property</h3>
+<pre class="programlisting">  â€œadjustmentâ€               <a class="link" href="GtkAdjustment.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAdjustment.html" title="GtkAdjustment"><span class="type">GtkAdjustment</span></a>Â *</pre>
+<p>The GtkAdjustment that contains the current value of this scale button object.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScaleButton--icons"></a><h3>The <code class="literal">â€œiconsâ€</code> property</h3>
+<pre class="programlisting">  â€œiconsâ€                    <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html#GStrv'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html#GStrv"><span class="type">GStrv</span></a></pre>
+<p>The names of the icons to be used by the scale button.
+The first item in the array will be used in the button
+when the current value is the lowest value, the second
+item for the highest value. All the subsequent icons will
+be used for all the other values, spread evenly over the
+range of values.</p>
+<p>If there's only one icon name in the <em class="parameter"><code>icons</code></em>
+ array, it will
+be used for all the values. If only two icon names are in
+the <em class="parameter"><code>icons</code></em>
+ array, the first one will be used for the bottom
+50% of the scale, and the second one for the top 50%.</p>
+<p>It is recommended to use at least 3 icons so that the
+<a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> reflects the current value of the scale
+better for the users.</p>
+<p>Flags: Read / Write</p>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScaleButton--size"></a><h3>The <code class="literal">â€œsizeâ€</code> property</h3>
+<pre class="programlisting">  â€œsizeâ€                     <a class="link" href="gtk3-Themeable-Stock-Images.html#GtkIconSize" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Themeable-Stock-Images.html#GtkIconSize" title="enum GtkIconSize"><span class="type">GtkIconSize</span></a></pre>
+<p>The icon size.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_ICON_SIZE_SMALL_TOOLBAR</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScaleButton--value"></a><h3>The <code class="literal">â€œvalueâ€</code> property</h3>
+<pre class="programlisting">  â€œvalueâ€                    <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>The value of the scale.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GtkScaleButton.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GtkScaleButton-popdown"></a><h3>The <code class="literal">â€œpopdownâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> *button,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
+<p>The ::popdown signal is a
+<a class="link" href="gtk3-Bindings.html#GtkBindingSignal" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Bindings.html#GtkBindingSignal" title="struct GtkBindingSignal">keybinding signal</a>
+which gets emitted to popdown the scale widget.</p>
+<p>The default binding for this signal is Escape.</p>
+<div class="refsect3">
+<a name="id-1.3.9.9.14.2.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>the object which received the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Action</p>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScaleButton-popup"></a><h3>The <code class="literal">â€œpopupâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> *button,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
+<p>The ::popup signal is a
+<a class="link" href="gtk3-Bindings.html#GtkBindingSignal" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Bindings.html#GtkBindingSignal" title="struct GtkBindingSignal">keybinding signal</a>
+which gets emitted to popup the scale widget.</p>
+<p>The default bindings for this signal are Space, Enter and Return.</p>
+<div class="refsect3">
+<a name="id-1.3.9.9.14.3.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>the object which received the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Action</p>
+<p class="since">Since 2.12</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkScaleButton-value-changed"></a><h3>The <code class="literal">â€œvalue-changedâ€</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="GtkScaleButton.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkScaleButton.html" title="GtkScaleButton"><span class="type">GtkScaleButton</span></a> *button,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>         value,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
+<p>The ::value-changed signal is emitted when the value field has
+changed.</p>
+<div class="refsect3">
+<a name="id-1.3.9.9.14.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>button</p></td>
+<td class="parameter_description"><p>the object which received the signal</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the new value</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">Â </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run Last</p>
+<p class="since">Since 2.12</p>
+</div>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">Â </div></div><div class="clearfix"></div><div id="footer_grass"> Â  </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright Â© 2005â€’2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>

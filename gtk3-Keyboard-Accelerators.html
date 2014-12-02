@@ -1,0 +1,1522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="gtkdoc.css" tppabs="https://developer.gnome.org/skin/gtkdoc.css" type="text/css"></link><link rel="stylesheet" type="text/css" media="all" href="grass-theme-style.css" tppabs="https://static.gnome.org/css/grass-theme-style.css"></link><link rel="stylesheet" type="text/css" media="all" href="lgo2010.css" tppabs="https://developer.gnome.org/skin/lgo2010.css"></link><link rel="icon" type="image/png" href="/skin/gnome-16.png"></link><link rel="SHORTCUT ICON" type="image/png" href="/skin/gnome-16.png"></link><link rel="search" type="application/opensearchdescription+xml" href="/gnome-library-search.xml" title="GNOME Library Search"></link><link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script><title>GTK+ 3 Reference Manual: Accelerator Groups</title><link href="index.html" rel="home" title="GTK+ 3 Reference Manual"></link><link href="gtkbase.html" rel="up" title="Part¬†III.¬†GTK+ Core Reference"></link><link href="gtk3-Feature-Test-Macros.html" rel="prev" title="Version Information"></link><link href="gtk3-Accelerator-Maps.html" rel="next" title="Accelerator Maps"></link><link rel="stylesheet" type="text/css" media="all" href="jquery.autocomplete.css" tppabs="https://developer.gnome.org/skin/jquery.autocomplete.css"></link><link rel="stylesheet" type="text/css" media="all" href="960_24_col.css" tppabs="https://developer.gnome.org/skin/960_24_col.css"></link><script type="text/javascript" src="jquery.js" tppabs="https://developer.gnome.org/js/jquery.js"></script><script type="text/javascript" src="jquery.jcarousel.min.js" tppabs="https://developer.gnome.org/js/jquery.jcarousel.min.js"></script><script type="text/javascript" src="jquery.autocomplete.js" tppabs="https://developer.gnome.org/js/jquery.autocomplete.js"></script></head><body><div id="accessibility_access"><ul><li><a href="#container">Go to page content</a></li><li><a href="#top_bar">Go to main menu</a></li><li><a href="#s" onclick="$('#s').focus(); return false;">Go to the search field</a></li></ul></div><div id="global_domain_bar"><div class="maxwidth"><div class="tab"><a class="root" href="javascript:if(confirm('https://www.gnome.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">GNOME.org</a></div></div></div><div id="header" class="container_12"><div id="logo" class="grid_3"><a title="Go to home page" href="javascript:if(confirm('https://developer.gnome.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/"><img alt="GNOME: The Free Software Desktop Project" src="gnome-logo-devcenter.png" tppabs="https://developer.gnome.org/skin/gnome-logo-devcenter.png"></img></a></div><div id="top_bar" class="grid_9"><div class="left"><div class="menu-globalnav-container"><ul id="menu-globalnav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-6"><a href="javascript:if(confirm('https://developer.gnome.org/about/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/about/'" tppabs="https://developer.gnome.org/about/">About</a></li><li class="menu-item menu-item-type-post_type menu-item-23"><a href="javascript:if(confirm('https://help.gnome.org/users/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://help.gnome.org/users/'" tppabs="https://help.gnome.org/users/">Users</a></li><li class="current-menu-item"><a href="javascript:if(confirm('https://developer.gnome.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/'" tppabs="https://developer.gnome.org/">Developers</a></li><li class="menu-item menu-item-type-post_type menu-item-40"><a href="javascript:if(confirm('https://help.gnome.org/admin/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://help.gnome.org/admin/'" tppabs="https://help.gnome.org/admin/">Administrators</a></li></ul></div></div><div class="right"><form role="search" method="get" id="searchform" action="https://developer.gnome.org/symbols/"><div><label class="hidden" for="q">Search:
+                        </label><input type="text" value="" name="q" id="s" placeholder="Search"></input></div></form><script type="text/javascript">
+$('#s').autocomplete('/symbols/lookup/',
+        { minChars:3, matchSubset:1, matchContains:1, cacheLength:10,
+          selectOnly:1, rowsLimit:25 });
+              </script></div></div></div><div class="clearfix"></div><div id="container" class="gtk-doc"><div class="content"><table cellpadding="2" cellspacing="5" class="navigation" id="top" summary="Navigation header" width="100%"><tbody><tr valign="middle">
+<td align="left" class="shortcuts" width="100%">
+<a class="shortcut" href="#">Top</a><span id="nav_description">¬†¬†<span class="dim">|</span>¬†
+                  <a class="shortcut" href="#gtk3-Keyboard-Accelerators.description">Description</a></span><span id="nav_hierarchy">¬†¬†<span class="dim">|</span>¬†
+                  <a class="shortcut" href="#gtk3-Keyboard-Accelerators.object-hierarchy">Object Hierarchy</a></span><span id="nav_properties">¬†¬†<span class="dim">|</span>¬†
+                  <a class="shortcut" href="#gtk3-Keyboard-Accelerators.properties">Properties</a></span><span id="nav_signals">¬†¬†<span class="dim">|</span>¬†
+                  <a class="shortcut" href="#gtk3-Keyboard-Accelerators.signals">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html" tppabs="https://developer.gnome.org/gtk3/stable/index.html"><img alt="Home" border="0" height="16" src="home.png" tppabs="https://developer.gnome.org/gtk3/stable/home.png" width="16"></img></a></td>
+<td><a accesskey="u" href="gtkbase.html" tppabs="https://developer.gnome.org/gtk3/stable/gtkbase.html"><img alt="Up" border="0" height="16" src="up.png" tppabs="https://developer.gnome.org/gtk3/stable/up.png" width="16"></img></a></td>
+<td><a accesskey="p" href="gtk3-Feature-Test-Macros.html" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Feature-Test-Macros.html"><img alt="Prev" border="0" height="16" src="left.png" tppabs="https://developer.gnome.org/gtk3/stable/left.png" width="16"></img></a></td>
+<td><a accesskey="n" href="gtk3-Accelerator-Maps.html" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Accelerator-Maps.html"><img alt="Next" border="0" height="16" src="right.png" tppabs="https://developer.gnome.org/gtk3/stable/right.png" width="16"></img></a></td>
+</tr></tbody></table><div class="refentry">
+<a name="gtk3-Keyboard-Accelerators"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tbody><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gtk3-Keyboard-Accelerators.top_of_page"></a>Accelerator Groups</span></h2>
+<p>Accelerator Groups ‚Äî Groups of global keyboard accelerators for an
+    entire GtkWindow</p>
+</td>
+<td align="right" class="gallery_image" valign="top"></td>
+</tr></tbody></table></div>
+<div class="refsect1">
+<a name="gtk3-Keyboard-Accelerators.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="functions_return" width="150px"></col>
+<col class="functions_name"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="returnvalue">GtkAccelGroup</span></a>¬†*
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-new" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-new" title="gtk_accel_group_new¬†()">gtk_accel_group_new</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-connect" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-connect" title="gtk_accel_group_connect¬†()">gtk_accel_group_connect</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-connect-by-path" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-connect-by-path" title="gtk_accel_group_connect_by_path¬†()">gtk_accel_group_connect_by_path</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroupActivate" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroupActivate" title="GtkAccelGroupActivate¬†()">*GtkAccelGroupActivate</a><span class="c_punctuation">)</span>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroupFindFunc" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroupFindFunc" title="GtkAccelGroupFindFunc¬†()">*GtkAccelGroupFindFunc</a><span class="c_punctuation">)</span>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-disconnect" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-disconnect" title="gtk_accel_group_disconnect¬†()">gtk_accel_group_disconnect</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-disconnect-key" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-disconnect-key" title="gtk_accel_group_disconnect_key¬†()">gtk_accel_group_disconnect_key</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-activate" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-activate" title="gtk_accel_group_activate¬†()">gtk_accel_group_activate</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-lock" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-lock" title="gtk_accel_group_lock¬†()">gtk_accel_group_lock</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-unlock" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-unlock" title="gtk_accel_group_unlock¬†()">gtk_accel_group_unlock</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-get-is-locked" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-get-is-locked" title="gtk_accel_group_get_is_locked¬†()">gtk_accel_group_get_is_locked</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="returnvalue">GtkAccelGroup</span></a>¬†*
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-from-accel-closure" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-from-accel-closure" title="gtk_accel_group_from_accel_closure¬†()">gtk_accel_group_from_accel_closure</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="returnvalue">GdkModifierType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-get-modifier-mask" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-get-modifier-mask" title="gtk_accel_group_get_modifier_mask¬†()">gtk_accel_group_get_modifier_mask</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-groups-activate" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-groups-activate" title="gtk_accel_groups_activate¬†()">gtk_accel_groups_activate</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a>¬†*
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-groups-from-object" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-groups-from-object" title="gtk_accel_groups_from_object¬†()">gtk_accel_groups_from_object</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelKey" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelKey" title="struct GtkAccelKey"><span class="returnvalue">GtkAccelKey</span></a>¬†*
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-find" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-find" title="gtk_accel_group_find¬†()">gtk_accel_group_find</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-valid" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-valid" title="gtk_accelerator_valid¬†()">gtk_accelerator_valid</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" title="gtk_accelerator_parse¬†()">gtk_accelerator_parse</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>¬†*
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-name" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-name" title="gtk_accelerator_name¬†()">gtk_accelerator_name</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>¬†*
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-get-label" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-get-label" title="gtk_accelerator_get_label¬†()">gtk_accelerator_get_label</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse-with-keycode" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse-with-keycode" title="gtk_accelerator_parse_with_keycode¬†()">gtk_accelerator_parse_with_keycode</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>¬†*
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-name-with-keycode" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-name-with-keycode" title="gtk_accelerator_name_with_keycode¬†()">gtk_accelerator_name_with_keycode</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>¬†*
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-get-label-with-keycode" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-get-label-with-keycode" title="gtk_accelerator_get_label_with_keycode¬†()">gtk_accelerator_get_label_with_keycode</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-set-default-mod-mask" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-set-default-mod-mask" title="gtk_accelerator_set_default_mod_mask¬†()">gtk_accelerator_set_default_mod_mask</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="returnvalue">GdkModifierType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-get-default-mod-mask" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-get-default-mod-mask" title="gtk_accelerator_get_default_mod_mask¬†()">gtk_accelerator_get_default_mod_mask</a>¬†<span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gtk3-Keyboard-Accelerators.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="properties_type" width="150px"></col>
+<col class="properties_name" width="300px"></col>
+<col class="properties_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup--is-locked" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup--is-locked" title="The ‚Äúis-locked‚Äù property">is-locked</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a></td>
+<td class="property_name"><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup--modifier-mask" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup--modifier-mask" title="The ‚Äúmodifier-mask‚Äù property">modifier-mask</a></td>
+<td class="property_flags">Read</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gtk3-Keyboard-Accelerators.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col class="signals_return" width="150px"></col>
+<col class="signals_name" width="300px"></col>
+<col class="signals_flags" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup-accel-activate" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup-accel-activate" title="The ‚Äúaccel-activate‚Äù signal">accel-activate</a></td>
+<td class="signal_flags">Has Details</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup-accel-changed" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup-accel-changed" title="The ‚Äúaccel-changed‚Äù signal">accel-changed</a></td>
+<td class="signal_flags">Has Details</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="GtkAccelGroup"></a><div class="refsect1">
+<a name="gtk3-Keyboard-Accelerators.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="name" width="150px"></col>
+<col class="description"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup-struct" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup-struct" title="struct GtkAccelGroup">GtkAccelGroup</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroupClass" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroupClass" title="struct GtkAccelGroupClass">GtkAccelGroupClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelKey" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelKey" title="struct GtkAccelKey">GtkAccelKey</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gtk3-Keyboard-Accelerators.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">‚ï∞‚îÄ‚îÄ</span> GtkAccelGroup
+</pre>
+</div>
+<div class="refsect1">
+<a name="gtk3-Keyboard-Accelerators.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gtk/gtk.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="gtk3-Keyboard-Accelerators.description"></a><h2>Description</h2>
+<p>A <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> represents a group of keyboard accelerators,
+typically attached to a toplevel <a class="link" href="GtkWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWindow.html" title="GtkWindow"><span class="type">GtkWindow</span></a> (with
+<a class="link" href="GtkWindow.html#gtk-window-add-accel-group" tppabs="https://developer.gnome.org/gtk3/stable/GtkWindow.html#gtk-window-add-accel-group" title="gtk_window_add_accel_group¬†()"><code class="function">gtk_window_add_accel_group()</code></a>). Usually you won‚Äôt need to create a
+<a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> directly; instead, when using <a class="link" href="GtkUIManager.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkUIManager.html" title="GtkUIManager"><span class="type">GtkUIManager</span></a>, GTK+
+automatically sets up the accelerators for your menus in the ui
+manager‚Äôs <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a>.</p>
+<p>Note that ‚Äúaccelerators‚Äù are different from
+‚Äúmnemonics‚Äù. Accelerators are shortcuts for
+activating a menu item; they appear alongside the menu item they‚Äôre a
+shortcut for. For example ‚ÄúCtrl+Q‚Äù might appear alongside the ‚ÄúQuit‚Äù
+menu item. Mnemonics are shortcuts for GUI elements such as text
+entries or buttons; they appear as underlined characters. See
+<a class="link" href="GtkLabel.html#gtk-label-new-with-mnemonic" tppabs="https://developer.gnome.org/gtk3/stable/GtkLabel.html#gtk-label-new-with-mnemonic" title="gtk_label_new_with_mnemonic¬†()"><code class="function">gtk_label_new_with_mnemonic()</code></a>. Menu items can have both accelerators
+and mnemonics, of course.</p>
+</div>
+<div class="refsect1">
+<a name="gtk3-Keyboard-Accelerators.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gtk-accel-group-new"></a><h3>gtk_accel_group_new¬†()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="returnvalue">GtkAccelGroup</span></a>¬†*
+gtk_accel_group_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.2.5"></a><h4>Returns</h4>
+<p> a new <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> object</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-group-connect"></a><h3>gtk_accel_group_connect¬†()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_accel_group_connect (<em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> *accel_group</code></em>,
+                         <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> accel_key</code></em>,
+                         <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> accel_mods</code></em>,
+                         <em class="parameter"><code><a class="link" href="gtk3-Standard-Enumerations.html#GtkAccelFlags" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Standard-Enumerations.html#GtkAccelFlags" title="enum GtkAccelFlags"><span class="type">GtkAccelFlags</span></a> accel_flags</code></em>,
+                         <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Closures.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure"><span class="type">GClosure</span></a> *closure</code></em>);</pre>
+<p>Installs an accelerator in this group. When <em class="parameter"><code>accel_group</code></em>
+ is being
+activated in response to a call to <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-groups-activate" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-groups-activate" title="gtk_accel_groups_activate¬†()"><code class="function">gtk_accel_groups_activate()</code></a>,
+<em class="parameter"><code>closure</code></em>
+ will be invoked if the <em class="parameter"><code>accel_key</code></em>
+ and <em class="parameter"><code>accel_mods</code></em>
+ from
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-groups-activate" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-groups-activate" title="gtk_accel_groups_activate¬†()"><code class="function">gtk_accel_groups_activate()</code></a> match those of this connection.</p>
+<p>The signature used for the <em class="parameter"><code>closure</code></em>
+ is that of <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroupActivate" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroupActivate" title="GtkAccelGroupActivate¬†()"><span class="type">GtkAccelGroupActivate</span></a>.</p>
+<p>Note that, due to implementation details, a single closure can
+only be connected to one accelerator group.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.3.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>accel_group</p></td>
+<td class="parameter_description"><p>the accelerator group to install an accelerator in</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_key</p></td>
+<td class="parameter_description"><p>key value of the accelerator</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_mods</p></td>
+<td class="parameter_description"><p>modifier combination of the accelerator</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_flags</p></td>
+<td class="parameter_description"><p>a flag mask to configure this accelerator</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>closure</p></td>
+<td class="parameter_description"><p>closure to be executed upon accelerator activation</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-group-connect-by-path"></a><h3>gtk_accel_group_connect_by_path¬†()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_accel_group_connect_by_path (<em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> *accel_group</code></em>,
+                                 <em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *accel_path</code></em>,
+                                 <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Closures.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure"><span class="type">GClosure</span></a> *closure</code></em>);</pre>
+<p>Installs an accelerator in this group, using an accelerator path
+to look up the appropriate key and modifiers (see
+<a class="link" href="gtk3-Accelerator-Maps.html#gtk-accel-map-add-entry" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Accelerator-Maps.html#gtk-accel-map-add-entry" title="gtk_accel_map_add_entry¬†()"><code class="function">gtk_accel_map_add_entry()</code></a>). When <em class="parameter"><code>accel_group</code></em>
+ is being activated
+in response to a call to <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-groups-activate" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-groups-activate" title="gtk_accel_groups_activate¬†()"><code class="function">gtk_accel_groups_activate()</code></a>, <em class="parameter"><code>closure</code></em>
+ will
+be invoked if the <em class="parameter"><code>accel_key</code></em>
+ and <em class="parameter"><code>accel_mods</code></em>
+ from
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-groups-activate" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-groups-activate" title="gtk_accel_groups_activate¬†()"><code class="function">gtk_accel_groups_activate()</code></a> match the key and modifiers for the path.</p>
+<p>The signature used for the <em class="parameter"><code>closure</code></em>
+ is that of <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroupActivate" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroupActivate" title="GtkAccelGroupActivate¬†()"><span class="type">GtkAccelGroupActivate</span></a>.</p>
+<p>Note that <em class="parameter"><code>accel_path</code></em>
+ string will be stored in a <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Quarks.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark'" tppabs="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a>. Therefore,
+if you pass a static string, you can save some memory by interning it
+first with <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Quarks.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string'" tppabs="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string"><code class="function">g_intern_static_string()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.4.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>accel_group</p></td>
+<td class="parameter_description"><p>the accelerator group to install an accelerator in</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_path</p></td>
+<td class="parameter_description"><p>path used for determining key and modifiers</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>closure</p></td>
+<td class="parameter_description"><p>closure to be executed upon accelerator activation</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkAccelGroupActivate"></a><h3>GtkAccelGroupActivate¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*GtkAccelGroupActivate<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> *accel_group</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a> *acceleratable</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> keyval</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> modifier</code></em>);</pre>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkAccelGroupFindFunc"></a><h3>GtkAccelGroupFindFunc¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*GtkAccelGroupFindFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelKey" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelKey" title="struct GtkAccelKey"><span class="type">GtkAccelKey</span></a> *key</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Closures.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure"><span class="type">GClosure</span></a> *closure</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
+<div class="refsect3">
+<a name="id-1.4.4.11.6.4"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 2.2</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-group-disconnect"></a><h3>gtk_accel_group_disconnect¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_accel_group_disconnect (<em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> *accel_group</code></em>,
+                            <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Closures.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure"><span class="type">GClosure</span></a> *closure</code></em>);</pre>
+<p>Removes an accelerator previously installed through
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-connect" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-connect" title="gtk_accel_group_connect¬†()"><code class="function">gtk_accel_group_connect()</code></a>.</p>
+<p>Since 2.20 <em class="parameter"><code>closure</code></em>
+ can be <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.7.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>accel_group</p></td>
+<td class="parameter_description"><p>the accelerator group to remove an accelerator from</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>closure</p></td>
+<td class="parameter_description"><p> the closure to remove from this accelerator
+group, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to remove all closures. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.7.7"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the closure was found and got disconnected</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-group-disconnect-key"></a><h3>gtk_accel_group_disconnect_key¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_accel_group_disconnect_key (<em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> *accel_group</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> accel_key</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> accel_mods</code></em>);</pre>
+<p>Removes an accelerator previously installed through
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-connect" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-connect" title="gtk_accel_group_connect¬†()"><code class="function">gtk_accel_group_connect()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>accel_group</p></td>
+<td class="parameter_description"><p>the accelerator group to install an accelerator in</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_key</p></td>
+<td class="parameter_description"><p>key value of the accelerator</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_mods</p></td>
+<td class="parameter_description"><p>modifier combination of the accelerator</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.8.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there was an accelerator which could be
+removed, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-group-activate"></a><h3>gtk_accel_group_activate¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_accel_group_activate (<em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> *accel_group</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Quarks.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark'" tppabs="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a> accel_quark</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a> *acceleratable</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> accel_key</code></em>,
+                          <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> accel_mods</code></em>);</pre>
+<p>Finds the first accelerator in <em class="parameter"><code>accel_group</code></em>
+ that matches
+<em class="parameter"><code>accel_key</code></em>
+ and <em class="parameter"><code>accel_mods</code></em>
+, and activates it.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>accel_group</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a></p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_quark</p></td>
+<td class="parameter_description"><p>the quark for the accelerator name</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>acceleratable</p></td>
+<td class="parameter_description"><p>the <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>, usually a <a class="link" href="GtkWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWindow.html" title="GtkWindow"><span class="type">GtkWindow</span></a>, on which
+to activate the accelerator</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_key</p></td>
+<td class="parameter_description"><p>accelerator keyval from a key event</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_mods</p></td>
+<td class="parameter_description"><p>keyboard state mask from a key event</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.9.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if an accelerator was activated and handled
+this keypress</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-group-lock"></a><h3>gtk_accel_group_lock¬†()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_accel_group_lock (<em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> *accel_group</code></em>);</pre>
+<p>Locks the given accelerator group.</p>
+<p>Locking an acelerator group prevents the accelerators contained
+within it to be changed during runtime. Refer to
+<a class="link" href="gtk3-Accelerator-Maps.html#gtk-accel-map-change-entry" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Accelerator-Maps.html#gtk-accel-map-change-entry" title="gtk_accel_map_change_entry¬†()"><code class="function">gtk_accel_map_change_entry()</code></a> about runtime accelerator changes.</p>
+<p>If called more than once, <em class="parameter"><code>accel_group</code></em>
+ remains locked until
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-unlock" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-unlock" title="gtk_accel_group_unlock¬†()"><code class="function">gtk_accel_group_unlock()</code></a> has been called an equivalent number
+of times.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.10.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>accel_group</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a></p></td>
+<td class="parameter_annotations">¬†</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-group-unlock"></a><h3>gtk_accel_group_unlock¬†()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_accel_group_unlock (<em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> *accel_group</code></em>);</pre>
+<p>Undoes the last call to <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-lock" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-lock" title="gtk_accel_group_lock¬†()"><code class="function">gtk_accel_group_lock()</code></a> on this <em class="parameter"><code>accel_group</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>accel_group</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a></p></td>
+<td class="parameter_annotations">¬†</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-group-get-is-locked"></a><h3>gtk_accel_group_get_is_locked¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_accel_group_get_is_locked (<em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> *accel_group</code></em>);</pre>
+<p>Locks are added and removed using <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-lock" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-lock" title="gtk_accel_group_lock¬†()"><code class="function">gtk_accel_group_lock()</code></a> and
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-unlock" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-unlock" title="gtk_accel_group_unlock¬†()"><code class="function">gtk_accel_group_unlock()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>accel_group</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a></p></td>
+<td class="parameter_annotations">¬†</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.12.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there are 1 or more locks on the <em class="parameter"><code>accel_group</code></em>
+,
+<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 2.14</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-group-from-accel-closure"></a><h3>gtk_accel_group_from_accel_closure¬†()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="returnvalue">GtkAccelGroup</span></a>¬†*
+gtk_accel_group_from_accel_closure (<em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Closures.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure"><span class="type">GClosure</span></a> *closure</code></em>);</pre>
+<p>Finds the <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> to which <em class="parameter"><code>closure</code></em>
+ is connected;
+see <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accel-group-connect" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accel-group-connect" title="gtk_accel_group_connect¬†()"><code class="function">gtk_accel_group_connect()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>closure</p></td>
+<td class="parameter_description"><p>a <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Closures.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure"><span class="type">GClosure</span></a></p></td>
+<td class="parameter_annotations">¬†</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.13.6"></a><h4>Returns</h4>
+<p> the <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> to which <em class="parameter"><code>closure</code></em>
+is connected, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-group-get-modifier-mask"></a><h3>gtk_accel_group_get_modifier_mask¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="returnvalue">GdkModifierType</span></a>
+gtk_accel_group_get_modifier_mask (<em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> *accel_group</code></em>);</pre>
+<p>Gets a <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> representing the mask for this
+<em class="parameter"><code>accel_group</code></em>
+. For example, <span class="type">GDK_CONTROL_MASK</span>, <span class="type">GDK_SHIFT_MASK</span>, etc.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>accel_group</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a></p></td>
+<td class="parameter_annotations">¬†</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.14.6"></a><h4>Returns</h4>
+<p> the modifier mask for this accel group.</p>
+<p></p>
+</div>
+<p class="since">Since 2.14</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-groups-activate"></a><h3>gtk_accel_groups_activate¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_accel_groups_activate (<em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a> *object</code></em>,
+                           <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> accel_key</code></em>,
+                           <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> accel_mods</code></em>);</pre>
+<p>Finds the first accelerator in any <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> attached
+to <em class="parameter"><code>object</code></em>
+ that matches <em class="parameter"><code>accel_key</code></em>
+ and <em class="parameter"><code>accel_mods</code></em>
+, and
+activates that accelerator.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>the <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>, usually a <a class="link" href="GtkWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWindow.html" title="GtkWindow"><span class="type">GtkWindow</span></a>, on which
+to activate the accelerator</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_key</p></td>
+<td class="parameter_description"><p>accelerator keyval from a key event</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_mods</p></td>
+<td class="parameter_description"><p>keyboard state mask from a key event</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.15.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if an accelerator was activated and handled
+this keypress</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-groups-from-object"></a><h3>gtk_accel_groups_from_object¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList'" tppabs="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a>¬†*
+gtk_accel_groups_from_object (<em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a> *object</code></em>);</pre>
+<p>Gets a list of all accel groups which are attached to <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>a <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>, usually a <a class="link" href="GtkWindow.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkWindow.html" title="GtkWindow"><span class="type">GtkWindow</span></a></p></td>
+<td class="parameter_annotations">¬†</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.16.6"></a><h4>Returns</h4>
+<p> a list of
+all accel groups which are attached to <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GtkAccelGroup][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accel-group-find"></a><h3>gtk_accel_group_find¬†()</h3>
+<pre class="programlisting"><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelKey" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelKey" title="struct GtkAccelKey"><span class="returnvalue">GtkAccelKey</span></a>¬†*
+gtk_accel_group_find (<em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> *accel_group</code></em>,
+                      <em class="parameter"><code><a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroupFindFunc" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroupFindFunc" title="GtkAccelGroupFindFunc¬†()"><span class="type">GtkAccelGroupFindFunc</span></a> find_func</code></em>,
+                      <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
+<p>Finds the first entry in an accelerator group for which
+<em class="parameter"><code>find_func</code></em>
+ returns <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> and returns its <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelKey" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelKey" title="struct GtkAccelKey"><span class="type">GtkAccelKey</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>accel_group</p></td>
+<td class="parameter_description"><p>a <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a></p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>find_func</p></td>
+<td class="parameter_description"><p> a function to filter the entries
+of <em class="parameter"><code>accel_group</code></em>
+with. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>data to pass to <em class="parameter"><code>find_func</code></em>
+</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.17.6"></a><h4>Returns</h4>
+<p> the key of the first entry passing
+<em class="parameter"><code>find_func</code></em>
+. The key is owned by GTK+ and must not be freed. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accelerator-valid"></a><h3>gtk_accelerator_valid¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gtk_accelerator_valid (<em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> keyval</code></em>,
+                       <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> modifiers</code></em>);</pre>
+<p>Determines whether a given keyval and modifier mask constitute
+a valid keyboard accelerator. For example, the <span class="type">GDK_KEY_a</span> keyval
+plus <span class="type">GDK_CONTROL_MASK</span> is valid - this is a ‚ÄúCtrl+a‚Äù accelerator.
+But, you can't, for instance, use the <span class="type">GDK_KEY_Control_L</span> keyval
+as an accelerator.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>keyval</p></td>
+<td class="parameter_description"><p>a GDK keyval</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>modifiers</p></td>
+<td class="parameter_description"><p>modifier mask</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.18.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the accelerator is valid</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accelerator-parse"></a><h3>gtk_accelerator_parse¬†()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_accelerator_parse (<em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *accelerator</code></em>,
+                       <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *accelerator_key</code></em>,
+                       <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> *accelerator_mods</code></em>);</pre>
+<p>Parses a string representing an accelerator. The format looks like
+‚Äú&lt;Control&gt;a‚Äù or ‚Äú&lt;Shift&gt;&lt;Alt&gt;F1‚Äù or ‚Äú&lt;Release&gt;z‚Äù (the last one is
+for key release).</p>
+<p>The parser is fairly liberal and allows lower or upper case, and also
+abbreviations such as ‚Äú&lt;Ctl&gt;‚Äù and ‚Äú&lt;Ctrl&gt;‚Äù. Key names are parsed using
+<a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Keyboard-Handling.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Keyboard-Handling.html#gdk-keyval-from-name'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Keyboard-Handling.html#gdk-keyval-from-name"><code class="function">gdk_keyval_from_name()</code></a>. For character keys the name is not the symbol,
+but the lowercase name, e.g. one would use ‚Äú&lt;Ctrl&gt;minus‚Äù instead of
+‚Äú&lt;Ctrl&gt;-‚Äù.</p>
+<p>If the parse fails, <em class="parameter"><code>accelerator_key</code></em>
+ and <em class="parameter"><code>accelerator_mods</code></em>
+ will
+be set to 0 (zero).</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.19.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>accelerator</p></td>
+<td class="parameter_description"><p>string representing an accelerator</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accelerator_key</p></td>
+<td class="parameter_description"><p> return location for accelerator
+keyval, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accelerator_mods</p></td>
+<td class="parameter_description"><p> return location for accelerator
+modifier mask, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accelerator-name"></a><h3>gtk_accelerator_name¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>¬†*
+gtk_accelerator_name (<em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> accelerator_key</code></em>,
+                      <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> accelerator_mods</code></em>);</pre>
+<p>Converts an accelerator keyval and modifier mask into a string
+parseable by <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" title="gtk_accelerator_parse¬†()"><code class="function">gtk_accelerator_parse()</code></a>. For example, if you pass in
+<span class="type">GDK_KEY_q</span> and <span class="type">GDK_CONTROL_MASK</span>, this function returns ‚Äú&lt;Control&gt;q‚Äù.</p>
+<p>If you need to display accelerators in the user interface,
+see <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-get-label" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-get-label" title="gtk_accelerator_get_label¬†()"><code class="function">gtk_accelerator_get_label()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.20.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>accelerator_key</p></td>
+<td class="parameter_description"><p>accelerator keyval</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accelerator_mods</p></td>
+<td class="parameter_description"><p>accelerator modifier mask</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.20.7"></a><h4>Returns</h4>
+<p> a newly-allocated accelerator name</p>
+<p></p>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accelerator-get-label"></a><h3>gtk_accelerator_get_label¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>¬†*
+gtk_accelerator_get_label (<em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> accelerator_key</code></em>,
+                           <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> accelerator_mods</code></em>);</pre>
+<p>Converts an accelerator keyval and modifier mask into a string
+which can be used to represent the accelerator to the user.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>accelerator_key</p></td>
+<td class="parameter_description"><p>accelerator keyval</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accelerator_mods</p></td>
+<td class="parameter_description"><p>accelerator modifier mask</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.21.6"></a><h4>Returns</h4>
+<p> a newly-allocated string representing the accelerator.</p>
+<p></p>
+</div>
+<p class="since">Since 2.6</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accelerator-parse-with-keycode"></a><h3>gtk_accelerator_parse_with_keycode¬†()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_accelerator_parse_with_keycode (<em class="parameter"><code>const <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *accelerator</code></em>,
+                                    <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *accelerator_key</code></em>,
+                                    <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> **accelerator_codes</code></em>,
+                                    <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> *accelerator_mods</code></em>);</pre>
+<p>Parses a string representing an accelerator, similarly to
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" title="gtk_accelerator_parse¬†()"><code class="function">gtk_accelerator_parse()</code></a> but handles keycodes as well. This is only
+useful for system-level components, applications should use
+<a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" title="gtk_accelerator_parse¬†()"><code class="function">gtk_accelerator_parse()</code></a> instead.</p>
+<p>If <em class="parameter"><code>accelerator_codes</code></em>
+ is given and the result stored in it is non-<a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>,
+the result must be freed with <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free'" tppabs="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.</p>
+<p>If a keycode is present in the accelerator and no <em class="parameter"><code>accelerator_codes</code></em>
+
+is given, the parse will fail.</p>
+<p>If the parse fails, <em class="parameter"><code>accelerator_key</code></em>
+, <em class="parameter"><code>accelerator_mods</code></em>
+ and
+<em class="parameter"><code>accelerator_codes</code></em>
+ will be set to 0 (zero).</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.22.8"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>accelerator</p></td>
+<td class="parameter_description"><p>string representing an accelerator</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accelerator_key</p></td>
+<td class="parameter_description"><p> return location for accelerator
+keyval, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accelerator_codes</p></td>
+<td class="parameter_description"><p>    return location for accelerator keycodes, or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accelerator_mods</p></td>
+<td class="parameter_description"><p> return location for accelerator
+modifier mask, <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 3.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accelerator-name-with-keycode"></a><h3>gtk_accelerator_name_with_keycode¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>¬†*
+gtk_accelerator_name_with_keycode (<em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/GdkDisplay.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/GdkDisplay.html'" tppabs="https://developer.gnome.org/gdk3/stable/GdkDisplay.html"><span class="type">GdkDisplay</span></a> *display</code></em>,
+                                   <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> accelerator_key</code></em>,
+                                   <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> keycode</code></em>,
+                                   <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> accelerator_mods</code></em>);</pre>
+<p>Converts an accelerator keyval and modifier mask
+into a string parseable by <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse-with-keycode" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse-with-keycode" title="gtk_accelerator_parse_with_keycode¬†()"><code class="function">gtk_accelerator_parse_with_keycode()</code></a>,
+similarly to <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-name" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-name" title="gtk_accelerator_name¬†()"><code class="function">gtk_accelerator_name()</code></a> but handling keycodes.
+This is only useful for system-level components, applications
+should use <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" title="gtk_accelerator_parse¬†()"><code class="function">gtk_accelerator_parse()</code></a> instead.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>display</p></td>
+<td class="parameter_description"><p> a <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/GdkDisplay.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/GdkDisplay.html'" tppabs="https://developer.gnome.org/gdk3/stable/GdkDisplay.html"><span class="type">GdkDisplay</span></a> or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to use the default display. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accelerator_key</p></td>
+<td class="parameter_description"><p>accelerator keyval</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keycode</p></td>
+<td class="parameter_description"><p>accelerator keycode</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accelerator_mods</p></td>
+<td class="parameter_description"><p>accelerator modifier mask</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.23.6"></a><h4>Returns</h4>
+<p> a newly allocated accelerator name.</p>
+<p></p>
+</div>
+<p class="since">Since 3.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accelerator-get-label-with-keycode"></a><h3>gtk_accelerator_get_label_with_keycode¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a>¬†*
+gtk_accelerator_get_label_with_keycode
+                               (<em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/GdkDisplay.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/GdkDisplay.html'" tppabs="https://developer.gnome.org/gdk3/stable/GdkDisplay.html"><span class="type">GdkDisplay</span></a> *display</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> accelerator_key</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> keycode</code></em>,
+                                <em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> accelerator_mods</code></em>);</pre>
+<p>Converts an accelerator keyval and modifier mask
+into a (possibly translated) string that can be displayed to
+a user, similarly to <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-get-label" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-get-label" title="gtk_accelerator_get_label¬†()"><code class="function">gtk_accelerator_get_label()</code></a>, but handling
+keycodes.</p>
+<p>This is only useful for system-level components, applications
+should use <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-parse" title="gtk_accelerator_parse¬†()"><code class="function">gtk_accelerator_parse()</code></a> instead.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.24.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>display</p></td>
+<td class="parameter_description"><p> a <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/GdkDisplay.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/GdkDisplay.html'" tppabs="https://developer.gnome.org/gdk3/stable/GdkDisplay.html"><span class="type">GdkDisplay</span></a> or <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to use the default display. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accelerator_key</p></td>
+<td class="parameter_description"><p>accelerator keyval</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keycode</p></td>
+<td class="parameter_description"><p>accelerator keycode</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accelerator_mods</p></td>
+<td class="parameter_description"><p>accelerator modifier mask</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.11.24.7"></a><h4>Returns</h4>
+<p> a newly-allocated string representing the accelerator.</p>
+<p></p>
+</div>
+<p class="since">Since 3.4</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accelerator-set-default-mod-mask"></a><h3>gtk_accelerator_set_default_mod_mask¬†()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gtk_accelerator_set_default_mod_mask (<em class="parameter"><code><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> default_mod_mask</code></em>);</pre>
+<p>Sets the modifiers that will be considered significant for keyboard
+accelerators. The default mod mask is <span class="type">GDK_CONTROL_MASK</span> |
+<span class="type">GDK_SHIFT_MASK</span> | <span class="type">GDK_MOD1_MASK</span> | <span class="type">GDK_SUPER_MASK</span> |
+<span class="type">GDK_HYPER_MASK</span> | <span class="type">GDK_META_MASK</span>, that is, Control, Shift, Alt,
+Super, Hyper and Meta. Other modifiers will by default be ignored
+by <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a>.
+You must include at least the three modifiers Control, Shift
+and Alt in any value you pass to this function.</p>
+<p>The default mod mask should be changed on application startup,
+before using any accelerator groups.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.25.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>default_mod_mask</p></td>
+<td class="parameter_description"><p>accelerator modifier mask</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="gtk-accelerator-get-default-mod-mask"></a><h3>gtk_accelerator_get_default_mod_mask¬†()</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="returnvalue">GdkModifierType</span></a>
+gtk_accelerator_get_default_mod_mask (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Gets the value set by <a class="link" href="gtk3-Keyboard-Accelerators.html#gtk-accelerator-set-default-mod-mask" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#gtk-accelerator-set-default-mod-mask" title="gtk_accelerator_set_default_mod_mask¬†()"><code class="function">gtk_accelerator_set_default_mod_mask()</code></a>.</p>
+<div class="refsect3">
+<a name="id-1.4.4.11.26.5"></a><h4>Returns</h4>
+<p> the default accelerator modifier mask</p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="gtk3-Keyboard-Accelerators.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GtkAccelGroup-struct"></a><h3>struct GtkAccelGroup</h3>
+<pre class="programlisting">struct GtkAccelGroup;</pre>
+<p>An object representing and maintaining a group of accelerators.</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkAccelGroupClass"></a><h3>struct GtkAccelGroupClass</h3>
+<pre class="programlisting">struct GtkAccelGroupClass {
+  GObjectClass parent_class;
+
+
+  void¬†(*accel_changed)¬†(GtkAccelGroup¬†*accel_group,
+				 guint           keyval,
+				 GdkModifierType modifier,
+				 GClosure       *accel_closure);
+};
+</pre>
+<div class="refsect3">
+<a name="id-1.4.4.12.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="struct_members_name" width="300px"></col>
+<col class="struct_members_description"></col>
+<col class="struct_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a>¬†<em class="structfield"><code><a name="GtkAccelGroupClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>The parent class.</p></td>
+<td class="struct_member_annotations">¬†</td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="GtkAccelGroupClass.accel-changed"></a>accel_changed</code></em>¬†()</p></td>
+<td class="struct_member_description"><p>Signal emitted when an entry is added to or removed
+from the accel group.</p></td>
+<td class="struct_member_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkAccelKey"></a><h3>struct GtkAccelKey</h3>
+<pre class="programlisting">struct GtkAccelKey {
+  guint           accel_key;
+  GdkModifierType accel_mods;
+  guint           accel_flags : 16;
+};
+</pre>
+<div class="refsect3">
+<a name="id-1.4.4.12.4.4"></a><h4>Members</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="struct_members_name" width="300px"></col>
+<col class="struct_members_description"></col>
+<col class="struct_members_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>¬†<em class="structfield"><code><a name="GtkAccelKey.accel-key"></a>accel_key</code></em>;</p></td>
+<td class="struct_member_description"><p>The accelerator keyval</p></td>
+<td class="struct_member_annotations">¬†</td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a>¬†<em class="structfield"><code><a name="GtkAccelKey.accel-mods"></a>accel_mods</code></em>;</p></td>
+<td class="struct_member_description"><p>The accelerator modifiers</p></td>
+<td class="struct_member_annotations">¬†</td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>¬†<em class="structfield"><code><a name="GtkAccelKey.accel-flags"></a>accel_flags</code></em>¬†:¬†16;</p></td>
+<td class="struct_member_description"><p>The accelerator flags</p></td>
+<td class="struct_member_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="gtk3-Keyboard-Accelerators.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GtkAccelGroup--is-locked"></a><h3>The <code class="literal">‚Äúis-locked‚Äù</code> property</h3>
+<pre class="programlisting">  ‚Äúis-locked‚Äù                <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Is the accel group locked.</p>
+<p>Flags: Read</p>
+<p>Default value: FALSE</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkAccelGroup--modifier-mask"></a><h3>The <code class="literal">‚Äúmodifier-mask‚Äù</code> property</h3>
+<pre class="programlisting">  ‚Äúmodifier-mask‚Äù            <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a></pre>
+<p>Modifier Mask.</p>
+<p>Flags: Read</p>
+<p>Default value: GDK_SHIFT_MASK | GDK_CONTROL_MASK | GDK_MOD1_MASK | GDK_SUPER_MASK | GDK_HYPER_MASK | GDK_META_MASK</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gtk3-Keyboard-Accelerators.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GtkAccelGroup-accel-activate"></a><h3>The <code class="literal">‚Äúaccel-activate‚Äù</code> signal</h3>
+<pre class="programlisting"><a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a>  *accel_group,
+               <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a>        *acceleratable,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>           keyval,
+               <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> modifier,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
+<p>The accel-activate signal is an implementation detail of
+<a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> and not meant to be used by applications.</p>
+<div class="refsect3">
+<a name="id-1.4.4.14.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>accel_group</p></td>
+<td class="parameter_description"><p>the <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> which received the signal</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>acceleratable</p></td>
+<td class="parameter_description"><p>the object on which the accelerator was activated</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keyval</p></td>
+<td class="parameter_description"><p>the accelerator keyval</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>modifier</p></td>
+<td class="parameter_description"><p>the modifier combination of the accelerator</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.4.14.2.6"></a><h4>Returns</h4>
+<p> <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS'" tppabs="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the accelerator was activated</p>
+<p></p>
+</div>
+<p>Flags: Has Details</p>
+</div>
+<hr></hr>
+<div class="refsect2">
+<a name="GtkAccelGroup-accel-changed"></a><h3>The <code class="literal">‚Äúaccel-changed‚Äù</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a>  *accel_group,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>           keyval,
+               <a href="javascript:if(confirm('https://developer.gnome.org/gdk3/stable/gdk3-Windows.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType'" tppabs="https://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> modifier,
+               <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Closures.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure"><span class="type">GClosure</span></a>       *accel_closure,
+               <a href="javascript:if(confirm('https://developer.gnome.org/glib/unstable/glib-Basic-Types.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer'" tppabs="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
+<p>The accel-changed signal is emitted when an entry
+is added to or removed from the accel group.</p>
+<p>Widgets like <a class="link" href="GtkAccelLabel.html" tppabs="https://developer.gnome.org/gtk3/stable/GtkAccelLabel.html" title="GtkAccelLabel"><span class="type">GtkAccelLabel</span></a> which display an associated
+accelerator should connect to this signal, and rebuild
+their visual representation if the <em class="parameter"><code>accel_closure</code></em>
+ is theirs.</p>
+<div class="refsect3">
+<a name="id-1.4.4.14.3.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table border="0" width="100%">
+<colgroup>
+<col class="parameters_name" width="150px"></col>
+<col class="parameters_description"></col>
+<col class="parameters_annotations" width="200px"></col>
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>accel_group</p></td>
+<td class="parameter_description"><p>the <a class="link" href="gtk3-Keyboard-Accelerators.html#GtkAccelGroup" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html#GtkAccelGroup"><span class="type">GtkAccelGroup</span></a> which received the signal</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keyval</p></td>
+<td class="parameter_description"><p>the accelerator keyval</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>modifier</p></td>
+<td class="parameter_description"><p>the modifier combination of the accelerator</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>accel_closure</p></td>
+<td class="parameter_description"><p>the <a href="javascript:if(confirm('https://developer.gnome.org/gobject/unstable/gobject-Closures.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure'" tppabs="https://developer.gnome.org/gobject/unstable/gobject-Closures.html#GClosure"><span class="type">GClosure</span></a> of the accelerator</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations">¬†</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Has Details</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gtk3-Keyboard-Accelerators.see-also"></a><h2>See Also</h2>
+<p>gtk_window_add_accel_group(), <a class="link" href="gtk3-Accelerator-Maps.html#gtk-accel-map-change-entry" tppabs="https://developer.gnome.org/gtk3/stable/gtk3-Accelerator-Maps.html#gtk-accel-map-change-entry" title="gtk_accel_map_change_entry¬†()"><code class="function">gtk_accel_map_change_entry()</code></a>,
+<a href="javascript:if(confirm('https://developer.gnome.org/gtk3/stable/GtkItemFactory.html  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ ∑˛ŒÒ∆˜±®∏Ê∏√Œƒº˛Œ¥’“µΩ°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/gtk3/stable/GtkItemFactory.html#gtk-item-factory-new'" tppabs="https://developer.gnome.org/gtk3/stable/GtkItemFactory.html#gtk-item-factory-new"><code class="function">gtk_item_factory_new()</code></a>, <a class="link" href="GtkLabel.html#gtk-label-new-with-mnemonic" tppabs="https://developer.gnome.org/gtk3/stable/GtkLabel.html#gtk-label-new-with-mnemonic" title="gtk_label_new_with_mnemonic¬†()"><code class="function">gtk_label_new_with_mnemonic()</code></a></p>
+</div>
+</div><div class="footer">
+<hr></hr>
+          Generated by GTK-Doc V1.20.1</div></div><div id="footer_art" class="default">¬†</div></div><div class="clearfix"></div><div id="footer_grass"> ¬† </div><div id="footer"><div class="container_12"><div class="links grid_9"><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-home menu-item-88"><a href="javascript:if(confirm('https://www.gnome.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://www.gnome.org/'" tppabs="https://www.gnome.org/">The GNOME Project</a><ul class="sub-menu"><li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-89"><a href="javascript:if(confirm('https://www.gnome.org/about/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://www.gnome.org/about/'" tppabs="https://www.gnome.org/about/">About Us</a></li><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-90"><a href="javascript:if(confirm('https://www.gnome.org/get-involved/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://www.gnome.org/get-involved/'" tppabs="https://www.gnome.org/get-involved/">Get Involved</a></li><li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-91"><a href="javascript:if(confirm('https://www.gnome.org/teams/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://www.gnome.org/teams/'" tppabs="https://www.gnome.org/teams/">Teams</a></li><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-92"><a href="javascript:if(confirm('https://foundation.gnome.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://foundation.gnome.org/'" tppabs="https://foundation.gnome.org/">The GNOME Foundation</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/support-gnome/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://www.gnome.org/support-gnome/'" tppabs="https://www.gnome.org/support-gnome/">Support GNOME</a></li><li><a href="javascript:if(confirm('https://www.gnome.org/contact/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://www.gnome.org/contact/'" tppabs="https://www.gnome.org/contact/">Contact</a></li></ul></li></ul></div><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-post_type current-menu-item page_item page-item-20 current_page_item menu-item-99"><a href="#">Resources</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://help.gnome.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://help.gnome.org/'" tppabs="https://help.gnome.org/">Documentation</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://wiki.gnome.org/'" tppabs="https://wiki.gnome.org/">Wiki</a></li><li><a href="javascript:if(confirm('https://mail.gnome.org/mailman/listinfo  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://mail.gnome.org/mailman/listinfo'" tppabs="https://mail.gnome.org/mailman/listinfo">Mailing Lists</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/GnomeIrcChannels  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://wiki.gnome.org/GnomeIrcChannels'" tppabs="https://wiki.gnome.org/GnomeIrcChannels">IRC Channels</a></li><li><a href="javascript:if(confirm('https://bugzilla.gnome.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://bugzilla.gnome.org/'" tppabs="https://bugzilla.gnome.org/">Bug Tracker</a></li><li><a href="javascript:if(confirm('https://git.gnome.org/browse/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://git.gnome.org/browse/'" tppabs="https://git.gnome.org/browse/">Development Code</a></li><li><a href="javascript:if(confirm('https://wiki.gnome.org/Jhbuild  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://wiki.gnome.org/Jhbuild'" tppabs="https://wiki.gnome.org/Jhbuild">Build Tool</a></li></ul></li></ul></div><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-104" class="menu-item menu-item-type-custom menu-item-104"><a href="javascript:if(confirm('http://www.gnome.org/news/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://www.gnome.org/news/'" tppabs="http://www.gnome.org/news/">News</a><ul class="sub-menu"><li><a href="javascript:if(confirm('https://www.gnome.org/start/stable  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://www.gnome.org/start/stable'" tppabs="https://www.gnome.org/start/stable">Latest Release</a></li><li><a href="javascript:if(confirm('https://planet.gnome.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://planet.gnome.org/'" tppabs="https://planet.gnome.org/">Planet GNOME</a></li><li><a href="javascript:if(confirm('https://news.gnome.org/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://news.gnome.org/'" tppabs="https://news.gnome.org/">Development News</a></li><li><a href="javascript:if(confirm('https://identi.ca/gnome/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://identi.ca/gnome/'" tppabs="https://identi.ca/gnome/">Identi.ca</a></li><li><a href="javascript:if(confirm('https://twitter.com/gnome  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://twitter.com/gnome'" tppabs="https://twitter.com/gnome">Twitter</a></li></ul></li></ul></div></div><div class="links grid_3 right"><div><ul class="menu available_languages"><li><strong>This website is available in many languages</strong><ul class="sub-menu"><li><a href="javascript:if(confirm('https://developer.gnome.org/languages  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='https://developer.gnome.org/languages'" tppabs="https://developer.gnome.org/languages" title="Switching Language">Switch Language</a></li></ul></li></ul><script type="text/javascript" src="language.js" tppabs="https://developer.gnome.org/js/language.js"></script></div></div><div id="footnotes" class="grid_9">
+                Copyright ¬© 2005‚Äí2014 <strong class="gnome_logo">The GNOME Project</strong><br></br><small>Optimised for standards. Hosted by <a href="javascript:if(confirm('http://redhat.com/  \n\n∏√Œƒº˛Œﬁ∑®”√ Teleport Ultra œ¬‘ÿ, “ÚŒ™ À¸ «“ª∏ˆ”ÚªÚ¬∑æ∂Õ‚≤ø±ª…Ë÷√Œ™À¸µƒ∆Ù ºµÿ÷∑µƒµÿ÷∑°£  \n\nƒ„œÎ‘⁄∑˛ŒÒ∆˜…œ¥Úø™À¸?'))window.location='http://redhat.com/'" tppabs="http://redhat.com/">Red Hat</a>.</small></div><div class="clear"></div></div></div><script type="text/javascript">
+$(document).ready(function() {
+    // Get browser
+    $.each($.browser, function(i) {
+        $('body').addClass(i);
+        return false;
+    });
+
+    // Get OS and add it as class to body tag, this then allows forcing some
+    // customisation in the CSS rules.
+    var match = navigator.userAgent.toLowerCase().match(/(win|mac|linux)/);
+    if (match) {
+        $('body').addClass(match[0]);
+    }
+});
+</script><script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.gnome.org/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "6"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script></body></html>
